@@ -24,6 +24,9 @@ namespace iljin
                     Response.Write("<script>alert('세션이 만료되었습니다. 다시 로그인하여 주십시오.');location.href='/';</script>");
                     return;
                 }
+
+                string test = "얄루";
+
                 hide_menu();
                 string top = Request.QueryString["top"];
                 string sub = Request.Params.Get("midx");
