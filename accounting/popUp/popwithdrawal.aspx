@@ -27,7 +27,7 @@
         var txtId = 'txt_cusname';
 
         function isExist(value) {
-            var param = "keyward=" + value + "&div=customer&caseNo=전체";
+            var param = "keyward=" + value + "&div=customer&caseNo=매출기타";
 
             sendRequest("/Scripts/autocomplete_list.aspx", param, 'GET', XHRcallback);
         }
@@ -94,7 +94,7 @@
 
             list.style.visibility = "visible";
 
-            if (itemCount > 10) itemCount = 10;
+            if (itemCount > 7) itemCount = 7;
 
             var height = (itemHeight * itemCount + 1) + "px";
             list.style.height = height;
@@ -221,39 +221,30 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>입출금구분</th>
-                    <td>
-                        <asp:DropDownList ID="cb_divCode" runat="server"></asp:DropDownList>
-                    </td>
                     <th>금액</th>
                     <td>
                         <asp:TextBox ID="txt_price" runat="server"></asp:TextBox>
                     </td>
-                </tr>
-
-                <tr>
                     <th>거래유형</th>
                     <td>
                         <asp:DropDownList ID="cb_paymentType" runat="server"></asp:DropDownList>
                     </td>
+                </tr>
+                <tr>
                     <th>담당자</th>
                     <td>
                         <asp:TextBox ID="txt_manager" runat="server"></asp:TextBox>
                     </td>
-
-                </tr>
-                <tr>
                     <th>비고</th>
                     <td>
                         <asp:TextBox ID="txt_memo" runat="server"></asp:TextBox>
                     </td>
-                    <th></th>
-                    <td></td>
                 </tr>
         </table>
-        <div class="tar mt20">
-            <asp:Button ID="btn_save" Text="저장" CssClass="btn_150_40 btn_black" runat="server" OnClick="btn_save_Click" />
-            <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">닫기</button>
+        <div class="mt20">
+            <asp:Button ID="btn_delete" Text="삭제" CssClass="btn_150_40 btn_red" runat="server" OnClick="btn_delete_Click" />
+            <button type="button" class="btn_150_40 btn_gray ml10 ft_right" onclick="self.close()">닫기</button>
+            <asp:Button ID="btn_save" Text="저장" CssClass="btn_150_40 btn_black ft_right" runat="server" OnClick="btn_save_Click" />
         </div>
         <script>
             fDatePickerById("txt_registrationdate");

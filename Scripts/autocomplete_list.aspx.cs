@@ -74,6 +74,10 @@ namespace iljin
                     whereSQL = "INNER JOIN tb_code b ON a.cusDivCode = b.code_id AND b.code_name LIKE '%기타%' " +
                                "WHERE a.isUse = '1'";
                     break;
+                case "매출기타":
+                    whereSQL = "INNER JOIN tb_code b ON a.cusDivCode = b.code_id AND (b.code_name LIKE '%기타%' OR b.code_name LIKE '%매출%' )" +
+                               "WHERE a.isUse = '1'";
+                    break;
             }
 
             if (keyward != "")

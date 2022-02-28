@@ -87,15 +87,6 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.TextBox txt_cusname;
 
         /// <summary>
-        /// cb_divCode 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cb_divCode;
-
-        /// <summary>
         /// txt_price 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -130,6 +121,15 @@ namespace iljin.popUp
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_memo;
+
+        /// <summary>
+        /// btn_delete 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_delete;
 
         /// <summary>
         /// btn_save 컨트롤입니다.

@@ -5,6 +5,7 @@
 
         var listId = 'ContentPlaceHolder2_li_itemlist';
         var txtId = 'ContentPlaceHolder2_txt_customer';
+        var codeId = 'ContentPlaceHolder2_txt_cusCode';
 
         function isExist(value) {
             var param = "keyward=" + value + "&div=customer&caseNo=전체";
@@ -35,6 +36,7 @@
                         element.addEventListener("click", function (e) {
                             txt.value = e.target.innerHTML;
                             list.style.visibility = "hidden";
+                            document.getElementById(codeId).value = e.target.value;
                         }
                         );
 
@@ -89,6 +91,7 @@
             var li = document.getElementById('<%=li_itemlist.ClientID%>');
 
             if (li.style.visibility == "hidden") {
+                document.getElementById(codeId).value = '';
 
                 if (hidden_keyWord.value != "") {
                     txt.value = hidden_keyWord.value;
@@ -118,6 +121,7 @@
             if (event.keyCode == 8) {
                 var txt = document.getElementById(txtId);
                 var hidden_keyWord = document.getElementById('<%= hidden_keyWord.ClientID%>');
+                document.getElementById(codeId).value = '';
 
                 //문자가 없는데 입력 시 return
                 if (txt.value.length == 0) {
@@ -131,10 +135,7 @@
 
                 //입력&저장된 키워드가 없을 시 한글자씩 삭제 가능하게 한다.
                 if (hidden_keyWord.value == "") {
-                    if (txt.value.includes("_")) {
-                        txt.value = "";
-                        isExist(txt.value);
-                    }
+                    isExist(txt.value);
                     return false;
                 }
 
@@ -177,7 +178,7 @@
             <h2 class="conts_tit">
                 <asp:Label ID="m_title" runat="server" Text="경리업무 ::> 매출/입금 관리"></asp:Label>
                 <asp:HiddenField ID="hidden_keyWord" runat="server" />
-                <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list" Style="top:0px; left:0px; visibility: hidden;"></asp:ListBox>
+                <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list" Style="top: 0px; left: 0px; visibility: hidden;"></asp:ListBox>
             </h2>
             <asp:HiddenField ID="hdn_idx" runat="server" />
             <div class="search_box">
@@ -187,9 +188,11 @@
                     ~
                     <asp:TextBox ID="tb_tradedt2" runat="server" CssClass="mWt100 txac"></asp:TextBox>
                     <span class="ml10">거래처</span>
-                    <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt150" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
-                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClick="btn_sch_Click" />
-                    <button type="button" runat="server" class="btn_black btn_100_30 ft_right " onclick="withdrawal('')">입출금등록</button>
+                    <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt200" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
+                    <span class="ml10">코드<span class="red vam"> *</span></span>
+                    <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt130"></asp:TextBox>
+                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
+                    <button type="button" runat="server" class="btn_black btn_100_30 ft_right " onclick="withdrawal('')">입금등록</button>
                 </div>
             </div>
             <div class="fixed_hs_600 mt10" style="width: 1190px; overflow: hidden;">
@@ -259,8 +262,8 @@
         </asp:Panel>
     </article>
     <script>
-        fDatePickerById("ContentPlaceHolder2_tb_withdrawaldate");
-        fDatePickerById("ContentPlaceHolder2_tb_withdrawaldate2");
+        fDatePickerById("ContentPlaceHolder2_tb_tradedt");
+        fDatePickerById("ContentPlaceHolder2_tb_tradedt2");
     </script>
     <script>
         function withdrawal(code) {
@@ -268,8 +271,21 @@
             var name = "_blank"
             var popupX = (window.screen.width / 2) - (730 / 2);
             var popupY = (window.screen.height / 2) - (300 / 2);
-            window.open(url, name, 'status=no, width=730, height=400, left=' + popupX + ',top=' + popupY);
+            window.open(url, name, 'status=no, width=730, height=300, left=' + popupX + ',top=' + popupY);
         }
+
+        function validChk()
+        {
+            var code = document.getElementById('<%= txt_cusCode.ClientID %>').value;
+            
+            if(!code) {
+                alert('거래처를 선택해 주십시오.');
+                return false;
+            }
+
+            return true;
+        }
+
 
         function refresh() {
             document.getElementById('<%= btn_sch.ClientID %>').click();

@@ -23,7 +23,6 @@ namespace iljin.popUp
 
                 hdn_idx.Value = Request.Params.Get("code");
                 km.GetCbDT(ConstClass.WITHDRAWAL_CODE, cb_paymentType);
-                cb_divCode_Setting();
 
                 if (hdn_idx.Value != "")
                 {
@@ -32,16 +31,9 @@ namespace iljin.popUp
                 else
                 {
                     txt_registrationdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                    btn_delete.Visible = false;
                 }
             }
-        }
-
-        private void cb_divCode_Setting()
-        {
-            cb_divCode.Items.Clear();
-
-            cb_divCode.Items.Add(new ListItem("입금", "0"));
-            cb_divCode.Items.Add(new ListItem("출금", "1"));
         }
 
         // 수정할 때만 발생함
@@ -58,7 +50,6 @@ namespace iljin.popUp
                 txt_registrationdate.Text = dt.Rows[0]["registrationdate"].ToString();
                 txt_cusname.Text = dt.Rows[0]["cusName"].ToString();
                 hidden_cusCode.Value = dt.Rows[0]["cusCode"].ToString();
-                cb_divCode.SelectedValue = dt.Rows[0]["divCode"].ToString();
                 txt_price.Text = dt.Rows[0]["price"].ToString();
                 cb_paymentType.SelectedValue = dt.Rows[0]["paymentType"].ToString();
                 txt_manager.Text = dt.Rows[0]["manager"].ToString();
@@ -76,7 +67,6 @@ namespace iljin.popUp
 
 
             if (km == null) km = new DB_mysql();
-            string idx = "";
 
             try
             {
@@ -84,14 +74,12 @@ namespace iljin.popUp
 
                 if (hdn_idx.Value != "")
                 {
-                    object[] obj = {hdn_idx.Value,txt_registrationdate,hidden_cusCode,cb_divCode,txt_price,
-                    cb_paymentType,txt_manager,txt_memo};
+                    object[] obj = {hdn_idx.Value,txt_registrationdate,hidden_cusCode,txt_price,cb_paymentType,txt_manager,txt_memo};
                     PROCEDURE.CUD_TRAN("SP_withdrawal_Update", obj, km);
                 }
                 else
-                {
-                    object[] obj = {txt_registrationdate,hidden_cusCode,cb_divCode,txt_price,
-                    cb_paymentType,txt_manager,txt_memo};
+                { 
+                    object[] obj = {txt_registrationdate,hidden_cusCode,txt_price,cb_paymentType,txt_manager,txt_memo};
                     PROCEDURE.CUD_TRAN("SP_withdrawal_Add", obj, km);
                 }
 
@@ -105,6 +93,29 @@ namespace iljin.popUp
                 PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
 
                 Response.Write("<script>('저장실패');</script>");
+            }
+        }
+
+        protected void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (km == null) km = new DB_mysql();
+            
+            try
+            {
+                km.BeginTran();
+
+                PROCEDURE.CUD_TRAN("SP_withdrawal_Delete", hdn_idx.Value, km);
+
+                km.Commit();
+                Response.Write("<script>alert('삭제되었습니다.');</script>");
+                Response.Write("<script>window.opener.refresh();</script>");
+                Response.Write("<script>window.close();</script>");
+            }
+            catch (Exception ex)
+            {
+                PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
+
+                Response.Write("<script>('삭제실패');</script>");
             }
         }
     }
