@@ -8,6 +8,7 @@ using System.Data;
 using PublicLibsManagement;
 using MysqlLib;
 using les;
+using iljin.Barobill;
 
 namespace iljin.popUp
 {
@@ -203,6 +204,15 @@ namespace iljin.popUp
 
                 Response.Write("<script>alert('저장 실패');</script>");
             }
+        }
+
+        protected void btn_send_Click(object sender, EventArgs e)
+        {
+            string serialNo = txt_serialNo.Text;
+
+            string barobillID = "";
+
+            TaxInvoice taxInvoice = new TaxInvoice();
         }
     }
 }

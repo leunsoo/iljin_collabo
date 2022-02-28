@@ -181,9 +181,8 @@
 
         <div class="tar mt20">
             <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
-<%--            <button type="button" class="btn_150_40 btn_gray ml10" >미리보기</button>--%>
-            <asp:Button ID="btn_save" Text="저장" CssClass="btn_150_40 btn_gray ml10" runat="server" OnClick="btn_save_Click" />
-<%--            <button type="button" class="btn_150_40 btn_gray ml10" style="visibility: hidden">전송</button>--%>
+            <asp:Button ID="btn_save" Text="저장" CssClass="btn_150_40 btn_black ml10" runat="server" OnClick="btn_save_Click" />
+            <asp:Button ID="btn_send" Text="전송" CssClass="btn_150_40 btn_navy ml10" runat="server" OnClick="btn_send_Click"/>
         </div>
         <script src="//spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
         <script>
