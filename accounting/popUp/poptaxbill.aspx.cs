@@ -36,7 +36,7 @@ namespace iljin.popUp
                 }
 
 
-                cb_billtypecode.Items.Add(new ListItem("청구", "0"));
+                cb_billtypecode.Items.Add(new ListItem("청구", "2"));
                 cb_billtypecode.Items.Add(new ListItem("영수", "1"));
 
                 Search_Company();
@@ -208,11 +208,57 @@ namespace iljin.popUp
 
         protected void btn_send_Click(object sender, EventArgs e)
         {
-            string serialNo = txt_serialNo.Text;
-
             string barobillID = "";
 
             TaxInvoice taxInvoice = new TaxInvoice();
+
+            Tax_ProucerInfo(taxInvoice);
+            Tax_RecipientInfo(taxInvoice);
+            Tax_Info(taxInvoice);
+        }
+
+        //공급자 정보
+        private void Tax_ProucerInfo(TaxInvoice tax)
+        {
+            tax.InvoicerParty = new InvoiceParty();
+            tax.InvoicerParty.MgrNum = txt_serialNo.Text; //고유ID 자동채번 세금계산서번호
+            tax.InvoicerParty.CorpNum = txt_registration1.Text.Replace("-",""); //사업자등록번호 -뺴고
+            tax.InvoicerParty.CorpName = txt_cusName1.Text; //업체명
+            tax.InvoicerParty.ContactId = ""; // 바로빌회원ID
+            tax.InvoicerParty.CEOName = txt_bossname1.Text; //대표자명
+            tax.InvoicerParty.ContactName = hdn_tax_manager.Value; //담당자명
+            tax.InvoicerParty.Addr = txt_address.Text; //주소
+            tax.InvoicerParty.Email = txt_email.Text; //메일
+        }
+
+        //공급받는자 정보
+        private void Tax_RecipientInfo(TaxInvoice tax)
+        {
+            tax.InvoiceeParty = new InvoiceParty();
+            tax.InvoiceeParty.MgrNum = ""; //고유ID 자동채번 세금계산서번호
+            tax.InvoiceeParty.CorpNum = txt_registration2.Text.Replace("-", ""); //사업자등록번호 -뺴고
+            tax.InvoiceeParty.CorpName = txt_cusName2.Text; //업체명
+            tax.InvoiceeParty.ContactId = ""; // 바로빌회원ID
+            tax.InvoiceeParty.CEOName = txt_bossname2.Text; //대표자명
+            tax.InvoiceeParty.ContactName = hdn_tax_manager.Value; //담당자명??<=입력란 필요함
+            tax.InvoiceeParty.Addr = txt_address2.Text; //주소
+            tax.InvoiceeParty.Email = txt_email2.Text; //메일
+        }
+
+        //세금계산서 내용
+        private void Tax_Info(TaxInvoice tax)
+        {
+            tax.IssueDirection = 1;
+            tax.TaxInvoiceType = 1;
+            tax.TaxType = chk_taxfree.Checked == true ? 2 : 1;
+            tax.PurposeType = int.Parse(cb_billtypecode.SelectedValue);
+            //tax.ModifyCode <= 수정세금계산서 작성 시 필수
+            tax.WriteDate = txt_registrationDate.Text;
+            tax.AmountTotal = txt_produceCost.Text;
+            tax.TaxTotal = txt_taxCost.Text == "" ? "0" : txt_taxCost.Text;
+            tax.TotalAmount = txt_totalCost.Text;
+            //tax.Remark1 <= 수정세금계산서인 경우 원본 세금계산서의 국세청 승인번호 입력
+            tax.TaxInvoiceTradeLineItems[0].Name = ""; // 품목상세 목록 <= 최대 99개까지 등록 가능
         }
     }
 }

@@ -44,6 +44,7 @@
                 <asp:HiddenField ID="hdn_cusCode" runat="server" />
                 <asp:HiddenField ID="hdn_code" runat="server" />
                 <asp:HiddenField ID="hdn_serialNo" runat="server" />
+                <asp:HiddenField ID="hdn_tax_manager" runat="server" />
             </div>
         </div>
         <table class="itable_1 mt10">
