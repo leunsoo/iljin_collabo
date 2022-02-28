@@ -1,0 +1,990 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D8FB798-001C-48AC-8A8E-E28AB2503CBE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iljin</RootNamespace>
+    <AssemblyName>iljin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44346</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\sam_kim\MysqlConn\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Schema, Version=3.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.Schema.3.0.14\lib\net45\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ValueTuple" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Woof.Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Woof.Windows.1.0.0\lib\net471\Woof.Windows.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounting\Frmdepositandwithdrawal_copy.aspx" />
+    <Content Include="accounting\Frmdepositandwithdrawal.aspx" />
+    <Content Include="accounting\Frmreceivable.aspx" />
+    <Content Include="accounting\Frmshippingfee.aspx" />
+    <Content Include="accounting\Frmtaxbill_Write.aspx" />
+    <Content Include="accounting\Frmtaxbill.aspx" />
+    <Content Include="accounting\popUp\popcollectmoney.aspx" />
+    <Content Include="accounting\popUp\popseparate.aspx" />
+    <Content Include="accounting\popUp\poptaxbill.aspx" />
+    <Content Include="accounting\popUp\popwithdrawal.aspx" />
+    <Content Include="businessstatistics\Frmcustotal_detail.aspx" />
+    <Content Include="sales\Frmdetail.aspx" />
+    <Content Include="sales\Frmorders.aspx" />
+    <Content Include="sales\Frmsales.aspx" />
+    <Content Include="sales\Frmshipping.aspx" />
+    <Content Include="sales\popUp\popfinal.aspx" />
+    <Content Include="sales\popUp\poporder.aspx" />
+    <Content Include="sales\popUp\poprelease.aspx" />
+    <Content Include="sales\popUp\popseparately.aspx" />
+    <Content Include="sales\popUp\poptransaction.aspx" />
+    <Content Include="sales\popUp\poptransactionlist.aspx" />
+    <Content Include="Scripts\autocomplete_list.aspx" />
+    <Content Include="base\Frmcompany.aspx" />
+    <Content Include="base\Frmemp.aspx" />
+    <Content Include="base\Frmcustomer.aspx" />
+    <Content Include="base\Frmitem.aspx" />
+    <Content Include="base\Frmforeigner.aspx" />
+    <Content Include="base\Frmunitprice.aspx" />
+    <Content Include="base\popUp\popcode.aspx" />
+    <Content Include="base\popUp\popforeigner.aspx" />
+    <Content Include="base\popUp\popunitprice_updatelist.aspx" />
+    <Content Include="base\popUp\popunitprice_update.aspx" />
+    <Content Include="businessstatistics\Frmcustotal.aspx" />
+    <Content Include="businessstatistics\Frmitemtotal.aspx" />
+    <Content Include="businessstatistics\Frmpayments.aspx" />
+    <Content Include="businessstatistics\Frmsalesstatistics.aspx" />
+    <Content Include="purchase\Frmarrivalanddeparture.aspx" />
+    <Content Include="purchase\Frmorderprogress.aspx" />
+    <Content Include="purchase\Frmpurchase.aspx" />
+    <Content Include="purchase\Frmstockstatus.aspx" />
+    <Content Include="purchase\Frmwearing.aspx" />
+    <Content Include="base\popUp\popcus.aspx" />
+    <Content Include="base\popUp\popcusregistation.aspx" />
+    <Content Include="base\popUp\popItem.aspx" />
+    <Content Include="base\popUp\popemp.aspx" />
+    <Content Include="board\board.aspx" />
+    <Content Include="board\board_view.aspx" />
+    <Content Include="board\test.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="purchase\Frmpurchaseorder.aspx" />
+    <Content Include="purchase\popUp\popbl.aspx" />
+    <Content Include="purchase\popUp\popdetail.aspx" />
+    <Content Include="purchase\popUp\popfinish.aspx" />
+    <Content Include="purchase\popUp\popcontaineritem.aspx" />
+    <Content Include="purchase\popUp\popincome.aspx" />
+    <Content Include="purchase\popUp\poppurchase.aspx" />
+    <Content Include="purchase\popUp\poppurchaseenrollment.aspx" />
+    <Content Include="purchase\popUp\popwarehouse.aspx" />
+    <Content Include="stock\Frmerror.aspx" />
+    <Content Include="stock\Frmincomeandrelease.aspx" />
+    <Content Include="stock\Frmsample.aspx" />
+    <Content Include="stock\Frmstock.aspx" />
+    <Content Include="stock\Frmstockadjust.aspx" />
+    <Content Include="stock\Frmstockcut.aspx" />
+    <Content Include="stock\popUp\poperror.aspx" />
+    <Content Include="stock\popUp\popinout.aspx" />
+    <Content Include="stock\popUp\popsample.aspx" />
+    <Content Include="stock\popUp\popstockadjust.aspx" />
+    <Content Include="stock\popUp\popwork.aspx" />
+    <Content Include="stock\popUp\popworkcomplete.aspx" />
+    <Content Include="stock\popUp\popworkorder.aspx" />
+    <Content Include="system\FrmLogin.aspx" />
+    <Content Include="system\popUp\popauthority.aspx" />
+    <Content Include="system\popUp\popcustomer.aspx" />
+    <Content Include="system\popUp\popsecondarycode.aspx" />
+    <Content Include="system\popUp\popPwChangeReg.aspx" />
+    <Content Include="base\FrmCode.aspx" />
+    <Content Include="system\Frmgroup.aspx" />
+    <Content Include="system\Frmpwchange.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="webapp\css\common.css" />
+    <Content Include="webapp\css\font\NanumSquareB.eot" />
+    <Content Include="webapp\css\font\NanumSquareB.ttf" />
+    <Content Include="webapp\css\font\NanumSquareB.woff" />
+    <Content Include="webapp\css\font\NanumSquareB.woff2" />
+    <Content Include="webapp\css\font\NanumSquareEB.eot" />
+    <Content Include="webapp\css\font\NanumSquareEB.ttf" />
+    <Content Include="webapp\css\font\NanumSquareEB.woff" />
+    <Content Include="webapp\css\font\NanumSquareEB.woff2" />
+    <Content Include="webapp\css\font\NanumSquareL.eot" />
+    <Content Include="webapp\css\font\NanumSquareL.ttf" />
+    <Content Include="webapp\css\font\NanumSquareL.woff" />
+    <Content Include="webapp\css\font\NanumSquareL.woff2" />
+    <Content Include="webapp\css\font\NanumSquareR.eot" />
+    <Content Include="webapp\css\font\NanumSquareR.ttf" />
+    <Content Include="webapp\css\font\NanumSquareR.woff" />
+    <Content Include="webapp\css\font\NanumSquareR.woff2" />
+    <Content Include="webapp\css\font\NotoSansKR-Black.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-Black.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-Black.woff" />
+    <Content Include="webapp\css\font\NotoSansKR-Bold.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-Bold.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-Bold.woff" />
+    <Content Include="webapp\css\font\NotoSansKR-DemiLight.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-DemiLight.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-DemiLight.woff" />
+    <Content Include="webapp\css\font\NotoSansKR-Light.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-Light.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-Light.woff" />
+    <Content Include="webapp\css\font\NotoSansKR-Medium.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-Medium.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-Medium.woff" />
+    <Content Include="webapp\css\font\NotoSansKR-Regular.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-Regular.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-Regular.woff" />
+    <Content Include="webapp\css\font\NotoSansKR-Thin.eot" />
+    <Content Include="webapp\css\font\NotoSansKR-Thin.otf" />
+    <Content Include="webapp\css\font\NotoSansKR-Thin.woff" />
+    <Content Include="webapp\css\ibuild.css" />
+    <Content Include="webapp\css\images\ui-icons_444444_256x240.png" />
+    <Content Include="webapp\css\images\ui-icons_555555_256x240.png" />
+    <Content Include="webapp\css\images\ui-icons_777620_256x240.png" />
+    <Content Include="webapp\css\images\ui-icons_777777_256x240.png" />
+    <Content Include="webapp\css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="webapp\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="webapp\css\jquery-ui.min.css" />
+    <Content Include="webapp\css\jquery-ui.structure.min.css" />
+    <Content Include="webapp\css\jquery-ui.theme.min.css" />
+    <Content Include="webapp\css\login.css" />
+    <Content Include="webapp\css\main.css" />
+    <Content Include="webapp\css\main_font.css" />
+    <Content Include="webapp\css\popUp.css" />
+    <Content Include="webapp\css\sub.css" />
+    <Content Include="webapp\img\buger_ico.png" />
+    <Content Include="webapp\img\button_calendar2.png" />
+    <Content Include="webapp\img\button_list_big1_first.png" />
+    <Content Include="webapp\img\button_list_big1_first_on.png" />
+    <Content Include="webapp\img\button_list_big1_last.png" />
+    <Content Include="webapp\img\button_list_big1_last_on.png" />
+    <Content Include="webapp\img\button_list_big1_next.png" />
+    <Content Include="webapp\img\button_list_big1_next_on.png" />
+    <Content Include="webapp\img\button_list_big1_prev.png" />
+    <Content Include="webapp\img\button_list_big1_prev_on.png" />
+    <Content Include="webapp\img\calendar_ico.png" />
+    <Content Include="webapp\img\calendar_ico1.png" />
+    <Content Include="webapp\img\calendar_next.png" />
+    <Content Include="webapp\img\calendar_prev.png" />
+    <Content Include="webapp\img\check_ico.png" />
+    <Content Include="webapp\img\close_ico.png" />
+    <Content Include="webapp\img\doc.jpg" />
+    <Content Include="webapp\img\ft_ico01.png" />
+    <Content Include="webapp\img\ft_ico02.png" />
+    <Content Include="webapp\img\ft_ico03.png" />
+    <Content Include="webapp\img\ft_ico04.png" />
+    <Content Include="webapp\img\ft_ico05.png" />
+    <Content Include="webapp\img\ft_ico06.png" />
+    <Content Include="webapp\img\ft_ico07.png" />
+    <Content Include="webapp\img\ft_ico08.png" />
+    <Content Include="webapp\img\gnb_01_off.png" />
+    <Content Include="webapp\img\gnb_01_on.png" />
+    <Content Include="webapp\img\gnb_02_off.png" />
+    <Content Include="webapp\img\gnb_02_on.png" />
+    <Content Include="webapp\img\gnb_03_off.png" />
+    <Content Include="webapp\img\gnb_03_on.png" />
+    <Content Include="webapp\img\gnb_04_off.png" />
+    <Content Include="webapp\img\gnb_04_on.png" />
+    <Content Include="webapp\img\gnb_05_off.png" />
+    <Content Include="webapp\img\gnb_05_on.png" />
+    <Content Include="webapp\img\gnb_06_off.png" />
+    <Content Include="webapp\img\gnb_06_on.png" />
+    <Content Include="webapp\img\gnb_07_off.png" />
+    <Content Include="webapp\img\gnb_07_on.png" />
+    <Content Include="webapp\img\gnb_08_off.png" />
+    <Content Include="webapp\img\gnb_08_on.png" />
+    <Content Include="webapp\img\gnb_09_off.png" />
+    <Content Include="webapp\img\gnb_09_on.png" />
+    <Content Include="webapp\img\gnb_10_off.png" />
+    <Content Include="webapp\img\gnb_10_on.png" />
+    <Content Include="webapp\img\gnb_11_off.png" />
+    <Content Include="webapp\img\gnb_11_on.png" />
+    <Content Include="webapp\img\gnb_12_off.png" />
+    <Content Include="webapp\img\gnb_12_on.png" />
+    <Content Include="webapp\img\gnb_13_off.png" />
+    <Content Include="webapp\img\gnb_13_on.png" />
+    <Content Include="webapp\img\gnb_sub_ico.png" />
+    <Content Include="webapp\img\gnb_sub_ico_on.png" />
+    <Content Include="webapp\img\ico_add.png" />
+    <Content Include="webapp\img\ico_box.png" />
+    <Content Include="webapp\img\ico_chkbox.png" />
+    <Content Include="webapp\img\ico_excel.png" />
+    <Content Include="webapp\img\ico_login.png" />
+    <Content Include="webapp\img\ico_menu01.png" />
+    <Content Include="webapp\img\ico_menu02.png" />
+    <Content Include="webapp\img\ico_menu03.png" />
+    <Content Include="webapp\img\ico_menu04.png" />
+    <Content Include="webapp\img\ico_menu05.png" />
+    <Content Include="webapp\img\ico_menu06.png" />
+    <Content Include="webapp\img\ico_menu07.png" />
+    <Content Include="webapp\img\ico_page_first.png" />
+    <Content Include="webapp\img\ico_page_last.png" />
+    <Content Include="webapp\img\ico_page_next.png" />
+    <Content Include="webapp\img\ico_page_prev.png" />
+    <Content Include="webapp\img\ico_radio.png" />
+    <Content Include="webapp\img\ico_reser.png" />
+    <Content Include="webapp\img\ico_reset.png" />
+    <Content Include="webapp\img\ico_search.png" />
+    <Content Include="webapp\img\ico_select.png" />
+    <Content Include="webapp\img\id_bg.png" />
+    <Content Include="webapp\img\index_bg.png" />
+    <Content Include="webapp\img\info_ico01.png" />
+    <Content Include="webapp\img\info_ico02.png" />
+    <Content Include="webapp\img\info_ico03.png" />
+    <Content Include="webapp\img\info_ico04.png" />
+    <Content Include="webapp\img\lock_ico.png" />
+    <Content Include="webapp\img\logo.png" />
+    <Content Include="webapp\img\logo_photo.jpg" />
+    <Content Include="webapp\img\main_bg.jpg" />
+    <Content Include="webapp\img\main_bg02.jpg" />
+    <Content Include="webapp\img\notice_ico01.png" />
+    <Content Include="webapp\img\pw_bg.png" />
+    <Content Include="webapp\img\search_ico01.png" />
+    <Content Include="webapp\img\search_ico02.png" />
+    <Content Include="webapp\img\search_ico03.png" />
+    <Content Include="webapp\img\select_ico_01.png" />
+    <Content Include="webapp\img\select_ico_02.png" />
+    <Content Include="webapp\img\select_ico_03.png" />
+    <Content Include="webapp\img\select_ico_04.png" />
+    <Content Include="webapp\img\stamp_photo.jpg" />
+    <Content Include="webapp\img\sub_logo.png" />
+    <Content Include="webapp\img\triangle_down.png" />
+    <Content Include="webapp\img\triangle_up.png" />
+    <Content Include="webapp\img\upload_bg.gif" />
+    <Content Include="webapp\js\commaStyle.js" />
+    <Content Include="webapp\js\front.js" />
+    <Content Include="webapp\js\httpRequest.js" />
+    <Content Include="webapp\js\jquery-1.11.1.min.js" />
+    <Content Include="webapp\js\jquery-ui.min.js" />
+    <Content Include="webapp\js\skyblueUtil.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accounting\Frmdepositandwithdrawal_copy.aspx.cs">
+      <DependentUpon>Frmdepositandwithdrawal_copy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\Frmdepositandwithdrawal_copy.aspx.designer.cs">
+      <DependentUpon>Frmdepositandwithdrawal_copy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\Frmdepositandwithdrawal.aspx.cs">
+      <DependentUpon>Frmdepositandwithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\Frmdepositandwithdrawal.aspx.designer.cs">
+      <DependentUpon>Frmdepositandwithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\Frmreceivable.aspx.cs">
+      <DependentUpon>Frmreceivable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\Frmreceivable.aspx.designer.cs">
+      <DependentUpon>Frmreceivable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\Frmshippingfee.aspx.cs">
+      <DependentUpon>Frmshippingfee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\Frmshippingfee.aspx.designer.cs">
+      <DependentUpon>Frmshippingfee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\Frmtaxbill_Write.aspx.cs">
+      <DependentUpon>Frmtaxbill_Write.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\Frmtaxbill_Write.aspx.designer.cs">
+      <DependentUpon>Frmtaxbill_Write.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\Frmtaxbill.aspx.cs">
+      <DependentUpon>Frmtaxbill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\Frmtaxbill.aspx.designer.cs">
+      <DependentUpon>Frmtaxbill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\popUp\popcollectmoney.aspx.cs">
+      <DependentUpon>popcollectmoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\popUp\popcollectmoney.aspx.designer.cs">
+      <DependentUpon>popcollectmoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\popUp\popseparate.aspx.cs">
+      <DependentUpon>popseparate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\popUp\popseparate.aspx.designer.cs">
+      <DependentUpon>popseparate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\popUp\poptaxbill.aspx.cs">
+      <DependentUpon>poptaxbill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\popUp\poptaxbill.aspx.designer.cs">
+      <DependentUpon>poptaxbill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounting\popUp\popwithdrawal.aspx.cs">
+      <DependentUpon>popwithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounting\popUp\popwithdrawal.aspx.designer.cs">
+      <DependentUpon>popwithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationRoot.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessstatistics\Frmcustotal_detail.aspx.cs">
+      <DependentUpon>Frmcustotal_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessstatistics\Frmcustotal_detail.aspx.designer.cs">
+      <DependentUpon>Frmcustotal_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="sales\Frmdetail.aspx.cs">
+      <DependentUpon>Frmdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\Frmdetail.aspx.designer.cs">
+      <DependentUpon>Frmdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\Frmorders.aspx.cs">
+      <DependentUpon>Frmorders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\Frmorders.aspx.designer.cs">
+      <DependentUpon>Frmorders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\Frmsales.aspx.cs">
+      <DependentUpon>Frmsales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\Frmsales.aspx.designer.cs">
+      <DependentUpon>Frmsales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\Frmshipping.aspx.cs">
+      <DependentUpon>Frmshipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\Frmshipping.aspx.designer.cs">
+      <DependentUpon>Frmshipping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\popUp\popfinal.aspx.cs">
+      <DependentUpon>popfinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\popUp\popfinal.aspx.designer.cs">
+      <DependentUpon>popfinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\popUp\poporder.aspx.cs">
+      <DependentUpon>poporder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\popUp\poporder.aspx.designer.cs">
+      <DependentUpon>poporder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\popUp\poprelease.aspx.cs">
+      <DependentUpon>poprelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\popUp\poprelease.aspx.designer.cs">
+      <DependentUpon>poprelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\popUp\popseparately.aspx.cs">
+      <DependentUpon>popseparately.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\popUp\popseparately.aspx.designer.cs">
+      <DependentUpon>popseparately.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\popUp\poptransaction.aspx.cs">
+      <DependentUpon>poptransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\popUp\poptransaction.aspx.designer.cs">
+      <DependentUpon>poptransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sales\popUp\poptransactionlist.aspx.cs">
+      <DependentUpon>poptransactionlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales\popUp\poptransactionlist.aspx.designer.cs">
+      <DependentUpon>poptransactionlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\autocomplete_list.aspx.cs">
+      <DependentUpon>autocomplete_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scripts\autocomplete_list.aspx.designer.cs">
+      <DependentUpon>autocomplete_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\Frmcompany.aspx.cs">
+      <DependentUpon>Frmcompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\Frmcompany.aspx.designer.cs">
+      <DependentUpon>Frmcompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\Frmemp.aspx.cs">
+      <DependentUpon>Frmemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\Frmemp.aspx.designer.cs">
+      <DependentUpon>Frmemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\Frmcustomer.aspx.cs">
+      <DependentUpon>Frmcustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\Frmcustomer.aspx.designer.cs">
+      <DependentUpon>Frmcustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\Frmitem.aspx.cs">
+      <DependentUpon>Frmitem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\Frmitem.aspx.designer.cs">
+      <DependentUpon>Frmitem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\Frmforeigner.aspx.cs">
+      <DependentUpon>Frmforeigner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\Frmforeigner.aspx.designer.cs">
+      <DependentUpon>Frmforeigner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\Frmunitprice.aspx.cs">
+      <DependentUpon>Frmunitprice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\Frmunitprice.aspx.designer.cs">
+      <DependentUpon>Frmunitprice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popcode.aspx.cs">
+      <DependentUpon>popcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popcode.aspx.designer.cs">
+      <DependentUpon>popcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popforeigner.aspx.cs">
+      <DependentUpon>popforeigner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popforeigner.aspx.designer.cs">
+      <DependentUpon>popforeigner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popunitprice_updatelist.aspx.cs">
+      <DependentUpon>popunitprice_updatelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popunitprice_updatelist.aspx.designer.cs">
+      <DependentUpon>popunitprice_updatelist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popunitprice_update.aspx.cs">
+      <DependentUpon>popunitprice_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popunitprice_update.aspx.designer.cs">
+      <DependentUpon>popunitprice_update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="businessstatistics\Frmcustotal.aspx.cs">
+      <DependentUpon>Frmcustotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessstatistics\Frmcustotal.aspx.designer.cs">
+      <DependentUpon>Frmcustotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="businessstatistics\Frmitemtotal.aspx.cs">
+      <DependentUpon>Frmitemtotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessstatistics\Frmitemtotal.aspx.designer.cs">
+      <DependentUpon>Frmitemtotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="businessstatistics\Frmpayments.aspx.cs">
+      <DependentUpon>Frmpayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessstatistics\Frmpayments.aspx.designer.cs">
+      <DependentUpon>Frmpayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="businessstatistics\Frmsalesstatistics.aspx.cs">
+      <DependentUpon>Frmsalesstatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessstatistics\Frmsalesstatistics.aspx.designer.cs">
+      <DependentUpon>Frmsalesstatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\Frmarrivalanddeparture.aspx.cs">
+      <DependentUpon>Frmarrivalanddeparture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\Frmarrivalanddeparture.aspx.designer.cs">
+      <DependentUpon>Frmarrivalanddeparture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\Frmorderprogress.aspx.cs">
+      <DependentUpon>Frmorderprogress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\Frmorderprogress.aspx.designer.cs">
+      <DependentUpon>Frmorderprogress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\Frmpurchase.aspx.cs">
+      <DependentUpon>Frmpurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\Frmpurchase.aspx.designer.cs">
+      <DependentUpon>Frmpurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\Frmstockstatus.aspx.cs">
+      <DependentUpon>Frmstockstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\Frmstockstatus.aspx.designer.cs">
+      <DependentUpon>Frmstockstatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\Frmwearing.aspx.cs">
+      <DependentUpon>Frmwearing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\Frmwearing.aspx.designer.cs">
+      <DependentUpon>Frmwearing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popcus.aspx.cs">
+      <DependentUpon>popcus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popcus.aspx.designer.cs">
+      <DependentUpon>popcus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popcusregistation.aspx.cs">
+      <DependentUpon>popcusregistation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popcusregistation.aspx.designer.cs">
+      <DependentUpon>popcusregistation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popItem.aspx.cs">
+      <DependentUpon>popItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popItem.aspx.designer.cs">
+      <DependentUpon>popItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="base\popUp\popemp.aspx.cs">
+      <DependentUpon>popemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\popUp\popemp.aspx.designer.cs">
+      <DependentUpon>popemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\board.aspx.cs">
+      <DependentUpon>board.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\board.aspx.designer.cs">
+      <DependentUpon>board.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\board_view.aspx.cs">
+      <DependentUpon>board_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\board_view.aspx.designer.cs">
+      <DependentUpon>board_view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iljin.Master.cs">
+      <DependentUpon>iljin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iljin.Master.designer.cs">
+      <DependentUpon>iljin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\Frmpurchaseorder.aspx.cs">
+      <DependentUpon>Frmpurchaseorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\Frmpurchaseorder.aspx.designer.cs">
+      <DependentUpon>Frmpurchaseorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\popbl.aspx.cs">
+      <DependentUpon>popbl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\popbl.aspx.designer.cs">
+      <DependentUpon>popbl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\popdetail.aspx.cs">
+      <DependentUpon>popdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\popdetail.aspx.designer.cs">
+      <DependentUpon>popdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\popfinish.aspx.cs">
+      <DependentUpon>popfinish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\popfinish.aspx.designer.cs">
+      <DependentUpon>popfinish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\popcontaineritem.aspx.cs">
+      <DependentUpon>popcontaineritem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\popcontaineritem.aspx.designer.cs">
+      <DependentUpon>popcontaineritem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\popincome.aspx.cs">
+      <DependentUpon>popincome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\popincome.aspx.designer.cs">
+      <DependentUpon>popincome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\poppurchase.aspx.cs">
+      <DependentUpon>poppurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\poppurchase.aspx.designer.cs">
+      <DependentUpon>poppurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\poppurchaseenrollment.aspx.cs">
+      <DependentUpon>poppurchaseenrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\poppurchaseenrollment.aspx.designer.cs">
+      <DependentUpon>poppurchaseenrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\popUp\popwarehouse.aspx.cs">
+      <DependentUpon>popwarehouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\popUp\popwarehouse.aspx.designer.cs">
+      <DependentUpon>popwarehouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\Frmerror.aspx.cs">
+      <DependentUpon>Frmerror.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\Frmerror.aspx.designer.cs">
+      <DependentUpon>Frmerror.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\Frmincomeandrelease.aspx.cs">
+      <DependentUpon>Frmincomeandrelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\Frmincomeandrelease.aspx.designer.cs">
+      <DependentUpon>Frmincomeandrelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\Frmsample.aspx.cs">
+      <DependentUpon>Frmsample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\Frmsample.aspx.designer.cs">
+      <DependentUpon>Frmsample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\Frmstock.aspx.cs">
+      <DependentUpon>Frmstock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\Frmstock.aspx.designer.cs">
+      <DependentUpon>Frmstock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\Frmstockadjust.aspx.cs">
+      <DependentUpon>Frmstockadjust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\Frmstockadjust.aspx.designer.cs">
+      <DependentUpon>Frmstockadjust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\Frmstockcut.aspx.cs">
+      <DependentUpon>Frmstockcut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\Frmstockcut.aspx.designer.cs">
+      <DependentUpon>Frmstockcut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\poperror.aspx.cs">
+      <DependentUpon>poperror.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\poperror.aspx.designer.cs">
+      <DependentUpon>poperror.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\popinout.aspx.cs">
+      <DependentUpon>popinout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\popinout.aspx.designer.cs">
+      <DependentUpon>popinout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\popsample.aspx.cs">
+      <DependentUpon>popsample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\popsample.aspx.designer.cs">
+      <DependentUpon>popsample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\popstockadjust.aspx.cs">
+      <DependentUpon>popstockadjust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\popstockadjust.aspx.designer.cs">
+      <DependentUpon>popstockadjust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\popwork.aspx.cs">
+      <DependentUpon>popwork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\popwork.aspx.designer.cs">
+      <DependentUpon>popwork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\popworkcomplete.aspx.cs">
+      <DependentUpon>popworkcomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\popworkcomplete.aspx.designer.cs">
+      <DependentUpon>popworkcomplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stock\popUp\popworkorder.aspx.cs">
+      <DependentUpon>popworkorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stock\popUp\popworkorder.aspx.designer.cs">
+      <DependentUpon>popworkorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\FrmLogin.aspx.cs">
+      <DependentUpon>FrmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\FrmLogin.aspx.designer.cs">
+      <DependentUpon>FrmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\popUp\popauthority.aspx.cs">
+      <DependentUpon>popauthority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\popUp\popauthority.aspx.designer.cs">
+      <DependentUpon>popauthority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\popUp\popcustomer.aspx.cs">
+      <DependentUpon>popcustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\popUp\popcustomer.aspx.designer.cs">
+      <DependentUpon>popcustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\popUp\popPwChangeReg.aspx.cs">
+      <DependentUpon>popPwChangeReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\popUp\popPwChangeReg.aspx.designer.cs">
+      <DependentUpon>popPwChangeReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="base\FrmCode.aspx.cs">
+      <DependentUpon>FrmCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base\FrmCode.aspx.designer.cs">
+      <DependentUpon>FrmCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Frmgroup.aspx.cs">
+      <DependentUpon>Frmgroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Frmgroup.aspx.designer.cs">
+      <DependentUpon>Frmgroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Frmpwchange.aspx.cs">
+      <DependentUpon>Frmpwchange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Frmpwchange.aspx.designer.cs">
+      <DependentUpon>Frmpwchange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\popUp\popsecondarycode.aspx.cs">
+      <DependentUpon>popsecondarycode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\popUp\popsecondarycode.aspx.designer.cs">
+      <DependentUpon>popsecondarycode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\ConstClass.cs" />
+    <Compile Include="Scripts\DefaultSet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iljin.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="BL\" />
+    <Folder Include="CMP\" />
+    <Folder Include="FRGN\" />
+    <Folder Include="Models\" />
+    <Folder Include="PopUps\" />
+    <Folder Include="PURC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppConfiguration\AppConfiguration.csproj">
+      <Project>{beb1cf96-15e5-4cde-bc9c-571a606697ad}</Project>
+      <Name>AppConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\les\les.csproj">
+      <Project>{a96ebf79-e42c-48d0-9242-07f4ae8b69eb}</Project>
+      <Name>les</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MysqlLib\MysqlLib.csproj">
+      <Project>{92cadb8d-8cc3-4bca-8834-a93db349d255}</Project>
+      <Name>MysqlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicLibsManagement\PublicLibsManagement.csproj">
+      <Project>{b7795111-42d8-4105-be2d-a4a22d868774}</Project>
+      <Name>PublicLibsManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49560</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44346/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
