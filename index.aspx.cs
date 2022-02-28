@@ -29,8 +29,6 @@ namespace iljin
                     txt_Pass.Attributes.Add("value", HttpUtility.UrlDecode(Request.Cookies["emppw"].Value));
                     chk_rememberInfo.Checked = true;
                 }
-
-                string test = "헬로우월드";
     
                 try
                 {
