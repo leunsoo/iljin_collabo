@@ -172,46 +172,42 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <article class="conts_inner">
+    <article class="conts_inner" style="left: 0px; top: 0px">
         <asp:Panel ID="defaultPanel1" runat="server" DefaultButton="btn_default">
             <h2 class="conts_tit">
-                <asp:Label ID="m_title" runat="server" Text="경리업무 ::> 입출금관리"></asp:Label>
+                <asp:Label ID="m_title" runat="server" Text="경리업무 ::> 매출/입금 관리"></asp:Label>
                 <asp:HiddenField ID="hidden_keyWord" runat="server" />
                 <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list" Style="top:0px; left:0px; visibility: hidden;"></asp:ListBox>
             </h2>
             <asp:HiddenField ID="hdn_idx" runat="server" />
             <div class="search_box">
                 <div class="box_row">
-                    <span>입출금일자</span>
-                    <asp:TextBox ID="tb_withdrawaldate" runat="server" CssClass="mWt100 txac"></asp:TextBox>
+                    <span>거래일자</span>
+                    <asp:TextBox ID="tb_tradedt" runat="server" CssClass="mWt100 txac"></asp:TextBox>
                     ~
-                <asp:TextBox ID="tb_withdrawaldate2" runat="server" CssClass="mWt100 txac"></asp:TextBox>
+                    <asp:TextBox ID="tb_tradedt2" runat="server" CssClass="mWt100 txac"></asp:TextBox>
                     <span class="ml10">거래처</span>
                     <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt150" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
-                    <span class="ml10">입출금구분 </span>
-                    <asp:DropDownList ID="cb_withdrawaldiv" runat="server" CssClass="mWt150"></asp:DropDownList>
                     <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClick="btn_sch_Click" />
-                    <button type="button" runat="server" class="btn_black btn_100_30 ml10 " onclick="withdrawal('')">입출금등록</button>
-                    <asp:Button ID="btn_deleteFunc" runat="server" CssClass="hidden" OnClick="btn_deleteFunc_Click" />
+                    <button type="button" runat="server" class="btn_black btn_100_30 ft_right " onclick="withdrawal('')">입출금등록</button>
                 </div>
             </div>
             <div class="fixed_hs_600 mt10" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
                         <tr>
-                            <th class="mWt4p">NO</th>
-                            <th class="mWt12p">입출금일자</th>
-                            <th class="mWt12p">거래처</th>
-                            <th class="mWt12p">입출금구분</th>
-                            <th class="mWt12p">금액</th>
-                            <th class="mWt12p">거래유형</th>
-                            <th class="mWt12p">비고</th>
-                            <th class="mWt24p">관리</th>
+                            <th class="mWt15p">거래명세표</th>
+                            <th class="mWt15p">등록일</th>
+                            <th class="mWt15p">거래일</th>
+                            <th class="mWt15p">거래금액</th>
+                            <th class="mWt15p">입금금액</th>
+                            <th class="mWt15p">누적미수금액</th>
+                            <th class="mWt10p">발행여부</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="8">
+                            <td colspan="7">
                                 <div style="height: 550px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
 
                                     <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1190">
@@ -221,40 +217,34 @@
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="4%" CssClass="" />
+                                                <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="12%" CssClass="" />
+                                                <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="12%" CssClass="" />
+                                                <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="12%" CssClass="" />
+                                                <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="12%" CssClass="" />
+                                                <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="12%" CssClass="" />
-                                            </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="">
-                                                <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="12%" CssClass="" />
+                                                <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <ItemTemplate>
-                                                    <asp:Button ID="btn_check" runat="server" CssClass="btn_green btn_100_30 ml10" Text="확인" />
-                                                    <asp:Button ID="btn_del" runat="server" CssClass="btn_red btn_100_30 ml10" Text="삭제" />
-
+                                                    <asp:Button ID="btn_check" runat="server" CssClass="btn_navy btn_60_25" Text="미발행" />
                                                 </ItemTemplate>
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="24%" CssClass="" />
+                                                <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
 
                                         </Columns>
@@ -280,14 +270,10 @@
             var popupY = (window.screen.height / 2) - (300 / 2);
             window.open(url, name, 'status=no, width=730, height=400, left=' + popupX + ',top=' + popupY);
         }
-        function remove(idx, row) {
-            document.getElementById('<%= hdn_idx.ClientID%>').value = idx;
-            document.getElementById('<%= btn_deleteFunc.ClientID%>').click();
-        }
+
         function refresh() {
             document.getElementById('<%= btn_sch.ClientID %>').click();
         }
-
     </script>
 </asp:Content>
 
