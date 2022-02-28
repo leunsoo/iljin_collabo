@@ -60,22 +60,22 @@ namespace iljin
         protected global::System.Web.UI.WebControls.HiddenField hdn_idx;
 
         /// <summary>
-        /// tb_withdrawaldate 컨트롤입니다.
+        /// tb_tradedt 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_withdrawaldate;
+        protected global::System.Web.UI.WebControls.TextBox tb_tradedt;
 
         /// <summary>
-        /// tb_withdrawaldate2 컨트롤입니다.
+        /// tb_tradedt2 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_withdrawaldate2;
+        protected global::System.Web.UI.WebControls.TextBox tb_tradedt2;
 
         /// <summary>
         /// txt_customer 컨트롤입니다.
@@ -87,15 +87,6 @@ namespace iljin
         protected global::System.Web.UI.WebControls.TextBox txt_customer;
 
         /// <summary>
-        /// cb_withdrawaldiv 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cb_withdrawaldiv;
-
-        /// <summary>
         /// btn_sch 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -103,15 +94,6 @@ namespace iljin
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_sch;
-
-        /// <summary>
-        /// btn_deleteFunc 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_deleteFunc;
 
         /// <summary>
         /// grdTable 컨트롤입니다.

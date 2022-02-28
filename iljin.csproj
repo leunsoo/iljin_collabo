@@ -78,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="accounting\Frmdepositandwithdrawal.aspx" />
-    <Content Include="accounting\Frmdepositandwithdrawal_copy.aspx" />
     <Content Include="accounting\Frmreceivable.aspx" />
     <Content Include="accounting\Frmshippingfee.aspx" />
     <Content Include="accounting\Frmtaxbill_Write.aspx" />
@@ -325,13 +324,6 @@
     </Compile>
     <Compile Include="accounting\Frmdepositandwithdrawal.aspx.designer.cs">
       <DependentUpon>Frmdepositandwithdrawal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="accounting\Frmdepositandwithdrawal_copy.aspx.cs">
-      <DependentUpon>Frmdepositandwithdrawal_copy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="accounting\Frmdepositandwithdrawal_copy.aspx.designer.cs">
-      <DependentUpon>Frmdepositandwithdrawal_copy.aspx</DependentUpon>
     </Compile>
     <Compile Include="accounting\Frmreceivable.aspx.cs">
       <DependentUpon>Frmreceivable.aspx</DependentUpon>
