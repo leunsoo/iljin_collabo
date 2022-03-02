@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace iljin.Barobill {
+namespace Barobill {
     using System.Runtime.Serialization;
     using System;
     
@@ -26,13 +26,13 @@ namespace iljin.Barobill {
         private string InvoiceKeyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private iljin.Barobill.InvoiceParty InvoicerPartyField;
+        private Barobill.InvoiceParty InvoicerPartyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private iljin.Barobill.InvoiceParty InvoiceePartyField;
+        private Barobill.InvoiceParty InvoiceePartyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private iljin.Barobill.InvoiceParty BrokerPartyField;
+        private Barobill.InvoiceParty BrokerPartyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string InvoiceeASPEmailField;
@@ -93,7 +93,7 @@ namespace iljin.Barobill {
         private string Remark3Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private iljin.Barobill.TaxInvoiceTradeLineItem[] TaxInvoiceTradeLineItemsField;
+        private Barobill.TaxInvoiceTradeLineItem[] TaxInvoiceTradeLineItemsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -119,7 +119,7 @@ namespace iljin.Barobill {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public iljin.Barobill.InvoiceParty InvoicerParty {
+        public Barobill.InvoiceParty InvoicerParty {
             get {
                 return this.InvoicerPartyField;
             }
@@ -132,7 +132,7 @@ namespace iljin.Barobill {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.InvoiceParty InvoiceeParty {
+        public Barobill.InvoiceParty InvoiceeParty {
             get {
                 return this.InvoiceePartyField;
             }
@@ -145,7 +145,7 @@ namespace iljin.Barobill {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public iljin.Barobill.InvoiceParty BrokerParty {
+        public Barobill.InvoiceParty BrokerParty {
             get {
                 return this.BrokerPartyField;
             }
@@ -431,7 +431,7 @@ namespace iljin.Barobill {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=25)]
-        public iljin.Barobill.TaxInvoiceTradeLineItem[] TaxInvoiceTradeLineItems {
+        public Barobill.TaxInvoiceTradeLineItem[] TaxInvoiceTradeLineItems {
             get {
                 return this.TaxInvoiceTradeLineItemsField;
             }
@@ -1647,7 +1647,7 @@ namespace iljin.Barobill {
         private int MaxPageNumField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private iljin.Barobill.SimpleTaxInvoice[] SimpleTaxInvoiceListField;
+        private Barobill.SimpleTaxInvoice[] SimpleTaxInvoiceListField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1712,7 +1712,7 @@ namespace iljin.Barobill {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public iljin.Barobill.SimpleTaxInvoice[] SimpleTaxInvoiceList {
+        public Barobill.SimpleTaxInvoice[] SimpleTaxInvoiceList {
             get {
                 return this.SimpleTaxInvoiceListField;
             }
@@ -1956,7 +1956,7 @@ namespace iljin.Barobill {
         private int MaxPageNumField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private iljin.Barobill.SimpleTaxInvoiceEx[] SimpleTaxInvoiceExListField;
+        private Barobill.SimpleTaxInvoiceEx[] SimpleTaxInvoiceExListField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2021,7 +2021,7 @@ namespace iljin.Barobill {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public iljin.Barobill.SimpleTaxInvoiceEx[] SimpleTaxInvoiceExList {
+        public Barobill.SimpleTaxInvoiceEx[] SimpleTaxInvoiceExList {
             get {
                 return this.SimpleTaxInvoiceExListField;
             }
@@ -3288,766 +3288,766 @@ namespace iljin.Barobill {
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckMgtNumIsExists", ReplyAction="*")]
-        iljin.Barobill.CheckMgtNumIsExistsResponse CheckMgtNumIsExists(iljin.Barobill.CheckMgtNumIsExistsRequest request);
+        Barobill.CheckMgtNumIsExistsResponse CheckMgtNumIsExists(Barobill.CheckMgtNumIsExistsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckMgtNumIsExists", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckMgtNumIsExistsResponse> CheckMgtNumIsExistsAsync(iljin.Barobill.CheckMgtNumIsExistsRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckMgtNumIsExistsResponse> CheckMgtNumIsExistsAsync(Barobill.CheckMgtNumIsExistsRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckIsValidTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.CheckIsValidTaxInvoiceResponse CheckIsValidTaxInvoice(iljin.Barobill.CheckIsValidTaxInvoiceRequest request);
+        Barobill.CheckIsValidTaxInvoiceResponse CheckIsValidTaxInvoice(Barobill.CheckIsValidTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckIsValidTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckIsValidTaxInvoiceResponse> CheckIsValidTaxInvoiceAsync(iljin.Barobill.CheckIsValidTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckIsValidTaxInvoiceResponse> CheckIsValidTaxInvoiceAsync(Barobill.CheckIsValidTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistTaxInvoiceResponse RegistTaxInvoice(iljin.Barobill.RegistTaxInvoiceRequest request);
+        Barobill.RegistTaxInvoiceResponse RegistTaxInvoice(Barobill.RegistTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceResponse> RegistTaxInvoiceAsync(iljin.Barobill.RegistTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceResponse> RegistTaxInvoiceAsync(Barobill.RegistTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoiceEX", ReplyAction="*")]
-        iljin.Barobill.RegistTaxInvoiceEXResponse RegistTaxInvoiceEX(iljin.Barobill.RegistTaxInvoiceEXRequest request);
+        Barobill.RegistTaxInvoiceEXResponse RegistTaxInvoiceEX(Barobill.RegistTaxInvoiceEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoiceEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceEXResponse> RegistTaxInvoiceEXAsync(iljin.Barobill.RegistTaxInvoiceEXRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceEXResponse> RegistTaxInvoiceEXAsync(Barobill.RegistTaxInvoiceEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistModifyTaxInvoiceResponse RegistModifyTaxInvoice(iljin.Barobill.RegistModifyTaxInvoiceRequest request);
+        Barobill.RegistModifyTaxInvoiceResponse RegistModifyTaxInvoice(Barobill.RegistModifyTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyTaxInvoiceResponse> RegistModifyTaxInvoiceAsync(iljin.Barobill.RegistModifyTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistModifyTaxInvoiceResponse> RegistModifyTaxInvoiceAsync(Barobill.RegistModifyTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyTaxInvoiceEX", ReplyAction="*")]
-        iljin.Barobill.RegistModifyTaxInvoiceEXResponse RegistModifyTaxInvoiceEX(iljin.Barobill.RegistModifyTaxInvoiceEXRequest request);
+        Barobill.RegistModifyTaxInvoiceEXResponse RegistModifyTaxInvoiceEX(Barobill.RegistModifyTaxInvoiceEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyTaxInvoiceEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyTaxInvoiceEXResponse> RegistModifyTaxInvoiceEXAsync(iljin.Barobill.RegistModifyTaxInvoiceEXRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistModifyTaxInvoiceEXResponse> RegistModifyTaxInvoiceEXAsync(Barobill.RegistModifyTaxInvoiceEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoiceReverse", ReplyAction="*")]
-        iljin.Barobill.RegistTaxInvoiceReverseResponse RegistTaxInvoiceReverse(iljin.Barobill.RegistTaxInvoiceReverseRequest request);
+        Barobill.RegistTaxInvoiceReverseResponse RegistTaxInvoiceReverse(Barobill.RegistTaxInvoiceReverseRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoiceReverse", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceReverseResponse> RegistTaxInvoiceReverseAsync(iljin.Barobill.RegistTaxInvoiceReverseRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceReverseResponse> RegistTaxInvoiceReverseAsync(Barobill.RegistTaxInvoiceReverseRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoiceReverseEX", ReplyAction="*")]
-        iljin.Barobill.RegistTaxInvoiceReverseEXResponse RegistTaxInvoiceReverseEX(iljin.Barobill.RegistTaxInvoiceReverseEXRequest request);
+        Barobill.RegistTaxInvoiceReverseEXResponse RegistTaxInvoiceReverseEX(Barobill.RegistTaxInvoiceReverseEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistTaxInvoiceReverseEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceReverseEXResponse> RegistTaxInvoiceReverseEXAsync(iljin.Barobill.RegistTaxInvoiceReverseEXRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceReverseEXResponse> RegistTaxInvoiceReverseEXAsync(Barobill.RegistTaxInvoiceReverseEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistBrokerTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistBrokerTaxInvoiceResponse RegistBrokerTaxInvoice(iljin.Barobill.RegistBrokerTaxInvoiceRequest request);
+        Barobill.RegistBrokerTaxInvoiceResponse RegistBrokerTaxInvoice(Barobill.RegistBrokerTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistBrokerTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistBrokerTaxInvoiceResponse> RegistBrokerTaxInvoiceAsync(iljin.Barobill.RegistBrokerTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistBrokerTaxInvoiceResponse> RegistBrokerTaxInvoiceAsync(Barobill.RegistBrokerTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistBrokerTaxInvoiceEX", ReplyAction="*")]
-        iljin.Barobill.RegistBrokerTaxInvoiceEXResponse RegistBrokerTaxInvoiceEX(iljin.Barobill.RegistBrokerTaxInvoiceEXRequest request);
+        Barobill.RegistBrokerTaxInvoiceEXResponse RegistBrokerTaxInvoiceEX(Barobill.RegistBrokerTaxInvoiceEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistBrokerTaxInvoiceEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistBrokerTaxInvoiceEXResponse> RegistBrokerTaxInvoiceEXAsync(iljin.Barobill.RegistBrokerTaxInvoiceEXRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistBrokerTaxInvoiceEXResponse> RegistBrokerTaxInvoiceEXAsync(Barobill.RegistBrokerTaxInvoiceEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyBrokerTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistModifyBrokerTaxInvoiceResponse RegistModifyBrokerTaxInvoice(iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest request);
+        Barobill.RegistModifyBrokerTaxInvoiceResponse RegistModifyBrokerTaxInvoice(Barobill.RegistModifyBrokerTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyBrokerTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyBrokerTaxInvoiceResponse> RegistModifyBrokerTaxInvoiceAsync(iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistModifyBrokerTaxInvoiceResponse> RegistModifyBrokerTaxInvoiceAsync(Barobill.RegistModifyBrokerTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyBrokerTaxInvoiceEX", ReplyAction="*")]
-        iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponse RegistModifyBrokerTaxInvoiceEX(iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest request);
+        Barobill.RegistModifyBrokerTaxInvoiceEXResponse RegistModifyBrokerTaxInvoiceEX(Barobill.RegistModifyBrokerTaxInvoiceEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistModifyBrokerTaxInvoiceEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponse> RegistModifyBrokerTaxInvoiceEXAsync(iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistModifyBrokerTaxInvoiceEXResponse> RegistModifyBrokerTaxInvoiceEXAsync(Barobill.RegistModifyBrokerTaxInvoiceEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateTaxInvoiceFooterString", ReplyAction="*")]
-        iljin.Barobill.UpdateTaxInvoiceFooterStringResponse UpdateTaxInvoiceFooterString(iljin.Barobill.UpdateTaxInvoiceFooterStringRequest request);
+        Barobill.UpdateTaxInvoiceFooterStringResponse UpdateTaxInvoiceFooterString(Barobill.UpdateTaxInvoiceFooterStringRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateTaxInvoiceFooterString", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceFooterStringResponse> UpdateTaxInvoiceFooterStringAsync(iljin.Barobill.UpdateTaxInvoiceFooterStringRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceFooterStringResponse> UpdateTaxInvoiceFooterStringAsync(Barobill.UpdateTaxInvoiceFooterStringRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.UpdateTaxInvoiceResponse UpdateTaxInvoice(iljin.Barobill.UpdateTaxInvoiceRequest request);
+        Barobill.UpdateTaxInvoiceResponse UpdateTaxInvoice(Barobill.UpdateTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceResponse> UpdateTaxInvoiceAsync(iljin.Barobill.UpdateTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceResponse> UpdateTaxInvoiceAsync(Barobill.UpdateTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateTaxInvoiceEX", ReplyAction="*")]
-        iljin.Barobill.UpdateTaxInvoiceEXResponse UpdateTaxInvoiceEX(iljin.Barobill.UpdateTaxInvoiceEXRequest request);
+        Barobill.UpdateTaxInvoiceEXResponse UpdateTaxInvoiceEX(Barobill.UpdateTaxInvoiceEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateTaxInvoiceEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceEXResponse> UpdateTaxInvoiceEXAsync(iljin.Barobill.UpdateTaxInvoiceEXRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceEXResponse> UpdateTaxInvoiceEXAsync(Barobill.UpdateTaxInvoiceEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateBrokerTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.UpdateBrokerTaxInvoiceResponse UpdateBrokerTaxInvoice(iljin.Barobill.UpdateBrokerTaxInvoiceRequest request);
+        Barobill.UpdateBrokerTaxInvoiceResponse UpdateBrokerTaxInvoice(Barobill.UpdateBrokerTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateBrokerTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateBrokerTaxInvoiceResponse> UpdateBrokerTaxInvoiceAsync(iljin.Barobill.UpdateBrokerTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateBrokerTaxInvoiceResponse> UpdateBrokerTaxInvoiceAsync(Barobill.UpdateBrokerTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateBrokerTaxInvoiceEX", ReplyAction="*")]
-        iljin.Barobill.UpdateBrokerTaxInvoiceEXResponse UpdateBrokerTaxInvoiceEX(iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest request);
+        Barobill.UpdateBrokerTaxInvoiceEXResponse UpdateBrokerTaxInvoiceEX(Barobill.UpdateBrokerTaxInvoiceEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateBrokerTaxInvoiceEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateBrokerTaxInvoiceEXResponse> UpdateBrokerTaxInvoiceEXAsync(iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateBrokerTaxInvoiceEXResponse> UpdateBrokerTaxInvoiceEXAsync(Barobill.UpdateBrokerTaxInvoiceEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.DeleteTaxInvoiceResponse DeleteTaxInvoice(iljin.Barobill.DeleteTaxInvoiceRequest request);
+        Barobill.DeleteTaxInvoiceResponse DeleteTaxInvoice(Barobill.DeleteTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteTaxInvoiceResponse> DeleteTaxInvoiceAsync(iljin.Barobill.DeleteTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.DeleteTaxInvoiceResponse> DeleteTaxInvoiceAsync(Barobill.DeleteTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteTaxInvoiceIK", ReplyAction="*")]
-        iljin.Barobill.DeleteTaxInvoiceIKResponse DeleteTaxInvoiceIK(iljin.Barobill.DeleteTaxInvoiceIKRequest request);
+        Barobill.DeleteTaxInvoiceIKResponse DeleteTaxInvoiceIK(Barobill.DeleteTaxInvoiceIKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteTaxInvoiceIK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteTaxInvoiceIKResponse> DeleteTaxInvoiceIKAsync(iljin.Barobill.DeleteTaxInvoiceIKRequest request);
+        System.Threading.Tasks.Task<Barobill.DeleteTaxInvoiceIKResponse> DeleteTaxInvoiceIKAsync(Barobill.DeleteTaxInvoiceIKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/IssueTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.IssueTaxInvoiceResponse IssueTaxInvoice(iljin.Barobill.IssueTaxInvoiceRequest request);
+        Barobill.IssueTaxInvoiceResponse IssueTaxInvoice(Barobill.IssueTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/IssueTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.IssueTaxInvoiceResponse> IssueTaxInvoiceAsync(iljin.Barobill.IssueTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.IssueTaxInvoiceResponse> IssueTaxInvoiceAsync(Barobill.IssueTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/IssueTaxInvoiceEx", ReplyAction="*")]
-        iljin.Barobill.IssueTaxInvoiceExResponse IssueTaxInvoiceEx(iljin.Barobill.IssueTaxInvoiceExRequest request);
+        Barobill.IssueTaxInvoiceExResponse IssueTaxInvoiceEx(Barobill.IssueTaxInvoiceExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/IssueTaxInvoiceEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.IssueTaxInvoiceExResponse> IssueTaxInvoiceExAsync(iljin.Barobill.IssueTaxInvoiceExRequest request);
+        System.Threading.Tasks.Task<Barobill.IssueTaxInvoiceExResponse> IssueTaxInvoiceExAsync(Barobill.IssueTaxInvoiceExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReverseIssueTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.ReverseIssueTaxInvoiceResponse ReverseIssueTaxInvoice(iljin.Barobill.ReverseIssueTaxInvoiceRequest request);
+        Barobill.ReverseIssueTaxInvoiceResponse ReverseIssueTaxInvoice(Barobill.ReverseIssueTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReverseIssueTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ReverseIssueTaxInvoiceResponse> ReverseIssueTaxInvoiceAsync(iljin.Barobill.ReverseIssueTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.ReverseIssueTaxInvoiceResponse> ReverseIssueTaxInvoiceAsync(Barobill.ReverseIssueTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReverseIssueTaxInvoiceEx", ReplyAction="*")]
-        iljin.Barobill.ReverseIssueTaxInvoiceExResponse ReverseIssueTaxInvoiceEx(iljin.Barobill.ReverseIssueTaxInvoiceExRequest request);
+        Barobill.ReverseIssueTaxInvoiceExResponse ReverseIssueTaxInvoiceEx(Barobill.ReverseIssueTaxInvoiceExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReverseIssueTaxInvoiceEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ReverseIssueTaxInvoiceExResponse> ReverseIssueTaxInvoiceExAsync(iljin.Barobill.ReverseIssueTaxInvoiceExRequest request);
+        System.Threading.Tasks.Task<Barobill.ReverseIssueTaxInvoiceExResponse> ReverseIssueTaxInvoiceExAsync(Barobill.ReverseIssueTaxInvoiceExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/PreIssueTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.PreIssueTaxInvoiceResponse PreIssueTaxInvoice(iljin.Barobill.PreIssueTaxInvoiceRequest request);
+        Barobill.PreIssueTaxInvoiceResponse PreIssueTaxInvoice(Barobill.PreIssueTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/PreIssueTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.PreIssueTaxInvoiceResponse> PreIssueTaxInvoiceAsync(iljin.Barobill.PreIssueTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.PreIssueTaxInvoiceResponse> PreIssueTaxInvoiceAsync(Barobill.PreIssueTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/PreIssueTaxInvoiceEx", ReplyAction="*")]
-        iljin.Barobill.PreIssueTaxInvoiceExResponse PreIssueTaxInvoiceEx(iljin.Barobill.PreIssueTaxInvoiceExRequest request);
+        Barobill.PreIssueTaxInvoiceExResponse PreIssueTaxInvoiceEx(Barobill.PreIssueTaxInvoiceExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/PreIssueTaxInvoiceEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.PreIssueTaxInvoiceExResponse> PreIssueTaxInvoiceExAsync(iljin.Barobill.PreIssueTaxInvoiceExRequest request);
+        System.Threading.Tasks.Task<Barobill.PreIssueTaxInvoiceExResponse> PreIssueTaxInvoiceExAsync(Barobill.PreIssueTaxInvoiceExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ProcTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.ProcTaxInvoiceResponse ProcTaxInvoice(iljin.Barobill.ProcTaxInvoiceRequest request);
+        Barobill.ProcTaxInvoiceResponse ProcTaxInvoice(Barobill.ProcTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ProcTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ProcTaxInvoiceResponse> ProcTaxInvoiceAsync(iljin.Barobill.ProcTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.ProcTaxInvoiceResponse> ProcTaxInvoiceAsync(Barobill.ProcTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndIssueTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistAndIssueTaxInvoiceResponse RegistAndIssueTaxInvoice(iljin.Barobill.RegistAndIssueTaxInvoiceRequest request);
+        Barobill.RegistAndIssueTaxInvoiceResponse RegistAndIssueTaxInvoice(Barobill.RegistAndIssueTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndIssueTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndIssueTaxInvoiceResponse> RegistAndIssueTaxInvoiceAsync(iljin.Barobill.RegistAndIssueTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistAndIssueTaxInvoiceResponse> RegistAndIssueTaxInvoiceAsync(Barobill.RegistAndIssueTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndPreIssueTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistAndPreIssueTaxInvoiceResponse RegistAndPreIssueTaxInvoice(iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest request);
+        Barobill.RegistAndPreIssueTaxInvoiceResponse RegistAndPreIssueTaxInvoice(Barobill.RegistAndPreIssueTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndPreIssueTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndPreIssueTaxInvoiceResponse> RegistAndPreIssueTaxInvoiceAsync(iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistAndPreIssueTaxInvoiceResponse> RegistAndPreIssueTaxInvoiceAsync(Barobill.RegistAndPreIssueTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndIssueBrokerTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponse RegistAndIssueBrokerTaxInvoice(iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest request);
+        Barobill.RegistAndIssueBrokerTaxInvoiceResponse RegistAndIssueBrokerTaxInvoice(Barobill.RegistAndIssueBrokerTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndIssueBrokerTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponse> RegistAndIssueBrokerTaxInvoiceAsync(iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistAndIssueBrokerTaxInvoiceResponse> RegistAndIssueBrokerTaxInvoiceAsync(Barobill.RegistAndIssueBrokerTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndPreIssueBrokerTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse RegistAndPreIssueBrokerTaxInvoice(iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request);
+        Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse RegistAndPreIssueBrokerTaxInvoice(Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndPreIssueBrokerTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse> RegistAndPreIssueBrokerTaxInvoiceAsync(iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse> RegistAndPreIssueBrokerTaxInvoiceAsync(Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndReverseIssueTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponse RegistAndReverseIssueTaxInvoice(iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest request);
+        Barobill.RegistAndReverseIssueTaxInvoiceResponse RegistAndReverseIssueTaxInvoice(Barobill.RegistAndReverseIssueTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistAndReverseIssueTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponse> RegistAndReverseIssueTaxInvoiceAsync(iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistAndReverseIssueTaxInvoiceResponse> RegistAndReverseIssueTaxInvoiceAsync(Barobill.RegistAndReverseIssueTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceResponse GetTaxInvoice(iljin.Barobill.GetTaxInvoiceRequest request);
+        Barobill.GetTaxInvoiceResponse GetTaxInvoice(Barobill.GetTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceResponse> GetTaxInvoiceAsync(iljin.Barobill.GetTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceResponse> GetTaxInvoiceAsync(Barobill.GetTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceIK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceIKResponse GetTaxInvoiceIK(iljin.Barobill.GetTaxInvoiceIKRequest request);
+        Barobill.GetTaxInvoiceIKResponse GetTaxInvoiceIK(Barobill.GetTaxInvoiceIKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceIK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceIKResponse> GetTaxInvoiceIKAsync(iljin.Barobill.GetTaxInvoiceIKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceIKResponse> GetTaxInvoiceIKAsync(Barobill.GetTaxInvoiceIKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceNK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceNKResponse GetTaxInvoiceNK(iljin.Barobill.GetTaxInvoiceNKRequest request);
+        Barobill.GetTaxInvoiceNKResponse GetTaxInvoiceNK(Barobill.GetTaxInvoiceNKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceNK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceNKResponse> GetTaxInvoiceNKAsync(iljin.Barobill.GetTaxInvoiceNKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceNKResponse> GetTaxInvoiceNKAsync(Barobill.GetTaxInvoiceNKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceState", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceStateResponse GetTaxInvoiceState(iljin.Barobill.GetTaxInvoiceStateRequest request);
+        Barobill.GetTaxInvoiceStateResponse GetTaxInvoiceState(Barobill.GetTaxInvoiceStateRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceState", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStateResponse> GetTaxInvoiceStateAsync(iljin.Barobill.GetTaxInvoiceStateRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStateResponse> GetTaxInvoiceStateAsync(Barobill.GetTaxInvoiceStateRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStates", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceStatesResponse GetTaxInvoiceStates(iljin.Barobill.GetTaxInvoiceStatesRequest request);
+        Barobill.GetTaxInvoiceStatesResponse GetTaxInvoiceStates(Barobill.GetTaxInvoiceStatesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStates", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesResponse> GetTaxInvoiceStatesAsync(iljin.Barobill.GetTaxInvoiceStatesRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesResponse> GetTaxInvoiceStatesAsync(Barobill.GetTaxInvoiceStatesRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStateEX", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceStateEXResponse GetTaxInvoiceStateEX(iljin.Barobill.GetTaxInvoiceStateEXRequest request);
+        Barobill.GetTaxInvoiceStateEXResponse GetTaxInvoiceStateEX(Barobill.GetTaxInvoiceStateEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStateEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStateEXResponse> GetTaxInvoiceStateEXAsync(iljin.Barobill.GetTaxInvoiceStateEXRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStateEXResponse> GetTaxInvoiceStateEXAsync(Barobill.GetTaxInvoiceStateEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStatesEX", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceStatesEXResponse GetTaxInvoiceStatesEX(iljin.Barobill.GetTaxInvoiceStatesEXRequest request);
+        Barobill.GetTaxInvoiceStatesEXResponse GetTaxInvoiceStatesEX(Barobill.GetTaxInvoiceStatesEXRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStatesEX", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesEXResponse> GetTaxInvoiceStatesEXAsync(iljin.Barobill.GetTaxInvoiceStatesEXRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesEXResponse> GetTaxInvoiceStatesEXAsync(Barobill.GetTaxInvoiceStatesEXRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStatesIK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceStatesIKResponse GetTaxInvoiceStatesIK(iljin.Barobill.GetTaxInvoiceStatesIKRequest request);
+        Barobill.GetTaxInvoiceStatesIKResponse GetTaxInvoiceStatesIK(Barobill.GetTaxInvoiceStatesIKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceStatesIK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesIKResponse> GetTaxInvoiceStatesIKAsync(iljin.Barobill.GetTaxInvoiceStatesIKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesIKResponse> GetTaxInvoiceStatesIKAsync(Barobill.GetTaxInvoiceStatesIKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceLog", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceLogResponse GetTaxInvoiceLog(iljin.Barobill.GetTaxInvoiceLogRequest request);
+        Barobill.GetTaxInvoiceLogResponse GetTaxInvoiceLog(Barobill.GetTaxInvoiceLogRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceLog", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceLogResponse> GetTaxInvoiceLogAsync(iljin.Barobill.GetTaxInvoiceLogRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceLogResponse> GetTaxInvoiceLogAsync(Barobill.GetTaxInvoiceLogRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceLogIK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceLogIKResponse GetTaxInvoiceLogIK(iljin.Barobill.GetTaxInvoiceLogIKRequest request);
+        Barobill.GetTaxInvoiceLogIKResponse GetTaxInvoiceLogIK(Barobill.GetTaxInvoiceLogIKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceLogIK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceLogIKResponse> GetTaxInvoiceLogIKAsync(iljin.Barobill.GetTaxInvoiceLogIKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceLogIKResponse> GetTaxInvoiceLogIKAsync(Barobill.GetTaxInvoiceLogIKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/AttachFileByFTP", ReplyAction="*")]
-        iljin.Barobill.AttachFileByFTPResponse AttachFileByFTP(iljin.Barobill.AttachFileByFTPRequest request);
+        Barobill.AttachFileByFTPResponse AttachFileByFTP(Barobill.AttachFileByFTPRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/AttachFileByFTP", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.AttachFileByFTPResponse> AttachFileByFTPAsync(iljin.Barobill.AttachFileByFTPRequest request);
+        System.Threading.Tasks.Task<Barobill.AttachFileByFTPResponse> AttachFileByFTPAsync(Barobill.AttachFileByFTPRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteAttachFile", ReplyAction="*")]
-        iljin.Barobill.DeleteAttachFileResponse DeleteAttachFile(iljin.Barobill.DeleteAttachFileRequest request);
+        Barobill.DeleteAttachFileResponse DeleteAttachFile(Barobill.DeleteAttachFileRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteAttachFile", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteAttachFileResponse> DeleteAttachFileAsync(iljin.Barobill.DeleteAttachFileRequest request);
+        System.Threading.Tasks.Task<Barobill.DeleteAttachFileResponse> DeleteAttachFileAsync(Barobill.DeleteAttachFileRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteAttachFileWithFileIndex", ReplyAction="*")]
-        iljin.Barobill.DeleteAttachFileWithFileIndexResponse DeleteAttachFileWithFileIndex(iljin.Barobill.DeleteAttachFileWithFileIndexRequest request);
+        Barobill.DeleteAttachFileWithFileIndexResponse DeleteAttachFileWithFileIndex(Barobill.DeleteAttachFileWithFileIndexRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/DeleteAttachFileWithFileIndex", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteAttachFileWithFileIndexResponse> DeleteAttachFileWithFileIndexAsync(iljin.Barobill.DeleteAttachFileWithFileIndexRequest request);
+        System.Threading.Tasks.Task<Barobill.DeleteAttachFileWithFileIndexResponse> DeleteAttachFileWithFileIndexAsync(Barobill.DeleteAttachFileWithFileIndexRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetAttachedFileList", ReplyAction="*")]
-        iljin.Barobill.GetAttachedFileListResponse GetAttachedFileList(iljin.Barobill.GetAttachedFileListRequest request);
+        Barobill.GetAttachedFileListResponse GetAttachedFileList(Barobill.GetAttachedFileListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetAttachedFileList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetAttachedFileListResponse> GetAttachedFileListAsync(iljin.Barobill.GetAttachedFileListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetAttachedFileListResponse> GetAttachedFileListAsync(Barobill.GetAttachedFileListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetAttachedFileListEx", ReplyAction="*")]
-        iljin.Barobill.GetAttachedFileListExResponse GetAttachedFileListEx(iljin.Barobill.GetAttachedFileListExRequest request);
+        Barobill.GetAttachedFileListExResponse GetAttachedFileListEx(Barobill.GetAttachedFileListExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetAttachedFileListEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetAttachedFileListExResponse> GetAttachedFileListExAsync(iljin.Barobill.GetAttachedFileListExRequest request);
+        System.Threading.Tasks.Task<Barobill.GetAttachedFileListExResponse> GetAttachedFileListExAsync(Barobill.GetAttachedFileListExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReSendEmail", ReplyAction="*")]
-        iljin.Barobill.ReSendEmailResponse ReSendEmail(iljin.Barobill.ReSendEmailRequest request);
+        Barobill.ReSendEmailResponse ReSendEmail(Barobill.ReSendEmailRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReSendEmail", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ReSendEmailResponse> ReSendEmailAsync(iljin.Barobill.ReSendEmailRequest request);
+        System.Threading.Tasks.Task<Barobill.ReSendEmailResponse> ReSendEmailAsync(Barobill.ReSendEmailRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReSendSMS", ReplyAction="*")]
-        iljin.Barobill.ReSendSMSResponse ReSendSMS(iljin.Barobill.ReSendSMSRequest request);
+        Barobill.ReSendSMSResponse ReSendSMS(Barobill.ReSendSMSRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ReSendSMS", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ReSendSMSResponse> ReSendSMSAsync(iljin.Barobill.ReSendSMSRequest request);
+        System.Threading.Tasks.Task<Barobill.ReSendSMSResponse> ReSendSMSAsync(Barobill.ReSendSMSRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/SendInvoiceSMS", ReplyAction="*")]
-        iljin.Barobill.SendInvoiceSMSResponse SendInvoiceSMS(iljin.Barobill.SendInvoiceSMSRequest request);
+        Barobill.SendInvoiceSMSResponse SendInvoiceSMS(Barobill.SendInvoiceSMSRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/SendInvoiceSMS", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.SendInvoiceSMSResponse> SendInvoiceSMSAsync(iljin.Barobill.SendInvoiceSMSRequest request);
+        System.Threading.Tasks.Task<Barobill.SendInvoiceSMSResponse> SendInvoiceSMSAsync(Barobill.SendInvoiceSMSRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/SendInvoiceFax", ReplyAction="*")]
-        iljin.Barobill.SendInvoiceFaxResponse SendInvoiceFax(iljin.Barobill.SendInvoiceFaxRequest request);
+        Barobill.SendInvoiceFaxResponse SendInvoiceFax(Barobill.SendInvoiceFaxRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/SendInvoiceFax", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.SendInvoiceFaxResponse> SendInvoiceFaxAsync(iljin.Barobill.SendInvoiceFaxRequest request);
+        System.Threading.Tasks.Task<Barobill.SendInvoiceFaxResponse> SendInvoiceFaxAsync(Barobill.SendInvoiceFaxRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBaroBillURL", ReplyAction="*")]
-        iljin.Barobill.GetBaroBillURLResponse GetBaroBillURL(iljin.Barobill.GetBaroBillURLRequest request);
+        Barobill.GetBaroBillURLResponse GetBaroBillURL(Barobill.GetBaroBillURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBaroBillURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBaroBillURLResponse> GetBaroBillURLAsync(iljin.Barobill.GetBaroBillURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetBaroBillURLResponse> GetBaroBillURLAsync(Barobill.GetBaroBillURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePopUpURL", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePopUpURLResponse GetTaxInvoicePopUpURL(iljin.Barobill.GetTaxInvoicePopUpURLRequest request);
+        Barobill.GetTaxInvoicePopUpURLResponse GetTaxInvoicePopUpURL(Barobill.GetTaxInvoicePopUpURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePopUpURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLResponse> GetTaxInvoicePopUpURLAsync(iljin.Barobill.GetTaxInvoicePopUpURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLResponse> GetTaxInvoicePopUpURLAsync(Barobill.GetTaxInvoicePopUpURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePopUpURLIK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePopUpURLIKResponse GetTaxInvoicePopUpURLIK(iljin.Barobill.GetTaxInvoicePopUpURLIKRequest request);
+        Barobill.GetTaxInvoicePopUpURLIKResponse GetTaxInvoicePopUpURLIK(Barobill.GetTaxInvoicePopUpURLIKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePopUpURLIK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLIKResponse> GetTaxInvoicePopUpURLIKAsync(iljin.Barobill.GetTaxInvoicePopUpURLIKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLIKResponse> GetTaxInvoicePopUpURLIKAsync(Barobill.GetTaxInvoicePopUpURLIKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePopUpURLNK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePopUpURLNKResponse GetTaxInvoicePopUpURLNK(iljin.Barobill.GetTaxInvoicePopUpURLNKRequest request);
+        Barobill.GetTaxInvoicePopUpURLNKResponse GetTaxInvoicePopUpURLNK(Barobill.GetTaxInvoicePopUpURLNKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePopUpURLNK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLNKResponse> GetTaxInvoicePopUpURLNKAsync(iljin.Barobill.GetTaxInvoicePopUpURLNKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLNKResponse> GetTaxInvoicePopUpURLNKAsync(Barobill.GetTaxInvoicePopUpURLNKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePrintURL", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePrintURLResponse GetTaxInvoicePrintURL(iljin.Barobill.GetTaxInvoicePrintURLRequest request);
+        Barobill.GetTaxInvoicePrintURLResponse GetTaxInvoicePrintURL(Barobill.GetTaxInvoicePrintURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePrintURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePrintURLResponse> GetTaxInvoicePrintURLAsync(iljin.Barobill.GetTaxInvoicePrintURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePrintURLResponse> GetTaxInvoicePrintURLAsync(Barobill.GetTaxInvoicePrintURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePrintURLIK", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePrintURLIKResponse GetTaxInvoicePrintURLIK(iljin.Barobill.GetTaxInvoicePrintURLIKRequest request);
+        Barobill.GetTaxInvoicePrintURLIKResponse GetTaxInvoicePrintURLIK(Barobill.GetTaxInvoicePrintURLIKRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePrintURLIK", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePrintURLIKResponse> GetTaxInvoicePrintURLIKAsync(iljin.Barobill.GetTaxInvoicePrintURLIKRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePrintURLIKResponse> GetTaxInvoicePrintURLIKAsync(Barobill.GetTaxInvoicePrintURLIKRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicesPrintURL", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicesPrintURLResponse GetTaxInvoicesPrintURL(iljin.Barobill.GetTaxInvoicesPrintURLRequest request);
+        Barobill.GetTaxInvoicesPrintURLResponse GetTaxInvoicesPrintURL(Barobill.GetTaxInvoicesPrintURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicesPrintURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicesPrintURLResponse> GetTaxInvoicesPrintURLAsync(iljin.Barobill.GetTaxInvoicesPrintURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicesPrintURLResponse> GetTaxInvoicesPrintURLAsync(Barobill.GetTaxInvoicesPrintURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxinvoiceMailURL", ReplyAction="*")]
-        iljin.Barobill.GetTaxinvoiceMailURLResponse GetTaxinvoiceMailURL(iljin.Barobill.GetTaxinvoiceMailURLRequest request);
+        Barobill.GetTaxinvoiceMailURLResponse GetTaxinvoiceMailURL(Barobill.GetTaxinvoiceMailURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxinvoiceMailURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxinvoiceMailURLResponse> GetTaxinvoiceMailURLAsync(iljin.Barobill.GetTaxinvoiceMailURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxinvoiceMailURLResponse> GetTaxinvoiceMailURLAsync(Barobill.GetTaxinvoiceMailURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceScrapRequestURL", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceScrapRequestURLResponse GetTaxInvoiceScrapRequestURL(iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest request);
+        Barobill.GetTaxInvoiceScrapRequestURLResponse GetTaxInvoiceScrapRequestURL(Barobill.GetTaxInvoiceScrapRequestURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceScrapRequestURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceScrapRequestURLResponse> GetTaxInvoiceScrapRequestURLAsync(iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceScrapRequestURLResponse> GetTaxInvoiceScrapRequestURLAsync(Barobill.GetTaxInvoiceScrapRequestURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesList", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceSalesListResponse GetTaxInvoiceSalesList(iljin.Barobill.GetTaxInvoiceSalesListRequest request);
+        Barobill.GetTaxInvoiceSalesListResponse GetTaxInvoiceSalesList(Barobill.GetTaxInvoiceSalesListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListResponse> GetTaxInvoiceSalesListAsync(iljin.Barobill.GetTaxInvoiceSalesListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListResponse> GetTaxInvoiceSalesListAsync(Barobill.GetTaxInvoiceSalesListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesListEx", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceSalesListExResponse GetTaxInvoiceSalesListEx(iljin.Barobill.GetTaxInvoiceSalesListExRequest request);
+        Barobill.GetTaxInvoiceSalesListExResponse GetTaxInvoiceSalesListEx(Barobill.GetTaxInvoiceSalesListExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesListEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListExResponse> GetTaxInvoiceSalesListExAsync(iljin.Barobill.GetTaxInvoiceSalesListExRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListExResponse> GetTaxInvoiceSalesListExAsync(Barobill.GetTaxInvoiceSalesListExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseList", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePurchaseListResponse GetTaxInvoicePurchaseList(iljin.Barobill.GetTaxInvoicePurchaseListRequest request);
+        Barobill.GetTaxInvoicePurchaseListResponse GetTaxInvoicePurchaseList(Barobill.GetTaxInvoicePurchaseListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListResponse> GetTaxInvoicePurchaseListAsync(iljin.Barobill.GetTaxInvoicePurchaseListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListResponse> GetTaxInvoicePurchaseListAsync(Barobill.GetTaxInvoicePurchaseListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseListEx", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePurchaseListExResponse GetTaxInvoicePurchaseListEx(iljin.Barobill.GetTaxInvoicePurchaseListExRequest request);
+        Barobill.GetTaxInvoicePurchaseListExResponse GetTaxInvoicePurchaseListEx(Barobill.GetTaxInvoicePurchaseListExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseListEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListExResponse> GetTaxInvoicePurchaseListExAsync(iljin.Barobill.GetTaxInvoicePurchaseListExRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListExResponse> GetTaxInvoicePurchaseListExAsync(Barobill.GetTaxInvoicePurchaseListExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetDailyTaxInvoiceSalesList", ReplyAction="*")]
-        iljin.Barobill.GetDailyTaxInvoiceSalesListResponse GetDailyTaxInvoiceSalesList(iljin.Barobill.GetDailyTaxInvoiceSalesListRequest request);
+        Barobill.GetDailyTaxInvoiceSalesListResponse GetDailyTaxInvoiceSalesList(Barobill.GetDailyTaxInvoiceSalesListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetDailyTaxInvoiceSalesList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetDailyTaxInvoiceSalesListResponse> GetDailyTaxInvoiceSalesListAsync(iljin.Barobill.GetDailyTaxInvoiceSalesListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetDailyTaxInvoiceSalesListResponse> GetDailyTaxInvoiceSalesListAsync(Barobill.GetDailyTaxInvoiceSalesListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetDailyTaxInvoicePurchaseList", ReplyAction="*")]
-        iljin.Barobill.GetDailyTaxInvoicePurchaseListResponse GetDailyTaxInvoicePurchaseList(iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest request);
+        Barobill.GetDailyTaxInvoicePurchaseListResponse GetDailyTaxInvoicePurchaseList(Barobill.GetDailyTaxInvoicePurchaseListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetDailyTaxInvoicePurchaseList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetDailyTaxInvoicePurchaseListResponse> GetDailyTaxInvoicePurchaseListAsync(iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetDailyTaxInvoicePurchaseListResponse> GetDailyTaxInvoicePurchaseListAsync(Barobill.GetDailyTaxInvoicePurchaseListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetMonthlyTaxInvoiceSalesList", ReplyAction="*")]
-        iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponse GetMonthlyTaxInvoiceSalesList(iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest request);
+        Barobill.GetMonthlyTaxInvoiceSalesListResponse GetMonthlyTaxInvoiceSalesList(Barobill.GetMonthlyTaxInvoiceSalesListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetMonthlyTaxInvoiceSalesList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponse> GetMonthlyTaxInvoiceSalesListAsync(iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetMonthlyTaxInvoiceSalesListResponse> GetMonthlyTaxInvoiceSalesListAsync(Barobill.GetMonthlyTaxInvoiceSalesListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetMonthlyTaxInvoicePurchaseList", ReplyAction="*")]
-        iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponse GetMonthlyTaxInvoicePurchaseList(iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest request);
+        Barobill.GetMonthlyTaxInvoicePurchaseListResponse GetMonthlyTaxInvoicePurchaseList(Barobill.GetMonthlyTaxInvoicePurchaseListRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetMonthlyTaxInvoicePurchaseList", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponse> GetMonthlyTaxInvoicePurchaseListAsync(iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest request);
+        System.Threading.Tasks.Task<Barobill.GetMonthlyTaxInvoicePurchaseListResponse> GetMonthlyTaxInvoicePurchaseListAsync(Barobill.GetMonthlyTaxInvoicePurchaseListRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetMonthlyCountTaxInvoice", ReplyAction="*")]
-        iljin.Barobill.GetMonthlyCountTaxInvoiceResponse GetMonthlyCountTaxInvoice(iljin.Barobill.GetMonthlyCountTaxInvoiceRequest request);
+        Barobill.GetMonthlyCountTaxInvoiceResponse GetMonthlyCountTaxInvoice(Barobill.GetMonthlyCountTaxInvoiceRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetMonthlyCountTaxInvoice", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyCountTaxInvoiceResponse> GetMonthlyCountTaxInvoiceAsync(iljin.Barobill.GetMonthlyCountTaxInvoiceRequest request);
+        System.Threading.Tasks.Task<Barobill.GetMonthlyCountTaxInvoiceResponse> GetMonthlyCountTaxInvoiceAsync(Barobill.GetMonthlyCountTaxInvoiceRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCanceledTaxInvoiceMgtKey", ReplyAction="*")]
-        iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponse GetCanceledTaxInvoiceMgtKey(iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest request);
+        Barobill.GetCanceledTaxInvoiceMgtKeyResponse GetCanceledTaxInvoiceMgtKey(Barobill.GetCanceledTaxInvoiceMgtKeyRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCanceledTaxInvoiceMgtKey", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponse> GetCanceledTaxInvoiceMgtKeyAsync(iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest request);
+        System.Threading.Tasks.Task<Barobill.GetCanceledTaxInvoiceMgtKeyResponse> GetCanceledTaxInvoiceMgtKeyAsync(Barobill.GetCanceledTaxInvoiceMgtKeyRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesListByID", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceSalesListByIDResponse GetTaxInvoiceSalesListByID(iljin.Barobill.GetTaxInvoiceSalesListByIDRequest request);
+        Barobill.GetTaxInvoiceSalesListByIDResponse GetTaxInvoiceSalesListByID(Barobill.GetTaxInvoiceSalesListByIDRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesListByID", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListByIDResponse> GetTaxInvoiceSalesListByIDAsync(iljin.Barobill.GetTaxInvoiceSalesListByIDRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListByIDResponse> GetTaxInvoiceSalesListByIDAsync(Barobill.GetTaxInvoiceSalesListByIDRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseListByID", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePurchaseListByIDResponse GetTaxInvoicePurchaseListByID(iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest request);
+        Barobill.GetTaxInvoicePurchaseListByIDResponse GetTaxInvoicePurchaseListByID(Barobill.GetTaxInvoicePurchaseListByIDRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseListByID", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListByIDResponse> GetTaxInvoicePurchaseListByIDAsync(iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListByIDResponse> GetTaxInvoicePurchaseListByIDAsync(Barobill.GetTaxInvoicePurchaseListByIDRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesListByIDEx", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoiceSalesListByIDExResponse GetTaxInvoiceSalesListByIDEx(iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest request);
+        Barobill.GetTaxInvoiceSalesListByIDExResponse GetTaxInvoiceSalesListByIDEx(Barobill.GetTaxInvoiceSalesListByIDExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoiceSalesListByIDEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListByIDExResponse> GetTaxInvoiceSalesListByIDExAsync(iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListByIDExResponse> GetTaxInvoiceSalesListByIDExAsync(Barobill.GetTaxInvoiceSalesListByIDExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseListByIDEx", ReplyAction="*")]
-        iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponse GetTaxInvoicePurchaseListByIDEx(iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest request);
+        Barobill.GetTaxInvoicePurchaseListByIDExResponse GetTaxInvoicePurchaseListByIDEx(Barobill.GetTaxInvoicePurchaseListByIDExRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetTaxInvoicePurchaseListByIDEx", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponse> GetTaxInvoicePurchaseListByIDExAsync(iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest request);
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListByIDExResponse> GetTaxInvoicePurchaseListByIDExAsync(Barobill.GetTaxInvoicePurchaseListByIDExRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/SendToNTS", ReplyAction="*")]
-        iljin.Barobill.SendToNTSResponse SendToNTS(iljin.Barobill.SendToNTSRequest request);
+        Barobill.SendToNTSResponse SendToNTS(Barobill.SendToNTSRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/SendToNTS", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.SendToNTSResponse> SendToNTSAsync(iljin.Barobill.SendToNTSRequest request);
+        System.Threading.Tasks.Task<Barobill.SendToNTSResponse> SendToNTSAsync(Barobill.SendToNTSRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetNTSSendOption", ReplyAction="*")]
-        iljin.Barobill.GetNTSSendOptionResponse GetNTSSendOption(iljin.Barobill.GetNTSSendOptionRequest request);
+        Barobill.GetNTSSendOptionResponse GetNTSSendOption(Barobill.GetNTSSendOptionRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetNTSSendOption", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetNTSSendOptionResponse> GetNTSSendOptionAsync(iljin.Barobill.GetNTSSendOptionRequest request);
+        System.Threading.Tasks.Task<Barobill.GetNTSSendOptionResponse> GetNTSSendOptionAsync(Barobill.GetNTSSendOptionRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ChangeNTSSendOption", ReplyAction="*")]
-        iljin.Barobill.ChangeNTSSendOptionResponse ChangeNTSSendOption(iljin.Barobill.ChangeNTSSendOptionRequest request);
+        Barobill.ChangeNTSSendOptionResponse ChangeNTSSendOption(Barobill.ChangeNTSSendOptionRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ChangeNTSSendOption", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ChangeNTSSendOptionResponse> ChangeNTSSendOptionAsync(iljin.Barobill.ChangeNTSSendOptionRequest request);
+        System.Threading.Tasks.Task<Barobill.ChangeNTSSendOptionResponse> ChangeNTSSendOptionAsync(Barobill.ChangeNTSSendOptionRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetEmailPublicKeys", ReplyAction="*")]
-        iljin.Barobill.GetEmailPublicKeysResponse GetEmailPublicKeys(iljin.Barobill.GetEmailPublicKeysRequest request);
+        Barobill.GetEmailPublicKeysResponse GetEmailPublicKeys(Barobill.GetEmailPublicKeysRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetEmailPublicKeys", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetEmailPublicKeysResponse> GetEmailPublicKeysAsync(iljin.Barobill.GetEmailPublicKeysRequest request);
+        System.Threading.Tasks.Task<Barobill.GetEmailPublicKeysResponse> GetEmailPublicKeysAsync(Barobill.GetEmailPublicKeysRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/MakeDocLinkage", ReplyAction="*")]
-        iljin.Barobill.MakeDocLinkageResponse MakeDocLinkage(iljin.Barobill.MakeDocLinkageRequest request);
+        Barobill.MakeDocLinkageResponse MakeDocLinkage(Barobill.MakeDocLinkageRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/MakeDocLinkage", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.MakeDocLinkageResponse> MakeDocLinkageAsync(iljin.Barobill.MakeDocLinkageRequest request);
+        System.Threading.Tasks.Task<Barobill.MakeDocLinkageResponse> MakeDocLinkageAsync(Barobill.MakeDocLinkageRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RemoveDocLinkage", ReplyAction="*")]
-        iljin.Barobill.RemoveDocLinkageResponse RemoveDocLinkage(iljin.Barobill.RemoveDocLinkageRequest request);
+        Barobill.RemoveDocLinkageResponse RemoveDocLinkage(Barobill.RemoveDocLinkageRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RemoveDocLinkage", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RemoveDocLinkageResponse> RemoveDocLinkageAsync(iljin.Barobill.RemoveDocLinkageRequest request);
+        System.Threading.Tasks.Task<Barobill.RemoveDocLinkageResponse> RemoveDocLinkageAsync(Barobill.RemoveDocLinkageRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetLinkedDocs", ReplyAction="*")]
-        iljin.Barobill.GetLinkedDocsResponse GetLinkedDocs(iljin.Barobill.GetLinkedDocsRequest request);
+        Barobill.GetLinkedDocsResponse GetLinkedDocs(Barobill.GetLinkedDocsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetLinkedDocs", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetLinkedDocsResponse> GetLinkedDocsAsync(iljin.Barobill.GetLinkedDocsRequest request);
+        System.Threading.Tasks.Task<Barobill.GetLinkedDocsResponse> GetLinkedDocsAsync(Barobill.GetLinkedDocsRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetJicInRegistURL", ReplyAction="*")]
-        iljin.Barobill.GetJicInRegistURLResponse GetJicInRegistURL(iljin.Barobill.GetJicInRegistURLRequest request);
+        Barobill.GetJicInRegistURLResponse GetJicInRegistURL(Barobill.GetJicInRegistURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetJicInRegistURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetJicInRegistURLResponse> GetJicInRegistURLAsync(iljin.Barobill.GetJicInRegistURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetJicInRegistURLResponse> GetJicInRegistURLAsync(Barobill.GetJicInRegistURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBusinessLicenseRegistURL", ReplyAction="*")]
-        iljin.Barobill.GetBusinessLicenseRegistURLResponse GetBusinessLicenseRegistURL(iljin.Barobill.GetBusinessLicenseRegistURLRequest request);
+        Barobill.GetBusinessLicenseRegistURLResponse GetBusinessLicenseRegistURL(Barobill.GetBusinessLicenseRegistURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBusinessLicenseRegistURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBusinessLicenseRegistURLResponse> GetBusinessLicenseRegistURLAsync(iljin.Barobill.GetBusinessLicenseRegistURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetBusinessLicenseRegistURLResponse> GetBusinessLicenseRegistURLAsync(Barobill.GetBusinessLicenseRegistURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBankBookRegistURL", ReplyAction="*")]
-        iljin.Barobill.GetBankBookRegistURLResponse GetBankBookRegistURL(iljin.Barobill.GetBankBookRegistURLRequest request);
+        Barobill.GetBankBookRegistURLResponse GetBankBookRegistURL(Barobill.GetBankBookRegistURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBankBookRegistURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBankBookRegistURLResponse> GetBankBookRegistURLAsync(iljin.Barobill.GetBankBookRegistURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetBankBookRegistURLResponse> GetBankBookRegistURLAsync(Barobill.GetBankBookRegistURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckCorpIsMember", ReplyAction="*")]
-        iljin.Barobill.CheckCorpIsMemberResponse CheckCorpIsMember(iljin.Barobill.CheckCorpIsMemberRequest request);
+        Barobill.CheckCorpIsMemberResponse CheckCorpIsMember(Barobill.CheckCorpIsMemberRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckCorpIsMember", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckCorpIsMemberResponse> CheckCorpIsMemberAsync(iljin.Barobill.CheckCorpIsMemberRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckCorpIsMemberResponse> CheckCorpIsMemberAsync(Barobill.CheckCorpIsMemberRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistCorp", ReplyAction="*")]
-        iljin.Barobill.RegistCorpResponse RegistCorp(iljin.Barobill.RegistCorpRequest request);
+        Barobill.RegistCorpResponse RegistCorp(Barobill.RegistCorpRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistCorp", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistCorpResponse> RegistCorpAsync(iljin.Barobill.RegistCorpRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistCorpResponse> RegistCorpAsync(Barobill.RegistCorpRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/AddUserToCorp", ReplyAction="*")]
-        iljin.Barobill.AddUserToCorpResponse AddUserToCorp(iljin.Barobill.AddUserToCorpRequest request);
+        Barobill.AddUserToCorpResponse AddUserToCorp(Barobill.AddUserToCorpRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/AddUserToCorp", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.AddUserToCorpResponse> AddUserToCorpAsync(iljin.Barobill.AddUserToCorpRequest request);
+        System.Threading.Tasks.Task<Barobill.AddUserToCorpResponse> AddUserToCorpAsync(Barobill.AddUserToCorpRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateCorpInfo", ReplyAction="*")]
-        iljin.Barobill.UpdateCorpInfoResponse UpdateCorpInfo(iljin.Barobill.UpdateCorpInfoRequest request);
+        Barobill.UpdateCorpInfoResponse UpdateCorpInfo(Barobill.UpdateCorpInfoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateCorpInfo", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateCorpInfoResponse> UpdateCorpInfoAsync(iljin.Barobill.UpdateCorpInfoRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateCorpInfoResponse> UpdateCorpInfoAsync(Barobill.UpdateCorpInfoRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateUserInfo", ReplyAction="*")]
-        iljin.Barobill.UpdateUserInfoResponse UpdateUserInfo(iljin.Barobill.UpdateUserInfoRequest request);
+        Barobill.UpdateUserInfoResponse UpdateUserInfo(Barobill.UpdateUserInfoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateUserInfo", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateUserInfoResponse> UpdateUserInfoAsync(iljin.Barobill.UpdateUserInfoRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateUserInfoResponse> UpdateUserInfoAsync(Barobill.UpdateUserInfoRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateUserPWD", ReplyAction="*")]
-        iljin.Barobill.UpdateUserPWDResponse UpdateUserPWD(iljin.Barobill.UpdateUserPWDRequest request);
+        Barobill.UpdateUserPWDResponse UpdateUserPWD(Barobill.UpdateUserPWDRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/UpdateUserPWD", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateUserPWDResponse> UpdateUserPWDAsync(iljin.Barobill.UpdateUserPWDRequest request);
+        System.Threading.Tasks.Task<Barobill.UpdateUserPWDResponse> UpdateUserPWDAsync(Barobill.UpdateUserPWDRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ChangeCorpManager", ReplyAction="*")]
-        iljin.Barobill.ChangeCorpManagerResponse ChangeCorpManager(iljin.Barobill.ChangeCorpManagerRequest request);
+        Barobill.ChangeCorpManagerResponse ChangeCorpManager(Barobill.ChangeCorpManagerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/ChangeCorpManager", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.ChangeCorpManagerResponse> ChangeCorpManagerAsync(iljin.Barobill.ChangeCorpManagerRequest request);
+        System.Threading.Tasks.Task<Barobill.ChangeCorpManagerResponse> ChangeCorpManagerAsync(Barobill.ChangeCorpManagerRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCorpMemberContacts", ReplyAction="*")]
-        iljin.Barobill.GetCorpMemberContactsResponse GetCorpMemberContacts(iljin.Barobill.GetCorpMemberContactsRequest request);
+        Barobill.GetCorpMemberContactsResponse GetCorpMemberContacts(Barobill.GetCorpMemberContactsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCorpMemberContacts", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCorpMemberContactsResponse> GetCorpMemberContactsAsync(iljin.Barobill.GetCorpMemberContactsRequest request);
+        System.Threading.Tasks.Task<Barobill.GetCorpMemberContactsResponse> GetCorpMemberContactsAsync(Barobill.GetCorpMemberContactsRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBalanceCostAmount", ReplyAction="*")]
-        iljin.Barobill.GetBalanceCostAmountResponse GetBalanceCostAmount(iljin.Barobill.GetBalanceCostAmountRequest request);
+        Barobill.GetBalanceCostAmountResponse GetBalanceCostAmount(Barobill.GetBalanceCostAmountRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBalanceCostAmount", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBalanceCostAmountResponse> GetBalanceCostAmountAsync(iljin.Barobill.GetBalanceCostAmountRequest request);
+        System.Threading.Tasks.Task<Barobill.GetBalanceCostAmountResponse> GetBalanceCostAmountAsync(Barobill.GetBalanceCostAmountRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBalanceCostAmountOfInterOP", ReplyAction="*")]
-        iljin.Barobill.GetBalanceCostAmountOfInterOPResponse GetBalanceCostAmountOfInterOP(iljin.Barobill.GetBalanceCostAmountOfInterOPRequest request);
+        Barobill.GetBalanceCostAmountOfInterOPResponse GetBalanceCostAmountOfInterOP(Barobill.GetBalanceCostAmountOfInterOPRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetBalanceCostAmountOfInterOP", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBalanceCostAmountOfInterOPResponse> GetBalanceCostAmountOfInterOPAsync(iljin.Barobill.GetBalanceCostAmountOfInterOPRequest request);
+        System.Threading.Tasks.Task<Barobill.GetBalanceCostAmountOfInterOPResponse> GetBalanceCostAmountOfInterOPAsync(Barobill.GetBalanceCostAmountOfInterOPRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckChargeable", ReplyAction="*")]
-        iljin.Barobill.CheckChargeableResponse CheckChargeable(iljin.Barobill.CheckChargeableRequest request);
+        Barobill.CheckChargeableResponse CheckChargeable(Barobill.CheckChargeableRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckChargeable", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckChargeableResponse> CheckChargeableAsync(iljin.Barobill.CheckChargeableRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckChargeableResponse> CheckChargeableAsync(Barobill.CheckChargeableRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetChargeUnitCost", ReplyAction="*")]
-        iljin.Barobill.GetChargeUnitCostResponse GetChargeUnitCost(iljin.Barobill.GetChargeUnitCostRequest request);
+        Barobill.GetChargeUnitCostResponse GetChargeUnitCost(Barobill.GetChargeUnitCostRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetChargeUnitCost", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetChargeUnitCostResponse> GetChargeUnitCostAsync(iljin.Barobill.GetChargeUnitCostRequest request);
+        System.Threading.Tasks.Task<Barobill.GetChargeUnitCostResponse> GetChargeUnitCostAsync(Barobill.GetChargeUnitCostRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCertificateRegistDate", ReplyAction="*")]
-        iljin.Barobill.GetCertificateRegistDateResponse GetCertificateRegistDate(iljin.Barobill.GetCertificateRegistDateRequest request);
+        Barobill.GetCertificateRegistDateResponse GetCertificateRegistDate(Barobill.GetCertificateRegistDateRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCertificateRegistDate", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCertificateRegistDateResponse> GetCertificateRegistDateAsync(iljin.Barobill.GetCertificateRegistDateRequest request);
+        System.Threading.Tasks.Task<Barobill.GetCertificateRegistDateResponse> GetCertificateRegistDateAsync(Barobill.GetCertificateRegistDateRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCertificateExpireDate", ReplyAction="*")]
-        iljin.Barobill.GetCertificateExpireDateResponse GetCertificateExpireDate(iljin.Barobill.GetCertificateExpireDateRequest request);
+        Barobill.GetCertificateExpireDateResponse GetCertificateExpireDate(Barobill.GetCertificateExpireDateRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCertificateExpireDate", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCertificateExpireDateResponse> GetCertificateExpireDateAsync(iljin.Barobill.GetCertificateExpireDateRequest request);
+        System.Threading.Tasks.Task<Barobill.GetCertificateExpireDateResponse> GetCertificateExpireDateAsync(Barobill.GetCertificateExpireDateRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckCERTIsValid", ReplyAction="*")]
-        iljin.Barobill.CheckCERTIsValidResponse CheckCERTIsValid(iljin.Barobill.CheckCERTIsValidRequest request);
+        Barobill.CheckCERTIsValidResponse CheckCERTIsValid(Barobill.CheckCERTIsValidRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckCERTIsValid", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckCERTIsValidResponse> CheckCERTIsValidAsync(iljin.Barobill.CheckCERTIsValidRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckCERTIsValidResponse> CheckCERTIsValidAsync(Barobill.CheckCERTIsValidRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCertificateRegistURL", ReplyAction="*")]
-        iljin.Barobill.GetCertificateRegistURLResponse GetCertificateRegistURL(iljin.Barobill.GetCertificateRegistURLRequest request);
+        Barobill.GetCertificateRegistURLResponse GetCertificateRegistURL(Barobill.GetCertificateRegistURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCertificateRegistURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCertificateRegistURLResponse> GetCertificateRegistURLAsync(iljin.Barobill.GetCertificateRegistURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetCertificateRegistURLResponse> GetCertificateRegistURLAsync(Barobill.GetCertificateRegistURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetLoginURL", ReplyAction="*")]
-        iljin.Barobill.GetLoginURLResponse GetLoginURL(iljin.Barobill.GetLoginURLRequest request);
+        Barobill.GetLoginURLResponse GetLoginURL(Barobill.GetLoginURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetLoginURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetLoginURLResponse> GetLoginURLAsync(iljin.Barobill.GetLoginURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetLoginURLResponse> GetLoginURLAsync(Barobill.GetLoginURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCashChargeURL", ReplyAction="*")]
-        iljin.Barobill.GetCashChargeURLResponse GetCashChargeURL(iljin.Barobill.GetCashChargeURLRequest request);
+        Barobill.GetCashChargeURLResponse GetCashChargeURL(Barobill.GetCashChargeURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetCashChargeURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCashChargeURLResponse> GetCashChargeURLAsync(iljin.Barobill.GetCashChargeURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetCashChargeURLResponse> GetCashChargeURLAsync(Barobill.GetCashChargeURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistSMSFromNumber", ReplyAction="*")]
-        iljin.Barobill.RegistSMSFromNumberResponse RegistSMSFromNumber(iljin.Barobill.RegistSMSFromNumberRequest request);
+        Barobill.RegistSMSFromNumberResponse RegistSMSFromNumber(Barobill.RegistSMSFromNumberRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/RegistSMSFromNumber", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistSMSFromNumberResponse> RegistSMSFromNumberAsync(iljin.Barobill.RegistSMSFromNumberRequest request);
+        System.Threading.Tasks.Task<Barobill.RegistSMSFromNumberResponse> RegistSMSFromNumberAsync(Barobill.RegistSMSFromNumberRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckSMSFromNumber", ReplyAction="*")]
-        iljin.Barobill.CheckSMSFromNumberResponse CheckSMSFromNumber(iljin.Barobill.CheckSMSFromNumberRequest request);
+        Barobill.CheckSMSFromNumberResponse CheckSMSFromNumber(Barobill.CheckSMSFromNumberRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckSMSFromNumber", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckSMSFromNumberResponse> CheckSMSFromNumberAsync(iljin.Barobill.CheckSMSFromNumberRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckSMSFromNumberResponse> CheckSMSFromNumberAsync(Barobill.CheckSMSFromNumberRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetSMSFromNumbers", ReplyAction="*")]
-        iljin.Barobill.GetSMSFromNumbersResponse GetSMSFromNumbers(iljin.Barobill.GetSMSFromNumbersRequest request);
+        Barobill.GetSMSFromNumbersResponse GetSMSFromNumbers(Barobill.GetSMSFromNumbersRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetSMSFromNumbers", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetSMSFromNumbersResponse> GetSMSFromNumbersAsync(iljin.Barobill.GetSMSFromNumbersRequest request);
+        System.Threading.Tasks.Task<Barobill.GetSMSFromNumbersResponse> GetSMSFromNumbersAsync(Barobill.GetSMSFromNumbersRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetSMSFromNumberURL", ReplyAction="*")]
-        iljin.Barobill.GetSMSFromNumberURLResponse GetSMSFromNumberURL(iljin.Barobill.GetSMSFromNumberURLRequest request);
+        Barobill.GetSMSFromNumberURLResponse GetSMSFromNumberURL(Barobill.GetSMSFromNumberURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetSMSFromNumberURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetSMSFromNumberURLResponse> GetSMSFromNumberURLAsync(iljin.Barobill.GetSMSFromNumberURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetSMSFromNumberURLResponse> GetSMSFromNumberURLAsync(Barobill.GetSMSFromNumberURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckFaxFromNumber", ReplyAction="*")]
-        iljin.Barobill.CheckFaxFromNumberResponse CheckFaxFromNumber(iljin.Barobill.CheckFaxFromNumberRequest request);
+        Barobill.CheckFaxFromNumberResponse CheckFaxFromNumber(Barobill.CheckFaxFromNumberRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/CheckFaxFromNumber", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckFaxFromNumberResponse> CheckFaxFromNumberAsync(iljin.Barobill.CheckFaxFromNumberRequest request);
+        System.Threading.Tasks.Task<Barobill.CheckFaxFromNumberResponse> CheckFaxFromNumberAsync(Barobill.CheckFaxFromNumberRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetFaxFromNumbers", ReplyAction="*")]
-        iljin.Barobill.GetFaxFromNumbersResponse GetFaxFromNumbers(iljin.Barobill.GetFaxFromNumbersRequest request);
+        Barobill.GetFaxFromNumbersResponse GetFaxFromNumbers(Barobill.GetFaxFromNumbersRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetFaxFromNumbers", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetFaxFromNumbersResponse> GetFaxFromNumbersAsync(iljin.Barobill.GetFaxFromNumbersRequest request);
+        System.Threading.Tasks.Task<Barobill.GetFaxFromNumbersResponse> GetFaxFromNumbersAsync(Barobill.GetFaxFromNumbersRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetFaxFromNumberURL", ReplyAction="*")]
-        iljin.Barobill.GetFaxFromNumberURLResponse GetFaxFromNumberURL(iljin.Barobill.GetFaxFromNumberURLRequest request);
+        Barobill.GetFaxFromNumberURLResponse GetFaxFromNumberURL(Barobill.GetFaxFromNumberURLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetFaxFromNumberURL", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetFaxFromNumberURLResponse> GetFaxFromNumberURLAsync(iljin.Barobill.GetFaxFromNumberURLRequest request);
+        System.Threading.Tasks.Task<Barobill.GetFaxFromNumberURLResponse> GetFaxFromNumberURLAsync(Barobill.GetFaxFromNumberURLRequest request);
         
         // CODEGEN: http://ws.baroservice.com/ 네임스페이스의 요소 이름 CERTKEY이(가) "nillable"로 표시되지 않았으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetErrString", ReplyAction="*")]
-        iljin.Barobill.GetErrStringResponse GetErrString(iljin.Barobill.GetErrStringRequest request);
+        Barobill.GetErrStringResponse GetErrString(Barobill.GetErrStringRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/GetErrString", ReplyAction="*")]
-        System.Threading.Tasks.Task<iljin.Barobill.GetErrStringResponse> GetErrStringAsync(iljin.Barobill.GetErrStringRequest request);
+        System.Threading.Tasks.Task<Barobill.GetErrStringResponse> GetErrStringAsync(Barobill.GetErrStringRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.baroservice.com/Ping", ReplyAction="*")]
         void Ping();
@@ -4063,12 +4063,12 @@ namespace iljin.Barobill {
     public partial class CheckMgtNumIsExistsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckMgtNumIsExists", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckMgtNumIsExistsRequestBody Body;
+        public Barobill.CheckMgtNumIsExistsRequestBody Body;
         
         public CheckMgtNumIsExistsRequest() {
         }
         
-        public CheckMgtNumIsExistsRequest(iljin.Barobill.CheckMgtNumIsExistsRequestBody Body) {
+        public CheckMgtNumIsExistsRequest(Barobill.CheckMgtNumIsExistsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4105,12 +4105,12 @@ namespace iljin.Barobill {
     public partial class CheckMgtNumIsExistsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckMgtNumIsExistsResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckMgtNumIsExistsResponseBody Body;
+        public Barobill.CheckMgtNumIsExistsResponseBody Body;
         
         public CheckMgtNumIsExistsResponse() {
         }
         
-        public CheckMgtNumIsExistsResponse(iljin.Barobill.CheckMgtNumIsExistsResponseBody Body) {
+        public CheckMgtNumIsExistsResponse(Barobill.CheckMgtNumIsExistsResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4139,12 +4139,12 @@ namespace iljin.Barobill {
     public partial class CheckIsValidTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckIsValidTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckIsValidTaxInvoiceRequestBody Body;
+        public Barobill.CheckIsValidTaxInvoiceRequestBody Body;
         
         public CheckIsValidTaxInvoiceRequest() {
         }
         
-        public CheckIsValidTaxInvoiceRequest(iljin.Barobill.CheckIsValidTaxInvoiceRequestBody Body) {
+        public CheckIsValidTaxInvoiceRequest(Barobill.CheckIsValidTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4162,12 +4162,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         public CheckIsValidTaxInvoiceRequestBody() {
         }
         
-        public CheckIsValidTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
+        public CheckIsValidTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4181,12 +4181,12 @@ namespace iljin.Barobill {
     public partial class CheckIsValidTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckIsValidTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckIsValidTaxInvoiceResponseBody Body;
+        public Barobill.CheckIsValidTaxInvoiceResponseBody Body;
         
         public CheckIsValidTaxInvoiceResponse() {
         }
         
-        public CheckIsValidTaxInvoiceResponse(iljin.Barobill.CheckIsValidTaxInvoiceResponseBody Body) {
+        public CheckIsValidTaxInvoiceResponse(Barobill.CheckIsValidTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4215,12 +4215,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceRequestBody Body;
+        public Barobill.RegistTaxInvoiceRequestBody Body;
         
         public RegistTaxInvoiceRequest() {
         }
         
-        public RegistTaxInvoiceRequest(iljin.Barobill.RegistTaxInvoiceRequestBody Body) {
+        public RegistTaxInvoiceRequest(Barobill.RegistTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4238,12 +4238,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         public RegistTaxInvoiceRequestBody() {
         }
         
-        public RegistTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
+        public RegistTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4257,12 +4257,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceResponseBody Body;
+        public Barobill.RegistTaxInvoiceResponseBody Body;
         
         public RegistTaxInvoiceResponse() {
         }
         
-        public RegistTaxInvoiceResponse(iljin.Barobill.RegistTaxInvoiceResponseBody Body) {
+        public RegistTaxInvoiceResponse(Barobill.RegistTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4291,12 +4291,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceEXRequestBody Body;
+        public Barobill.RegistTaxInvoiceEXRequestBody Body;
         
         public RegistTaxInvoiceEXRequest() {
         }
         
-        public RegistTaxInvoiceEXRequest(iljin.Barobill.RegistTaxInvoiceEXRequestBody Body) {
+        public RegistTaxInvoiceEXRequest(Barobill.RegistTaxInvoiceEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4314,7 +4314,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public int IssueTiming;
@@ -4322,7 +4322,7 @@ namespace iljin.Barobill {
         public RegistTaxInvoiceEXRequestBody() {
         }
         
-        public RegistTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
+        public RegistTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4337,12 +4337,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceEXResponseBody Body;
+        public Barobill.RegistTaxInvoiceEXResponseBody Body;
         
         public RegistTaxInvoiceEXResponse() {
         }
         
-        public RegistTaxInvoiceEXResponse(iljin.Barobill.RegistTaxInvoiceEXResponseBody Body) {
+        public RegistTaxInvoiceEXResponse(Barobill.RegistTaxInvoiceEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4371,12 +4371,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyTaxInvoiceRequestBody Body;
+        public Barobill.RegistModifyTaxInvoiceRequestBody Body;
         
         public RegistModifyTaxInvoiceRequest() {
         }
         
-        public RegistModifyTaxInvoiceRequest(iljin.Barobill.RegistModifyTaxInvoiceRequestBody Body) {
+        public RegistModifyTaxInvoiceRequest(Barobill.RegistModifyTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4394,7 +4394,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string OriginalNTSSendKey;
@@ -4402,7 +4402,7 @@ namespace iljin.Barobill {
         public RegistModifyTaxInvoiceRequestBody() {
         }
         
-        public RegistModifyTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
+        public RegistModifyTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4417,12 +4417,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyTaxInvoiceResponseBody Body;
+        public Barobill.RegistModifyTaxInvoiceResponseBody Body;
         
         public RegistModifyTaxInvoiceResponse() {
         }
         
-        public RegistModifyTaxInvoiceResponse(iljin.Barobill.RegistModifyTaxInvoiceResponseBody Body) {
+        public RegistModifyTaxInvoiceResponse(Barobill.RegistModifyTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4451,12 +4451,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyTaxInvoiceEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyTaxInvoiceEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyTaxInvoiceEXRequestBody Body;
+        public Barobill.RegistModifyTaxInvoiceEXRequestBody Body;
         
         public RegistModifyTaxInvoiceEXRequest() {
         }
         
-        public RegistModifyTaxInvoiceEXRequest(iljin.Barobill.RegistModifyTaxInvoiceEXRequestBody Body) {
+        public RegistModifyTaxInvoiceEXRequest(Barobill.RegistModifyTaxInvoiceEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4474,7 +4474,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string OriginalNTSSendKey;
@@ -4485,7 +4485,7 @@ namespace iljin.Barobill {
         public RegistModifyTaxInvoiceEXRequestBody() {
         }
         
-        public RegistModifyTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
+        public RegistModifyTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4501,12 +4501,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyTaxInvoiceEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyTaxInvoiceEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyTaxInvoiceEXResponseBody Body;
+        public Barobill.RegistModifyTaxInvoiceEXResponseBody Body;
         
         public RegistModifyTaxInvoiceEXResponse() {
         }
         
-        public RegistModifyTaxInvoiceEXResponse(iljin.Barobill.RegistModifyTaxInvoiceEXResponseBody Body) {
+        public RegistModifyTaxInvoiceEXResponse(Barobill.RegistModifyTaxInvoiceEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4535,12 +4535,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceReverseRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceReverse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceReverseRequestBody Body;
+        public Barobill.RegistTaxInvoiceReverseRequestBody Body;
         
         public RegistTaxInvoiceReverseRequest() {
         }
         
-        public RegistTaxInvoiceReverseRequest(iljin.Barobill.RegistTaxInvoiceReverseRequestBody Body) {
+        public RegistTaxInvoiceReverseRequest(Barobill.RegistTaxInvoiceReverseRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4558,12 +4558,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         public RegistTaxInvoiceReverseRequestBody() {
         }
         
-        public RegistTaxInvoiceReverseRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
+        public RegistTaxInvoiceReverseRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4577,12 +4577,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceReverseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceReverseResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceReverseResponseBody Body;
+        public Barobill.RegistTaxInvoiceReverseResponseBody Body;
         
         public RegistTaxInvoiceReverseResponse() {
         }
         
-        public RegistTaxInvoiceReverseResponse(iljin.Barobill.RegistTaxInvoiceReverseResponseBody Body) {
+        public RegistTaxInvoiceReverseResponse(Barobill.RegistTaxInvoiceReverseResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4611,12 +4611,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceReverseEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceReverseEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceReverseEXRequestBody Body;
+        public Barobill.RegistTaxInvoiceReverseEXRequestBody Body;
         
         public RegistTaxInvoiceReverseEXRequest() {
         }
         
-        public RegistTaxInvoiceReverseEXRequest(iljin.Barobill.RegistTaxInvoiceReverseEXRequestBody Body) {
+        public RegistTaxInvoiceReverseEXRequest(Barobill.RegistTaxInvoiceReverseEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4634,7 +4634,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public int ChargeDirection;
@@ -4642,7 +4642,7 @@ namespace iljin.Barobill {
         public RegistTaxInvoiceReverseEXRequestBody() {
         }
         
-        public RegistTaxInvoiceReverseEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int ChargeDirection) {
+        public RegistTaxInvoiceReverseEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int ChargeDirection) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4657,12 +4657,12 @@ namespace iljin.Barobill {
     public partial class RegistTaxInvoiceReverseEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistTaxInvoiceReverseEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistTaxInvoiceReverseEXResponseBody Body;
+        public Barobill.RegistTaxInvoiceReverseEXResponseBody Body;
         
         public RegistTaxInvoiceReverseEXResponse() {
         }
         
-        public RegistTaxInvoiceReverseEXResponse(iljin.Barobill.RegistTaxInvoiceReverseEXResponseBody Body) {
+        public RegistTaxInvoiceReverseEXResponse(Barobill.RegistTaxInvoiceReverseEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4691,12 +4691,12 @@ namespace iljin.Barobill {
     public partial class RegistBrokerTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistBrokerTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistBrokerTaxInvoiceRequestBody Body;
+        public Barobill.RegistBrokerTaxInvoiceRequestBody Body;
         
         public RegistBrokerTaxInvoiceRequest() {
         }
         
-        public RegistBrokerTaxInvoiceRequest(iljin.Barobill.RegistBrokerTaxInvoiceRequestBody Body) {
+        public RegistBrokerTaxInvoiceRequest(Barobill.RegistBrokerTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4714,12 +4714,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         public RegistBrokerTaxInvoiceRequestBody() {
         }
         
-        public RegistBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
+        public RegistBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4733,12 +4733,12 @@ namespace iljin.Barobill {
     public partial class RegistBrokerTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistBrokerTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistBrokerTaxInvoiceResponseBody Body;
+        public Barobill.RegistBrokerTaxInvoiceResponseBody Body;
         
         public RegistBrokerTaxInvoiceResponse() {
         }
         
-        public RegistBrokerTaxInvoiceResponse(iljin.Barobill.RegistBrokerTaxInvoiceResponseBody Body) {
+        public RegistBrokerTaxInvoiceResponse(Barobill.RegistBrokerTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4767,12 +4767,12 @@ namespace iljin.Barobill {
     public partial class RegistBrokerTaxInvoiceEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistBrokerTaxInvoiceEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistBrokerTaxInvoiceEXRequestBody Body;
+        public Barobill.RegistBrokerTaxInvoiceEXRequestBody Body;
         
         public RegistBrokerTaxInvoiceEXRequest() {
         }
         
-        public RegistBrokerTaxInvoiceEXRequest(iljin.Barobill.RegistBrokerTaxInvoiceEXRequestBody Body) {
+        public RegistBrokerTaxInvoiceEXRequest(Barobill.RegistBrokerTaxInvoiceEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4790,7 +4790,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public int IssueTiming;
@@ -4798,7 +4798,7 @@ namespace iljin.Barobill {
         public RegistBrokerTaxInvoiceEXRequestBody() {
         }
         
-        public RegistBrokerTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
+        public RegistBrokerTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4813,12 +4813,12 @@ namespace iljin.Barobill {
     public partial class RegistBrokerTaxInvoiceEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistBrokerTaxInvoiceEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistBrokerTaxInvoiceEXResponseBody Body;
+        public Barobill.RegistBrokerTaxInvoiceEXResponseBody Body;
         
         public RegistBrokerTaxInvoiceEXResponse() {
         }
         
-        public RegistBrokerTaxInvoiceEXResponse(iljin.Barobill.RegistBrokerTaxInvoiceEXResponseBody Body) {
+        public RegistBrokerTaxInvoiceEXResponse(Barobill.RegistBrokerTaxInvoiceEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4847,12 +4847,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyBrokerTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyBrokerTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyBrokerTaxInvoiceRequestBody Body;
+        public Barobill.RegistModifyBrokerTaxInvoiceRequestBody Body;
         
         public RegistModifyBrokerTaxInvoiceRequest() {
         }
         
-        public RegistModifyBrokerTaxInvoiceRequest(iljin.Barobill.RegistModifyBrokerTaxInvoiceRequestBody Body) {
+        public RegistModifyBrokerTaxInvoiceRequest(Barobill.RegistModifyBrokerTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4870,7 +4870,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string OriginalNTSSendKey;
@@ -4878,7 +4878,7 @@ namespace iljin.Barobill {
         public RegistModifyBrokerTaxInvoiceRequestBody() {
         }
         
-        public RegistModifyBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
+        public RegistModifyBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4893,12 +4893,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyBrokerTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyBrokerTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyBrokerTaxInvoiceResponseBody Body;
+        public Barobill.RegistModifyBrokerTaxInvoiceResponseBody Body;
         
         public RegistModifyBrokerTaxInvoiceResponse() {
         }
         
-        public RegistModifyBrokerTaxInvoiceResponse(iljin.Barobill.RegistModifyBrokerTaxInvoiceResponseBody Body) {
+        public RegistModifyBrokerTaxInvoiceResponse(Barobill.RegistModifyBrokerTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -4927,12 +4927,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyBrokerTaxInvoiceEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyBrokerTaxInvoiceEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody Body;
+        public Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody Body;
         
         public RegistModifyBrokerTaxInvoiceEXRequest() {
         }
         
-        public RegistModifyBrokerTaxInvoiceEXRequest(iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody Body) {
+        public RegistModifyBrokerTaxInvoiceEXRequest(Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -4950,7 +4950,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string OriginalNTSSendKey;
@@ -4961,7 +4961,7 @@ namespace iljin.Barobill {
         public RegistModifyBrokerTaxInvoiceEXRequestBody() {
         }
         
-        public RegistModifyBrokerTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
+        public RegistModifyBrokerTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -4977,12 +4977,12 @@ namespace iljin.Barobill {
     public partial class RegistModifyBrokerTaxInvoiceEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistModifyBrokerTaxInvoiceEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponseBody Body;
+        public Barobill.RegistModifyBrokerTaxInvoiceEXResponseBody Body;
         
         public RegistModifyBrokerTaxInvoiceEXResponse() {
         }
         
-        public RegistModifyBrokerTaxInvoiceEXResponse(iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponseBody Body) {
+        public RegistModifyBrokerTaxInvoiceEXResponse(Barobill.RegistModifyBrokerTaxInvoiceEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5011,12 +5011,12 @@ namespace iljin.Barobill {
     public partial class UpdateTaxInvoiceFooterStringRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateTaxInvoiceFooterString", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateTaxInvoiceFooterStringRequestBody Body;
+        public Barobill.UpdateTaxInvoiceFooterStringRequestBody Body;
         
         public UpdateTaxInvoiceFooterStringRequest() {
         }
         
-        public UpdateTaxInvoiceFooterStringRequest(iljin.Barobill.UpdateTaxInvoiceFooterStringRequestBody Body) {
+        public UpdateTaxInvoiceFooterStringRequest(Barobill.UpdateTaxInvoiceFooterStringRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5057,12 +5057,12 @@ namespace iljin.Barobill {
     public partial class UpdateTaxInvoiceFooterStringResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateTaxInvoiceFooterStringResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateTaxInvoiceFooterStringResponseBody Body;
+        public Barobill.UpdateTaxInvoiceFooterStringResponseBody Body;
         
         public UpdateTaxInvoiceFooterStringResponse() {
         }
         
-        public UpdateTaxInvoiceFooterStringResponse(iljin.Barobill.UpdateTaxInvoiceFooterStringResponseBody Body) {
+        public UpdateTaxInvoiceFooterStringResponse(Barobill.UpdateTaxInvoiceFooterStringResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5091,12 +5091,12 @@ namespace iljin.Barobill {
     public partial class UpdateTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateTaxInvoiceRequestBody Body;
+        public Barobill.UpdateTaxInvoiceRequestBody Body;
         
         public UpdateTaxInvoiceRequest() {
         }
         
-        public UpdateTaxInvoiceRequest(iljin.Barobill.UpdateTaxInvoiceRequestBody Body) {
+        public UpdateTaxInvoiceRequest(Barobill.UpdateTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5114,12 +5114,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         public UpdateTaxInvoiceRequestBody() {
         }
         
-        public UpdateTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
+        public UpdateTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -5133,12 +5133,12 @@ namespace iljin.Barobill {
     public partial class UpdateTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateTaxInvoiceResponseBody Body;
+        public Barobill.UpdateTaxInvoiceResponseBody Body;
         
         public UpdateTaxInvoiceResponse() {
         }
         
-        public UpdateTaxInvoiceResponse(iljin.Barobill.UpdateTaxInvoiceResponseBody Body) {
+        public UpdateTaxInvoiceResponse(Barobill.UpdateTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5167,12 +5167,12 @@ namespace iljin.Barobill {
     public partial class UpdateTaxInvoiceEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateTaxInvoiceEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateTaxInvoiceEXRequestBody Body;
+        public Barobill.UpdateTaxInvoiceEXRequestBody Body;
         
         public UpdateTaxInvoiceEXRequest() {
         }
         
-        public UpdateTaxInvoiceEXRequest(iljin.Barobill.UpdateTaxInvoiceEXRequestBody Body) {
+        public UpdateTaxInvoiceEXRequest(Barobill.UpdateTaxInvoiceEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5190,7 +5190,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public int IssueTiming;
@@ -5198,7 +5198,7 @@ namespace iljin.Barobill {
         public UpdateTaxInvoiceEXRequestBody() {
         }
         
-        public UpdateTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
+        public UpdateTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -5213,12 +5213,12 @@ namespace iljin.Barobill {
     public partial class UpdateTaxInvoiceEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateTaxInvoiceEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateTaxInvoiceEXResponseBody Body;
+        public Barobill.UpdateTaxInvoiceEXResponseBody Body;
         
         public UpdateTaxInvoiceEXResponse() {
         }
         
-        public UpdateTaxInvoiceEXResponse(iljin.Barobill.UpdateTaxInvoiceEXResponseBody Body) {
+        public UpdateTaxInvoiceEXResponse(Barobill.UpdateTaxInvoiceEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5247,12 +5247,12 @@ namespace iljin.Barobill {
     public partial class UpdateBrokerTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateBrokerTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateBrokerTaxInvoiceRequestBody Body;
+        public Barobill.UpdateBrokerTaxInvoiceRequestBody Body;
         
         public UpdateBrokerTaxInvoiceRequest() {
         }
         
-        public UpdateBrokerTaxInvoiceRequest(iljin.Barobill.UpdateBrokerTaxInvoiceRequestBody Body) {
+        public UpdateBrokerTaxInvoiceRequest(Barobill.UpdateBrokerTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5270,12 +5270,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         public UpdateBrokerTaxInvoiceRequestBody() {
         }
         
-        public UpdateBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
+        public UpdateBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -5289,12 +5289,12 @@ namespace iljin.Barobill {
     public partial class UpdateBrokerTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateBrokerTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateBrokerTaxInvoiceResponseBody Body;
+        public Barobill.UpdateBrokerTaxInvoiceResponseBody Body;
         
         public UpdateBrokerTaxInvoiceResponse() {
         }
         
-        public UpdateBrokerTaxInvoiceResponse(iljin.Barobill.UpdateBrokerTaxInvoiceResponseBody Body) {
+        public UpdateBrokerTaxInvoiceResponse(Barobill.UpdateBrokerTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5323,12 +5323,12 @@ namespace iljin.Barobill {
     public partial class UpdateBrokerTaxInvoiceEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateBrokerTaxInvoiceEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateBrokerTaxInvoiceEXRequestBody Body;
+        public Barobill.UpdateBrokerTaxInvoiceEXRequestBody Body;
         
         public UpdateBrokerTaxInvoiceEXRequest() {
         }
         
-        public UpdateBrokerTaxInvoiceEXRequest(iljin.Barobill.UpdateBrokerTaxInvoiceEXRequestBody Body) {
+        public UpdateBrokerTaxInvoiceEXRequest(Barobill.UpdateBrokerTaxInvoiceEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5346,7 +5346,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public int IssueTiming;
@@ -5354,7 +5354,7 @@ namespace iljin.Barobill {
         public UpdateBrokerTaxInvoiceEXRequestBody() {
         }
         
-        public UpdateBrokerTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
+        public UpdateBrokerTaxInvoiceEXRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -5369,12 +5369,12 @@ namespace iljin.Barobill {
     public partial class UpdateBrokerTaxInvoiceEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateBrokerTaxInvoiceEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateBrokerTaxInvoiceEXResponseBody Body;
+        public Barobill.UpdateBrokerTaxInvoiceEXResponseBody Body;
         
         public UpdateBrokerTaxInvoiceEXResponse() {
         }
         
-        public UpdateBrokerTaxInvoiceEXResponse(iljin.Barobill.UpdateBrokerTaxInvoiceEXResponseBody Body) {
+        public UpdateBrokerTaxInvoiceEXResponse(Barobill.UpdateBrokerTaxInvoiceEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5403,12 +5403,12 @@ namespace iljin.Barobill {
     public partial class DeleteTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteTaxInvoiceRequestBody Body;
+        public Barobill.DeleteTaxInvoiceRequestBody Body;
         
         public DeleteTaxInvoiceRequest() {
         }
         
-        public DeleteTaxInvoiceRequest(iljin.Barobill.DeleteTaxInvoiceRequestBody Body) {
+        public DeleteTaxInvoiceRequest(Barobill.DeleteTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5445,12 +5445,12 @@ namespace iljin.Barobill {
     public partial class DeleteTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteTaxInvoiceResponseBody Body;
+        public Barobill.DeleteTaxInvoiceResponseBody Body;
         
         public DeleteTaxInvoiceResponse() {
         }
         
-        public DeleteTaxInvoiceResponse(iljin.Barobill.DeleteTaxInvoiceResponseBody Body) {
+        public DeleteTaxInvoiceResponse(Barobill.DeleteTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5479,12 +5479,12 @@ namespace iljin.Barobill {
     public partial class DeleteTaxInvoiceIKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteTaxInvoiceIK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteTaxInvoiceIKRequestBody Body;
+        public Barobill.DeleteTaxInvoiceIKRequestBody Body;
         
         public DeleteTaxInvoiceIKRequest() {
         }
         
-        public DeleteTaxInvoiceIKRequest(iljin.Barobill.DeleteTaxInvoiceIKRequestBody Body) {
+        public DeleteTaxInvoiceIKRequest(Barobill.DeleteTaxInvoiceIKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5521,12 +5521,12 @@ namespace iljin.Barobill {
     public partial class DeleteTaxInvoiceIKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteTaxInvoiceIKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteTaxInvoiceIKResponseBody Body;
+        public Barobill.DeleteTaxInvoiceIKResponseBody Body;
         
         public DeleteTaxInvoiceIKResponse() {
         }
         
-        public DeleteTaxInvoiceIKResponse(iljin.Barobill.DeleteTaxInvoiceIKResponseBody Body) {
+        public DeleteTaxInvoiceIKResponse(Barobill.DeleteTaxInvoiceIKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5555,12 +5555,12 @@ namespace iljin.Barobill {
     public partial class IssueTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="IssueTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.IssueTaxInvoiceRequestBody Body;
+        public Barobill.IssueTaxInvoiceRequestBody Body;
         
         public IssueTaxInvoiceRequest() {
         }
         
-        public IssueTaxInvoiceRequest(iljin.Barobill.IssueTaxInvoiceRequestBody Body) {
+        public IssueTaxInvoiceRequest(Barobill.IssueTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5613,12 +5613,12 @@ namespace iljin.Barobill {
     public partial class IssueTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="IssueTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.IssueTaxInvoiceResponseBody Body;
+        public Barobill.IssueTaxInvoiceResponseBody Body;
         
         public IssueTaxInvoiceResponse() {
         }
         
-        public IssueTaxInvoiceResponse(iljin.Barobill.IssueTaxInvoiceResponseBody Body) {
+        public IssueTaxInvoiceResponse(Barobill.IssueTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5647,12 +5647,12 @@ namespace iljin.Barobill {
     public partial class IssueTaxInvoiceExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="IssueTaxInvoiceEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.IssueTaxInvoiceExRequestBody Body;
+        public Barobill.IssueTaxInvoiceExRequestBody Body;
         
         public IssueTaxInvoiceExRequest() {
         }
         
-        public IssueTaxInvoiceExRequest(iljin.Barobill.IssueTaxInvoiceExRequestBody Body) {
+        public IssueTaxInvoiceExRequest(Barobill.IssueTaxInvoiceExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5713,12 +5713,12 @@ namespace iljin.Barobill {
     public partial class IssueTaxInvoiceExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="IssueTaxInvoiceExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.IssueTaxInvoiceExResponseBody Body;
+        public Barobill.IssueTaxInvoiceExResponseBody Body;
         
         public IssueTaxInvoiceExResponse() {
         }
         
-        public IssueTaxInvoiceExResponse(iljin.Barobill.IssueTaxInvoiceExResponseBody Body) {
+        public IssueTaxInvoiceExResponse(Barobill.IssueTaxInvoiceExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5747,12 +5747,12 @@ namespace iljin.Barobill {
     public partial class ReverseIssueTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReverseIssueTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReverseIssueTaxInvoiceRequestBody Body;
+        public Barobill.ReverseIssueTaxInvoiceRequestBody Body;
         
         public ReverseIssueTaxInvoiceRequest() {
         }
         
-        public ReverseIssueTaxInvoiceRequest(iljin.Barobill.ReverseIssueTaxInvoiceRequestBody Body) {
+        public ReverseIssueTaxInvoiceRequest(Barobill.ReverseIssueTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5801,12 +5801,12 @@ namespace iljin.Barobill {
     public partial class ReverseIssueTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReverseIssueTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReverseIssueTaxInvoiceResponseBody Body;
+        public Barobill.ReverseIssueTaxInvoiceResponseBody Body;
         
         public ReverseIssueTaxInvoiceResponse() {
         }
         
-        public ReverseIssueTaxInvoiceResponse(iljin.Barobill.ReverseIssueTaxInvoiceResponseBody Body) {
+        public ReverseIssueTaxInvoiceResponse(Barobill.ReverseIssueTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5835,12 +5835,12 @@ namespace iljin.Barobill {
     public partial class ReverseIssueTaxInvoiceExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReverseIssueTaxInvoiceEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReverseIssueTaxInvoiceExRequestBody Body;
+        public Barobill.ReverseIssueTaxInvoiceExRequestBody Body;
         
         public ReverseIssueTaxInvoiceExRequest() {
         }
         
-        public ReverseIssueTaxInvoiceExRequest(iljin.Barobill.ReverseIssueTaxInvoiceExRequestBody Body) {
+        public ReverseIssueTaxInvoiceExRequest(Barobill.ReverseIssueTaxInvoiceExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5893,12 +5893,12 @@ namespace iljin.Barobill {
     public partial class ReverseIssueTaxInvoiceExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReverseIssueTaxInvoiceExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReverseIssueTaxInvoiceExResponseBody Body;
+        public Barobill.ReverseIssueTaxInvoiceExResponseBody Body;
         
         public ReverseIssueTaxInvoiceExResponse() {
         }
         
-        public ReverseIssueTaxInvoiceExResponse(iljin.Barobill.ReverseIssueTaxInvoiceExResponseBody Body) {
+        public ReverseIssueTaxInvoiceExResponse(Barobill.ReverseIssueTaxInvoiceExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -5927,12 +5927,12 @@ namespace iljin.Barobill {
     public partial class PreIssueTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="PreIssueTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.PreIssueTaxInvoiceRequestBody Body;
+        public Barobill.PreIssueTaxInvoiceRequestBody Body;
         
         public PreIssueTaxInvoiceRequest() {
         }
         
-        public PreIssueTaxInvoiceRequest(iljin.Barobill.PreIssueTaxInvoiceRequestBody Body) {
+        public PreIssueTaxInvoiceRequest(Barobill.PreIssueTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -5977,12 +5977,12 @@ namespace iljin.Barobill {
     public partial class PreIssueTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="PreIssueTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.PreIssueTaxInvoiceResponseBody Body;
+        public Barobill.PreIssueTaxInvoiceResponseBody Body;
         
         public PreIssueTaxInvoiceResponse() {
         }
         
-        public PreIssueTaxInvoiceResponse(iljin.Barobill.PreIssueTaxInvoiceResponseBody Body) {
+        public PreIssueTaxInvoiceResponse(Barobill.PreIssueTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6011,12 +6011,12 @@ namespace iljin.Barobill {
     public partial class PreIssueTaxInvoiceExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="PreIssueTaxInvoiceEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.PreIssueTaxInvoiceExRequestBody Body;
+        public Barobill.PreIssueTaxInvoiceExRequestBody Body;
         
         public PreIssueTaxInvoiceExRequest() {
         }
         
-        public PreIssueTaxInvoiceExRequest(iljin.Barobill.PreIssueTaxInvoiceExRequestBody Body) {
+        public PreIssueTaxInvoiceExRequest(Barobill.PreIssueTaxInvoiceExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6073,12 +6073,12 @@ namespace iljin.Barobill {
     public partial class PreIssueTaxInvoiceExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="PreIssueTaxInvoiceExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.PreIssueTaxInvoiceExResponseBody Body;
+        public Barobill.PreIssueTaxInvoiceExResponseBody Body;
         
         public PreIssueTaxInvoiceExResponse() {
         }
         
-        public PreIssueTaxInvoiceExResponse(iljin.Barobill.PreIssueTaxInvoiceExResponseBody Body) {
+        public PreIssueTaxInvoiceExResponse(Barobill.PreIssueTaxInvoiceExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6107,12 +6107,12 @@ namespace iljin.Barobill {
     public partial class ProcTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ProcTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ProcTaxInvoiceRequestBody Body;
+        public Barobill.ProcTaxInvoiceRequestBody Body;
         
         public ProcTaxInvoiceRequest() {
         }
         
-        public ProcTaxInvoiceRequest(iljin.Barobill.ProcTaxInvoiceRequestBody Body) {
+        public ProcTaxInvoiceRequest(Barobill.ProcTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6157,12 +6157,12 @@ namespace iljin.Barobill {
     public partial class ProcTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ProcTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ProcTaxInvoiceResponseBody Body;
+        public Barobill.ProcTaxInvoiceResponseBody Body;
         
         public ProcTaxInvoiceResponse() {
         }
         
-        public ProcTaxInvoiceResponse(iljin.Barobill.ProcTaxInvoiceResponseBody Body) {
+        public ProcTaxInvoiceResponse(Barobill.ProcTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6191,12 +6191,12 @@ namespace iljin.Barobill {
     public partial class RegistAndIssueTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndIssueTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndIssueTaxInvoiceRequestBody Body;
+        public Barobill.RegistAndIssueTaxInvoiceRequestBody Body;
         
         public RegistAndIssueTaxInvoiceRequest() {
         }
         
-        public RegistAndIssueTaxInvoiceRequest(iljin.Barobill.RegistAndIssueTaxInvoiceRequestBody Body) {
+        public RegistAndIssueTaxInvoiceRequest(Barobill.RegistAndIssueTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6214,7 +6214,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public bool SendSMS;
@@ -6228,7 +6228,7 @@ namespace iljin.Barobill {
         public RegistAndIssueTaxInvoiceRequestBody() {
         }
         
-        public RegistAndIssueTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+        public RegistAndIssueTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -6245,12 +6245,12 @@ namespace iljin.Barobill {
     public partial class RegistAndIssueTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndIssueTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndIssueTaxInvoiceResponseBody Body;
+        public Barobill.RegistAndIssueTaxInvoiceResponseBody Body;
         
         public RegistAndIssueTaxInvoiceResponse() {
         }
         
-        public RegistAndIssueTaxInvoiceResponse(iljin.Barobill.RegistAndIssueTaxInvoiceResponseBody Body) {
+        public RegistAndIssueTaxInvoiceResponse(Barobill.RegistAndIssueTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6279,12 +6279,12 @@ namespace iljin.Barobill {
     public partial class RegistAndPreIssueTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndPreIssueTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndPreIssueTaxInvoiceRequestBody Body;
+        public Barobill.RegistAndPreIssueTaxInvoiceRequestBody Body;
         
         public RegistAndPreIssueTaxInvoiceRequest() {
         }
         
-        public RegistAndPreIssueTaxInvoiceRequest(iljin.Barobill.RegistAndPreIssueTaxInvoiceRequestBody Body) {
+        public RegistAndPreIssueTaxInvoiceRequest(Barobill.RegistAndPreIssueTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6302,7 +6302,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public bool SendSMS;
@@ -6316,7 +6316,7 @@ namespace iljin.Barobill {
         public RegistAndPreIssueTaxInvoiceRequestBody() {
         }
         
-        public RegistAndPreIssueTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
+        public RegistAndPreIssueTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -6333,12 +6333,12 @@ namespace iljin.Barobill {
     public partial class RegistAndPreIssueTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndPreIssueTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndPreIssueTaxInvoiceResponseBody Body;
+        public Barobill.RegistAndPreIssueTaxInvoiceResponseBody Body;
         
         public RegistAndPreIssueTaxInvoiceResponse() {
         }
         
-        public RegistAndPreIssueTaxInvoiceResponse(iljin.Barobill.RegistAndPreIssueTaxInvoiceResponseBody Body) {
+        public RegistAndPreIssueTaxInvoiceResponse(Barobill.RegistAndPreIssueTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6367,12 +6367,12 @@ namespace iljin.Barobill {
     public partial class RegistAndIssueBrokerTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndIssueBrokerTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody Body;
+        public Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody Body;
         
         public RegistAndIssueBrokerTaxInvoiceRequest() {
         }
         
-        public RegistAndIssueBrokerTaxInvoiceRequest(iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody Body) {
+        public RegistAndIssueBrokerTaxInvoiceRequest(Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6390,7 +6390,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public bool SendSMS;
@@ -6404,7 +6404,7 @@ namespace iljin.Barobill {
         public RegistAndIssueBrokerTaxInvoiceRequestBody() {
         }
         
-        public RegistAndIssueBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+        public RegistAndIssueBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -6421,12 +6421,12 @@ namespace iljin.Barobill {
     public partial class RegistAndIssueBrokerTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndIssueBrokerTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponseBody Body;
+        public Barobill.RegistAndIssueBrokerTaxInvoiceResponseBody Body;
         
         public RegistAndIssueBrokerTaxInvoiceResponse() {
         }
         
-        public RegistAndIssueBrokerTaxInvoiceResponse(iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponseBody Body) {
+        public RegistAndIssueBrokerTaxInvoiceResponse(Barobill.RegistAndIssueBrokerTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6455,12 +6455,12 @@ namespace iljin.Barobill {
     public partial class RegistAndPreIssueBrokerTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndPreIssueBrokerTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody Body;
+        public Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody Body;
         
         public RegistAndPreIssueBrokerTaxInvoiceRequest() {
         }
         
-        public RegistAndPreIssueBrokerTaxInvoiceRequest(iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody Body) {
+        public RegistAndPreIssueBrokerTaxInvoiceRequest(Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6478,7 +6478,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public bool SendSMS;
@@ -6492,7 +6492,7 @@ namespace iljin.Barobill {
         public RegistAndPreIssueBrokerTaxInvoiceRequestBody() {
         }
         
-        public RegistAndPreIssueBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
+        public RegistAndPreIssueBrokerTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -6509,12 +6509,12 @@ namespace iljin.Barobill {
     public partial class RegistAndPreIssueBrokerTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndPreIssueBrokerTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponseBody Body;
+        public Barobill.RegistAndPreIssueBrokerTaxInvoiceResponseBody Body;
         
         public RegistAndPreIssueBrokerTaxInvoiceResponse() {
         }
         
-        public RegistAndPreIssueBrokerTaxInvoiceResponse(iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponseBody Body) {
+        public RegistAndPreIssueBrokerTaxInvoiceResponse(Barobill.RegistAndPreIssueBrokerTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6543,12 +6543,12 @@ namespace iljin.Barobill {
     public partial class RegistAndReverseIssueTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndReverseIssueTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequestBody Body;
+        public Barobill.RegistAndReverseIssueTaxInvoiceRequestBody Body;
         
         public RegistAndReverseIssueTaxInvoiceRequest() {
         }
         
-        public RegistAndReverseIssueTaxInvoiceRequest(iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequestBody Body) {
+        public RegistAndReverseIssueTaxInvoiceRequest(Barobill.RegistAndReverseIssueTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6566,7 +6566,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.TaxInvoice Invoice;
+        public Barobill.TaxInvoice Invoice;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
         public bool SendSMS;
@@ -6580,7 +6580,7 @@ namespace iljin.Barobill {
         public RegistAndReverseIssueTaxInvoiceRequestBody() {
         }
         
-        public RegistAndReverseIssueTaxInvoiceRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+        public RegistAndReverseIssueTaxInvoiceRequestBody(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.Invoice = Invoice;
@@ -6597,12 +6597,12 @@ namespace iljin.Barobill {
     public partial class RegistAndReverseIssueTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistAndReverseIssueTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponseBody Body;
+        public Barobill.RegistAndReverseIssueTaxInvoiceResponseBody Body;
         
         public RegistAndReverseIssueTaxInvoiceResponse() {
         }
         
-        public RegistAndReverseIssueTaxInvoiceResponse(iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponseBody Body) {
+        public RegistAndReverseIssueTaxInvoiceResponse(Barobill.RegistAndReverseIssueTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6631,12 +6631,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceRequestBody Body;
+        public Barobill.GetTaxInvoiceRequestBody Body;
         
         public GetTaxInvoiceRequest() {
         }
         
-        public GetTaxInvoiceRequest(iljin.Barobill.GetTaxInvoiceRequestBody Body) {
+        public GetTaxInvoiceRequest(Barobill.GetTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6673,12 +6673,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceResponseBody Body;
+        public Barobill.GetTaxInvoiceResponseBody Body;
         
         public GetTaxInvoiceResponse() {
         }
         
-        public GetTaxInvoiceResponse(iljin.Barobill.GetTaxInvoiceResponseBody Body) {
+        public GetTaxInvoiceResponse(Barobill.GetTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6690,12 +6690,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoice GetTaxInvoiceResult;
+        public Barobill.TaxInvoice GetTaxInvoiceResult;
         
         public GetTaxInvoiceResponseBody() {
         }
         
-        public GetTaxInvoiceResponseBody(iljin.Barobill.TaxInvoice GetTaxInvoiceResult) {
+        public GetTaxInvoiceResponseBody(Barobill.TaxInvoice GetTaxInvoiceResult) {
             this.GetTaxInvoiceResult = GetTaxInvoiceResult;
         }
     }
@@ -6707,12 +6707,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceIKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceIK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceIKRequestBody Body;
+        public Barobill.GetTaxInvoiceIKRequestBody Body;
         
         public GetTaxInvoiceIKRequest() {
         }
         
-        public GetTaxInvoiceIKRequest(iljin.Barobill.GetTaxInvoiceIKRequestBody Body) {
+        public GetTaxInvoiceIKRequest(Barobill.GetTaxInvoiceIKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6749,12 +6749,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceIKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceIKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceIKResponseBody Body;
+        public Barobill.GetTaxInvoiceIKResponseBody Body;
         
         public GetTaxInvoiceIKResponse() {
         }
         
-        public GetTaxInvoiceIKResponse(iljin.Barobill.GetTaxInvoiceIKResponseBody Body) {
+        public GetTaxInvoiceIKResponse(Barobill.GetTaxInvoiceIKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6766,12 +6766,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceIKResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoice GetTaxInvoiceIKResult;
+        public Barobill.TaxInvoice GetTaxInvoiceIKResult;
         
         public GetTaxInvoiceIKResponseBody() {
         }
         
-        public GetTaxInvoiceIKResponseBody(iljin.Barobill.TaxInvoice GetTaxInvoiceIKResult) {
+        public GetTaxInvoiceIKResponseBody(Barobill.TaxInvoice GetTaxInvoiceIKResult) {
             this.GetTaxInvoiceIKResult = GetTaxInvoiceIKResult;
         }
     }
@@ -6783,12 +6783,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceNKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceNK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceNKRequestBody Body;
+        public Barobill.GetTaxInvoiceNKRequestBody Body;
         
         public GetTaxInvoiceNKRequest() {
         }
         
-        public GetTaxInvoiceNKRequest(iljin.Barobill.GetTaxInvoiceNKRequestBody Body) {
+        public GetTaxInvoiceNKRequest(Barobill.GetTaxInvoiceNKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6825,12 +6825,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceNKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceNKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceNKResponseBody Body;
+        public Barobill.GetTaxInvoiceNKResponseBody Body;
         
         public GetTaxInvoiceNKResponse() {
         }
         
-        public GetTaxInvoiceNKResponse(iljin.Barobill.GetTaxInvoiceNKResponseBody Body) {
+        public GetTaxInvoiceNKResponse(Barobill.GetTaxInvoiceNKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6842,12 +6842,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceNKResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoice GetTaxInvoiceNKResult;
+        public Barobill.TaxInvoice GetTaxInvoiceNKResult;
         
         public GetTaxInvoiceNKResponseBody() {
         }
         
-        public GetTaxInvoiceNKResponseBody(iljin.Barobill.TaxInvoice GetTaxInvoiceNKResult) {
+        public GetTaxInvoiceNKResponseBody(Barobill.TaxInvoice GetTaxInvoiceNKResult) {
             this.GetTaxInvoiceNKResult = GetTaxInvoiceNKResult;
         }
     }
@@ -6859,12 +6859,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStateRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceState", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStateRequestBody Body;
+        public Barobill.GetTaxInvoiceStateRequestBody Body;
         
         public GetTaxInvoiceStateRequest() {
         }
         
-        public GetTaxInvoiceStateRequest(iljin.Barobill.GetTaxInvoiceStateRequestBody Body) {
+        public GetTaxInvoiceStateRequest(Barobill.GetTaxInvoiceStateRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6901,12 +6901,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStateResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStateResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStateResponseBody Body;
+        public Barobill.GetTaxInvoiceStateResponseBody Body;
         
         public GetTaxInvoiceStateResponse() {
         }
         
-        public GetTaxInvoiceStateResponse(iljin.Barobill.GetTaxInvoiceStateResponseBody Body) {
+        public GetTaxInvoiceStateResponse(Barobill.GetTaxInvoiceStateResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6918,12 +6918,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStateResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoiceState GetTaxInvoiceStateResult;
+        public Barobill.TaxInvoiceState GetTaxInvoiceStateResult;
         
         public GetTaxInvoiceStateResponseBody() {
         }
         
-        public GetTaxInvoiceStateResponseBody(iljin.Barobill.TaxInvoiceState GetTaxInvoiceStateResult) {
+        public GetTaxInvoiceStateResponseBody(Barobill.TaxInvoiceState GetTaxInvoiceStateResult) {
             this.GetTaxInvoiceStateResult = GetTaxInvoiceStateResult;
         }
     }
@@ -6935,12 +6935,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStates", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStatesRequestBody Body;
+        public Barobill.GetTaxInvoiceStatesRequestBody Body;
         
         public GetTaxInvoiceStatesRequest() {
         }
         
-        public GetTaxInvoiceStatesRequest(iljin.Barobill.GetTaxInvoiceStatesRequestBody Body) {
+        public GetTaxInvoiceStatesRequest(Barobill.GetTaxInvoiceStatesRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -6958,12 +6958,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.ArrayOfString MgtKeyList;
+        public Barobill.ArrayOfString MgtKeyList;
         
         public GetTaxInvoiceStatesRequestBody() {
         }
         
-        public GetTaxInvoiceStatesRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList) {
+        public GetTaxInvoiceStatesRequestBody(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.MgtKeyList = MgtKeyList;
@@ -6977,12 +6977,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStatesResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStatesResponseBody Body;
+        public Barobill.GetTaxInvoiceStatesResponseBody Body;
         
         public GetTaxInvoiceStatesResponse() {
         }
         
-        public GetTaxInvoiceStatesResponse(iljin.Barobill.GetTaxInvoiceStatesResponseBody Body) {
+        public GetTaxInvoiceStatesResponse(Barobill.GetTaxInvoiceStatesResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -6994,12 +6994,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoiceState[] GetTaxInvoiceStatesResult;
+        public Barobill.TaxInvoiceState[] GetTaxInvoiceStatesResult;
         
         public GetTaxInvoiceStatesResponseBody() {
         }
         
-        public GetTaxInvoiceStatesResponseBody(iljin.Barobill.TaxInvoiceState[] GetTaxInvoiceStatesResult) {
+        public GetTaxInvoiceStatesResponseBody(Barobill.TaxInvoiceState[] GetTaxInvoiceStatesResult) {
             this.GetTaxInvoiceStatesResult = GetTaxInvoiceStatesResult;
         }
     }
@@ -7011,12 +7011,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStateEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStateEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStateEXRequestBody Body;
+        public Barobill.GetTaxInvoiceStateEXRequestBody Body;
         
         public GetTaxInvoiceStateEXRequest() {
         }
         
-        public GetTaxInvoiceStateEXRequest(iljin.Barobill.GetTaxInvoiceStateEXRequestBody Body) {
+        public GetTaxInvoiceStateEXRequest(Barobill.GetTaxInvoiceStateEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7053,12 +7053,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStateEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStateEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStateEXResponseBody Body;
+        public Barobill.GetTaxInvoiceStateEXResponseBody Body;
         
         public GetTaxInvoiceStateEXResponse() {
         }
         
-        public GetTaxInvoiceStateEXResponse(iljin.Barobill.GetTaxInvoiceStateEXResponseBody Body) {
+        public GetTaxInvoiceStateEXResponse(Barobill.GetTaxInvoiceStateEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7070,12 +7070,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStateEXResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoiceStateEX GetTaxInvoiceStateEXResult;
+        public Barobill.TaxInvoiceStateEX GetTaxInvoiceStateEXResult;
         
         public GetTaxInvoiceStateEXResponseBody() {
         }
         
-        public GetTaxInvoiceStateEXResponseBody(iljin.Barobill.TaxInvoiceStateEX GetTaxInvoiceStateEXResult) {
+        public GetTaxInvoiceStateEXResponseBody(Barobill.TaxInvoiceStateEX GetTaxInvoiceStateEXResult) {
             this.GetTaxInvoiceStateEXResult = GetTaxInvoiceStateEXResult;
         }
     }
@@ -7087,12 +7087,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesEXRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStatesEX", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStatesEXRequestBody Body;
+        public Barobill.GetTaxInvoiceStatesEXRequestBody Body;
         
         public GetTaxInvoiceStatesEXRequest() {
         }
         
-        public GetTaxInvoiceStatesEXRequest(iljin.Barobill.GetTaxInvoiceStatesEXRequestBody Body) {
+        public GetTaxInvoiceStatesEXRequest(Barobill.GetTaxInvoiceStatesEXRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7110,12 +7110,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.ArrayOfString MgtKeyList;
+        public Barobill.ArrayOfString MgtKeyList;
         
         public GetTaxInvoiceStatesEXRequestBody() {
         }
         
-        public GetTaxInvoiceStatesEXRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList) {
+        public GetTaxInvoiceStatesEXRequestBody(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.MgtKeyList = MgtKeyList;
@@ -7129,12 +7129,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesEXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStatesEXResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStatesEXResponseBody Body;
+        public Barobill.GetTaxInvoiceStatesEXResponseBody Body;
         
         public GetTaxInvoiceStatesEXResponse() {
         }
         
-        public GetTaxInvoiceStatesEXResponse(iljin.Barobill.GetTaxInvoiceStatesEXResponseBody Body) {
+        public GetTaxInvoiceStatesEXResponse(Barobill.GetTaxInvoiceStatesEXResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7146,12 +7146,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesEXResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoiceStateEX[] GetTaxInvoiceStatesEXResult;
+        public Barobill.TaxInvoiceStateEX[] GetTaxInvoiceStatesEXResult;
         
         public GetTaxInvoiceStatesEXResponseBody() {
         }
         
-        public GetTaxInvoiceStatesEXResponseBody(iljin.Barobill.TaxInvoiceStateEX[] GetTaxInvoiceStatesEXResult) {
+        public GetTaxInvoiceStatesEXResponseBody(Barobill.TaxInvoiceStateEX[] GetTaxInvoiceStatesEXResult) {
             this.GetTaxInvoiceStatesEXResult = GetTaxInvoiceStatesEXResult;
         }
     }
@@ -7163,12 +7163,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesIKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStatesIK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStatesIKRequestBody Body;
+        public Barobill.GetTaxInvoiceStatesIKRequestBody Body;
         
         public GetTaxInvoiceStatesIKRequest() {
         }
         
-        public GetTaxInvoiceStatesIKRequest(iljin.Barobill.GetTaxInvoiceStatesIKRequestBody Body) {
+        public GetTaxInvoiceStatesIKRequest(Barobill.GetTaxInvoiceStatesIKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7186,12 +7186,12 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.ArrayOfString InvoiceKeyList;
+        public Barobill.ArrayOfString InvoiceKeyList;
         
         public GetTaxInvoiceStatesIKRequestBody() {
         }
         
-        public GetTaxInvoiceStatesIKRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString InvoiceKeyList) {
+        public GetTaxInvoiceStatesIKRequestBody(string CERTKEY, string CorpNum, Barobill.ArrayOfString InvoiceKeyList) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.InvoiceKeyList = InvoiceKeyList;
@@ -7205,12 +7205,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesIKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceStatesIKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceStatesIKResponseBody Body;
+        public Barobill.GetTaxInvoiceStatesIKResponseBody Body;
         
         public GetTaxInvoiceStatesIKResponse() {
         }
         
-        public GetTaxInvoiceStatesIKResponse(iljin.Barobill.GetTaxInvoiceStatesIKResponseBody Body) {
+        public GetTaxInvoiceStatesIKResponse(Barobill.GetTaxInvoiceStatesIKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7222,12 +7222,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceStatesIKResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.TaxInvoiceState[] GetTaxInvoiceStatesIKResult;
+        public Barobill.TaxInvoiceState[] GetTaxInvoiceStatesIKResult;
         
         public GetTaxInvoiceStatesIKResponseBody() {
         }
         
-        public GetTaxInvoiceStatesIKResponseBody(iljin.Barobill.TaxInvoiceState[] GetTaxInvoiceStatesIKResult) {
+        public GetTaxInvoiceStatesIKResponseBody(Barobill.TaxInvoiceState[] GetTaxInvoiceStatesIKResult) {
             this.GetTaxInvoiceStatesIKResult = GetTaxInvoiceStatesIKResult;
         }
     }
@@ -7239,12 +7239,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceLogRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceLog", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceLogRequestBody Body;
+        public Barobill.GetTaxInvoiceLogRequestBody Body;
         
         public GetTaxInvoiceLogRequest() {
         }
         
-        public GetTaxInvoiceLogRequest(iljin.Barobill.GetTaxInvoiceLogRequestBody Body) {
+        public GetTaxInvoiceLogRequest(Barobill.GetTaxInvoiceLogRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7281,12 +7281,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceLogResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceLogResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceLogResponseBody Body;
+        public Barobill.GetTaxInvoiceLogResponseBody Body;
         
         public GetTaxInvoiceLogResponse() {
         }
         
-        public GetTaxInvoiceLogResponse(iljin.Barobill.GetTaxInvoiceLogResponseBody Body) {
+        public GetTaxInvoiceLogResponse(Barobill.GetTaxInvoiceLogResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7298,12 +7298,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceLogResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.InvoiceLog[] GetTaxInvoiceLogResult;
+        public Barobill.InvoiceLog[] GetTaxInvoiceLogResult;
         
         public GetTaxInvoiceLogResponseBody() {
         }
         
-        public GetTaxInvoiceLogResponseBody(iljin.Barobill.InvoiceLog[] GetTaxInvoiceLogResult) {
+        public GetTaxInvoiceLogResponseBody(Barobill.InvoiceLog[] GetTaxInvoiceLogResult) {
             this.GetTaxInvoiceLogResult = GetTaxInvoiceLogResult;
         }
     }
@@ -7315,12 +7315,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceLogIKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceLogIK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceLogIKRequestBody Body;
+        public Barobill.GetTaxInvoiceLogIKRequestBody Body;
         
         public GetTaxInvoiceLogIKRequest() {
         }
         
-        public GetTaxInvoiceLogIKRequest(iljin.Barobill.GetTaxInvoiceLogIKRequestBody Body) {
+        public GetTaxInvoiceLogIKRequest(Barobill.GetTaxInvoiceLogIKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7357,12 +7357,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceLogIKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceLogIKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceLogIKResponseBody Body;
+        public Barobill.GetTaxInvoiceLogIKResponseBody Body;
         
         public GetTaxInvoiceLogIKResponse() {
         }
         
-        public GetTaxInvoiceLogIKResponse(iljin.Barobill.GetTaxInvoiceLogIKResponseBody Body) {
+        public GetTaxInvoiceLogIKResponse(Barobill.GetTaxInvoiceLogIKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7374,12 +7374,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceLogIKResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.InvoiceLog[] GetTaxInvoiceLogIKResult;
+        public Barobill.InvoiceLog[] GetTaxInvoiceLogIKResult;
         
         public GetTaxInvoiceLogIKResponseBody() {
         }
         
-        public GetTaxInvoiceLogIKResponseBody(iljin.Barobill.InvoiceLog[] GetTaxInvoiceLogIKResult) {
+        public GetTaxInvoiceLogIKResponseBody(Barobill.InvoiceLog[] GetTaxInvoiceLogIKResult) {
             this.GetTaxInvoiceLogIKResult = GetTaxInvoiceLogIKResult;
         }
     }
@@ -7391,12 +7391,12 @@ namespace iljin.Barobill {
     public partial class AttachFileByFTPRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="AttachFileByFTP", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.AttachFileByFTPRequestBody Body;
+        public Barobill.AttachFileByFTPRequestBody Body;
         
         public AttachFileByFTPRequest() {
         }
         
-        public AttachFileByFTPRequest(iljin.Barobill.AttachFileByFTPRequestBody Body) {
+        public AttachFileByFTPRequest(Barobill.AttachFileByFTPRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7441,12 +7441,12 @@ namespace iljin.Barobill {
     public partial class AttachFileByFTPResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="AttachFileByFTPResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.AttachFileByFTPResponseBody Body;
+        public Barobill.AttachFileByFTPResponseBody Body;
         
         public AttachFileByFTPResponse() {
         }
         
-        public AttachFileByFTPResponse(iljin.Barobill.AttachFileByFTPResponseBody Body) {
+        public AttachFileByFTPResponse(Barobill.AttachFileByFTPResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7475,12 +7475,12 @@ namespace iljin.Barobill {
     public partial class DeleteAttachFileRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteAttachFile", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteAttachFileRequestBody Body;
+        public Barobill.DeleteAttachFileRequestBody Body;
         
         public DeleteAttachFileRequest() {
         }
         
-        public DeleteAttachFileRequest(iljin.Barobill.DeleteAttachFileRequestBody Body) {
+        public DeleteAttachFileRequest(Barobill.DeleteAttachFileRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7517,12 +7517,12 @@ namespace iljin.Barobill {
     public partial class DeleteAttachFileResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteAttachFileResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteAttachFileResponseBody Body;
+        public Barobill.DeleteAttachFileResponseBody Body;
         
         public DeleteAttachFileResponse() {
         }
         
-        public DeleteAttachFileResponse(iljin.Barobill.DeleteAttachFileResponseBody Body) {
+        public DeleteAttachFileResponse(Barobill.DeleteAttachFileResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7551,12 +7551,12 @@ namespace iljin.Barobill {
     public partial class DeleteAttachFileWithFileIndexRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteAttachFileWithFileIndex", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteAttachFileWithFileIndexRequestBody Body;
+        public Barobill.DeleteAttachFileWithFileIndexRequestBody Body;
         
         public DeleteAttachFileWithFileIndexRequest() {
         }
         
-        public DeleteAttachFileWithFileIndexRequest(iljin.Barobill.DeleteAttachFileWithFileIndexRequestBody Body) {
+        public DeleteAttachFileWithFileIndexRequest(Barobill.DeleteAttachFileWithFileIndexRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7597,12 +7597,12 @@ namespace iljin.Barobill {
     public partial class DeleteAttachFileWithFileIndexResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteAttachFileWithFileIndexResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.DeleteAttachFileWithFileIndexResponseBody Body;
+        public Barobill.DeleteAttachFileWithFileIndexResponseBody Body;
         
         public DeleteAttachFileWithFileIndexResponse() {
         }
         
-        public DeleteAttachFileWithFileIndexResponse(iljin.Barobill.DeleteAttachFileWithFileIndexResponseBody Body) {
+        public DeleteAttachFileWithFileIndexResponse(Barobill.DeleteAttachFileWithFileIndexResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7631,12 +7631,12 @@ namespace iljin.Barobill {
     public partial class GetAttachedFileListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAttachedFileList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetAttachedFileListRequestBody Body;
+        public Barobill.GetAttachedFileListRequestBody Body;
         
         public GetAttachedFileListRequest() {
         }
         
-        public GetAttachedFileListRequest(iljin.Barobill.GetAttachedFileListRequestBody Body) {
+        public GetAttachedFileListRequest(Barobill.GetAttachedFileListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7673,12 +7673,12 @@ namespace iljin.Barobill {
     public partial class GetAttachedFileListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAttachedFileListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetAttachedFileListResponseBody Body;
+        public Barobill.GetAttachedFileListResponseBody Body;
         
         public GetAttachedFileListResponse() {
         }
         
-        public GetAttachedFileListResponse(iljin.Barobill.GetAttachedFileListResponseBody Body) {
+        public GetAttachedFileListResponse(Barobill.GetAttachedFileListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7690,12 +7690,12 @@ namespace iljin.Barobill {
     public partial class GetAttachedFileListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.AttachedFile[] GetAttachedFileListResult;
+        public Barobill.AttachedFile[] GetAttachedFileListResult;
         
         public GetAttachedFileListResponseBody() {
         }
         
-        public GetAttachedFileListResponseBody(iljin.Barobill.AttachedFile[] GetAttachedFileListResult) {
+        public GetAttachedFileListResponseBody(Barobill.AttachedFile[] GetAttachedFileListResult) {
             this.GetAttachedFileListResult = GetAttachedFileListResult;
         }
     }
@@ -7707,12 +7707,12 @@ namespace iljin.Barobill {
     public partial class GetAttachedFileListExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAttachedFileListEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetAttachedFileListExRequestBody Body;
+        public Barobill.GetAttachedFileListExRequestBody Body;
         
         public GetAttachedFileListExRequest() {
         }
         
-        public GetAttachedFileListExRequest(iljin.Barobill.GetAttachedFileListExRequestBody Body) {
+        public GetAttachedFileListExRequest(Barobill.GetAttachedFileListExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7749,12 +7749,12 @@ namespace iljin.Barobill {
     public partial class GetAttachedFileListExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAttachedFileListExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetAttachedFileListExResponseBody Body;
+        public Barobill.GetAttachedFileListExResponseBody Body;
         
         public GetAttachedFileListExResponse() {
         }
         
-        public GetAttachedFileListExResponse(iljin.Barobill.GetAttachedFileListExResponseBody Body) {
+        public GetAttachedFileListExResponse(Barobill.GetAttachedFileListExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7766,12 +7766,12 @@ namespace iljin.Barobill {
     public partial class GetAttachedFileListExResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.AttachedFileEx[] GetAttachedFileListExResult;
+        public Barobill.AttachedFileEx[] GetAttachedFileListExResult;
         
         public GetAttachedFileListExResponseBody() {
         }
         
-        public GetAttachedFileListExResponseBody(iljin.Barobill.AttachedFileEx[] GetAttachedFileListExResult) {
+        public GetAttachedFileListExResponseBody(Barobill.AttachedFileEx[] GetAttachedFileListExResult) {
             this.GetAttachedFileListExResult = GetAttachedFileListExResult;
         }
     }
@@ -7783,12 +7783,12 @@ namespace iljin.Barobill {
     public partial class ReSendEmailRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReSendEmail", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReSendEmailRequestBody Body;
+        public Barobill.ReSendEmailRequestBody Body;
         
         public ReSendEmailRequest() {
         }
         
-        public ReSendEmailRequest(iljin.Barobill.ReSendEmailRequestBody Body) {
+        public ReSendEmailRequest(Barobill.ReSendEmailRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7829,12 +7829,12 @@ namespace iljin.Barobill {
     public partial class ReSendEmailResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReSendEmailResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReSendEmailResponseBody Body;
+        public Barobill.ReSendEmailResponseBody Body;
         
         public ReSendEmailResponse() {
         }
         
-        public ReSendEmailResponse(iljin.Barobill.ReSendEmailResponseBody Body) {
+        public ReSendEmailResponse(Barobill.ReSendEmailResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7863,12 +7863,12 @@ namespace iljin.Barobill {
     public partial class ReSendSMSRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReSendSMS", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReSendSMSRequestBody Body;
+        public Barobill.ReSendSMSRequestBody Body;
         
         public ReSendSMSRequest() {
         }
         
-        public ReSendSMSRequest(iljin.Barobill.ReSendSMSRequestBody Body) {
+        public ReSendSMSRequest(Barobill.ReSendSMSRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -7925,12 +7925,12 @@ namespace iljin.Barobill {
     public partial class ReSendSMSResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReSendSMSResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ReSendSMSResponseBody Body;
+        public Barobill.ReSendSMSResponseBody Body;
         
         public ReSendSMSResponse() {
         }
         
-        public ReSendSMSResponse(iljin.Barobill.ReSendSMSResponseBody Body) {
+        public ReSendSMSResponse(Barobill.ReSendSMSResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -7959,12 +7959,12 @@ namespace iljin.Barobill {
     public partial class SendInvoiceSMSRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SendInvoiceSMS", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.SendInvoiceSMSRequestBody Body;
+        public Barobill.SendInvoiceSMSRequestBody Body;
         
         public SendInvoiceSMSRequest() {
         }
         
-        public SendInvoiceSMSRequest(iljin.Barobill.SendInvoiceSMSRequestBody Body) {
+        public SendInvoiceSMSRequest(Barobill.SendInvoiceSMSRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8017,12 +8017,12 @@ namespace iljin.Barobill {
     public partial class SendInvoiceSMSResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SendInvoiceSMSResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.SendInvoiceSMSResponseBody Body;
+        public Barobill.SendInvoiceSMSResponseBody Body;
         
         public SendInvoiceSMSResponse() {
         }
         
-        public SendInvoiceSMSResponse(iljin.Barobill.SendInvoiceSMSResponseBody Body) {
+        public SendInvoiceSMSResponse(Barobill.SendInvoiceSMSResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8051,12 +8051,12 @@ namespace iljin.Barobill {
     public partial class SendInvoiceFaxRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SendInvoiceFax", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.SendInvoiceFaxRequestBody Body;
+        public Barobill.SendInvoiceFaxRequestBody Body;
         
         public SendInvoiceFaxRequest() {
         }
         
-        public SendInvoiceFaxRequest(iljin.Barobill.SendInvoiceFaxRequestBody Body) {
+        public SendInvoiceFaxRequest(Barobill.SendInvoiceFaxRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8105,12 +8105,12 @@ namespace iljin.Barobill {
     public partial class SendInvoiceFaxResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SendInvoiceFaxResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.SendInvoiceFaxResponseBody Body;
+        public Barobill.SendInvoiceFaxResponseBody Body;
         
         public SendInvoiceFaxResponse() {
         }
         
-        public SendInvoiceFaxResponse(iljin.Barobill.SendInvoiceFaxResponseBody Body) {
+        public SendInvoiceFaxResponse(Barobill.SendInvoiceFaxResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8139,12 +8139,12 @@ namespace iljin.Barobill {
     public partial class GetBaroBillURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBaroBillURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBaroBillURLRequestBody Body;
+        public Barobill.GetBaroBillURLRequestBody Body;
         
         public GetBaroBillURLRequest() {
         }
         
-        public GetBaroBillURLRequest(iljin.Barobill.GetBaroBillURLRequestBody Body) {
+        public GetBaroBillURLRequest(Barobill.GetBaroBillURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8189,12 +8189,12 @@ namespace iljin.Barobill {
     public partial class GetBaroBillURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBaroBillURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBaroBillURLResponseBody Body;
+        public Barobill.GetBaroBillURLResponseBody Body;
         
         public GetBaroBillURLResponse() {
         }
         
-        public GetBaroBillURLResponse(iljin.Barobill.GetBaroBillURLResponseBody Body) {
+        public GetBaroBillURLResponse(Barobill.GetBaroBillURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8223,12 +8223,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePopUpURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePopUpURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePopUpURLRequestBody Body;
+        public Barobill.GetTaxInvoicePopUpURLRequestBody Body;
         
         public GetTaxInvoicePopUpURLRequest() {
         }
         
-        public GetTaxInvoicePopUpURLRequest(iljin.Barobill.GetTaxInvoicePopUpURLRequestBody Body) {
+        public GetTaxInvoicePopUpURLRequest(Barobill.GetTaxInvoicePopUpURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8273,12 +8273,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePopUpURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePopUpURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePopUpURLResponseBody Body;
+        public Barobill.GetTaxInvoicePopUpURLResponseBody Body;
         
         public GetTaxInvoicePopUpURLResponse() {
         }
         
-        public GetTaxInvoicePopUpURLResponse(iljin.Barobill.GetTaxInvoicePopUpURLResponseBody Body) {
+        public GetTaxInvoicePopUpURLResponse(Barobill.GetTaxInvoicePopUpURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8307,12 +8307,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePopUpURLIKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePopUpURLIK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePopUpURLIKRequestBody Body;
+        public Barobill.GetTaxInvoicePopUpURLIKRequestBody Body;
         
         public GetTaxInvoicePopUpURLIKRequest() {
         }
         
-        public GetTaxInvoicePopUpURLIKRequest(iljin.Barobill.GetTaxInvoicePopUpURLIKRequestBody Body) {
+        public GetTaxInvoicePopUpURLIKRequest(Barobill.GetTaxInvoicePopUpURLIKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8357,12 +8357,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePopUpURLIKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePopUpURLIKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePopUpURLIKResponseBody Body;
+        public Barobill.GetTaxInvoicePopUpURLIKResponseBody Body;
         
         public GetTaxInvoicePopUpURLIKResponse() {
         }
         
-        public GetTaxInvoicePopUpURLIKResponse(iljin.Barobill.GetTaxInvoicePopUpURLIKResponseBody Body) {
+        public GetTaxInvoicePopUpURLIKResponse(Barobill.GetTaxInvoicePopUpURLIKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8391,12 +8391,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePopUpURLNKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePopUpURLNK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePopUpURLNKRequestBody Body;
+        public Barobill.GetTaxInvoicePopUpURLNKRequestBody Body;
         
         public GetTaxInvoicePopUpURLNKRequest() {
         }
         
-        public GetTaxInvoicePopUpURLNKRequest(iljin.Barobill.GetTaxInvoicePopUpURLNKRequestBody Body) {
+        public GetTaxInvoicePopUpURLNKRequest(Barobill.GetTaxInvoicePopUpURLNKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8441,12 +8441,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePopUpURLNKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePopUpURLNKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePopUpURLNKResponseBody Body;
+        public Barobill.GetTaxInvoicePopUpURLNKResponseBody Body;
         
         public GetTaxInvoicePopUpURLNKResponse() {
         }
         
-        public GetTaxInvoicePopUpURLNKResponse(iljin.Barobill.GetTaxInvoicePopUpURLNKResponseBody Body) {
+        public GetTaxInvoicePopUpURLNKResponse(Barobill.GetTaxInvoicePopUpURLNKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8475,12 +8475,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePrintURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePrintURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePrintURLRequestBody Body;
+        public Barobill.GetTaxInvoicePrintURLRequestBody Body;
         
         public GetTaxInvoicePrintURLRequest() {
         }
         
-        public GetTaxInvoicePrintURLRequest(iljin.Barobill.GetTaxInvoicePrintURLRequestBody Body) {
+        public GetTaxInvoicePrintURLRequest(Barobill.GetTaxInvoicePrintURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8525,12 +8525,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePrintURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePrintURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePrintURLResponseBody Body;
+        public Barobill.GetTaxInvoicePrintURLResponseBody Body;
         
         public GetTaxInvoicePrintURLResponse() {
         }
         
-        public GetTaxInvoicePrintURLResponse(iljin.Barobill.GetTaxInvoicePrintURLResponseBody Body) {
+        public GetTaxInvoicePrintURLResponse(Barobill.GetTaxInvoicePrintURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8559,12 +8559,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePrintURLIKRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePrintURLIK", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePrintURLIKRequestBody Body;
+        public Barobill.GetTaxInvoicePrintURLIKRequestBody Body;
         
         public GetTaxInvoicePrintURLIKRequest() {
         }
         
-        public GetTaxInvoicePrintURLIKRequest(iljin.Barobill.GetTaxInvoicePrintURLIKRequestBody Body) {
+        public GetTaxInvoicePrintURLIKRequest(Barobill.GetTaxInvoicePrintURLIKRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8609,12 +8609,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePrintURLIKResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePrintURLIKResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePrintURLIKResponseBody Body;
+        public Barobill.GetTaxInvoicePrintURLIKResponseBody Body;
         
         public GetTaxInvoicePrintURLIKResponse() {
         }
         
-        public GetTaxInvoicePrintURLIKResponse(iljin.Barobill.GetTaxInvoicePrintURLIKResponseBody Body) {
+        public GetTaxInvoicePrintURLIKResponse(Barobill.GetTaxInvoicePrintURLIKResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8643,12 +8643,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicesPrintURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicesPrintURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicesPrintURLRequestBody Body;
+        public Barobill.GetTaxInvoicesPrintURLRequestBody Body;
         
         public GetTaxInvoicesPrintURLRequest() {
         }
         
-        public GetTaxInvoicesPrintURLRequest(iljin.Barobill.GetTaxInvoicesPrintURLRequestBody Body) {
+        public GetTaxInvoicesPrintURLRequest(Barobill.GetTaxInvoicesPrintURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8666,7 +8666,7 @@ namespace iljin.Barobill {
         public string CorpNum;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public iljin.Barobill.ArrayOfString MgtKeyList;
+        public Barobill.ArrayOfString MgtKeyList;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string ID;
@@ -8677,7 +8677,7 @@ namespace iljin.Barobill {
         public GetTaxInvoicesPrintURLRequestBody() {
         }
         
-        public GetTaxInvoicesPrintURLRequestBody(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList, string ID, string PWD) {
+        public GetTaxInvoicesPrintURLRequestBody(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList, string ID, string PWD) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.MgtKeyList = MgtKeyList;
@@ -8693,12 +8693,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicesPrintURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicesPrintURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicesPrintURLResponseBody Body;
+        public Barobill.GetTaxInvoicesPrintURLResponseBody Body;
         
         public GetTaxInvoicesPrintURLResponse() {
         }
         
-        public GetTaxInvoicesPrintURLResponse(iljin.Barobill.GetTaxInvoicesPrintURLResponseBody Body) {
+        public GetTaxInvoicesPrintURLResponse(Barobill.GetTaxInvoicesPrintURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8727,12 +8727,12 @@ namespace iljin.Barobill {
     public partial class GetTaxinvoiceMailURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxinvoiceMailURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxinvoiceMailURLRequestBody Body;
+        public Barobill.GetTaxinvoiceMailURLRequestBody Body;
         
         public GetTaxinvoiceMailURLRequest() {
         }
         
-        public GetTaxinvoiceMailURLRequest(iljin.Barobill.GetTaxinvoiceMailURLRequestBody Body) {
+        public GetTaxinvoiceMailURLRequest(Barobill.GetTaxinvoiceMailURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8769,12 +8769,12 @@ namespace iljin.Barobill {
     public partial class GetTaxinvoiceMailURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxinvoiceMailURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxinvoiceMailURLResponseBody Body;
+        public Barobill.GetTaxinvoiceMailURLResponseBody Body;
         
         public GetTaxinvoiceMailURLResponse() {
         }
         
-        public GetTaxinvoiceMailURLResponse(iljin.Barobill.GetTaxinvoiceMailURLResponseBody Body) {
+        public GetTaxinvoiceMailURLResponse(Barobill.GetTaxinvoiceMailURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8803,12 +8803,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceScrapRequestURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceScrapRequestURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceScrapRequestURLRequestBody Body;
+        public Barobill.GetTaxInvoiceScrapRequestURLRequestBody Body;
         
         public GetTaxInvoiceScrapRequestURLRequest() {
         }
         
-        public GetTaxInvoiceScrapRequestURLRequest(iljin.Barobill.GetTaxInvoiceScrapRequestURLRequestBody Body) {
+        public GetTaxInvoiceScrapRequestURLRequest(Barobill.GetTaxInvoiceScrapRequestURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8849,12 +8849,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceScrapRequestURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceScrapRequestURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceScrapRequestURLResponseBody Body;
+        public Barobill.GetTaxInvoiceScrapRequestURLResponseBody Body;
         
         public GetTaxInvoiceScrapRequestURLResponse() {
         }
         
-        public GetTaxInvoiceScrapRequestURLResponse(iljin.Barobill.GetTaxInvoiceScrapRequestURLResponseBody Body) {
+        public GetTaxInvoiceScrapRequestURLResponse(Barobill.GetTaxInvoiceScrapRequestURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8883,12 +8883,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListRequestBody Body;
+        public Barobill.GetTaxInvoiceSalesListRequestBody Body;
         
         public GetTaxInvoiceSalesListRequest() {
         }
         
-        public GetTaxInvoiceSalesListRequest(iljin.Barobill.GetTaxInvoiceSalesListRequestBody Body) {
+        public GetTaxInvoiceSalesListRequest(Barobill.GetTaxInvoiceSalesListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -8941,12 +8941,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListResponseBody Body;
+        public Barobill.GetTaxInvoiceSalesListResponseBody Body;
         
         public GetTaxInvoiceSalesListResponse() {
         }
         
-        public GetTaxInvoiceSalesListResponse(iljin.Barobill.GetTaxInvoiceSalesListResponseBody Body) {
+        public GetTaxInvoiceSalesListResponse(Barobill.GetTaxInvoiceSalesListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -8958,12 +8958,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoiceSalesListResult;
+        public Barobill.PagedTaxInvoice GetTaxInvoiceSalesListResult;
         
         public GetTaxInvoiceSalesListResponseBody() {
         }
         
-        public GetTaxInvoiceSalesListResponseBody(iljin.Barobill.PagedTaxInvoice GetTaxInvoiceSalesListResult) {
+        public GetTaxInvoiceSalesListResponseBody(Barobill.PagedTaxInvoice GetTaxInvoiceSalesListResult) {
             this.GetTaxInvoiceSalesListResult = GetTaxInvoiceSalesListResult;
         }
     }
@@ -8975,12 +8975,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListExRequestBody Body;
+        public Barobill.GetTaxInvoiceSalesListExRequestBody Body;
         
         public GetTaxInvoiceSalesListExRequest() {
         }
         
-        public GetTaxInvoiceSalesListExRequest(iljin.Barobill.GetTaxInvoiceSalesListExRequestBody Body) {
+        public GetTaxInvoiceSalesListExRequest(Barobill.GetTaxInvoiceSalesListExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9033,12 +9033,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListExResponseBody Body;
+        public Barobill.GetTaxInvoiceSalesListExResponseBody Body;
         
         public GetTaxInvoiceSalesListExResponse() {
         }
         
-        public GetTaxInvoiceSalesListExResponse(iljin.Barobill.GetTaxInvoiceSalesListExResponseBody Body) {
+        public GetTaxInvoiceSalesListExResponse(Barobill.GetTaxInvoiceSalesListExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9050,12 +9050,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListExResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListExResult;
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListExResult;
         
         public GetTaxInvoiceSalesListExResponseBody() {
         }
         
-        public GetTaxInvoiceSalesListExResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListExResult) {
+        public GetTaxInvoiceSalesListExResponseBody(Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListExResult) {
             this.GetTaxInvoiceSalesListExResult = GetTaxInvoiceSalesListExResult;
         }
     }
@@ -9067,12 +9067,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListRequestBody Body;
+        public Barobill.GetTaxInvoicePurchaseListRequestBody Body;
         
         public GetTaxInvoicePurchaseListRequest() {
         }
         
-        public GetTaxInvoicePurchaseListRequest(iljin.Barobill.GetTaxInvoicePurchaseListRequestBody Body) {
+        public GetTaxInvoicePurchaseListRequest(Barobill.GetTaxInvoicePurchaseListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9125,12 +9125,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListResponseBody Body;
+        public Barobill.GetTaxInvoicePurchaseListResponseBody Body;
         
         public GetTaxInvoicePurchaseListResponse() {
         }
         
-        public GetTaxInvoicePurchaseListResponse(iljin.Barobill.GetTaxInvoicePurchaseListResponseBody Body) {
+        public GetTaxInvoicePurchaseListResponse(Barobill.GetTaxInvoicePurchaseListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9142,12 +9142,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListResult;
+        public Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListResult;
         
         public GetTaxInvoicePurchaseListResponseBody() {
         }
         
-        public GetTaxInvoicePurchaseListResponseBody(iljin.Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListResult) {
+        public GetTaxInvoicePurchaseListResponseBody(Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListResult) {
             this.GetTaxInvoicePurchaseListResult = GetTaxInvoicePurchaseListResult;
         }
     }
@@ -9159,12 +9159,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListExRequestBody Body;
+        public Barobill.GetTaxInvoicePurchaseListExRequestBody Body;
         
         public GetTaxInvoicePurchaseListExRequest() {
         }
         
-        public GetTaxInvoicePurchaseListExRequest(iljin.Barobill.GetTaxInvoicePurchaseListExRequestBody Body) {
+        public GetTaxInvoicePurchaseListExRequest(Barobill.GetTaxInvoicePurchaseListExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9217,12 +9217,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListExResponseBody Body;
+        public Barobill.GetTaxInvoicePurchaseListExResponseBody Body;
         
         public GetTaxInvoicePurchaseListExResponse() {
         }
         
-        public GetTaxInvoicePurchaseListExResponse(iljin.Barobill.GetTaxInvoicePurchaseListExResponseBody Body) {
+        public GetTaxInvoicePurchaseListExResponse(Barobill.GetTaxInvoicePurchaseListExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9234,12 +9234,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListExResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListExResult;
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListExResult;
         
         public GetTaxInvoicePurchaseListExResponseBody() {
         }
         
-        public GetTaxInvoicePurchaseListExResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListExResult) {
+        public GetTaxInvoicePurchaseListExResponseBody(Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListExResult) {
             this.GetTaxInvoicePurchaseListExResult = GetTaxInvoicePurchaseListExResult;
         }
     }
@@ -9251,12 +9251,12 @@ namespace iljin.Barobill {
     public partial class GetDailyTaxInvoiceSalesListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetDailyTaxInvoiceSalesList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetDailyTaxInvoiceSalesListRequestBody Body;
+        public Barobill.GetDailyTaxInvoiceSalesListRequestBody Body;
         
         public GetDailyTaxInvoiceSalesListRequest() {
         }
         
-        public GetDailyTaxInvoiceSalesListRequest(iljin.Barobill.GetDailyTaxInvoiceSalesListRequestBody Body) {
+        public GetDailyTaxInvoiceSalesListRequest(Barobill.GetDailyTaxInvoiceSalesListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9313,12 +9313,12 @@ namespace iljin.Barobill {
     public partial class GetDailyTaxInvoiceSalesListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetDailyTaxInvoiceSalesListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetDailyTaxInvoiceSalesListResponseBody Body;
+        public Barobill.GetDailyTaxInvoiceSalesListResponseBody Body;
         
         public GetDailyTaxInvoiceSalesListResponse() {
         }
         
-        public GetDailyTaxInvoiceSalesListResponse(iljin.Barobill.GetDailyTaxInvoiceSalesListResponseBody Body) {
+        public GetDailyTaxInvoiceSalesListResponse(Barobill.GetDailyTaxInvoiceSalesListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9330,12 +9330,12 @@ namespace iljin.Barobill {
     public partial class GetDailyTaxInvoiceSalesListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetDailyTaxInvoiceSalesListResult;
+        public Barobill.PagedTaxInvoiceEx GetDailyTaxInvoiceSalesListResult;
         
         public GetDailyTaxInvoiceSalesListResponseBody() {
         }
         
-        public GetDailyTaxInvoiceSalesListResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetDailyTaxInvoiceSalesListResult) {
+        public GetDailyTaxInvoiceSalesListResponseBody(Barobill.PagedTaxInvoiceEx GetDailyTaxInvoiceSalesListResult) {
             this.GetDailyTaxInvoiceSalesListResult = GetDailyTaxInvoiceSalesListResult;
         }
     }
@@ -9347,12 +9347,12 @@ namespace iljin.Barobill {
     public partial class GetDailyTaxInvoicePurchaseListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetDailyTaxInvoicePurchaseList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetDailyTaxInvoicePurchaseListRequestBody Body;
+        public Barobill.GetDailyTaxInvoicePurchaseListRequestBody Body;
         
         public GetDailyTaxInvoicePurchaseListRequest() {
         }
         
-        public GetDailyTaxInvoicePurchaseListRequest(iljin.Barobill.GetDailyTaxInvoicePurchaseListRequestBody Body) {
+        public GetDailyTaxInvoicePurchaseListRequest(Barobill.GetDailyTaxInvoicePurchaseListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9409,12 +9409,12 @@ namespace iljin.Barobill {
     public partial class GetDailyTaxInvoicePurchaseListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetDailyTaxInvoicePurchaseListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetDailyTaxInvoicePurchaseListResponseBody Body;
+        public Barobill.GetDailyTaxInvoicePurchaseListResponseBody Body;
         
         public GetDailyTaxInvoicePurchaseListResponse() {
         }
         
-        public GetDailyTaxInvoicePurchaseListResponse(iljin.Barobill.GetDailyTaxInvoicePurchaseListResponseBody Body) {
+        public GetDailyTaxInvoicePurchaseListResponse(Barobill.GetDailyTaxInvoicePurchaseListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9426,12 +9426,12 @@ namespace iljin.Barobill {
     public partial class GetDailyTaxInvoicePurchaseListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetDailyTaxInvoicePurchaseListResult;
+        public Barobill.PagedTaxInvoiceEx GetDailyTaxInvoicePurchaseListResult;
         
         public GetDailyTaxInvoicePurchaseListResponseBody() {
         }
         
-        public GetDailyTaxInvoicePurchaseListResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetDailyTaxInvoicePurchaseListResult) {
+        public GetDailyTaxInvoicePurchaseListResponseBody(Barobill.PagedTaxInvoiceEx GetDailyTaxInvoicePurchaseListResult) {
             this.GetDailyTaxInvoicePurchaseListResult = GetDailyTaxInvoicePurchaseListResult;
         }
     }
@@ -9443,12 +9443,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyTaxInvoiceSalesListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMonthlyTaxInvoiceSalesList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequestBody Body;
+        public Barobill.GetMonthlyTaxInvoiceSalesListRequestBody Body;
         
         public GetMonthlyTaxInvoiceSalesListRequest() {
         }
         
-        public GetMonthlyTaxInvoiceSalesListRequest(iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequestBody Body) {
+        public GetMonthlyTaxInvoiceSalesListRequest(Barobill.GetMonthlyTaxInvoiceSalesListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9509,12 +9509,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyTaxInvoiceSalesListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMonthlyTaxInvoiceSalesListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponseBody Body;
+        public Barobill.GetMonthlyTaxInvoiceSalesListResponseBody Body;
         
         public GetMonthlyTaxInvoiceSalesListResponse() {
         }
         
-        public GetMonthlyTaxInvoiceSalesListResponse(iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponseBody Body) {
+        public GetMonthlyTaxInvoiceSalesListResponse(Barobill.GetMonthlyTaxInvoiceSalesListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9526,12 +9526,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyTaxInvoiceSalesListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoiceSalesListResult;
+        public Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoiceSalesListResult;
         
         public GetMonthlyTaxInvoiceSalesListResponseBody() {
         }
         
-        public GetMonthlyTaxInvoiceSalesListResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoiceSalesListResult) {
+        public GetMonthlyTaxInvoiceSalesListResponseBody(Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoiceSalesListResult) {
             this.GetMonthlyTaxInvoiceSalesListResult = GetMonthlyTaxInvoiceSalesListResult;
         }
     }
@@ -9543,12 +9543,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyTaxInvoicePurchaseListRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMonthlyTaxInvoicePurchaseList", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody Body;
+        public Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody Body;
         
         public GetMonthlyTaxInvoicePurchaseListRequest() {
         }
         
-        public GetMonthlyTaxInvoicePurchaseListRequest(iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody Body) {
+        public GetMonthlyTaxInvoicePurchaseListRequest(Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9609,12 +9609,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyTaxInvoicePurchaseListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMonthlyTaxInvoicePurchaseListResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponseBody Body;
+        public Barobill.GetMonthlyTaxInvoicePurchaseListResponseBody Body;
         
         public GetMonthlyTaxInvoicePurchaseListResponse() {
         }
         
-        public GetMonthlyTaxInvoicePurchaseListResponse(iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponseBody Body) {
+        public GetMonthlyTaxInvoicePurchaseListResponse(Barobill.GetMonthlyTaxInvoicePurchaseListResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9626,12 +9626,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyTaxInvoicePurchaseListResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoicePurchaseListResult;
+        public Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoicePurchaseListResult;
         
         public GetMonthlyTaxInvoicePurchaseListResponseBody() {
         }
         
-        public GetMonthlyTaxInvoicePurchaseListResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoicePurchaseListResult) {
+        public GetMonthlyTaxInvoicePurchaseListResponseBody(Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoicePurchaseListResult) {
             this.GetMonthlyTaxInvoicePurchaseListResult = GetMonthlyTaxInvoicePurchaseListResult;
         }
     }
@@ -9643,12 +9643,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyCountTaxInvoiceRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMonthlyCountTaxInvoice", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetMonthlyCountTaxInvoiceRequestBody Body;
+        public Barobill.GetMonthlyCountTaxInvoiceRequestBody Body;
         
         public GetMonthlyCountTaxInvoiceRequest() {
         }
         
-        public GetMonthlyCountTaxInvoiceRequest(iljin.Barobill.GetMonthlyCountTaxInvoiceRequestBody Body) {
+        public GetMonthlyCountTaxInvoiceRequest(Barobill.GetMonthlyCountTaxInvoiceRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9697,12 +9697,12 @@ namespace iljin.Barobill {
     public partial class GetMonthlyCountTaxInvoiceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMonthlyCountTaxInvoiceResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetMonthlyCountTaxInvoiceResponseBody Body;
+        public Barobill.GetMonthlyCountTaxInvoiceResponseBody Body;
         
         public GetMonthlyCountTaxInvoiceResponse() {
         }
         
-        public GetMonthlyCountTaxInvoiceResponse(iljin.Barobill.GetMonthlyCountTaxInvoiceResponseBody Body) {
+        public GetMonthlyCountTaxInvoiceResponse(Barobill.GetMonthlyCountTaxInvoiceResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9731,12 +9731,12 @@ namespace iljin.Barobill {
     public partial class GetCanceledTaxInvoiceMgtKeyRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCanceledTaxInvoiceMgtKey", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody Body;
+        public Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody Body;
         
         public GetCanceledTaxInvoiceMgtKeyRequest() {
         }
         
-        public GetCanceledTaxInvoiceMgtKeyRequest(iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody Body) {
+        public GetCanceledTaxInvoiceMgtKeyRequest(Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9777,12 +9777,12 @@ namespace iljin.Barobill {
     public partial class GetCanceledTaxInvoiceMgtKeyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCanceledTaxInvoiceMgtKeyResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponseBody Body;
+        public Barobill.GetCanceledTaxInvoiceMgtKeyResponseBody Body;
         
         public GetCanceledTaxInvoiceMgtKeyResponse() {
         }
         
-        public GetCanceledTaxInvoiceMgtKeyResponse(iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponseBody Body) {
+        public GetCanceledTaxInvoiceMgtKeyResponse(Barobill.GetCanceledTaxInvoiceMgtKeyResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9794,12 +9794,12 @@ namespace iljin.Barobill {
     public partial class GetCanceledTaxInvoiceMgtKeyResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.ArrayOfString GetCanceledTaxInvoiceMgtKeyResult;
+        public Barobill.ArrayOfString GetCanceledTaxInvoiceMgtKeyResult;
         
         public GetCanceledTaxInvoiceMgtKeyResponseBody() {
         }
         
-        public GetCanceledTaxInvoiceMgtKeyResponseBody(iljin.Barobill.ArrayOfString GetCanceledTaxInvoiceMgtKeyResult) {
+        public GetCanceledTaxInvoiceMgtKeyResponseBody(Barobill.ArrayOfString GetCanceledTaxInvoiceMgtKeyResult) {
             this.GetCanceledTaxInvoiceMgtKeyResult = GetCanceledTaxInvoiceMgtKeyResult;
         }
     }
@@ -9811,12 +9811,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListByIDRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListByID", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListByIDRequestBody Body;
+        public Barobill.GetTaxInvoiceSalesListByIDRequestBody Body;
         
         public GetTaxInvoiceSalesListByIDRequest() {
         }
         
-        public GetTaxInvoiceSalesListByIDRequest(iljin.Barobill.GetTaxInvoiceSalesListByIDRequestBody Body) {
+        public GetTaxInvoiceSalesListByIDRequest(Barobill.GetTaxInvoiceSalesListByIDRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9869,12 +9869,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListByIDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListByIDResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListByIDResponseBody Body;
+        public Barobill.GetTaxInvoiceSalesListByIDResponseBody Body;
         
         public GetTaxInvoiceSalesListByIDResponse() {
         }
         
-        public GetTaxInvoiceSalesListByIDResponse(iljin.Barobill.GetTaxInvoiceSalesListByIDResponseBody Body) {
+        public GetTaxInvoiceSalesListByIDResponse(Barobill.GetTaxInvoiceSalesListByIDResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9886,12 +9886,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListByIDResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoiceSalesListByIDResult;
+        public Barobill.PagedTaxInvoice GetTaxInvoiceSalesListByIDResult;
         
         public GetTaxInvoiceSalesListByIDResponseBody() {
         }
         
-        public GetTaxInvoiceSalesListByIDResponseBody(iljin.Barobill.PagedTaxInvoice GetTaxInvoiceSalesListByIDResult) {
+        public GetTaxInvoiceSalesListByIDResponseBody(Barobill.PagedTaxInvoice GetTaxInvoiceSalesListByIDResult) {
             this.GetTaxInvoiceSalesListByIDResult = GetTaxInvoiceSalesListByIDResult;
         }
     }
@@ -9903,12 +9903,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListByIDRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListByID", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListByIDRequestBody Body;
+        public Barobill.GetTaxInvoicePurchaseListByIDRequestBody Body;
         
         public GetTaxInvoicePurchaseListByIDRequest() {
         }
         
-        public GetTaxInvoicePurchaseListByIDRequest(iljin.Barobill.GetTaxInvoicePurchaseListByIDRequestBody Body) {
+        public GetTaxInvoicePurchaseListByIDRequest(Barobill.GetTaxInvoicePurchaseListByIDRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -9961,12 +9961,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListByIDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListByIDResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListByIDResponseBody Body;
+        public Barobill.GetTaxInvoicePurchaseListByIDResponseBody Body;
         
         public GetTaxInvoicePurchaseListByIDResponse() {
         }
         
-        public GetTaxInvoicePurchaseListByIDResponse(iljin.Barobill.GetTaxInvoicePurchaseListByIDResponseBody Body) {
+        public GetTaxInvoicePurchaseListByIDResponse(Barobill.GetTaxInvoicePurchaseListByIDResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -9978,12 +9978,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListByIDResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListByIDResult;
+        public Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListByIDResult;
         
         public GetTaxInvoicePurchaseListByIDResponseBody() {
         }
         
-        public GetTaxInvoicePurchaseListByIDResponseBody(iljin.Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListByIDResult) {
+        public GetTaxInvoicePurchaseListByIDResponseBody(Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListByIDResult) {
             this.GetTaxInvoicePurchaseListByIDResult = GetTaxInvoicePurchaseListByIDResult;
         }
     }
@@ -9995,12 +9995,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListByIDExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListByIDEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListByIDExRequestBody Body;
+        public Barobill.GetTaxInvoiceSalesListByIDExRequestBody Body;
         
         public GetTaxInvoiceSalesListByIDExRequest() {
         }
         
-        public GetTaxInvoiceSalesListByIDExRequest(iljin.Barobill.GetTaxInvoiceSalesListByIDExRequestBody Body) {
+        public GetTaxInvoiceSalesListByIDExRequest(Barobill.GetTaxInvoiceSalesListByIDExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10053,12 +10053,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListByIDExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoiceSalesListByIDExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoiceSalesListByIDExResponseBody Body;
+        public Barobill.GetTaxInvoiceSalesListByIDExResponseBody Body;
         
         public GetTaxInvoiceSalesListByIDExResponse() {
         }
         
-        public GetTaxInvoiceSalesListByIDExResponse(iljin.Barobill.GetTaxInvoiceSalesListByIDExResponseBody Body) {
+        public GetTaxInvoiceSalesListByIDExResponse(Barobill.GetTaxInvoiceSalesListByIDExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10070,12 +10070,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoiceSalesListByIDExResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListByIDExResult;
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListByIDExResult;
         
         public GetTaxInvoiceSalesListByIDExResponseBody() {
         }
         
-        public GetTaxInvoiceSalesListByIDExResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListByIDExResult) {
+        public GetTaxInvoiceSalesListByIDExResponseBody(Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListByIDExResult) {
             this.GetTaxInvoiceSalesListByIDExResult = GetTaxInvoiceSalesListByIDExResult;
         }
     }
@@ -10087,12 +10087,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListByIDExRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListByIDEx", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequestBody Body;
+        public Barobill.GetTaxInvoicePurchaseListByIDExRequestBody Body;
         
         public GetTaxInvoicePurchaseListByIDExRequest() {
         }
         
-        public GetTaxInvoicePurchaseListByIDExRequest(iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequestBody Body) {
+        public GetTaxInvoicePurchaseListByIDExRequest(Barobill.GetTaxInvoicePurchaseListByIDExRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10145,12 +10145,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListByIDExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTaxInvoicePurchaseListByIDExResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponseBody Body;
+        public Barobill.GetTaxInvoicePurchaseListByIDExResponseBody Body;
         
         public GetTaxInvoicePurchaseListByIDExResponse() {
         }
         
-        public GetTaxInvoicePurchaseListByIDExResponse(iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponseBody Body) {
+        public GetTaxInvoicePurchaseListByIDExResponse(Barobill.GetTaxInvoicePurchaseListByIDExResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10162,12 +10162,12 @@ namespace iljin.Barobill {
     public partial class GetTaxInvoicePurchaseListByIDExResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListByIDExResult;
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListByIDExResult;
         
         public GetTaxInvoicePurchaseListByIDExResponseBody() {
         }
         
-        public GetTaxInvoicePurchaseListByIDExResponseBody(iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListByIDExResult) {
+        public GetTaxInvoicePurchaseListByIDExResponseBody(Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListByIDExResult) {
             this.GetTaxInvoicePurchaseListByIDExResult = GetTaxInvoicePurchaseListByIDExResult;
         }
     }
@@ -10179,12 +10179,12 @@ namespace iljin.Barobill {
     public partial class SendToNTSRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SendToNTS", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.SendToNTSRequestBody Body;
+        public Barobill.SendToNTSRequestBody Body;
         
         public SendToNTSRequest() {
         }
         
-        public SendToNTSRequest(iljin.Barobill.SendToNTSRequestBody Body) {
+        public SendToNTSRequest(Barobill.SendToNTSRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10221,12 +10221,12 @@ namespace iljin.Barobill {
     public partial class SendToNTSResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SendToNTSResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.SendToNTSResponseBody Body;
+        public Barobill.SendToNTSResponseBody Body;
         
         public SendToNTSResponse() {
         }
         
-        public SendToNTSResponse(iljin.Barobill.SendToNTSResponseBody Body) {
+        public SendToNTSResponse(Barobill.SendToNTSResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10255,12 +10255,12 @@ namespace iljin.Barobill {
     public partial class GetNTSSendOptionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetNTSSendOption", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetNTSSendOptionRequestBody Body;
+        public Barobill.GetNTSSendOptionRequestBody Body;
         
         public GetNTSSendOptionRequest() {
         }
         
-        public GetNTSSendOptionRequest(iljin.Barobill.GetNTSSendOptionRequestBody Body) {
+        public GetNTSSendOptionRequest(Barobill.GetNTSSendOptionRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10293,12 +10293,12 @@ namespace iljin.Barobill {
     public partial class GetNTSSendOptionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetNTSSendOptionResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetNTSSendOptionResponseBody Body;
+        public Barobill.GetNTSSendOptionResponseBody Body;
         
         public GetNTSSendOptionResponse() {
         }
         
-        public GetNTSSendOptionResponse(iljin.Barobill.GetNTSSendOptionResponseBody Body) {
+        public GetNTSSendOptionResponse(Barobill.GetNTSSendOptionResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10310,12 +10310,12 @@ namespace iljin.Barobill {
     public partial class GetNTSSendOptionResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.NTSSendOption GetNTSSendOptionResult;
+        public Barobill.NTSSendOption GetNTSSendOptionResult;
         
         public GetNTSSendOptionResponseBody() {
         }
         
-        public GetNTSSendOptionResponseBody(iljin.Barobill.NTSSendOption GetNTSSendOptionResult) {
+        public GetNTSSendOptionResponseBody(Barobill.NTSSendOption GetNTSSendOptionResult) {
             this.GetNTSSendOptionResult = GetNTSSendOptionResult;
         }
     }
@@ -10327,12 +10327,12 @@ namespace iljin.Barobill {
     public partial class ChangeNTSSendOptionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ChangeNTSSendOption", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ChangeNTSSendOptionRequestBody Body;
+        public Barobill.ChangeNTSSendOptionRequestBody Body;
         
         public ChangeNTSSendOptionRequest() {
         }
         
-        public ChangeNTSSendOptionRequest(iljin.Barobill.ChangeNTSSendOptionRequestBody Body) {
+        public ChangeNTSSendOptionRequest(Barobill.ChangeNTSSendOptionRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10353,12 +10353,12 @@ namespace iljin.Barobill {
         public string ID;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public iljin.Barobill.NTSSendOption NTSSendOption;
+        public Barobill.NTSSendOption NTSSendOption;
         
         public ChangeNTSSendOptionRequestBody() {
         }
         
-        public ChangeNTSSendOptionRequestBody(string CERTKEY, string CorpNum, string ID, iljin.Barobill.NTSSendOption NTSSendOption) {
+        public ChangeNTSSendOptionRequestBody(string CERTKEY, string CorpNum, string ID, Barobill.NTSSendOption NTSSendOption) {
             this.CERTKEY = CERTKEY;
             this.CorpNum = CorpNum;
             this.ID = ID;
@@ -10373,12 +10373,12 @@ namespace iljin.Barobill {
     public partial class ChangeNTSSendOptionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ChangeNTSSendOptionResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ChangeNTSSendOptionResponseBody Body;
+        public Barobill.ChangeNTSSendOptionResponseBody Body;
         
         public ChangeNTSSendOptionResponse() {
         }
         
-        public ChangeNTSSendOptionResponse(iljin.Barobill.ChangeNTSSendOptionResponseBody Body) {
+        public ChangeNTSSendOptionResponse(Barobill.ChangeNTSSendOptionResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10407,12 +10407,12 @@ namespace iljin.Barobill {
     public partial class GetEmailPublicKeysRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmailPublicKeys", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetEmailPublicKeysRequestBody Body;
+        public Barobill.GetEmailPublicKeysRequestBody Body;
         
         public GetEmailPublicKeysRequest() {
         }
         
-        public GetEmailPublicKeysRequest(iljin.Barobill.GetEmailPublicKeysRequestBody Body) {
+        public GetEmailPublicKeysRequest(Barobill.GetEmailPublicKeysRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10441,12 +10441,12 @@ namespace iljin.Barobill {
     public partial class GetEmailPublicKeysResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmailPublicKeysResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetEmailPublicKeysResponseBody Body;
+        public Barobill.GetEmailPublicKeysResponseBody Body;
         
         public GetEmailPublicKeysResponse() {
         }
         
-        public GetEmailPublicKeysResponse(iljin.Barobill.GetEmailPublicKeysResponseBody Body) {
+        public GetEmailPublicKeysResponse(Barobill.GetEmailPublicKeysResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10458,12 +10458,12 @@ namespace iljin.Barobill {
     public partial class GetEmailPublicKeysResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.EMAILPUBLICKEY[] GetEmailPublicKeysResult;
+        public Barobill.EMAILPUBLICKEY[] GetEmailPublicKeysResult;
         
         public GetEmailPublicKeysResponseBody() {
         }
         
-        public GetEmailPublicKeysResponseBody(iljin.Barobill.EMAILPUBLICKEY[] GetEmailPublicKeysResult) {
+        public GetEmailPublicKeysResponseBody(Barobill.EMAILPUBLICKEY[] GetEmailPublicKeysResult) {
             this.GetEmailPublicKeysResult = GetEmailPublicKeysResult;
         }
     }
@@ -10475,12 +10475,12 @@ namespace iljin.Barobill {
     public partial class MakeDocLinkageRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="MakeDocLinkage", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.MakeDocLinkageRequestBody Body;
+        public Barobill.MakeDocLinkageRequestBody Body;
         
         public MakeDocLinkageRequest() {
         }
         
-        public MakeDocLinkageRequest(iljin.Barobill.MakeDocLinkageRequestBody Body) {
+        public MakeDocLinkageRequest(Barobill.MakeDocLinkageRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10529,12 +10529,12 @@ namespace iljin.Barobill {
     public partial class MakeDocLinkageResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="MakeDocLinkageResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.MakeDocLinkageResponseBody Body;
+        public Barobill.MakeDocLinkageResponseBody Body;
         
         public MakeDocLinkageResponse() {
         }
         
-        public MakeDocLinkageResponse(iljin.Barobill.MakeDocLinkageResponseBody Body) {
+        public MakeDocLinkageResponse(Barobill.MakeDocLinkageResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10563,12 +10563,12 @@ namespace iljin.Barobill {
     public partial class RemoveDocLinkageRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RemoveDocLinkage", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RemoveDocLinkageRequestBody Body;
+        public Barobill.RemoveDocLinkageRequestBody Body;
         
         public RemoveDocLinkageRequest() {
         }
         
-        public RemoveDocLinkageRequest(iljin.Barobill.RemoveDocLinkageRequestBody Body) {
+        public RemoveDocLinkageRequest(Barobill.RemoveDocLinkageRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10617,12 +10617,12 @@ namespace iljin.Barobill {
     public partial class RemoveDocLinkageResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RemoveDocLinkageResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RemoveDocLinkageResponseBody Body;
+        public Barobill.RemoveDocLinkageResponseBody Body;
         
         public RemoveDocLinkageResponse() {
         }
         
-        public RemoveDocLinkageResponse(iljin.Barobill.RemoveDocLinkageResponseBody Body) {
+        public RemoveDocLinkageResponse(Barobill.RemoveDocLinkageResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10651,12 +10651,12 @@ namespace iljin.Barobill {
     public partial class GetLinkedDocsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLinkedDocs", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetLinkedDocsRequestBody Body;
+        public Barobill.GetLinkedDocsRequestBody Body;
         
         public GetLinkedDocsRequest() {
         }
         
-        public GetLinkedDocsRequest(iljin.Barobill.GetLinkedDocsRequestBody Body) {
+        public GetLinkedDocsRequest(Barobill.GetLinkedDocsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10697,12 +10697,12 @@ namespace iljin.Barobill {
     public partial class GetLinkedDocsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLinkedDocsResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetLinkedDocsResponseBody Body;
+        public Barobill.GetLinkedDocsResponseBody Body;
         
         public GetLinkedDocsResponse() {
         }
         
-        public GetLinkedDocsResponse(iljin.Barobill.GetLinkedDocsResponseBody Body) {
+        public GetLinkedDocsResponse(Barobill.GetLinkedDocsResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10714,12 +10714,12 @@ namespace iljin.Barobill {
     public partial class GetLinkedDocsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.LinkedDoc[] GetLinkedDocsResult;
+        public Barobill.LinkedDoc[] GetLinkedDocsResult;
         
         public GetLinkedDocsResponseBody() {
         }
         
-        public GetLinkedDocsResponseBody(iljin.Barobill.LinkedDoc[] GetLinkedDocsResult) {
+        public GetLinkedDocsResponseBody(Barobill.LinkedDoc[] GetLinkedDocsResult) {
             this.GetLinkedDocsResult = GetLinkedDocsResult;
         }
     }
@@ -10731,12 +10731,12 @@ namespace iljin.Barobill {
     public partial class GetJicInRegistURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetJicInRegistURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetJicInRegistURLRequestBody Body;
+        public Barobill.GetJicInRegistURLRequestBody Body;
         
         public GetJicInRegistURLRequest() {
         }
         
-        public GetJicInRegistURLRequest(iljin.Barobill.GetJicInRegistURLRequestBody Body) {
+        public GetJicInRegistURLRequest(Barobill.GetJicInRegistURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10777,12 +10777,12 @@ namespace iljin.Barobill {
     public partial class GetJicInRegistURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetJicInRegistURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetJicInRegistURLResponseBody Body;
+        public Barobill.GetJicInRegistURLResponseBody Body;
         
         public GetJicInRegistURLResponse() {
         }
         
-        public GetJicInRegistURLResponse(iljin.Barobill.GetJicInRegistURLResponseBody Body) {
+        public GetJicInRegistURLResponse(Barobill.GetJicInRegistURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10811,12 +10811,12 @@ namespace iljin.Barobill {
     public partial class GetBusinessLicenseRegistURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBusinessLicenseRegistURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBusinessLicenseRegistURLRequestBody Body;
+        public Barobill.GetBusinessLicenseRegistURLRequestBody Body;
         
         public GetBusinessLicenseRegistURLRequest() {
         }
         
-        public GetBusinessLicenseRegistURLRequest(iljin.Barobill.GetBusinessLicenseRegistURLRequestBody Body) {
+        public GetBusinessLicenseRegistURLRequest(Barobill.GetBusinessLicenseRegistURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10857,12 +10857,12 @@ namespace iljin.Barobill {
     public partial class GetBusinessLicenseRegistURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBusinessLicenseRegistURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBusinessLicenseRegistURLResponseBody Body;
+        public Barobill.GetBusinessLicenseRegistURLResponseBody Body;
         
         public GetBusinessLicenseRegistURLResponse() {
         }
         
-        public GetBusinessLicenseRegistURLResponse(iljin.Barobill.GetBusinessLicenseRegistURLResponseBody Body) {
+        public GetBusinessLicenseRegistURLResponse(Barobill.GetBusinessLicenseRegistURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10891,12 +10891,12 @@ namespace iljin.Barobill {
     public partial class GetBankBookRegistURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBankBookRegistURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBankBookRegistURLRequestBody Body;
+        public Barobill.GetBankBookRegistURLRequestBody Body;
         
         public GetBankBookRegistURLRequest() {
         }
         
-        public GetBankBookRegistURLRequest(iljin.Barobill.GetBankBookRegistURLRequestBody Body) {
+        public GetBankBookRegistURLRequest(Barobill.GetBankBookRegistURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -10937,12 +10937,12 @@ namespace iljin.Barobill {
     public partial class GetBankBookRegistURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBankBookRegistURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBankBookRegistURLResponseBody Body;
+        public Barobill.GetBankBookRegistURLResponseBody Body;
         
         public GetBankBookRegistURLResponse() {
         }
         
-        public GetBankBookRegistURLResponse(iljin.Barobill.GetBankBookRegistURLResponseBody Body) {
+        public GetBankBookRegistURLResponse(Barobill.GetBankBookRegistURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -10971,12 +10971,12 @@ namespace iljin.Barobill {
     public partial class CheckCorpIsMemberRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckCorpIsMember", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckCorpIsMemberRequestBody Body;
+        public Barobill.CheckCorpIsMemberRequestBody Body;
         
         public CheckCorpIsMemberRequest() {
         }
         
-        public CheckCorpIsMemberRequest(iljin.Barobill.CheckCorpIsMemberRequestBody Body) {
+        public CheckCorpIsMemberRequest(Barobill.CheckCorpIsMemberRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11013,12 +11013,12 @@ namespace iljin.Barobill {
     public partial class CheckCorpIsMemberResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckCorpIsMemberResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckCorpIsMemberResponseBody Body;
+        public Barobill.CheckCorpIsMemberResponseBody Body;
         
         public CheckCorpIsMemberResponse() {
         }
         
-        public CheckCorpIsMemberResponse(iljin.Barobill.CheckCorpIsMemberResponseBody Body) {
+        public CheckCorpIsMemberResponse(Barobill.CheckCorpIsMemberResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11047,12 +11047,12 @@ namespace iljin.Barobill {
     public partial class RegistCorpRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistCorp", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistCorpRequestBody Body;
+        public Barobill.RegistCorpRequestBody Body;
         
         public RegistCorpRequest() {
         }
         
-        public RegistCorpRequest(iljin.Barobill.RegistCorpRequestBody Body) {
+        public RegistCorpRequest(Barobill.RegistCorpRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11162,12 +11162,12 @@ namespace iljin.Barobill {
     public partial class RegistCorpResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistCorpResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistCorpResponseBody Body;
+        public Barobill.RegistCorpResponseBody Body;
         
         public RegistCorpResponse() {
         }
         
-        public RegistCorpResponse(iljin.Barobill.RegistCorpResponseBody Body) {
+        public RegistCorpResponse(Barobill.RegistCorpResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11196,12 +11196,12 @@ namespace iljin.Barobill {
     public partial class AddUserToCorpRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="AddUserToCorp", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.AddUserToCorpRequestBody Body;
+        public Barobill.AddUserToCorpRequestBody Body;
         
         public AddUserToCorpRequest() {
         }
         
-        public AddUserToCorpRequest(iljin.Barobill.AddUserToCorpRequestBody Body) {
+        public AddUserToCorpRequest(Barobill.AddUserToCorpRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11266,12 +11266,12 @@ namespace iljin.Barobill {
     public partial class AddUserToCorpResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="AddUserToCorpResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.AddUserToCorpResponseBody Body;
+        public Barobill.AddUserToCorpResponseBody Body;
         
         public AddUserToCorpResponse() {
         }
         
-        public AddUserToCorpResponse(iljin.Barobill.AddUserToCorpResponseBody Body) {
+        public AddUserToCorpResponse(Barobill.AddUserToCorpResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11300,12 +11300,12 @@ namespace iljin.Barobill {
     public partial class UpdateCorpInfoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateCorpInfo", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateCorpInfoRequestBody Body;
+        public Barobill.UpdateCorpInfoRequestBody Body;
         
         public UpdateCorpInfoRequest() {
         }
         
-        public UpdateCorpInfoRequest(iljin.Barobill.UpdateCorpInfoRequestBody Body) {
+        public UpdateCorpInfoRequest(Barobill.UpdateCorpInfoRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11366,12 +11366,12 @@ namespace iljin.Barobill {
     public partial class UpdateCorpInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateCorpInfoResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateCorpInfoResponseBody Body;
+        public Barobill.UpdateCorpInfoResponseBody Body;
         
         public UpdateCorpInfoResponse() {
         }
         
-        public UpdateCorpInfoResponse(iljin.Barobill.UpdateCorpInfoResponseBody Body) {
+        public UpdateCorpInfoResponse(Barobill.UpdateCorpInfoResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11400,12 +11400,12 @@ namespace iljin.Barobill {
     public partial class UpdateUserInfoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateUserInfo", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateUserInfoRequestBody Body;
+        public Barobill.UpdateUserInfoRequestBody Body;
         
         public UpdateUserInfoRequest() {
         }
         
-        public UpdateUserInfoRequest(iljin.Barobill.UpdateUserInfoRequestBody Body) {
+        public UpdateUserInfoRequest(Barobill.UpdateUserInfoRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11466,12 +11466,12 @@ namespace iljin.Barobill {
     public partial class UpdateUserInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateUserInfoResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateUserInfoResponseBody Body;
+        public Barobill.UpdateUserInfoResponseBody Body;
         
         public UpdateUserInfoResponse() {
         }
         
-        public UpdateUserInfoResponse(iljin.Barobill.UpdateUserInfoResponseBody Body) {
+        public UpdateUserInfoResponse(Barobill.UpdateUserInfoResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11500,12 +11500,12 @@ namespace iljin.Barobill {
     public partial class UpdateUserPWDRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateUserPWD", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateUserPWDRequestBody Body;
+        public Barobill.UpdateUserPWDRequestBody Body;
         
         public UpdateUserPWDRequest() {
         }
         
-        public UpdateUserPWDRequest(iljin.Barobill.UpdateUserPWDRequestBody Body) {
+        public UpdateUserPWDRequest(Barobill.UpdateUserPWDRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11546,12 +11546,12 @@ namespace iljin.Barobill {
     public partial class UpdateUserPWDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateUserPWDResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.UpdateUserPWDResponseBody Body;
+        public Barobill.UpdateUserPWDResponseBody Body;
         
         public UpdateUserPWDResponse() {
         }
         
-        public UpdateUserPWDResponse(iljin.Barobill.UpdateUserPWDResponseBody Body) {
+        public UpdateUserPWDResponse(Barobill.UpdateUserPWDResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11580,12 +11580,12 @@ namespace iljin.Barobill {
     public partial class ChangeCorpManagerRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ChangeCorpManager", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ChangeCorpManagerRequestBody Body;
+        public Barobill.ChangeCorpManagerRequestBody Body;
         
         public ChangeCorpManagerRequest() {
         }
         
-        public ChangeCorpManagerRequest(iljin.Barobill.ChangeCorpManagerRequestBody Body) {
+        public ChangeCorpManagerRequest(Barobill.ChangeCorpManagerRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11622,12 +11622,12 @@ namespace iljin.Barobill {
     public partial class ChangeCorpManagerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ChangeCorpManagerResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.ChangeCorpManagerResponseBody Body;
+        public Barobill.ChangeCorpManagerResponseBody Body;
         
         public ChangeCorpManagerResponse() {
         }
         
-        public ChangeCorpManagerResponse(iljin.Barobill.ChangeCorpManagerResponseBody Body) {
+        public ChangeCorpManagerResponse(Barobill.ChangeCorpManagerResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11656,12 +11656,12 @@ namespace iljin.Barobill {
     public partial class GetCorpMemberContactsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCorpMemberContacts", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCorpMemberContactsRequestBody Body;
+        public Barobill.GetCorpMemberContactsRequestBody Body;
         
         public GetCorpMemberContactsRequest() {
         }
         
-        public GetCorpMemberContactsRequest(iljin.Barobill.GetCorpMemberContactsRequestBody Body) {
+        public GetCorpMemberContactsRequest(Barobill.GetCorpMemberContactsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11698,12 +11698,12 @@ namespace iljin.Barobill {
     public partial class GetCorpMemberContactsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCorpMemberContactsResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCorpMemberContactsResponseBody Body;
+        public Barobill.GetCorpMemberContactsResponseBody Body;
         
         public GetCorpMemberContactsResponse() {
         }
         
-        public GetCorpMemberContactsResponse(iljin.Barobill.GetCorpMemberContactsResponseBody Body) {
+        public GetCorpMemberContactsResponse(Barobill.GetCorpMemberContactsResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11715,12 +11715,12 @@ namespace iljin.Barobill {
     public partial class GetCorpMemberContactsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.Contact[] GetCorpMemberContactsResult;
+        public Barobill.Contact[] GetCorpMemberContactsResult;
         
         public GetCorpMemberContactsResponseBody() {
         }
         
-        public GetCorpMemberContactsResponseBody(iljin.Barobill.Contact[] GetCorpMemberContactsResult) {
+        public GetCorpMemberContactsResponseBody(Barobill.Contact[] GetCorpMemberContactsResult) {
             this.GetCorpMemberContactsResult = GetCorpMemberContactsResult;
         }
     }
@@ -11732,12 +11732,12 @@ namespace iljin.Barobill {
     public partial class GetBalanceCostAmountRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBalanceCostAmount", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBalanceCostAmountRequestBody Body;
+        public Barobill.GetBalanceCostAmountRequestBody Body;
         
         public GetBalanceCostAmountRequest() {
         }
         
-        public GetBalanceCostAmountRequest(iljin.Barobill.GetBalanceCostAmountRequestBody Body) {
+        public GetBalanceCostAmountRequest(Barobill.GetBalanceCostAmountRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11770,12 +11770,12 @@ namespace iljin.Barobill {
     public partial class GetBalanceCostAmountResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBalanceCostAmountResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBalanceCostAmountResponseBody Body;
+        public Barobill.GetBalanceCostAmountResponseBody Body;
         
         public GetBalanceCostAmountResponse() {
         }
         
-        public GetBalanceCostAmountResponse(iljin.Barobill.GetBalanceCostAmountResponseBody Body) {
+        public GetBalanceCostAmountResponse(Barobill.GetBalanceCostAmountResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11804,12 +11804,12 @@ namespace iljin.Barobill {
     public partial class GetBalanceCostAmountOfInterOPRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBalanceCostAmountOfInterOP", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBalanceCostAmountOfInterOPRequestBody Body;
+        public Barobill.GetBalanceCostAmountOfInterOPRequestBody Body;
         
         public GetBalanceCostAmountOfInterOPRequest() {
         }
         
-        public GetBalanceCostAmountOfInterOPRequest(iljin.Barobill.GetBalanceCostAmountOfInterOPRequestBody Body) {
+        public GetBalanceCostAmountOfInterOPRequest(Barobill.GetBalanceCostAmountOfInterOPRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11838,12 +11838,12 @@ namespace iljin.Barobill {
     public partial class GetBalanceCostAmountOfInterOPResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBalanceCostAmountOfInterOPResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetBalanceCostAmountOfInterOPResponseBody Body;
+        public Barobill.GetBalanceCostAmountOfInterOPResponseBody Body;
         
         public GetBalanceCostAmountOfInterOPResponse() {
         }
         
-        public GetBalanceCostAmountOfInterOPResponse(iljin.Barobill.GetBalanceCostAmountOfInterOPResponseBody Body) {
+        public GetBalanceCostAmountOfInterOPResponse(Barobill.GetBalanceCostAmountOfInterOPResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11872,12 +11872,12 @@ namespace iljin.Barobill {
     public partial class CheckChargeableRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckChargeable", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckChargeableRequestBody Body;
+        public Barobill.CheckChargeableRequestBody Body;
         
         public CheckChargeableRequest() {
         }
         
-        public CheckChargeableRequest(iljin.Barobill.CheckChargeableRequestBody Body) {
+        public CheckChargeableRequest(Barobill.CheckChargeableRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11918,12 +11918,12 @@ namespace iljin.Barobill {
     public partial class CheckChargeableResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckChargeableResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckChargeableResponseBody Body;
+        public Barobill.CheckChargeableResponseBody Body;
         
         public CheckChargeableResponse() {
         }
         
-        public CheckChargeableResponse(iljin.Barobill.CheckChargeableResponseBody Body) {
+        public CheckChargeableResponse(Barobill.CheckChargeableResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -11952,12 +11952,12 @@ namespace iljin.Barobill {
     public partial class GetChargeUnitCostRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetChargeUnitCost", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetChargeUnitCostRequestBody Body;
+        public Barobill.GetChargeUnitCostRequestBody Body;
         
         public GetChargeUnitCostRequest() {
         }
         
-        public GetChargeUnitCostRequest(iljin.Barobill.GetChargeUnitCostRequestBody Body) {
+        public GetChargeUnitCostRequest(Barobill.GetChargeUnitCostRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -11994,12 +11994,12 @@ namespace iljin.Barobill {
     public partial class GetChargeUnitCostResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetChargeUnitCostResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetChargeUnitCostResponseBody Body;
+        public Barobill.GetChargeUnitCostResponseBody Body;
         
         public GetChargeUnitCostResponse() {
         }
         
-        public GetChargeUnitCostResponse(iljin.Barobill.GetChargeUnitCostResponseBody Body) {
+        public GetChargeUnitCostResponse(Barobill.GetChargeUnitCostResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12028,12 +12028,12 @@ namespace iljin.Barobill {
     public partial class GetCertificateRegistDateRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCertificateRegistDate", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCertificateRegistDateRequestBody Body;
+        public Barobill.GetCertificateRegistDateRequestBody Body;
         
         public GetCertificateRegistDateRequest() {
         }
         
-        public GetCertificateRegistDateRequest(iljin.Barobill.GetCertificateRegistDateRequestBody Body) {
+        public GetCertificateRegistDateRequest(Barobill.GetCertificateRegistDateRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12066,12 +12066,12 @@ namespace iljin.Barobill {
     public partial class GetCertificateRegistDateResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCertificateRegistDateResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCertificateRegistDateResponseBody Body;
+        public Barobill.GetCertificateRegistDateResponseBody Body;
         
         public GetCertificateRegistDateResponse() {
         }
         
-        public GetCertificateRegistDateResponse(iljin.Barobill.GetCertificateRegistDateResponseBody Body) {
+        public GetCertificateRegistDateResponse(Barobill.GetCertificateRegistDateResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12100,12 +12100,12 @@ namespace iljin.Barobill {
     public partial class GetCertificateExpireDateRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCertificateExpireDate", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCertificateExpireDateRequestBody Body;
+        public Barobill.GetCertificateExpireDateRequestBody Body;
         
         public GetCertificateExpireDateRequest() {
         }
         
-        public GetCertificateExpireDateRequest(iljin.Barobill.GetCertificateExpireDateRequestBody Body) {
+        public GetCertificateExpireDateRequest(Barobill.GetCertificateExpireDateRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12138,12 +12138,12 @@ namespace iljin.Barobill {
     public partial class GetCertificateExpireDateResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCertificateExpireDateResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCertificateExpireDateResponseBody Body;
+        public Barobill.GetCertificateExpireDateResponseBody Body;
         
         public GetCertificateExpireDateResponse() {
         }
         
-        public GetCertificateExpireDateResponse(iljin.Barobill.GetCertificateExpireDateResponseBody Body) {
+        public GetCertificateExpireDateResponse(Barobill.GetCertificateExpireDateResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12172,12 +12172,12 @@ namespace iljin.Barobill {
     public partial class CheckCERTIsValidRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckCERTIsValid", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckCERTIsValidRequestBody Body;
+        public Barobill.CheckCERTIsValidRequestBody Body;
         
         public CheckCERTIsValidRequest() {
         }
         
-        public CheckCERTIsValidRequest(iljin.Barobill.CheckCERTIsValidRequestBody Body) {
+        public CheckCERTIsValidRequest(Barobill.CheckCERTIsValidRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12210,12 +12210,12 @@ namespace iljin.Barobill {
     public partial class CheckCERTIsValidResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckCERTIsValidResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckCERTIsValidResponseBody Body;
+        public Barobill.CheckCERTIsValidResponseBody Body;
         
         public CheckCERTIsValidResponse() {
         }
         
-        public CheckCERTIsValidResponse(iljin.Barobill.CheckCERTIsValidResponseBody Body) {
+        public CheckCERTIsValidResponse(Barobill.CheckCERTIsValidResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12244,12 +12244,12 @@ namespace iljin.Barobill {
     public partial class GetCertificateRegistURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCertificateRegistURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCertificateRegistURLRequestBody Body;
+        public Barobill.GetCertificateRegistURLRequestBody Body;
         
         public GetCertificateRegistURLRequest() {
         }
         
-        public GetCertificateRegistURLRequest(iljin.Barobill.GetCertificateRegistURLRequestBody Body) {
+        public GetCertificateRegistURLRequest(Barobill.GetCertificateRegistURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12290,12 +12290,12 @@ namespace iljin.Barobill {
     public partial class GetCertificateRegistURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCertificateRegistURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCertificateRegistURLResponseBody Body;
+        public Barobill.GetCertificateRegistURLResponseBody Body;
         
         public GetCertificateRegistURLResponse() {
         }
         
-        public GetCertificateRegistURLResponse(iljin.Barobill.GetCertificateRegistURLResponseBody Body) {
+        public GetCertificateRegistURLResponse(Barobill.GetCertificateRegistURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12324,12 +12324,12 @@ namespace iljin.Barobill {
     public partial class GetLoginURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLoginURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetLoginURLRequestBody Body;
+        public Barobill.GetLoginURLRequestBody Body;
         
         public GetLoginURLRequest() {
         }
         
-        public GetLoginURLRequest(iljin.Barobill.GetLoginURLRequestBody Body) {
+        public GetLoginURLRequest(Barobill.GetLoginURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12370,12 +12370,12 @@ namespace iljin.Barobill {
     public partial class GetLoginURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLoginURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetLoginURLResponseBody Body;
+        public Barobill.GetLoginURLResponseBody Body;
         
         public GetLoginURLResponse() {
         }
         
-        public GetLoginURLResponse(iljin.Barobill.GetLoginURLResponseBody Body) {
+        public GetLoginURLResponse(Barobill.GetLoginURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12404,12 +12404,12 @@ namespace iljin.Barobill {
     public partial class GetCashChargeURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCashChargeURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCashChargeURLRequestBody Body;
+        public Barobill.GetCashChargeURLRequestBody Body;
         
         public GetCashChargeURLRequest() {
         }
         
-        public GetCashChargeURLRequest(iljin.Barobill.GetCashChargeURLRequestBody Body) {
+        public GetCashChargeURLRequest(Barobill.GetCashChargeURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12450,12 +12450,12 @@ namespace iljin.Barobill {
     public partial class GetCashChargeURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCashChargeURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetCashChargeURLResponseBody Body;
+        public Barobill.GetCashChargeURLResponseBody Body;
         
         public GetCashChargeURLResponse() {
         }
         
-        public GetCashChargeURLResponse(iljin.Barobill.GetCashChargeURLResponseBody Body) {
+        public GetCashChargeURLResponse(Barobill.GetCashChargeURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12484,12 +12484,12 @@ namespace iljin.Barobill {
     public partial class RegistSMSFromNumberRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistSMSFromNumber", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistSMSFromNumberRequestBody Body;
+        public Barobill.RegistSMSFromNumberRequestBody Body;
         
         public RegistSMSFromNumberRequest() {
         }
         
-        public RegistSMSFromNumberRequest(iljin.Barobill.RegistSMSFromNumberRequestBody Body) {
+        public RegistSMSFromNumberRequest(Barobill.RegistSMSFromNumberRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12526,12 +12526,12 @@ namespace iljin.Barobill {
     public partial class RegistSMSFromNumberResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistSMSFromNumberResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.RegistSMSFromNumberResponseBody Body;
+        public Barobill.RegistSMSFromNumberResponseBody Body;
         
         public RegistSMSFromNumberResponse() {
         }
         
-        public RegistSMSFromNumberResponse(iljin.Barobill.RegistSMSFromNumberResponseBody Body) {
+        public RegistSMSFromNumberResponse(Barobill.RegistSMSFromNumberResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12560,12 +12560,12 @@ namespace iljin.Barobill {
     public partial class CheckSMSFromNumberRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckSMSFromNumber", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckSMSFromNumberRequestBody Body;
+        public Barobill.CheckSMSFromNumberRequestBody Body;
         
         public CheckSMSFromNumberRequest() {
         }
         
-        public CheckSMSFromNumberRequest(iljin.Barobill.CheckSMSFromNumberRequestBody Body) {
+        public CheckSMSFromNumberRequest(Barobill.CheckSMSFromNumberRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12602,12 +12602,12 @@ namespace iljin.Barobill {
     public partial class CheckSMSFromNumberResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckSMSFromNumberResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckSMSFromNumberResponseBody Body;
+        public Barobill.CheckSMSFromNumberResponseBody Body;
         
         public CheckSMSFromNumberResponse() {
         }
         
-        public CheckSMSFromNumberResponse(iljin.Barobill.CheckSMSFromNumberResponseBody Body) {
+        public CheckSMSFromNumberResponse(Barobill.CheckSMSFromNumberResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12636,12 +12636,12 @@ namespace iljin.Barobill {
     public partial class GetSMSFromNumbersRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSMSFromNumbers", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetSMSFromNumbersRequestBody Body;
+        public Barobill.GetSMSFromNumbersRequestBody Body;
         
         public GetSMSFromNumbersRequest() {
         }
         
-        public GetSMSFromNumbersRequest(iljin.Barobill.GetSMSFromNumbersRequestBody Body) {
+        public GetSMSFromNumbersRequest(Barobill.GetSMSFromNumbersRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12674,12 +12674,12 @@ namespace iljin.Barobill {
     public partial class GetSMSFromNumbersResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSMSFromNumbersResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetSMSFromNumbersResponseBody Body;
+        public Barobill.GetSMSFromNumbersResponseBody Body;
         
         public GetSMSFromNumbersResponse() {
         }
         
-        public GetSMSFromNumbersResponse(iljin.Barobill.GetSMSFromNumbersResponseBody Body) {
+        public GetSMSFromNumbersResponse(Barobill.GetSMSFromNumbersResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12691,12 +12691,12 @@ namespace iljin.Barobill {
     public partial class GetSMSFromNumbersResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.FromNumber[] GetSMSFromNumbersResult;
+        public Barobill.FromNumber[] GetSMSFromNumbersResult;
         
         public GetSMSFromNumbersResponseBody() {
         }
         
-        public GetSMSFromNumbersResponseBody(iljin.Barobill.FromNumber[] GetSMSFromNumbersResult) {
+        public GetSMSFromNumbersResponseBody(Barobill.FromNumber[] GetSMSFromNumbersResult) {
             this.GetSMSFromNumbersResult = GetSMSFromNumbersResult;
         }
     }
@@ -12708,12 +12708,12 @@ namespace iljin.Barobill {
     public partial class GetSMSFromNumberURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSMSFromNumberURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetSMSFromNumberURLRequestBody Body;
+        public Barobill.GetSMSFromNumberURLRequestBody Body;
         
         public GetSMSFromNumberURLRequest() {
         }
         
-        public GetSMSFromNumberURLRequest(iljin.Barobill.GetSMSFromNumberURLRequestBody Body) {
+        public GetSMSFromNumberURLRequest(Barobill.GetSMSFromNumberURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12754,12 +12754,12 @@ namespace iljin.Barobill {
     public partial class GetSMSFromNumberURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSMSFromNumberURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetSMSFromNumberURLResponseBody Body;
+        public Barobill.GetSMSFromNumberURLResponseBody Body;
         
         public GetSMSFromNumberURLResponse() {
         }
         
-        public GetSMSFromNumberURLResponse(iljin.Barobill.GetSMSFromNumberURLResponseBody Body) {
+        public GetSMSFromNumberURLResponse(Barobill.GetSMSFromNumberURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12788,12 +12788,12 @@ namespace iljin.Barobill {
     public partial class CheckFaxFromNumberRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckFaxFromNumber", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckFaxFromNumberRequestBody Body;
+        public Barobill.CheckFaxFromNumberRequestBody Body;
         
         public CheckFaxFromNumberRequest() {
         }
         
-        public CheckFaxFromNumberRequest(iljin.Barobill.CheckFaxFromNumberRequestBody Body) {
+        public CheckFaxFromNumberRequest(Barobill.CheckFaxFromNumberRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12830,12 +12830,12 @@ namespace iljin.Barobill {
     public partial class CheckFaxFromNumberResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="CheckFaxFromNumberResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.CheckFaxFromNumberResponseBody Body;
+        public Barobill.CheckFaxFromNumberResponseBody Body;
         
         public CheckFaxFromNumberResponse() {
         }
         
-        public CheckFaxFromNumberResponse(iljin.Barobill.CheckFaxFromNumberResponseBody Body) {
+        public CheckFaxFromNumberResponse(Barobill.CheckFaxFromNumberResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12864,12 +12864,12 @@ namespace iljin.Barobill {
     public partial class GetFaxFromNumbersRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetFaxFromNumbers", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetFaxFromNumbersRequestBody Body;
+        public Barobill.GetFaxFromNumbersRequestBody Body;
         
         public GetFaxFromNumbersRequest() {
         }
         
-        public GetFaxFromNumbersRequest(iljin.Barobill.GetFaxFromNumbersRequestBody Body) {
+        public GetFaxFromNumbersRequest(Barobill.GetFaxFromNumbersRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12902,12 +12902,12 @@ namespace iljin.Barobill {
     public partial class GetFaxFromNumbersResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetFaxFromNumbersResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetFaxFromNumbersResponseBody Body;
+        public Barobill.GetFaxFromNumbersResponseBody Body;
         
         public GetFaxFromNumbersResponse() {
         }
         
-        public GetFaxFromNumbersResponse(iljin.Barobill.GetFaxFromNumbersResponseBody Body) {
+        public GetFaxFromNumbersResponse(Barobill.GetFaxFromNumbersResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -12919,12 +12919,12 @@ namespace iljin.Barobill {
     public partial class GetFaxFromNumbersResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public iljin.Barobill.FromNumber[] GetFaxFromNumbersResult;
+        public Barobill.FromNumber[] GetFaxFromNumbersResult;
         
         public GetFaxFromNumbersResponseBody() {
         }
         
-        public GetFaxFromNumbersResponseBody(iljin.Barobill.FromNumber[] GetFaxFromNumbersResult) {
+        public GetFaxFromNumbersResponseBody(Barobill.FromNumber[] GetFaxFromNumbersResult) {
             this.GetFaxFromNumbersResult = GetFaxFromNumbersResult;
         }
     }
@@ -12936,12 +12936,12 @@ namespace iljin.Barobill {
     public partial class GetFaxFromNumberURLRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetFaxFromNumberURL", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetFaxFromNumberURLRequestBody Body;
+        public Barobill.GetFaxFromNumberURLRequestBody Body;
         
         public GetFaxFromNumberURLRequest() {
         }
         
-        public GetFaxFromNumberURLRequest(iljin.Barobill.GetFaxFromNumberURLRequestBody Body) {
+        public GetFaxFromNumberURLRequest(Barobill.GetFaxFromNumberURLRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -12982,12 +12982,12 @@ namespace iljin.Barobill {
     public partial class GetFaxFromNumberURLResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetFaxFromNumberURLResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetFaxFromNumberURLResponseBody Body;
+        public Barobill.GetFaxFromNumberURLResponseBody Body;
         
         public GetFaxFromNumberURLResponse() {
         }
         
-        public GetFaxFromNumberURLResponse(iljin.Barobill.GetFaxFromNumberURLResponseBody Body) {
+        public GetFaxFromNumberURLResponse(Barobill.GetFaxFromNumberURLResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -13016,12 +13016,12 @@ namespace iljin.Barobill {
     public partial class GetErrStringRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetErrString", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetErrStringRequestBody Body;
+        public Barobill.GetErrStringRequestBody Body;
         
         public GetErrStringRequest() {
         }
         
-        public GetErrStringRequest(iljin.Barobill.GetErrStringRequestBody Body) {
+        public GetErrStringRequest(Barobill.GetErrStringRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -13054,12 +13054,12 @@ namespace iljin.Barobill {
     public partial class GetErrStringResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetErrStringResponse", Namespace="http://ws.baroservice.com/", Order=0)]
-        public iljin.Barobill.GetErrStringResponseBody Body;
+        public Barobill.GetErrStringResponseBody Body;
         
         public GetErrStringResponse() {
         }
         
-        public GetErrStringResponse(iljin.Barobill.GetErrStringResponseBody Body) {
+        public GetErrStringResponse(Barobill.GetErrStringResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -13082,12 +13082,12 @@ namespace iljin.Barobill {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface BaroService_TISoapChannel : iljin.Barobill.BaroService_TISoap, System.ServiceModel.IClientChannel {
+    public interface BaroService_TISoapChannel : Barobill.BaroService_TISoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BaroService_TISoapClient : System.ServiceModel.ClientBase<iljin.Barobill.BaroService_TISoap>, iljin.Barobill.BaroService_TISoap {
+    public partial class BaroService_TISoapClient : System.ServiceModel.ClientBase<Barobill.BaroService_TISoap>, Barobill.BaroService_TISoap {
         
         public BaroService_TISoapClient() {
         }
@@ -13109,588 +13109,588 @@ namespace iljin.Barobill {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckMgtNumIsExistsResponse iljin.Barobill.BaroService_TISoap.CheckMgtNumIsExists(iljin.Barobill.CheckMgtNumIsExistsRequest request) {
+        Barobill.CheckMgtNumIsExistsResponse Barobill.BaroService_TISoap.CheckMgtNumIsExists(Barobill.CheckMgtNumIsExistsRequest request) {
             return base.Channel.CheckMgtNumIsExists(request);
         }
         
         public int CheckMgtNumIsExists(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.CheckMgtNumIsExistsRequest inValue = new iljin.Barobill.CheckMgtNumIsExistsRequest();
-            inValue.Body = new iljin.Barobill.CheckMgtNumIsExistsRequestBody();
+            Barobill.CheckMgtNumIsExistsRequest inValue = new Barobill.CheckMgtNumIsExistsRequest();
+            inValue.Body = new Barobill.CheckMgtNumIsExistsRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.CheckMgtNumIsExistsResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckMgtNumIsExists(inValue);
+            Barobill.CheckMgtNumIsExistsResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckMgtNumIsExists(inValue);
             return retVal.Body.CheckMgtNumIsExistsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckMgtNumIsExistsResponse> iljin.Barobill.BaroService_TISoap.CheckMgtNumIsExistsAsync(iljin.Barobill.CheckMgtNumIsExistsRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckMgtNumIsExistsResponse> Barobill.BaroService_TISoap.CheckMgtNumIsExistsAsync(Barobill.CheckMgtNumIsExistsRequest request) {
             return base.Channel.CheckMgtNumIsExistsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckMgtNumIsExistsResponse> CheckMgtNumIsExistsAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.CheckMgtNumIsExistsRequest inValue = new iljin.Barobill.CheckMgtNumIsExistsRequest();
-            inValue.Body = new iljin.Barobill.CheckMgtNumIsExistsRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckMgtNumIsExistsResponse> CheckMgtNumIsExistsAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.CheckMgtNumIsExistsRequest inValue = new Barobill.CheckMgtNumIsExistsRequest();
+            inValue.Body = new Barobill.CheckMgtNumIsExistsRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckMgtNumIsExistsAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckMgtNumIsExistsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckIsValidTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.CheckIsValidTaxInvoice(iljin.Barobill.CheckIsValidTaxInvoiceRequest request) {
+        Barobill.CheckIsValidTaxInvoiceResponse Barobill.BaroService_TISoap.CheckIsValidTaxInvoice(Barobill.CheckIsValidTaxInvoiceRequest request) {
             return base.Channel.CheckIsValidTaxInvoice(request);
         }
         
-        public int CheckIsValidTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.CheckIsValidTaxInvoiceRequest inValue = new iljin.Barobill.CheckIsValidTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.CheckIsValidTaxInvoiceRequestBody();
+        public int CheckIsValidTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.CheckIsValidTaxInvoiceRequest inValue = new Barobill.CheckIsValidTaxInvoiceRequest();
+            inValue.Body = new Barobill.CheckIsValidTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            iljin.Barobill.CheckIsValidTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckIsValidTaxInvoice(inValue);
+            Barobill.CheckIsValidTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckIsValidTaxInvoice(inValue);
             return retVal.Body.CheckIsValidTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckIsValidTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.CheckIsValidTaxInvoiceAsync(iljin.Barobill.CheckIsValidTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckIsValidTaxInvoiceResponse> Barobill.BaroService_TISoap.CheckIsValidTaxInvoiceAsync(Barobill.CheckIsValidTaxInvoiceRequest request) {
             return base.Channel.CheckIsValidTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckIsValidTaxInvoiceResponse> CheckIsValidTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.CheckIsValidTaxInvoiceRequest inValue = new iljin.Barobill.CheckIsValidTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.CheckIsValidTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckIsValidTaxInvoiceResponse> CheckIsValidTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.CheckIsValidTaxInvoiceRequest inValue = new Barobill.CheckIsValidTaxInvoiceRequest();
+            inValue.Body = new Barobill.CheckIsValidTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckIsValidTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckIsValidTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistTaxInvoice(iljin.Barobill.RegistTaxInvoiceRequest request) {
+        Barobill.RegistTaxInvoiceResponse Barobill.BaroService_TISoap.RegistTaxInvoice(Barobill.RegistTaxInvoiceRequest request) {
             return base.Channel.RegistTaxInvoice(request);
         }
         
-        public int RegistTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.RegistTaxInvoiceRequest inValue = new iljin.Barobill.RegistTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceRequestBody();
+        public int RegistTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.RegistTaxInvoiceRequest inValue = new Barobill.RegistTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            iljin.Barobill.RegistTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoice(inValue);
+            Barobill.RegistTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoice(inValue);
             return retVal.Body.RegistTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceAsync(iljin.Barobill.RegistTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistTaxInvoiceAsync(Barobill.RegistTaxInvoiceRequest request) {
             return base.Channel.RegistTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceResponse> RegistTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.RegistTaxInvoiceRequest inValue = new iljin.Barobill.RegistTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceResponse> RegistTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.RegistTaxInvoiceRequest inValue = new Barobill.RegistTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistTaxInvoiceEXResponse iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceEX(iljin.Barobill.RegistTaxInvoiceEXRequest request) {
+        Barobill.RegistTaxInvoiceEXResponse Barobill.BaroService_TISoap.RegistTaxInvoiceEX(Barobill.RegistTaxInvoiceEXRequest request) {
             return base.Channel.RegistTaxInvoiceEX(request);
         }
         
-        public int RegistTaxInvoiceEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.RegistTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceEXRequestBody();
+        public int RegistTaxInvoiceEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.RegistTaxInvoiceEXRequest inValue = new Barobill.RegistTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            iljin.Barobill.RegistTaxInvoiceEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceEX(inValue);
+            Barobill.RegistTaxInvoiceEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceEX(inValue);
             return retVal.Body.RegistTaxInvoiceEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceEXResponse> iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceEXAsync(iljin.Barobill.RegistTaxInvoiceEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceEXResponse> Barobill.BaroService_TISoap.RegistTaxInvoiceEXAsync(Barobill.RegistTaxInvoiceEXRequest request) {
             return base.Channel.RegistTaxInvoiceEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceEXResponse> RegistTaxInvoiceEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.RegistTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceEXResponse> RegistTaxInvoiceEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.RegistTaxInvoiceEXRequest inValue = new Barobill.RegistTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistModifyTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistModifyTaxInvoice(iljin.Barobill.RegistModifyTaxInvoiceRequest request) {
+        Barobill.RegistModifyTaxInvoiceResponse Barobill.BaroService_TISoap.RegistModifyTaxInvoice(Barobill.RegistModifyTaxInvoiceRequest request) {
             return base.Channel.RegistModifyTaxInvoice(request);
         }
         
-        public int RegistModifyTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
-            iljin.Barobill.RegistModifyTaxInvoiceRequest inValue = new iljin.Barobill.RegistModifyTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyTaxInvoiceRequestBody();
+        public int RegistModifyTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
+            Barobill.RegistModifyTaxInvoiceRequest inValue = new Barobill.RegistModifyTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistModifyTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
-            iljin.Barobill.RegistModifyTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoice(inValue);
+            Barobill.RegistModifyTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoice(inValue);
             return retVal.Body.RegistModifyTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistModifyTaxInvoiceAsync(iljin.Barobill.RegistModifyTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistModifyTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistModifyTaxInvoiceAsync(Barobill.RegistModifyTaxInvoiceRequest request) {
             return base.Channel.RegistModifyTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistModifyTaxInvoiceResponse> RegistModifyTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
-            iljin.Barobill.RegistModifyTaxInvoiceRequest inValue = new iljin.Barobill.RegistModifyTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistModifyTaxInvoiceResponse> RegistModifyTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
+            Barobill.RegistModifyTaxInvoiceRequest inValue = new Barobill.RegistModifyTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistModifyTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistModifyTaxInvoiceEXResponse iljin.Barobill.BaroService_TISoap.RegistModifyTaxInvoiceEX(iljin.Barobill.RegistModifyTaxInvoiceEXRequest request) {
+        Barobill.RegistModifyTaxInvoiceEXResponse Barobill.BaroService_TISoap.RegistModifyTaxInvoiceEX(Barobill.RegistModifyTaxInvoiceEXRequest request) {
             return base.Channel.RegistModifyTaxInvoiceEX(request);
         }
         
-        public int RegistModifyTaxInvoiceEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
-            iljin.Barobill.RegistModifyTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistModifyTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyTaxInvoiceEXRequestBody();
+        public int RegistModifyTaxInvoiceEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
+            Barobill.RegistModifyTaxInvoiceEXRequest inValue = new Barobill.RegistModifyTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistModifyTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
             inValue.Body.IssueTiming = IssueTiming;
-            iljin.Barobill.RegistModifyTaxInvoiceEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoiceEX(inValue);
+            Barobill.RegistModifyTaxInvoiceEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoiceEX(inValue);
             return retVal.Body.RegistModifyTaxInvoiceEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyTaxInvoiceEXResponse> iljin.Barobill.BaroService_TISoap.RegistModifyTaxInvoiceEXAsync(iljin.Barobill.RegistModifyTaxInvoiceEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistModifyTaxInvoiceEXResponse> Barobill.BaroService_TISoap.RegistModifyTaxInvoiceEXAsync(Barobill.RegistModifyTaxInvoiceEXRequest request) {
             return base.Channel.RegistModifyTaxInvoiceEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistModifyTaxInvoiceEXResponse> RegistModifyTaxInvoiceEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
-            iljin.Barobill.RegistModifyTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistModifyTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyTaxInvoiceEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistModifyTaxInvoiceEXResponse> RegistModifyTaxInvoiceEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
+            Barobill.RegistModifyTaxInvoiceEXRequest inValue = new Barobill.RegistModifyTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistModifyTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
             inValue.Body.IssueTiming = IssueTiming;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoiceEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistModifyTaxInvoiceEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistTaxInvoiceReverseResponse iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceReverse(iljin.Barobill.RegistTaxInvoiceReverseRequest request) {
+        Barobill.RegistTaxInvoiceReverseResponse Barobill.BaroService_TISoap.RegistTaxInvoiceReverse(Barobill.RegistTaxInvoiceReverseRequest request) {
             return base.Channel.RegistTaxInvoiceReverse(request);
         }
         
-        public int RegistTaxInvoiceReverse(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.RegistTaxInvoiceReverseRequest inValue = new iljin.Barobill.RegistTaxInvoiceReverseRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceReverseRequestBody();
+        public int RegistTaxInvoiceReverse(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.RegistTaxInvoiceReverseRequest inValue = new Barobill.RegistTaxInvoiceReverseRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceReverseRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            iljin.Barobill.RegistTaxInvoiceReverseResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverse(inValue);
+            Barobill.RegistTaxInvoiceReverseResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverse(inValue);
             return retVal.Body.RegistTaxInvoiceReverseResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceReverseResponse> iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceReverseAsync(iljin.Barobill.RegistTaxInvoiceReverseRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceReverseResponse> Barobill.BaroService_TISoap.RegistTaxInvoiceReverseAsync(Barobill.RegistTaxInvoiceReverseRequest request) {
             return base.Channel.RegistTaxInvoiceReverseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceReverseResponse> RegistTaxInvoiceReverseAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.RegistTaxInvoiceReverseRequest inValue = new iljin.Barobill.RegistTaxInvoiceReverseRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceReverseRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceReverseResponse> RegistTaxInvoiceReverseAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.RegistTaxInvoiceReverseRequest inValue = new Barobill.RegistTaxInvoiceReverseRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceReverseRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverseAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistTaxInvoiceReverseEXResponse iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceReverseEX(iljin.Barobill.RegistTaxInvoiceReverseEXRequest request) {
+        Barobill.RegistTaxInvoiceReverseEXResponse Barobill.BaroService_TISoap.RegistTaxInvoiceReverseEX(Barobill.RegistTaxInvoiceReverseEXRequest request) {
             return base.Channel.RegistTaxInvoiceReverseEX(request);
         }
         
-        public int RegistTaxInvoiceReverseEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int ChargeDirection) {
-            iljin.Barobill.RegistTaxInvoiceReverseEXRequest inValue = new iljin.Barobill.RegistTaxInvoiceReverseEXRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceReverseEXRequestBody();
+        public int RegistTaxInvoiceReverseEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int ChargeDirection) {
+            Barobill.RegistTaxInvoiceReverseEXRequest inValue = new Barobill.RegistTaxInvoiceReverseEXRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceReverseEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.ChargeDirection = ChargeDirection;
-            iljin.Barobill.RegistTaxInvoiceReverseEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverseEX(inValue);
+            Barobill.RegistTaxInvoiceReverseEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverseEX(inValue);
             return retVal.Body.RegistTaxInvoiceReverseEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceReverseEXResponse> iljin.Barobill.BaroService_TISoap.RegistTaxInvoiceReverseEXAsync(iljin.Barobill.RegistTaxInvoiceReverseEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceReverseEXResponse> Barobill.BaroService_TISoap.RegistTaxInvoiceReverseEXAsync(Barobill.RegistTaxInvoiceReverseEXRequest request) {
             return base.Channel.RegistTaxInvoiceReverseEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistTaxInvoiceReverseEXResponse> RegistTaxInvoiceReverseEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int ChargeDirection) {
-            iljin.Barobill.RegistTaxInvoiceReverseEXRequest inValue = new iljin.Barobill.RegistTaxInvoiceReverseEXRequest();
-            inValue.Body = new iljin.Barobill.RegistTaxInvoiceReverseEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistTaxInvoiceReverseEXResponse> RegistTaxInvoiceReverseEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int ChargeDirection) {
+            Barobill.RegistTaxInvoiceReverseEXRequest inValue = new Barobill.RegistTaxInvoiceReverseEXRequest();
+            inValue.Body = new Barobill.RegistTaxInvoiceReverseEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.ChargeDirection = ChargeDirection;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverseEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistTaxInvoiceReverseEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistBrokerTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistBrokerTaxInvoice(iljin.Barobill.RegistBrokerTaxInvoiceRequest request) {
+        Barobill.RegistBrokerTaxInvoiceResponse Barobill.BaroService_TISoap.RegistBrokerTaxInvoice(Barobill.RegistBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistBrokerTaxInvoice(request);
         }
         
-        public int RegistBrokerTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.RegistBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistBrokerTaxInvoiceRequestBody();
+        public int RegistBrokerTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.RegistBrokerTaxInvoiceRequest inValue = new Barobill.RegistBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            iljin.Barobill.RegistBrokerTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoice(inValue);
+            Barobill.RegistBrokerTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoice(inValue);
             return retVal.Body.RegistBrokerTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistBrokerTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistBrokerTaxInvoiceAsync(iljin.Barobill.RegistBrokerTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistBrokerTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistBrokerTaxInvoiceAsync(Barobill.RegistBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistBrokerTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistBrokerTaxInvoiceResponse> RegistBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.RegistBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistBrokerTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistBrokerTaxInvoiceResponse> RegistBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.RegistBrokerTaxInvoiceRequest inValue = new Barobill.RegistBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistBrokerTaxInvoiceEXResponse iljin.Barobill.BaroService_TISoap.RegistBrokerTaxInvoiceEX(iljin.Barobill.RegistBrokerTaxInvoiceEXRequest request) {
+        Barobill.RegistBrokerTaxInvoiceEXResponse Barobill.BaroService_TISoap.RegistBrokerTaxInvoiceEX(Barobill.RegistBrokerTaxInvoiceEXRequest request) {
             return base.Channel.RegistBrokerTaxInvoiceEX(request);
         }
         
-        public int RegistBrokerTaxInvoiceEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.RegistBrokerTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistBrokerTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistBrokerTaxInvoiceEXRequestBody();
+        public int RegistBrokerTaxInvoiceEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.RegistBrokerTaxInvoiceEXRequest inValue = new Barobill.RegistBrokerTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistBrokerTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            iljin.Barobill.RegistBrokerTaxInvoiceEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoiceEX(inValue);
+            Barobill.RegistBrokerTaxInvoiceEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoiceEX(inValue);
             return retVal.Body.RegistBrokerTaxInvoiceEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistBrokerTaxInvoiceEXResponse> iljin.Barobill.BaroService_TISoap.RegistBrokerTaxInvoiceEXAsync(iljin.Barobill.RegistBrokerTaxInvoiceEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistBrokerTaxInvoiceEXResponse> Barobill.BaroService_TISoap.RegistBrokerTaxInvoiceEXAsync(Barobill.RegistBrokerTaxInvoiceEXRequest request) {
             return base.Channel.RegistBrokerTaxInvoiceEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistBrokerTaxInvoiceEXResponse> RegistBrokerTaxInvoiceEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.RegistBrokerTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistBrokerTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistBrokerTaxInvoiceEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistBrokerTaxInvoiceEXResponse> RegistBrokerTaxInvoiceEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.RegistBrokerTaxInvoiceEXRequest inValue = new Barobill.RegistBrokerTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistBrokerTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoiceEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistBrokerTaxInvoiceEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistModifyBrokerTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoice(iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest request) {
+        Barobill.RegistModifyBrokerTaxInvoiceResponse Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoice(Barobill.RegistModifyBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistModifyBrokerTaxInvoice(request);
         }
         
-        public int RegistModifyBrokerTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
-            iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyBrokerTaxInvoiceRequestBody();
+        public int RegistModifyBrokerTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
+            Barobill.RegistModifyBrokerTaxInvoiceRequest inValue = new Barobill.RegistModifyBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistModifyBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
-            iljin.Barobill.RegistModifyBrokerTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoice(inValue);
+            Barobill.RegistModifyBrokerTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoice(inValue);
             return retVal.Body.RegistModifyBrokerTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyBrokerTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoiceAsync(iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistModifyBrokerTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoiceAsync(Barobill.RegistModifyBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistModifyBrokerTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistModifyBrokerTaxInvoiceResponse> RegistModifyBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
-            iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistModifyBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyBrokerTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistModifyBrokerTaxInvoiceResponse> RegistModifyBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey) {
+            Barobill.RegistModifyBrokerTaxInvoiceRequest inValue = new Barobill.RegistModifyBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistModifyBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponse iljin.Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoiceEX(iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest request) {
+        Barobill.RegistModifyBrokerTaxInvoiceEXResponse Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoiceEX(Barobill.RegistModifyBrokerTaxInvoiceEXRequest request) {
             return base.Channel.RegistModifyBrokerTaxInvoiceEX(request);
         }
         
-        public int RegistModifyBrokerTaxInvoiceEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
-            iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody();
+        public int RegistModifyBrokerTaxInvoiceEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
+            Barobill.RegistModifyBrokerTaxInvoiceEXRequest inValue = new Barobill.RegistModifyBrokerTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
             inValue.Body.IssueTiming = IssueTiming;
-            iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoiceEX(inValue);
+            Barobill.RegistModifyBrokerTaxInvoiceEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoiceEX(inValue);
             return retVal.Body.RegistModifyBrokerTaxInvoiceEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponse> iljin.Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoiceEXAsync(iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistModifyBrokerTaxInvoiceEXResponse> Barobill.BaroService_TISoap.RegistModifyBrokerTaxInvoiceEXAsync(Barobill.RegistModifyBrokerTaxInvoiceEXRequest request) {
             return base.Channel.RegistModifyBrokerTaxInvoiceEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistModifyBrokerTaxInvoiceEXResponse> RegistModifyBrokerTaxInvoiceEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
-            iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest inValue = new iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistModifyBrokerTaxInvoiceEXResponse> RegistModifyBrokerTaxInvoiceEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, string OriginalNTSSendKey, int IssueTiming) {
+            Barobill.RegistModifyBrokerTaxInvoiceEXRequest inValue = new Barobill.RegistModifyBrokerTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.RegistModifyBrokerTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.OriginalNTSSendKey = OriginalNTSSendKey;
             inValue.Body.IssueTiming = IssueTiming;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoiceEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistModifyBrokerTaxInvoiceEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateTaxInvoiceFooterStringResponse iljin.Barobill.BaroService_TISoap.UpdateTaxInvoiceFooterString(iljin.Barobill.UpdateTaxInvoiceFooterStringRequest request) {
+        Barobill.UpdateTaxInvoiceFooterStringResponse Barobill.BaroService_TISoap.UpdateTaxInvoiceFooterString(Barobill.UpdateTaxInvoiceFooterStringRequest request) {
             return base.Channel.UpdateTaxInvoiceFooterString(request);
         }
         
         public int UpdateTaxInvoiceFooterString(string CERTKEY, string CorpNum, string MgtKey, string FooterString) {
-            iljin.Barobill.UpdateTaxInvoiceFooterStringRequest inValue = new iljin.Barobill.UpdateTaxInvoiceFooterStringRequest();
-            inValue.Body = new iljin.Barobill.UpdateTaxInvoiceFooterStringRequestBody();
+            Barobill.UpdateTaxInvoiceFooterStringRequest inValue = new Barobill.UpdateTaxInvoiceFooterStringRequest();
+            inValue.Body = new Barobill.UpdateTaxInvoiceFooterStringRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.FooterString = FooterString;
-            iljin.Barobill.UpdateTaxInvoiceFooterStringResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceFooterString(inValue);
+            Barobill.UpdateTaxInvoiceFooterStringResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceFooterString(inValue);
             return retVal.Body.UpdateTaxInvoiceFooterStringResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceFooterStringResponse> iljin.Barobill.BaroService_TISoap.UpdateTaxInvoiceFooterStringAsync(iljin.Barobill.UpdateTaxInvoiceFooterStringRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceFooterStringResponse> Barobill.BaroService_TISoap.UpdateTaxInvoiceFooterStringAsync(Barobill.UpdateTaxInvoiceFooterStringRequest request) {
             return base.Channel.UpdateTaxInvoiceFooterStringAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceFooterStringResponse> UpdateTaxInvoiceFooterStringAsync(string CERTKEY, string CorpNum, string MgtKey, string FooterString) {
-            iljin.Barobill.UpdateTaxInvoiceFooterStringRequest inValue = new iljin.Barobill.UpdateTaxInvoiceFooterStringRequest();
-            inValue.Body = new iljin.Barobill.UpdateTaxInvoiceFooterStringRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceFooterStringResponse> UpdateTaxInvoiceFooterStringAsync(string CERTKEY, string CorpNum, string MgtKey, string FooterString) {
+            Barobill.UpdateTaxInvoiceFooterStringRequest inValue = new Barobill.UpdateTaxInvoiceFooterStringRequest();
+            inValue.Body = new Barobill.UpdateTaxInvoiceFooterStringRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.FooterString = FooterString;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceFooterStringAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceFooterStringAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.UpdateTaxInvoice(iljin.Barobill.UpdateTaxInvoiceRequest request) {
+        Barobill.UpdateTaxInvoiceResponse Barobill.BaroService_TISoap.UpdateTaxInvoice(Barobill.UpdateTaxInvoiceRequest request) {
             return base.Channel.UpdateTaxInvoice(request);
         }
         
-        public int UpdateTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.UpdateTaxInvoiceRequest inValue = new iljin.Barobill.UpdateTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.UpdateTaxInvoiceRequestBody();
+        public int UpdateTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.UpdateTaxInvoiceRequest inValue = new Barobill.UpdateTaxInvoiceRequest();
+            inValue.Body = new Barobill.UpdateTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            iljin.Barobill.UpdateTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateTaxInvoice(inValue);
+            Barobill.UpdateTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateTaxInvoice(inValue);
             return retVal.Body.UpdateTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.UpdateTaxInvoiceAsync(iljin.Barobill.UpdateTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceResponse> Barobill.BaroService_TISoap.UpdateTaxInvoiceAsync(Barobill.UpdateTaxInvoiceRequest request) {
             return base.Channel.UpdateTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceResponse> UpdateTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.UpdateTaxInvoiceRequest inValue = new iljin.Barobill.UpdateTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.UpdateTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceResponse> UpdateTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.UpdateTaxInvoiceRequest inValue = new Barobill.UpdateTaxInvoiceRequest();
+            inValue.Body = new Barobill.UpdateTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateTaxInvoiceEXResponse iljin.Barobill.BaroService_TISoap.UpdateTaxInvoiceEX(iljin.Barobill.UpdateTaxInvoiceEXRequest request) {
+        Barobill.UpdateTaxInvoiceEXResponse Barobill.BaroService_TISoap.UpdateTaxInvoiceEX(Barobill.UpdateTaxInvoiceEXRequest request) {
             return base.Channel.UpdateTaxInvoiceEX(request);
         }
         
-        public int UpdateTaxInvoiceEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.UpdateTaxInvoiceEXRequest inValue = new iljin.Barobill.UpdateTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.UpdateTaxInvoiceEXRequestBody();
+        public int UpdateTaxInvoiceEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.UpdateTaxInvoiceEXRequest inValue = new Barobill.UpdateTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.UpdateTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            iljin.Barobill.UpdateTaxInvoiceEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceEX(inValue);
+            Barobill.UpdateTaxInvoiceEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceEX(inValue);
             return retVal.Body.UpdateTaxInvoiceEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceEXResponse> iljin.Barobill.BaroService_TISoap.UpdateTaxInvoiceEXAsync(iljin.Barobill.UpdateTaxInvoiceEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceEXResponse> Barobill.BaroService_TISoap.UpdateTaxInvoiceEXAsync(Barobill.UpdateTaxInvoiceEXRequest request) {
             return base.Channel.UpdateTaxInvoiceEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateTaxInvoiceEXResponse> UpdateTaxInvoiceEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.UpdateTaxInvoiceEXRequest inValue = new iljin.Barobill.UpdateTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.UpdateTaxInvoiceEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateTaxInvoiceEXResponse> UpdateTaxInvoiceEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.UpdateTaxInvoiceEXRequest inValue = new Barobill.UpdateTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.UpdateTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateTaxInvoiceEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateBrokerTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.UpdateBrokerTaxInvoice(iljin.Barobill.UpdateBrokerTaxInvoiceRequest request) {
+        Barobill.UpdateBrokerTaxInvoiceResponse Barobill.BaroService_TISoap.UpdateBrokerTaxInvoice(Barobill.UpdateBrokerTaxInvoiceRequest request) {
             return base.Channel.UpdateBrokerTaxInvoice(request);
         }
         
-        public int UpdateBrokerTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.UpdateBrokerTaxInvoiceRequest inValue = new iljin.Barobill.UpdateBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.UpdateBrokerTaxInvoiceRequestBody();
+        public int UpdateBrokerTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.UpdateBrokerTaxInvoiceRequest inValue = new Barobill.UpdateBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.UpdateBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            iljin.Barobill.UpdateBrokerTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoice(inValue);
+            Barobill.UpdateBrokerTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoice(inValue);
             return retVal.Body.UpdateBrokerTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateBrokerTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.UpdateBrokerTaxInvoiceAsync(iljin.Barobill.UpdateBrokerTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateBrokerTaxInvoiceResponse> Barobill.BaroService_TISoap.UpdateBrokerTaxInvoiceAsync(Barobill.UpdateBrokerTaxInvoiceRequest request) {
             return base.Channel.UpdateBrokerTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateBrokerTaxInvoiceResponse> UpdateBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice) {
-            iljin.Barobill.UpdateBrokerTaxInvoiceRequest inValue = new iljin.Barobill.UpdateBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.UpdateBrokerTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateBrokerTaxInvoiceResponse> UpdateBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice) {
+            Barobill.UpdateBrokerTaxInvoiceRequest inValue = new Barobill.UpdateBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.UpdateBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateBrokerTaxInvoiceEXResponse iljin.Barobill.BaroService_TISoap.UpdateBrokerTaxInvoiceEX(iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest request) {
+        Barobill.UpdateBrokerTaxInvoiceEXResponse Barobill.BaroService_TISoap.UpdateBrokerTaxInvoiceEX(Barobill.UpdateBrokerTaxInvoiceEXRequest request) {
             return base.Channel.UpdateBrokerTaxInvoiceEX(request);
         }
         
-        public int UpdateBrokerTaxInvoiceEX(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest inValue = new iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.UpdateBrokerTaxInvoiceEXRequestBody();
+        public int UpdateBrokerTaxInvoiceEX(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.UpdateBrokerTaxInvoiceEXRequest inValue = new Barobill.UpdateBrokerTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.UpdateBrokerTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            iljin.Barobill.UpdateBrokerTaxInvoiceEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoiceEX(inValue);
+            Barobill.UpdateBrokerTaxInvoiceEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoiceEX(inValue);
             return retVal.Body.UpdateBrokerTaxInvoiceEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateBrokerTaxInvoiceEXResponse> iljin.Barobill.BaroService_TISoap.UpdateBrokerTaxInvoiceEXAsync(iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateBrokerTaxInvoiceEXResponse> Barobill.BaroService_TISoap.UpdateBrokerTaxInvoiceEXAsync(Barobill.UpdateBrokerTaxInvoiceEXRequest request) {
             return base.Channel.UpdateBrokerTaxInvoiceEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateBrokerTaxInvoiceEXResponse> UpdateBrokerTaxInvoiceEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, int IssueTiming) {
-            iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest inValue = new iljin.Barobill.UpdateBrokerTaxInvoiceEXRequest();
-            inValue.Body = new iljin.Barobill.UpdateBrokerTaxInvoiceEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateBrokerTaxInvoiceEXResponse> UpdateBrokerTaxInvoiceEXAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, int IssueTiming) {
+            Barobill.UpdateBrokerTaxInvoiceEXRequest inValue = new Barobill.UpdateBrokerTaxInvoiceEXRequest();
+            inValue.Body = new Barobill.UpdateBrokerTaxInvoiceEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.IssueTiming = IssueTiming;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoiceEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateBrokerTaxInvoiceEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.DeleteTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.DeleteTaxInvoice(iljin.Barobill.DeleteTaxInvoiceRequest request) {
+        Barobill.DeleteTaxInvoiceResponse Barobill.BaroService_TISoap.DeleteTaxInvoice(Barobill.DeleteTaxInvoiceRequest request) {
             return base.Channel.DeleteTaxInvoice(request);
         }
         
         public int DeleteTaxInvoice(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.DeleteTaxInvoiceRequest inValue = new iljin.Barobill.DeleteTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.DeleteTaxInvoiceRequestBody();
+            Barobill.DeleteTaxInvoiceRequest inValue = new Barobill.DeleteTaxInvoiceRequest();
+            inValue.Body = new Barobill.DeleteTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.DeleteTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).DeleteTaxInvoice(inValue);
+            Barobill.DeleteTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).DeleteTaxInvoice(inValue);
             return retVal.Body.DeleteTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.DeleteTaxInvoiceAsync(iljin.Barobill.DeleteTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.DeleteTaxInvoiceResponse> Barobill.BaroService_TISoap.DeleteTaxInvoiceAsync(Barobill.DeleteTaxInvoiceRequest request) {
             return base.Channel.DeleteTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.DeleteTaxInvoiceResponse> DeleteTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.DeleteTaxInvoiceRequest inValue = new iljin.Barobill.DeleteTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.DeleteTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.DeleteTaxInvoiceResponse> DeleteTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.DeleteTaxInvoiceRequest inValue = new Barobill.DeleteTaxInvoiceRequest();
+            inValue.Body = new Barobill.DeleteTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).DeleteTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).DeleteTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.DeleteTaxInvoiceIKResponse iljin.Barobill.BaroService_TISoap.DeleteTaxInvoiceIK(iljin.Barobill.DeleteTaxInvoiceIKRequest request) {
+        Barobill.DeleteTaxInvoiceIKResponse Barobill.BaroService_TISoap.DeleteTaxInvoiceIK(Barobill.DeleteTaxInvoiceIKRequest request) {
             return base.Channel.DeleteTaxInvoiceIK(request);
         }
         
         public int DeleteTaxInvoiceIK(string CERTKEY, string CorpNum, string InvoiceKey) {
-            iljin.Barobill.DeleteTaxInvoiceIKRequest inValue = new iljin.Barobill.DeleteTaxInvoiceIKRequest();
-            inValue.Body = new iljin.Barobill.DeleteTaxInvoiceIKRequestBody();
+            Barobill.DeleteTaxInvoiceIKRequest inValue = new Barobill.DeleteTaxInvoiceIKRequest();
+            inValue.Body = new Barobill.DeleteTaxInvoiceIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
-            iljin.Barobill.DeleteTaxInvoiceIKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).DeleteTaxInvoiceIK(inValue);
+            Barobill.DeleteTaxInvoiceIKResponse retVal = ((Barobill.BaroService_TISoap)(this)).DeleteTaxInvoiceIK(inValue);
             return retVal.Body.DeleteTaxInvoiceIKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteTaxInvoiceIKResponse> iljin.Barobill.BaroService_TISoap.DeleteTaxInvoiceIKAsync(iljin.Barobill.DeleteTaxInvoiceIKRequest request) {
+        System.Threading.Tasks.Task<Barobill.DeleteTaxInvoiceIKResponse> Barobill.BaroService_TISoap.DeleteTaxInvoiceIKAsync(Barobill.DeleteTaxInvoiceIKRequest request) {
             return base.Channel.DeleteTaxInvoiceIKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.DeleteTaxInvoiceIKResponse> DeleteTaxInvoiceIKAsync(string CERTKEY, string CorpNum, string InvoiceKey) {
-            iljin.Barobill.DeleteTaxInvoiceIKRequest inValue = new iljin.Barobill.DeleteTaxInvoiceIKRequest();
-            inValue.Body = new iljin.Barobill.DeleteTaxInvoiceIKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.DeleteTaxInvoiceIKResponse> DeleteTaxInvoiceIKAsync(string CERTKEY, string CorpNum, string InvoiceKey) {
+            Barobill.DeleteTaxInvoiceIKRequest inValue = new Barobill.DeleteTaxInvoiceIKRequest();
+            inValue.Body = new Barobill.DeleteTaxInvoiceIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).DeleteTaxInvoiceIKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).DeleteTaxInvoiceIKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.IssueTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.IssueTaxInvoice(iljin.Barobill.IssueTaxInvoiceRequest request) {
+        Barobill.IssueTaxInvoiceResponse Barobill.BaroService_TISoap.IssueTaxInvoice(Barobill.IssueTaxInvoiceRequest request) {
             return base.Channel.IssueTaxInvoice(request);
         }
         
         public int IssueTaxInvoice(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, int NTSSendOption, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.IssueTaxInvoiceRequest inValue = new iljin.Barobill.IssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.IssueTaxInvoiceRequestBody();
+            Barobill.IssueTaxInvoiceRequest inValue = new Barobill.IssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.IssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13698,18 +13698,18 @@ namespace iljin.Barobill {
             inValue.Body.NTSSendOption = NTSSendOption;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.IssueTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).IssueTaxInvoice(inValue);
+            Barobill.IssueTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).IssueTaxInvoice(inValue);
             return retVal.Body.IssueTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.IssueTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.IssueTaxInvoiceAsync(iljin.Barobill.IssueTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.IssueTaxInvoiceResponse> Barobill.BaroService_TISoap.IssueTaxInvoiceAsync(Barobill.IssueTaxInvoiceRequest request) {
             return base.Channel.IssueTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.IssueTaxInvoiceResponse> IssueTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, int NTSSendOption, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.IssueTaxInvoiceRequest inValue = new iljin.Barobill.IssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.IssueTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.IssueTaxInvoiceResponse> IssueTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, int NTSSendOption, bool ForceIssue, string MailTitle) {
+            Barobill.IssueTaxInvoiceRequest inValue = new Barobill.IssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.IssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13717,17 +13717,17 @@ namespace iljin.Barobill {
             inValue.Body.NTSSendOption = NTSSendOption;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).IssueTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).IssueTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.IssueTaxInvoiceExResponse iljin.Barobill.BaroService_TISoap.IssueTaxInvoiceEx(iljin.Barobill.IssueTaxInvoiceExRequest request) {
+        Barobill.IssueTaxInvoiceExResponse Barobill.BaroService_TISoap.IssueTaxInvoiceEx(Barobill.IssueTaxInvoiceExRequest request) {
             return base.Channel.IssueTaxInvoiceEx(request);
         }
         
         public int IssueTaxInvoiceEx(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, bool ForceIssue, string MailTitle, bool BusinessLicenseYN, bool BankBookYN) {
-            iljin.Barobill.IssueTaxInvoiceExRequest inValue = new iljin.Barobill.IssueTaxInvoiceExRequest();
-            inValue.Body = new iljin.Barobill.IssueTaxInvoiceExRequestBody();
+            Barobill.IssueTaxInvoiceExRequest inValue = new Barobill.IssueTaxInvoiceExRequest();
+            inValue.Body = new Barobill.IssueTaxInvoiceExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13737,18 +13737,18 @@ namespace iljin.Barobill {
             inValue.Body.MailTitle = MailTitle;
             inValue.Body.BusinessLicenseYN = BusinessLicenseYN;
             inValue.Body.BankBookYN = BankBookYN;
-            iljin.Barobill.IssueTaxInvoiceExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).IssueTaxInvoiceEx(inValue);
+            Barobill.IssueTaxInvoiceExResponse retVal = ((Barobill.BaroService_TISoap)(this)).IssueTaxInvoiceEx(inValue);
             return retVal.Body.IssueTaxInvoiceExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.IssueTaxInvoiceExResponse> iljin.Barobill.BaroService_TISoap.IssueTaxInvoiceExAsync(iljin.Barobill.IssueTaxInvoiceExRequest request) {
+        System.Threading.Tasks.Task<Barobill.IssueTaxInvoiceExResponse> Barobill.BaroService_TISoap.IssueTaxInvoiceExAsync(Barobill.IssueTaxInvoiceExRequest request) {
             return base.Channel.IssueTaxInvoiceExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.IssueTaxInvoiceExResponse> IssueTaxInvoiceExAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, bool ForceIssue, string MailTitle, bool BusinessLicenseYN, bool BankBookYN) {
-            iljin.Barobill.IssueTaxInvoiceExRequest inValue = new iljin.Barobill.IssueTaxInvoiceExRequest();
-            inValue.Body = new iljin.Barobill.IssueTaxInvoiceExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.IssueTaxInvoiceExResponse> IssueTaxInvoiceExAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, bool ForceIssue, string MailTitle, bool BusinessLicenseYN, bool BankBookYN) {
+            Barobill.IssueTaxInvoiceExRequest inValue = new Barobill.IssueTaxInvoiceExRequest();
+            inValue.Body = new Barobill.IssueTaxInvoiceExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13758,52 +13758,52 @@ namespace iljin.Barobill {
             inValue.Body.MailTitle = MailTitle;
             inValue.Body.BusinessLicenseYN = BusinessLicenseYN;
             inValue.Body.BankBookYN = BankBookYN;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).IssueTaxInvoiceExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).IssueTaxInvoiceExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ReverseIssueTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.ReverseIssueTaxInvoice(iljin.Barobill.ReverseIssueTaxInvoiceRequest request) {
+        Barobill.ReverseIssueTaxInvoiceResponse Barobill.BaroService_TISoap.ReverseIssueTaxInvoice(Barobill.ReverseIssueTaxInvoiceRequest request) {
             return base.Channel.ReverseIssueTaxInvoice(request);
         }
         
         public int ReverseIssueTaxInvoice(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.ReverseIssueTaxInvoiceRequest inValue = new iljin.Barobill.ReverseIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.ReverseIssueTaxInvoiceRequestBody();
+            Barobill.ReverseIssueTaxInvoiceRequest inValue = new Barobill.ReverseIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.ReverseIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.ReverseIssueTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoice(inValue);
+            Barobill.ReverseIssueTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoice(inValue);
             return retVal.Body.ReverseIssueTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ReverseIssueTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.ReverseIssueTaxInvoiceAsync(iljin.Barobill.ReverseIssueTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.ReverseIssueTaxInvoiceResponse> Barobill.BaroService_TISoap.ReverseIssueTaxInvoiceAsync(Barobill.ReverseIssueTaxInvoiceRequest request) {
             return base.Channel.ReverseIssueTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ReverseIssueTaxInvoiceResponse> ReverseIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.ReverseIssueTaxInvoiceRequest inValue = new iljin.Barobill.ReverseIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.ReverseIssueTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ReverseIssueTaxInvoiceResponse> ReverseIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.ReverseIssueTaxInvoiceRequest inValue = new Barobill.ReverseIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.ReverseIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ReverseIssueTaxInvoiceExResponse iljin.Barobill.BaroService_TISoap.ReverseIssueTaxInvoiceEx(iljin.Barobill.ReverseIssueTaxInvoiceExRequest request) {
+        Barobill.ReverseIssueTaxInvoiceExResponse Barobill.BaroService_TISoap.ReverseIssueTaxInvoiceEx(Barobill.ReverseIssueTaxInvoiceExRequest request) {
             return base.Channel.ReverseIssueTaxInvoiceEx(request);
         }
         
         public int ReverseIssueTaxInvoiceEx(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.ReverseIssueTaxInvoiceExRequest inValue = new iljin.Barobill.ReverseIssueTaxInvoiceExRequest();
-            inValue.Body = new iljin.Barobill.ReverseIssueTaxInvoiceExRequestBody();
+            Barobill.ReverseIssueTaxInvoiceExRequest inValue = new Barobill.ReverseIssueTaxInvoiceExRequest();
+            inValue.Body = new Barobill.ReverseIssueTaxInvoiceExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13811,18 +13811,18 @@ namespace iljin.Barobill {
             inValue.Body.SMSMessage = SMSMessage;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.ReverseIssueTaxInvoiceExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoiceEx(inValue);
+            Barobill.ReverseIssueTaxInvoiceExResponse retVal = ((Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoiceEx(inValue);
             return retVal.Body.ReverseIssueTaxInvoiceExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ReverseIssueTaxInvoiceExResponse> iljin.Barobill.BaroService_TISoap.ReverseIssueTaxInvoiceExAsync(iljin.Barobill.ReverseIssueTaxInvoiceExRequest request) {
+        System.Threading.Tasks.Task<Barobill.ReverseIssueTaxInvoiceExResponse> Barobill.BaroService_TISoap.ReverseIssueTaxInvoiceExAsync(Barobill.ReverseIssueTaxInvoiceExRequest request) {
             return base.Channel.ReverseIssueTaxInvoiceExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ReverseIssueTaxInvoiceExResponse> ReverseIssueTaxInvoiceExAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.ReverseIssueTaxInvoiceExRequest inValue = new iljin.Barobill.ReverseIssueTaxInvoiceExRequest();
-            inValue.Body = new iljin.Barobill.ReverseIssueTaxInvoiceExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ReverseIssueTaxInvoiceExResponse> ReverseIssueTaxInvoiceExAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, bool ForceIssue, string MailTitle) {
+            Barobill.ReverseIssueTaxInvoiceExRequest inValue = new Barobill.ReverseIssueTaxInvoiceExRequest();
+            inValue.Body = new Barobill.ReverseIssueTaxInvoiceExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13830,50 +13830,50 @@ namespace iljin.Barobill {
             inValue.Body.SMSMessage = SMSMessage;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoiceExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ReverseIssueTaxInvoiceExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.PreIssueTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.PreIssueTaxInvoice(iljin.Barobill.PreIssueTaxInvoiceRequest request) {
+        Barobill.PreIssueTaxInvoiceResponse Barobill.BaroService_TISoap.PreIssueTaxInvoice(Barobill.PreIssueTaxInvoiceRequest request) {
             return base.Channel.PreIssueTaxInvoice(request);
         }
         
         public int PreIssueTaxInvoice(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string MailTitle) {
-            iljin.Barobill.PreIssueTaxInvoiceRequest inValue = new iljin.Barobill.PreIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.PreIssueTaxInvoiceRequestBody();
+            Barobill.PreIssueTaxInvoiceRequest inValue = new Barobill.PreIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.PreIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.PreIssueTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoice(inValue);
+            Barobill.PreIssueTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoice(inValue);
             return retVal.Body.PreIssueTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.PreIssueTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.PreIssueTaxInvoiceAsync(iljin.Barobill.PreIssueTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.PreIssueTaxInvoiceResponse> Barobill.BaroService_TISoap.PreIssueTaxInvoiceAsync(Barobill.PreIssueTaxInvoiceRequest request) {
             return base.Channel.PreIssueTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.PreIssueTaxInvoiceResponse> PreIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string MailTitle) {
-            iljin.Barobill.PreIssueTaxInvoiceRequest inValue = new iljin.Barobill.PreIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.PreIssueTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.PreIssueTaxInvoiceResponse> PreIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string MailTitle) {
+            Barobill.PreIssueTaxInvoiceRequest inValue = new Barobill.PreIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.PreIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.PreIssueTaxInvoiceExResponse iljin.Barobill.BaroService_TISoap.PreIssueTaxInvoiceEx(iljin.Barobill.PreIssueTaxInvoiceExRequest request) {
+        Barobill.PreIssueTaxInvoiceExResponse Barobill.BaroService_TISoap.PreIssueTaxInvoiceEx(Barobill.PreIssueTaxInvoiceExRequest request) {
             return base.Channel.PreIssueTaxInvoiceEx(request);
         }
         
         public int PreIssueTaxInvoiceEx(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, string MailTitle, bool BusinessLicenseYN, bool BankBookYN) {
-            iljin.Barobill.PreIssueTaxInvoiceExRequest inValue = new iljin.Barobill.PreIssueTaxInvoiceExRequest();
-            inValue.Body = new iljin.Barobill.PreIssueTaxInvoiceExRequestBody();
+            Barobill.PreIssueTaxInvoiceExRequest inValue = new Barobill.PreIssueTaxInvoiceExRequest();
+            inValue.Body = new Barobill.PreIssueTaxInvoiceExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13882,18 +13882,18 @@ namespace iljin.Barobill {
             inValue.Body.MailTitle = MailTitle;
             inValue.Body.BusinessLicenseYN = BusinessLicenseYN;
             inValue.Body.BankBookYN = BankBookYN;
-            iljin.Barobill.PreIssueTaxInvoiceExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoiceEx(inValue);
+            Barobill.PreIssueTaxInvoiceExResponse retVal = ((Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoiceEx(inValue);
             return retVal.Body.PreIssueTaxInvoiceExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.PreIssueTaxInvoiceExResponse> iljin.Barobill.BaroService_TISoap.PreIssueTaxInvoiceExAsync(iljin.Barobill.PreIssueTaxInvoiceExRequest request) {
+        System.Threading.Tasks.Task<Barobill.PreIssueTaxInvoiceExResponse> Barobill.BaroService_TISoap.PreIssueTaxInvoiceExAsync(Barobill.PreIssueTaxInvoiceExRequest request) {
             return base.Channel.PreIssueTaxInvoiceExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.PreIssueTaxInvoiceExResponse> PreIssueTaxInvoiceExAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, string MailTitle, bool BusinessLicenseYN, bool BankBookYN) {
-            iljin.Barobill.PreIssueTaxInvoiceExRequest inValue = new iljin.Barobill.PreIssueTaxInvoiceExRequest();
-            inValue.Body = new iljin.Barobill.PreIssueTaxInvoiceExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.PreIssueTaxInvoiceExResponse> PreIssueTaxInvoiceExAsync(string CERTKEY, string CorpNum, string MgtKey, bool SendSMS, string SMSMessage, string MailTitle, bool BusinessLicenseYN, bool BankBookYN) {
+            Barobill.PreIssueTaxInvoiceExRequest inValue = new Barobill.PreIssueTaxInvoiceExRequest();
+            inValue.Body = new Barobill.PreIssueTaxInvoiceExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
@@ -13902,697 +13902,697 @@ namespace iljin.Barobill {
             inValue.Body.MailTitle = MailTitle;
             inValue.Body.BusinessLicenseYN = BusinessLicenseYN;
             inValue.Body.BankBookYN = BankBookYN;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoiceExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).PreIssueTaxInvoiceExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ProcTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.ProcTaxInvoice(iljin.Barobill.ProcTaxInvoiceRequest request) {
+        Barobill.ProcTaxInvoiceResponse Barobill.BaroService_TISoap.ProcTaxInvoice(Barobill.ProcTaxInvoiceRequest request) {
             return base.Channel.ProcTaxInvoice(request);
         }
         
         public int ProcTaxInvoice(string CERTKEY, string CorpNum, string MgtKey, string ProcType, string Memo) {
-            iljin.Barobill.ProcTaxInvoiceRequest inValue = new iljin.Barobill.ProcTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.ProcTaxInvoiceRequestBody();
+            Barobill.ProcTaxInvoiceRequest inValue = new Barobill.ProcTaxInvoiceRequest();
+            inValue.Body = new Barobill.ProcTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ProcType = ProcType;
             inValue.Body.Memo = Memo;
-            iljin.Barobill.ProcTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ProcTaxInvoice(inValue);
+            Barobill.ProcTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).ProcTaxInvoice(inValue);
             return retVal.Body.ProcTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ProcTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.ProcTaxInvoiceAsync(iljin.Barobill.ProcTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.ProcTaxInvoiceResponse> Barobill.BaroService_TISoap.ProcTaxInvoiceAsync(Barobill.ProcTaxInvoiceRequest request) {
             return base.Channel.ProcTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ProcTaxInvoiceResponse> ProcTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, string ProcType, string Memo) {
-            iljin.Barobill.ProcTaxInvoiceRequest inValue = new iljin.Barobill.ProcTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.ProcTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ProcTaxInvoiceResponse> ProcTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey, string ProcType, string Memo) {
+            Barobill.ProcTaxInvoiceRequest inValue = new Barobill.ProcTaxInvoiceRequest();
+            inValue.Body = new Barobill.ProcTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ProcType = ProcType;
             inValue.Body.Memo = Memo;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ProcTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ProcTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistAndIssueTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistAndIssueTaxInvoice(iljin.Barobill.RegistAndIssueTaxInvoiceRequest request) {
+        Barobill.RegistAndIssueTaxInvoiceResponse Barobill.BaroService_TISoap.RegistAndIssueTaxInvoice(Barobill.RegistAndIssueTaxInvoiceRequest request) {
             return base.Channel.RegistAndIssueTaxInvoice(request);
         }
         
-        public int RegistAndIssueTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.RegistAndIssueTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndIssueTaxInvoiceRequestBody();
+        public int RegistAndIssueTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.RegistAndIssueTaxInvoiceRequest inValue = new Barobill.RegistAndIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.RegistAndIssueTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndIssueTaxInvoice(inValue);
+            Barobill.RegistAndIssueTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistAndIssueTaxInvoice(inValue);
             return retVal.Body.RegistAndIssueTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndIssueTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistAndIssueTaxInvoiceAsync(iljin.Barobill.RegistAndIssueTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistAndIssueTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistAndIssueTaxInvoiceAsync(Barobill.RegistAndIssueTaxInvoiceRequest request) {
             return base.Channel.RegistAndIssueTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistAndIssueTaxInvoiceResponse> RegistAndIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.RegistAndIssueTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndIssueTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistAndIssueTaxInvoiceResponse> RegistAndIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.RegistAndIssueTaxInvoiceRequest inValue = new Barobill.RegistAndIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndIssueTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistAndIssueTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistAndPreIssueTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistAndPreIssueTaxInvoice(iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest request) {
+        Barobill.RegistAndPreIssueTaxInvoiceResponse Barobill.BaroService_TISoap.RegistAndPreIssueTaxInvoice(Barobill.RegistAndPreIssueTaxInvoiceRequest request) {
             return base.Channel.RegistAndPreIssueTaxInvoice(request);
         }
         
-        public int RegistAndPreIssueTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
-            iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndPreIssueTaxInvoiceRequestBody();
+        public int RegistAndPreIssueTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
+            Barobill.RegistAndPreIssueTaxInvoiceRequest inValue = new Barobill.RegistAndPreIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndPreIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.IssueTiming = IssueTiming;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.RegistAndPreIssueTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndPreIssueTaxInvoice(inValue);
+            Barobill.RegistAndPreIssueTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistAndPreIssueTaxInvoice(inValue);
             return retVal.Body.RegistAndPreIssueTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndPreIssueTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistAndPreIssueTaxInvoiceAsync(iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistAndPreIssueTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistAndPreIssueTaxInvoiceAsync(Barobill.RegistAndPreIssueTaxInvoiceRequest request) {
             return base.Channel.RegistAndPreIssueTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistAndPreIssueTaxInvoiceResponse> RegistAndPreIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
-            iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndPreIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndPreIssueTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistAndPreIssueTaxInvoiceResponse> RegistAndPreIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
+            Barobill.RegistAndPreIssueTaxInvoiceRequest inValue = new Barobill.RegistAndPreIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndPreIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.IssueTiming = IssueTiming;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndPreIssueTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistAndPreIssueTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistAndIssueBrokerTaxInvoice(iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest request) {
+        Barobill.RegistAndIssueBrokerTaxInvoiceResponse Barobill.BaroService_TISoap.RegistAndIssueBrokerTaxInvoice(Barobill.RegistAndIssueBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistAndIssueBrokerTaxInvoice(request);
         }
         
-        public int RegistAndIssueBrokerTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody();
+        public int RegistAndIssueBrokerTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.RegistAndIssueBrokerTaxInvoiceRequest inValue = new Barobill.RegistAndIssueBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndIssueBrokerTaxInvoice(inValue);
+            Barobill.RegistAndIssueBrokerTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistAndIssueBrokerTaxInvoice(inValue);
             return retVal.Body.RegistAndIssueBrokerTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistAndIssueBrokerTaxInvoiceAsync(iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistAndIssueBrokerTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistAndIssueBrokerTaxInvoiceAsync(Barobill.RegistAndIssueBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistAndIssueBrokerTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistAndIssueBrokerTaxInvoiceResponse> RegistAndIssueBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistAndIssueBrokerTaxInvoiceResponse> RegistAndIssueBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.RegistAndIssueBrokerTaxInvoiceRequest inValue = new Barobill.RegistAndIssueBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndIssueBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndIssueBrokerTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistAndIssueBrokerTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistAndPreIssueBrokerTaxInvoice(iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request) {
+        Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse Barobill.BaroService_TISoap.RegistAndPreIssueBrokerTaxInvoice(Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistAndPreIssueBrokerTaxInvoice(request);
         }
         
-        public int RegistAndPreIssueBrokerTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
-            iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody();
+        public int RegistAndPreIssueBrokerTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
+            Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest inValue = new Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.IssueTiming = IssueTiming;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndPreIssueBrokerTaxInvoice(inValue);
+            Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistAndPreIssueBrokerTaxInvoice(inValue);
             return retVal.Body.RegistAndPreIssueBrokerTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistAndPreIssueBrokerTaxInvoiceAsync(iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistAndPreIssueBrokerTaxInvoiceAsync(Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest request) {
             return base.Channel.RegistAndPreIssueBrokerTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse> RegistAndPreIssueBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
-            iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistAndPreIssueBrokerTaxInvoiceResponse> RegistAndPreIssueBrokerTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, int IssueTiming, string MailTitle) {
+            Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest inValue = new Barobill.RegistAndPreIssueBrokerTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndPreIssueBrokerTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.IssueTiming = IssueTiming;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndPreIssueBrokerTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistAndPreIssueBrokerTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.RegistAndReverseIssueTaxInvoice(iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest request) {
+        Barobill.RegistAndReverseIssueTaxInvoiceResponse Barobill.BaroService_TISoap.RegistAndReverseIssueTaxInvoice(Barobill.RegistAndReverseIssueTaxInvoiceRequest request) {
             return base.Channel.RegistAndReverseIssueTaxInvoice(request);
         }
         
-        public int RegistAndReverseIssueTaxInvoice(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequestBody();
+        public int RegistAndReverseIssueTaxInvoice(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.RegistAndReverseIssueTaxInvoiceRequest inValue = new Barobill.RegistAndReverseIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndReverseIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndReverseIssueTaxInvoice(inValue);
+            Barobill.RegistAndReverseIssueTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistAndReverseIssueTaxInvoice(inValue);
             return retVal.Body.RegistAndReverseIssueTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.RegistAndReverseIssueTaxInvoiceAsync(iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistAndReverseIssueTaxInvoiceResponse> Barobill.BaroService_TISoap.RegistAndReverseIssueTaxInvoiceAsync(Barobill.RegistAndReverseIssueTaxInvoiceRequest request) {
             return base.Channel.RegistAndReverseIssueTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistAndReverseIssueTaxInvoiceResponse> RegistAndReverseIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, iljin.Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
-            iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest inValue = new iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.RegistAndReverseIssueTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistAndReverseIssueTaxInvoiceResponse> RegistAndReverseIssueTaxInvoiceAsync(string CERTKEY, string CorpNum, Barobill.TaxInvoice Invoice, bool SendSMS, bool ForceIssue, string MailTitle) {
+            Barobill.RegistAndReverseIssueTaxInvoiceRequest inValue = new Barobill.RegistAndReverseIssueTaxInvoiceRequest();
+            inValue.Body = new Barobill.RegistAndReverseIssueTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Invoice = Invoice;
             inValue.Body.SendSMS = SendSMS;
             inValue.Body.ForceIssue = ForceIssue;
             inValue.Body.MailTitle = MailTitle;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistAndReverseIssueTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistAndReverseIssueTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoice(iljin.Barobill.GetTaxInvoiceRequest request) {
+        Barobill.GetTaxInvoiceResponse Barobill.BaroService_TISoap.GetTaxInvoice(Barobill.GetTaxInvoiceRequest request) {
             return base.Channel.GetTaxInvoice(request);
         }
         
-        public iljin.Barobill.TaxInvoice GetTaxInvoice(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceRequest inValue = new iljin.Barobill.GetTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceRequestBody();
+        public Barobill.TaxInvoice GetTaxInvoice(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceRequest inValue = new Barobill.GetTaxInvoiceRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoice(inValue);
+            Barobill.GetTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoice(inValue);
             return retVal.Body.GetTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceAsync(iljin.Barobill.GetTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceResponse> Barobill.BaroService_TISoap.GetTaxInvoiceAsync(Barobill.GetTaxInvoiceRequest request) {
             return base.Channel.GetTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceResponse> GetTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceRequest inValue = new iljin.Barobill.GetTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceResponse> GetTaxInvoiceAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceRequest inValue = new Barobill.GetTaxInvoiceRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceIKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceIK(iljin.Barobill.GetTaxInvoiceIKRequest request) {
+        Barobill.GetTaxInvoiceIKResponse Barobill.BaroService_TISoap.GetTaxInvoiceIK(Barobill.GetTaxInvoiceIKRequest request) {
             return base.Channel.GetTaxInvoiceIK(request);
         }
         
-        public iljin.Barobill.TaxInvoice GetTaxInvoiceIK(string CERTKEY, string CorpNum, string InvoiceKey) {
-            iljin.Barobill.GetTaxInvoiceIKRequest inValue = new iljin.Barobill.GetTaxInvoiceIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceIKRequestBody();
+        public Barobill.TaxInvoice GetTaxInvoiceIK(string CERTKEY, string CorpNum, string InvoiceKey) {
+            Barobill.GetTaxInvoiceIKRequest inValue = new Barobill.GetTaxInvoiceIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
-            iljin.Barobill.GetTaxInvoiceIKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceIK(inValue);
+            Barobill.GetTaxInvoiceIKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceIK(inValue);
             return retVal.Body.GetTaxInvoiceIKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceIKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceIKAsync(iljin.Barobill.GetTaxInvoiceIKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceIKResponse> Barobill.BaroService_TISoap.GetTaxInvoiceIKAsync(Barobill.GetTaxInvoiceIKRequest request) {
             return base.Channel.GetTaxInvoiceIKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceIKResponse> GetTaxInvoiceIKAsync(string CERTKEY, string CorpNum, string InvoiceKey) {
-            iljin.Barobill.GetTaxInvoiceIKRequest inValue = new iljin.Barobill.GetTaxInvoiceIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceIKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceIKResponse> GetTaxInvoiceIKAsync(string CERTKEY, string CorpNum, string InvoiceKey) {
+            Barobill.GetTaxInvoiceIKRequest inValue = new Barobill.GetTaxInvoiceIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceIKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceIKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceNKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceNK(iljin.Barobill.GetTaxInvoiceNKRequest request) {
+        Barobill.GetTaxInvoiceNKResponse Barobill.BaroService_TISoap.GetTaxInvoiceNK(Barobill.GetTaxInvoiceNKRequest request) {
             return base.Channel.GetTaxInvoiceNK(request);
         }
         
-        public iljin.Barobill.TaxInvoice GetTaxInvoiceNK(string CERTKEY, string CorpNum, string NTSConfirmNum) {
-            iljin.Barobill.GetTaxInvoiceNKRequest inValue = new iljin.Barobill.GetTaxInvoiceNKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceNKRequestBody();
+        public Barobill.TaxInvoice GetTaxInvoiceNK(string CERTKEY, string CorpNum, string NTSConfirmNum) {
+            Barobill.GetTaxInvoiceNKRequest inValue = new Barobill.GetTaxInvoiceNKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceNKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.NTSConfirmNum = NTSConfirmNum;
-            iljin.Barobill.GetTaxInvoiceNKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceNK(inValue);
+            Barobill.GetTaxInvoiceNKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceNK(inValue);
             return retVal.Body.GetTaxInvoiceNKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceNKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceNKAsync(iljin.Barobill.GetTaxInvoiceNKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceNKResponse> Barobill.BaroService_TISoap.GetTaxInvoiceNKAsync(Barobill.GetTaxInvoiceNKRequest request) {
             return base.Channel.GetTaxInvoiceNKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceNKResponse> GetTaxInvoiceNKAsync(string CERTKEY, string CorpNum, string NTSConfirmNum) {
-            iljin.Barobill.GetTaxInvoiceNKRequest inValue = new iljin.Barobill.GetTaxInvoiceNKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceNKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceNKResponse> GetTaxInvoiceNKAsync(string CERTKEY, string CorpNum, string NTSConfirmNum) {
+            Barobill.GetTaxInvoiceNKRequest inValue = new Barobill.GetTaxInvoiceNKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceNKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.NTSConfirmNum = NTSConfirmNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceNKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceNKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceStateResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceState(iljin.Barobill.GetTaxInvoiceStateRequest request) {
+        Barobill.GetTaxInvoiceStateResponse Barobill.BaroService_TISoap.GetTaxInvoiceState(Barobill.GetTaxInvoiceStateRequest request) {
             return base.Channel.GetTaxInvoiceState(request);
         }
         
-        public iljin.Barobill.TaxInvoiceState GetTaxInvoiceState(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceStateRequest inValue = new iljin.Barobill.GetTaxInvoiceStateRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStateRequestBody();
+        public Barobill.TaxInvoiceState GetTaxInvoiceState(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceStateRequest inValue = new Barobill.GetTaxInvoiceStateRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStateRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetTaxInvoiceStateResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceState(inValue);
+            Barobill.GetTaxInvoiceStateResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceState(inValue);
             return retVal.Body.GetTaxInvoiceStateResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStateResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStateAsync(iljin.Barobill.GetTaxInvoiceStateRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStateResponse> Barobill.BaroService_TISoap.GetTaxInvoiceStateAsync(Barobill.GetTaxInvoiceStateRequest request) {
             return base.Channel.GetTaxInvoiceStateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStateResponse> GetTaxInvoiceStateAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceStateRequest inValue = new iljin.Barobill.GetTaxInvoiceStateRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStateRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStateResponse> GetTaxInvoiceStateAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceStateRequest inValue = new Barobill.GetTaxInvoiceStateRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStateRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStateAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStateAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceStatesResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStates(iljin.Barobill.GetTaxInvoiceStatesRequest request) {
+        Barobill.GetTaxInvoiceStatesResponse Barobill.BaroService_TISoap.GetTaxInvoiceStates(Barobill.GetTaxInvoiceStatesRequest request) {
             return base.Channel.GetTaxInvoiceStates(request);
         }
         
-        public iljin.Barobill.TaxInvoiceState[] GetTaxInvoiceStates(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList) {
-            iljin.Barobill.GetTaxInvoiceStatesRequest inValue = new iljin.Barobill.GetTaxInvoiceStatesRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStatesRequestBody();
+        public Barobill.TaxInvoiceState[] GetTaxInvoiceStates(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList) {
+            Barobill.GetTaxInvoiceStatesRequest inValue = new Barobill.GetTaxInvoiceStatesRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStatesRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKeyList = MgtKeyList;
-            iljin.Barobill.GetTaxInvoiceStatesResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStates(inValue);
+            Barobill.GetTaxInvoiceStatesResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStates(inValue);
             return retVal.Body.GetTaxInvoiceStatesResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStatesAsync(iljin.Barobill.GetTaxInvoiceStatesRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesResponse> Barobill.BaroService_TISoap.GetTaxInvoiceStatesAsync(Barobill.GetTaxInvoiceStatesRequest request) {
             return base.Channel.GetTaxInvoiceStatesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesResponse> GetTaxInvoiceStatesAsync(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList) {
-            iljin.Barobill.GetTaxInvoiceStatesRequest inValue = new iljin.Barobill.GetTaxInvoiceStatesRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStatesRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesResponse> GetTaxInvoiceStatesAsync(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList) {
+            Barobill.GetTaxInvoiceStatesRequest inValue = new Barobill.GetTaxInvoiceStatesRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStatesRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKeyList = MgtKeyList;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceStateEXResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStateEX(iljin.Barobill.GetTaxInvoiceStateEXRequest request) {
+        Barobill.GetTaxInvoiceStateEXResponse Barobill.BaroService_TISoap.GetTaxInvoiceStateEX(Barobill.GetTaxInvoiceStateEXRequest request) {
             return base.Channel.GetTaxInvoiceStateEX(request);
         }
         
-        public iljin.Barobill.TaxInvoiceStateEX GetTaxInvoiceStateEX(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceStateEXRequest inValue = new iljin.Barobill.GetTaxInvoiceStateEXRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStateEXRequestBody();
+        public Barobill.TaxInvoiceStateEX GetTaxInvoiceStateEX(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceStateEXRequest inValue = new Barobill.GetTaxInvoiceStateEXRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStateEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetTaxInvoiceStateEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStateEX(inValue);
+            Barobill.GetTaxInvoiceStateEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStateEX(inValue);
             return retVal.Body.GetTaxInvoiceStateEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStateEXResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStateEXAsync(iljin.Barobill.GetTaxInvoiceStateEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStateEXResponse> Barobill.BaroService_TISoap.GetTaxInvoiceStateEXAsync(Barobill.GetTaxInvoiceStateEXRequest request) {
             return base.Channel.GetTaxInvoiceStateEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStateEXResponse> GetTaxInvoiceStateEXAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceStateEXRequest inValue = new iljin.Barobill.GetTaxInvoiceStateEXRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStateEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStateEXResponse> GetTaxInvoiceStateEXAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceStateEXRequest inValue = new Barobill.GetTaxInvoiceStateEXRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStateEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStateEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStateEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceStatesEXResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStatesEX(iljin.Barobill.GetTaxInvoiceStatesEXRequest request) {
+        Barobill.GetTaxInvoiceStatesEXResponse Barobill.BaroService_TISoap.GetTaxInvoiceStatesEX(Barobill.GetTaxInvoiceStatesEXRequest request) {
             return base.Channel.GetTaxInvoiceStatesEX(request);
         }
         
-        public iljin.Barobill.TaxInvoiceStateEX[] GetTaxInvoiceStatesEX(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList) {
-            iljin.Barobill.GetTaxInvoiceStatesEXRequest inValue = new iljin.Barobill.GetTaxInvoiceStatesEXRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStatesEXRequestBody();
+        public Barobill.TaxInvoiceStateEX[] GetTaxInvoiceStatesEX(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList) {
+            Barobill.GetTaxInvoiceStatesEXRequest inValue = new Barobill.GetTaxInvoiceStatesEXRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStatesEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKeyList = MgtKeyList;
-            iljin.Barobill.GetTaxInvoiceStatesEXResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesEX(inValue);
+            Barobill.GetTaxInvoiceStatesEXResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesEX(inValue);
             return retVal.Body.GetTaxInvoiceStatesEXResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesEXResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStatesEXAsync(iljin.Barobill.GetTaxInvoiceStatesEXRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesEXResponse> Barobill.BaroService_TISoap.GetTaxInvoiceStatesEXAsync(Barobill.GetTaxInvoiceStatesEXRequest request) {
             return base.Channel.GetTaxInvoiceStatesEXAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesEXResponse> GetTaxInvoiceStatesEXAsync(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList) {
-            iljin.Barobill.GetTaxInvoiceStatesEXRequest inValue = new iljin.Barobill.GetTaxInvoiceStatesEXRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStatesEXRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesEXResponse> GetTaxInvoiceStatesEXAsync(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList) {
+            Barobill.GetTaxInvoiceStatesEXRequest inValue = new Barobill.GetTaxInvoiceStatesEXRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStatesEXRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKeyList = MgtKeyList;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesEXAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesEXAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceStatesIKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStatesIK(iljin.Barobill.GetTaxInvoiceStatesIKRequest request) {
+        Barobill.GetTaxInvoiceStatesIKResponse Barobill.BaroService_TISoap.GetTaxInvoiceStatesIK(Barobill.GetTaxInvoiceStatesIKRequest request) {
             return base.Channel.GetTaxInvoiceStatesIK(request);
         }
         
-        public iljin.Barobill.TaxInvoiceState[] GetTaxInvoiceStatesIK(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString InvoiceKeyList) {
-            iljin.Barobill.GetTaxInvoiceStatesIKRequest inValue = new iljin.Barobill.GetTaxInvoiceStatesIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStatesIKRequestBody();
+        public Barobill.TaxInvoiceState[] GetTaxInvoiceStatesIK(string CERTKEY, string CorpNum, Barobill.ArrayOfString InvoiceKeyList) {
+            Barobill.GetTaxInvoiceStatesIKRequest inValue = new Barobill.GetTaxInvoiceStatesIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStatesIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKeyList = InvoiceKeyList;
-            iljin.Barobill.GetTaxInvoiceStatesIKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesIK(inValue);
+            Barobill.GetTaxInvoiceStatesIKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesIK(inValue);
             return retVal.Body.GetTaxInvoiceStatesIKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesIKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceStatesIKAsync(iljin.Barobill.GetTaxInvoiceStatesIKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesIKResponse> Barobill.BaroService_TISoap.GetTaxInvoiceStatesIKAsync(Barobill.GetTaxInvoiceStatesIKRequest request) {
             return base.Channel.GetTaxInvoiceStatesIKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceStatesIKResponse> GetTaxInvoiceStatesIKAsync(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString InvoiceKeyList) {
-            iljin.Barobill.GetTaxInvoiceStatesIKRequest inValue = new iljin.Barobill.GetTaxInvoiceStatesIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceStatesIKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceStatesIKResponse> GetTaxInvoiceStatesIKAsync(string CERTKEY, string CorpNum, Barobill.ArrayOfString InvoiceKeyList) {
+            Barobill.GetTaxInvoiceStatesIKRequest inValue = new Barobill.GetTaxInvoiceStatesIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceStatesIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKeyList = InvoiceKeyList;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesIKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceStatesIKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceLogResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceLog(iljin.Barobill.GetTaxInvoiceLogRequest request) {
+        Barobill.GetTaxInvoiceLogResponse Barobill.BaroService_TISoap.GetTaxInvoiceLog(Barobill.GetTaxInvoiceLogRequest request) {
             return base.Channel.GetTaxInvoiceLog(request);
         }
         
-        public iljin.Barobill.InvoiceLog[] GetTaxInvoiceLog(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceLogRequest inValue = new iljin.Barobill.GetTaxInvoiceLogRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceLogRequestBody();
+        public Barobill.InvoiceLog[] GetTaxInvoiceLog(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceLogRequest inValue = new Barobill.GetTaxInvoiceLogRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceLogRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetTaxInvoiceLogResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLog(inValue);
+            Barobill.GetTaxInvoiceLogResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLog(inValue);
             return retVal.Body.GetTaxInvoiceLogResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceLogResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceLogAsync(iljin.Barobill.GetTaxInvoiceLogRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceLogResponse> Barobill.BaroService_TISoap.GetTaxInvoiceLogAsync(Barobill.GetTaxInvoiceLogRequest request) {
             return base.Channel.GetTaxInvoiceLogAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceLogResponse> GetTaxInvoiceLogAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxInvoiceLogRequest inValue = new iljin.Barobill.GetTaxInvoiceLogRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceLogRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceLogResponse> GetTaxInvoiceLogAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxInvoiceLogRequest inValue = new Barobill.GetTaxInvoiceLogRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceLogRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLogAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLogAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceLogIKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceLogIK(iljin.Barobill.GetTaxInvoiceLogIKRequest request) {
+        Barobill.GetTaxInvoiceLogIKResponse Barobill.BaroService_TISoap.GetTaxInvoiceLogIK(Barobill.GetTaxInvoiceLogIKRequest request) {
             return base.Channel.GetTaxInvoiceLogIK(request);
         }
         
-        public iljin.Barobill.InvoiceLog[] GetTaxInvoiceLogIK(string CERTKEY, string CorpNum, string InvoiceKey) {
-            iljin.Barobill.GetTaxInvoiceLogIKRequest inValue = new iljin.Barobill.GetTaxInvoiceLogIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceLogIKRequestBody();
+        public Barobill.InvoiceLog[] GetTaxInvoiceLogIK(string CERTKEY, string CorpNum, string InvoiceKey) {
+            Barobill.GetTaxInvoiceLogIKRequest inValue = new Barobill.GetTaxInvoiceLogIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceLogIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
-            iljin.Barobill.GetTaxInvoiceLogIKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLogIK(inValue);
+            Barobill.GetTaxInvoiceLogIKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLogIK(inValue);
             return retVal.Body.GetTaxInvoiceLogIKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceLogIKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceLogIKAsync(iljin.Barobill.GetTaxInvoiceLogIKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceLogIKResponse> Barobill.BaroService_TISoap.GetTaxInvoiceLogIKAsync(Barobill.GetTaxInvoiceLogIKRequest request) {
             return base.Channel.GetTaxInvoiceLogIKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceLogIKResponse> GetTaxInvoiceLogIKAsync(string CERTKEY, string CorpNum, string InvoiceKey) {
-            iljin.Barobill.GetTaxInvoiceLogIKRequest inValue = new iljin.Barobill.GetTaxInvoiceLogIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceLogIKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceLogIKResponse> GetTaxInvoiceLogIKAsync(string CERTKEY, string CorpNum, string InvoiceKey) {
+            Barobill.GetTaxInvoiceLogIKRequest inValue = new Barobill.GetTaxInvoiceLogIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceLogIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLogIKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceLogIKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.AttachFileByFTPResponse iljin.Barobill.BaroService_TISoap.AttachFileByFTP(iljin.Barobill.AttachFileByFTPRequest request) {
+        Barobill.AttachFileByFTPResponse Barobill.BaroService_TISoap.AttachFileByFTP(Barobill.AttachFileByFTPRequest request) {
             return base.Channel.AttachFileByFTP(request);
         }
         
         public int AttachFileByFTP(string CERTKEY, string CorpNum, string MgtKey, string FileName, string DisplayFileName) {
-            iljin.Barobill.AttachFileByFTPRequest inValue = new iljin.Barobill.AttachFileByFTPRequest();
-            inValue.Body = new iljin.Barobill.AttachFileByFTPRequestBody();
+            Barobill.AttachFileByFTPRequest inValue = new Barobill.AttachFileByFTPRequest();
+            inValue.Body = new Barobill.AttachFileByFTPRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.FileName = FileName;
             inValue.Body.DisplayFileName = DisplayFileName;
-            iljin.Barobill.AttachFileByFTPResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).AttachFileByFTP(inValue);
+            Barobill.AttachFileByFTPResponse retVal = ((Barobill.BaroService_TISoap)(this)).AttachFileByFTP(inValue);
             return retVal.Body.AttachFileByFTPResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.AttachFileByFTPResponse> iljin.Barobill.BaroService_TISoap.AttachFileByFTPAsync(iljin.Barobill.AttachFileByFTPRequest request) {
+        System.Threading.Tasks.Task<Barobill.AttachFileByFTPResponse> Barobill.BaroService_TISoap.AttachFileByFTPAsync(Barobill.AttachFileByFTPRequest request) {
             return base.Channel.AttachFileByFTPAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.AttachFileByFTPResponse> AttachFileByFTPAsync(string CERTKEY, string CorpNum, string MgtKey, string FileName, string DisplayFileName) {
-            iljin.Barobill.AttachFileByFTPRequest inValue = new iljin.Barobill.AttachFileByFTPRequest();
-            inValue.Body = new iljin.Barobill.AttachFileByFTPRequestBody();
+        public System.Threading.Tasks.Task<Barobill.AttachFileByFTPResponse> AttachFileByFTPAsync(string CERTKEY, string CorpNum, string MgtKey, string FileName, string DisplayFileName) {
+            Barobill.AttachFileByFTPRequest inValue = new Barobill.AttachFileByFTPRequest();
+            inValue.Body = new Barobill.AttachFileByFTPRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.FileName = FileName;
             inValue.Body.DisplayFileName = DisplayFileName;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).AttachFileByFTPAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).AttachFileByFTPAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.DeleteAttachFileResponse iljin.Barobill.BaroService_TISoap.DeleteAttachFile(iljin.Barobill.DeleteAttachFileRequest request) {
+        Barobill.DeleteAttachFileResponse Barobill.BaroService_TISoap.DeleteAttachFile(Barobill.DeleteAttachFileRequest request) {
             return base.Channel.DeleteAttachFile(request);
         }
         
         public int DeleteAttachFile(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.DeleteAttachFileRequest inValue = new iljin.Barobill.DeleteAttachFileRequest();
-            inValue.Body = new iljin.Barobill.DeleteAttachFileRequestBody();
+            Barobill.DeleteAttachFileRequest inValue = new Barobill.DeleteAttachFileRequest();
+            inValue.Body = new Barobill.DeleteAttachFileRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.DeleteAttachFileResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).DeleteAttachFile(inValue);
+            Barobill.DeleteAttachFileResponse retVal = ((Barobill.BaroService_TISoap)(this)).DeleteAttachFile(inValue);
             return retVal.Body.DeleteAttachFileResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteAttachFileResponse> iljin.Barobill.BaroService_TISoap.DeleteAttachFileAsync(iljin.Barobill.DeleteAttachFileRequest request) {
+        System.Threading.Tasks.Task<Barobill.DeleteAttachFileResponse> Barobill.BaroService_TISoap.DeleteAttachFileAsync(Barobill.DeleteAttachFileRequest request) {
             return base.Channel.DeleteAttachFileAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.DeleteAttachFileResponse> DeleteAttachFileAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.DeleteAttachFileRequest inValue = new iljin.Barobill.DeleteAttachFileRequest();
-            inValue.Body = new iljin.Barobill.DeleteAttachFileRequestBody();
+        public System.Threading.Tasks.Task<Barobill.DeleteAttachFileResponse> DeleteAttachFileAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.DeleteAttachFileRequest inValue = new Barobill.DeleteAttachFileRequest();
+            inValue.Body = new Barobill.DeleteAttachFileRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).DeleteAttachFileAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).DeleteAttachFileAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.DeleteAttachFileWithFileIndexResponse iljin.Barobill.BaroService_TISoap.DeleteAttachFileWithFileIndex(iljin.Barobill.DeleteAttachFileWithFileIndexRequest request) {
+        Barobill.DeleteAttachFileWithFileIndexResponse Barobill.BaroService_TISoap.DeleteAttachFileWithFileIndex(Barobill.DeleteAttachFileWithFileIndexRequest request) {
             return base.Channel.DeleteAttachFileWithFileIndex(request);
         }
         
         public int DeleteAttachFileWithFileIndex(string CERTKEY, string CorpNum, string MgtKey, int FileIndex) {
-            iljin.Barobill.DeleteAttachFileWithFileIndexRequest inValue = new iljin.Barobill.DeleteAttachFileWithFileIndexRequest();
-            inValue.Body = new iljin.Barobill.DeleteAttachFileWithFileIndexRequestBody();
+            Barobill.DeleteAttachFileWithFileIndexRequest inValue = new Barobill.DeleteAttachFileWithFileIndexRequest();
+            inValue.Body = new Barobill.DeleteAttachFileWithFileIndexRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.FileIndex = FileIndex;
-            iljin.Barobill.DeleteAttachFileWithFileIndexResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).DeleteAttachFileWithFileIndex(inValue);
+            Barobill.DeleteAttachFileWithFileIndexResponse retVal = ((Barobill.BaroService_TISoap)(this)).DeleteAttachFileWithFileIndex(inValue);
             return retVal.Body.DeleteAttachFileWithFileIndexResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.DeleteAttachFileWithFileIndexResponse> iljin.Barobill.BaroService_TISoap.DeleteAttachFileWithFileIndexAsync(iljin.Barobill.DeleteAttachFileWithFileIndexRequest request) {
+        System.Threading.Tasks.Task<Barobill.DeleteAttachFileWithFileIndexResponse> Barobill.BaroService_TISoap.DeleteAttachFileWithFileIndexAsync(Barobill.DeleteAttachFileWithFileIndexRequest request) {
             return base.Channel.DeleteAttachFileWithFileIndexAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.DeleteAttachFileWithFileIndexResponse> DeleteAttachFileWithFileIndexAsync(string CERTKEY, string CorpNum, string MgtKey, int FileIndex) {
-            iljin.Barobill.DeleteAttachFileWithFileIndexRequest inValue = new iljin.Barobill.DeleteAttachFileWithFileIndexRequest();
-            inValue.Body = new iljin.Barobill.DeleteAttachFileWithFileIndexRequestBody();
+        public System.Threading.Tasks.Task<Barobill.DeleteAttachFileWithFileIndexResponse> DeleteAttachFileWithFileIndexAsync(string CERTKEY, string CorpNum, string MgtKey, int FileIndex) {
+            Barobill.DeleteAttachFileWithFileIndexRequest inValue = new Barobill.DeleteAttachFileWithFileIndexRequest();
+            inValue.Body = new Barobill.DeleteAttachFileWithFileIndexRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.FileIndex = FileIndex;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).DeleteAttachFileWithFileIndexAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).DeleteAttachFileWithFileIndexAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetAttachedFileListResponse iljin.Barobill.BaroService_TISoap.GetAttachedFileList(iljin.Barobill.GetAttachedFileListRequest request) {
+        Barobill.GetAttachedFileListResponse Barobill.BaroService_TISoap.GetAttachedFileList(Barobill.GetAttachedFileListRequest request) {
             return base.Channel.GetAttachedFileList(request);
         }
         
-        public iljin.Barobill.AttachedFile[] GetAttachedFileList(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetAttachedFileListRequest inValue = new iljin.Barobill.GetAttachedFileListRequest();
-            inValue.Body = new iljin.Barobill.GetAttachedFileListRequestBody();
+        public Barobill.AttachedFile[] GetAttachedFileList(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetAttachedFileListRequest inValue = new Barobill.GetAttachedFileListRequest();
+            inValue.Body = new Barobill.GetAttachedFileListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetAttachedFileListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetAttachedFileList(inValue);
+            Barobill.GetAttachedFileListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetAttachedFileList(inValue);
             return retVal.Body.GetAttachedFileListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetAttachedFileListResponse> iljin.Barobill.BaroService_TISoap.GetAttachedFileListAsync(iljin.Barobill.GetAttachedFileListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetAttachedFileListResponse> Barobill.BaroService_TISoap.GetAttachedFileListAsync(Barobill.GetAttachedFileListRequest request) {
             return base.Channel.GetAttachedFileListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetAttachedFileListResponse> GetAttachedFileListAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetAttachedFileListRequest inValue = new iljin.Barobill.GetAttachedFileListRequest();
-            inValue.Body = new iljin.Barobill.GetAttachedFileListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetAttachedFileListResponse> GetAttachedFileListAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetAttachedFileListRequest inValue = new Barobill.GetAttachedFileListRequest();
+            inValue.Body = new Barobill.GetAttachedFileListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetAttachedFileListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetAttachedFileListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetAttachedFileListExResponse iljin.Barobill.BaroService_TISoap.GetAttachedFileListEx(iljin.Barobill.GetAttachedFileListExRequest request) {
+        Barobill.GetAttachedFileListExResponse Barobill.BaroService_TISoap.GetAttachedFileListEx(Barobill.GetAttachedFileListExRequest request) {
             return base.Channel.GetAttachedFileListEx(request);
         }
         
-        public iljin.Barobill.AttachedFileEx[] GetAttachedFileListEx(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetAttachedFileListExRequest inValue = new iljin.Barobill.GetAttachedFileListExRequest();
-            inValue.Body = new iljin.Barobill.GetAttachedFileListExRequestBody();
+        public Barobill.AttachedFileEx[] GetAttachedFileListEx(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetAttachedFileListExRequest inValue = new Barobill.GetAttachedFileListExRequest();
+            inValue.Body = new Barobill.GetAttachedFileListExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetAttachedFileListExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetAttachedFileListEx(inValue);
+            Barobill.GetAttachedFileListExResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetAttachedFileListEx(inValue);
             return retVal.Body.GetAttachedFileListExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetAttachedFileListExResponse> iljin.Barobill.BaroService_TISoap.GetAttachedFileListExAsync(iljin.Barobill.GetAttachedFileListExRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetAttachedFileListExResponse> Barobill.BaroService_TISoap.GetAttachedFileListExAsync(Barobill.GetAttachedFileListExRequest request) {
             return base.Channel.GetAttachedFileListExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetAttachedFileListExResponse> GetAttachedFileListExAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetAttachedFileListExRequest inValue = new iljin.Barobill.GetAttachedFileListExRequest();
-            inValue.Body = new iljin.Barobill.GetAttachedFileListExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetAttachedFileListExResponse> GetAttachedFileListExAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetAttachedFileListExRequest inValue = new Barobill.GetAttachedFileListExRequest();
+            inValue.Body = new Barobill.GetAttachedFileListExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetAttachedFileListExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetAttachedFileListExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ReSendEmailResponse iljin.Barobill.BaroService_TISoap.ReSendEmail(iljin.Barobill.ReSendEmailRequest request) {
+        Barobill.ReSendEmailResponse Barobill.BaroService_TISoap.ReSendEmail(Barobill.ReSendEmailRequest request) {
             return base.Channel.ReSendEmail(request);
         }
         
         public int ReSendEmail(string CERTKEY, string CorpNum, string MgtKey, string ToEmailAddress) {
-            iljin.Barobill.ReSendEmailRequest inValue = new iljin.Barobill.ReSendEmailRequest();
-            inValue.Body = new iljin.Barobill.ReSendEmailRequestBody();
+            Barobill.ReSendEmailRequest inValue = new Barobill.ReSendEmailRequest();
+            inValue.Body = new Barobill.ReSendEmailRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ToEmailAddress = ToEmailAddress;
-            iljin.Barobill.ReSendEmailResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ReSendEmail(inValue);
+            Barobill.ReSendEmailResponse retVal = ((Barobill.BaroService_TISoap)(this)).ReSendEmail(inValue);
             return retVal.Body.ReSendEmailResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ReSendEmailResponse> iljin.Barobill.BaroService_TISoap.ReSendEmailAsync(iljin.Barobill.ReSendEmailRequest request) {
+        System.Threading.Tasks.Task<Barobill.ReSendEmailResponse> Barobill.BaroService_TISoap.ReSendEmailAsync(Barobill.ReSendEmailRequest request) {
             return base.Channel.ReSendEmailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ReSendEmailResponse> ReSendEmailAsync(string CERTKEY, string CorpNum, string MgtKey, string ToEmailAddress) {
-            iljin.Barobill.ReSendEmailRequest inValue = new iljin.Barobill.ReSendEmailRequest();
-            inValue.Body = new iljin.Barobill.ReSendEmailRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ReSendEmailResponse> ReSendEmailAsync(string CERTKEY, string CorpNum, string MgtKey, string ToEmailAddress) {
+            Barobill.ReSendEmailRequest inValue = new Barobill.ReSendEmailRequest();
+            inValue.Body = new Barobill.ReSendEmailRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ToEmailAddress = ToEmailAddress;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ReSendEmailAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ReSendEmailAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ReSendSMSResponse iljin.Barobill.BaroService_TISoap.ReSendSMS(iljin.Barobill.ReSendSMSRequest request) {
+        Barobill.ReSendSMSResponse Barobill.BaroService_TISoap.ReSendSMS(Barobill.ReSendSMSRequest request) {
             return base.Channel.ReSendSMS(request);
         }
         
         public int ReSendSMS(string CERTKEY, string CorpNum, string SenderID, string FromNumber, string ToCorpNum, string ToName, string ToNumber, string Contents) {
-            iljin.Barobill.ReSendSMSRequest inValue = new iljin.Barobill.ReSendSMSRequest();
-            inValue.Body = new iljin.Barobill.ReSendSMSRequestBody();
+            Barobill.ReSendSMSRequest inValue = new Barobill.ReSendSMSRequest();
+            inValue.Body = new Barobill.ReSendSMSRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.SenderID = SenderID;
@@ -14601,18 +14601,18 @@ namespace iljin.Barobill {
             inValue.Body.ToName = ToName;
             inValue.Body.ToNumber = ToNumber;
             inValue.Body.Contents = Contents;
-            iljin.Barobill.ReSendSMSResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ReSendSMS(inValue);
+            Barobill.ReSendSMSResponse retVal = ((Barobill.BaroService_TISoap)(this)).ReSendSMS(inValue);
             return retVal.Body.ReSendSMSResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ReSendSMSResponse> iljin.Barobill.BaroService_TISoap.ReSendSMSAsync(iljin.Barobill.ReSendSMSRequest request) {
+        System.Threading.Tasks.Task<Barobill.ReSendSMSResponse> Barobill.BaroService_TISoap.ReSendSMSAsync(Barobill.ReSendSMSRequest request) {
             return base.Channel.ReSendSMSAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ReSendSMSResponse> ReSendSMSAsync(string CERTKEY, string CorpNum, string SenderID, string FromNumber, string ToCorpNum, string ToName, string ToNumber, string Contents) {
-            iljin.Barobill.ReSendSMSRequest inValue = new iljin.Barobill.ReSendSMSRequest();
-            inValue.Body = new iljin.Barobill.ReSendSMSRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ReSendSMSResponse> ReSendSMSAsync(string CERTKEY, string CorpNum, string SenderID, string FromNumber, string ToCorpNum, string ToName, string ToNumber, string Contents) {
+            Barobill.ReSendSMSRequest inValue = new Barobill.ReSendSMSRequest();
+            inValue.Body = new Barobill.ReSendSMSRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.SenderID = SenderID;
@@ -14621,17 +14621,17 @@ namespace iljin.Barobill {
             inValue.Body.ToName = ToName;
             inValue.Body.ToNumber = ToNumber;
             inValue.Body.Contents = Contents;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ReSendSMSAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ReSendSMSAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.SendInvoiceSMSResponse iljin.Barobill.BaroService_TISoap.SendInvoiceSMS(iljin.Barobill.SendInvoiceSMSRequest request) {
+        Barobill.SendInvoiceSMSResponse Barobill.BaroService_TISoap.SendInvoiceSMS(Barobill.SendInvoiceSMSRequest request) {
             return base.Channel.SendInvoiceSMS(request);
         }
         
         public int SendInvoiceSMS(string CERTKEY, string CorpNum, string SenderID, string MgtKey, string FromNumber, string ToNumber, string Contents) {
-            iljin.Barobill.SendInvoiceSMSRequest inValue = new iljin.Barobill.SendInvoiceSMSRequest();
-            inValue.Body = new iljin.Barobill.SendInvoiceSMSRequestBody();
+            Barobill.SendInvoiceSMSRequest inValue = new Barobill.SendInvoiceSMSRequest();
+            inValue.Body = new Barobill.SendInvoiceSMSRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.SenderID = SenderID;
@@ -14639,18 +14639,18 @@ namespace iljin.Barobill {
             inValue.Body.FromNumber = FromNumber;
             inValue.Body.ToNumber = ToNumber;
             inValue.Body.Contents = Contents;
-            iljin.Barobill.SendInvoiceSMSResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).SendInvoiceSMS(inValue);
+            Barobill.SendInvoiceSMSResponse retVal = ((Barobill.BaroService_TISoap)(this)).SendInvoiceSMS(inValue);
             return retVal.Body.SendInvoiceSMSResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.SendInvoiceSMSResponse> iljin.Barobill.BaroService_TISoap.SendInvoiceSMSAsync(iljin.Barobill.SendInvoiceSMSRequest request) {
+        System.Threading.Tasks.Task<Barobill.SendInvoiceSMSResponse> Barobill.BaroService_TISoap.SendInvoiceSMSAsync(Barobill.SendInvoiceSMSRequest request) {
             return base.Channel.SendInvoiceSMSAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.SendInvoiceSMSResponse> SendInvoiceSMSAsync(string CERTKEY, string CorpNum, string SenderID, string MgtKey, string FromNumber, string ToNumber, string Contents) {
-            iljin.Barobill.SendInvoiceSMSRequest inValue = new iljin.Barobill.SendInvoiceSMSRequest();
-            inValue.Body = new iljin.Barobill.SendInvoiceSMSRequestBody();
+        public System.Threading.Tasks.Task<Barobill.SendInvoiceSMSResponse> SendInvoiceSMSAsync(string CERTKEY, string CorpNum, string SenderID, string MgtKey, string FromNumber, string ToNumber, string Contents) {
+            Barobill.SendInvoiceSMSRequest inValue = new Barobill.SendInvoiceSMSRequest();
+            inValue.Body = new Barobill.SendInvoiceSMSRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.SenderID = SenderID;
@@ -14658,343 +14658,343 @@ namespace iljin.Barobill {
             inValue.Body.FromNumber = FromNumber;
             inValue.Body.ToNumber = ToNumber;
             inValue.Body.Contents = Contents;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).SendInvoiceSMSAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).SendInvoiceSMSAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.SendInvoiceFaxResponse iljin.Barobill.BaroService_TISoap.SendInvoiceFax(iljin.Barobill.SendInvoiceFaxRequest request) {
+        Barobill.SendInvoiceFaxResponse Barobill.BaroService_TISoap.SendInvoiceFax(Barobill.SendInvoiceFaxRequest request) {
             return base.Channel.SendInvoiceFax(request);
         }
         
         public int SendInvoiceFax(string CERTKEY, string CorpNum, string MgtKey, string SenderID, string FromFaxNumber, string ToFaxNumber) {
-            iljin.Barobill.SendInvoiceFaxRequest inValue = new iljin.Barobill.SendInvoiceFaxRequest();
-            inValue.Body = new iljin.Barobill.SendInvoiceFaxRequestBody();
+            Barobill.SendInvoiceFaxRequest inValue = new Barobill.SendInvoiceFaxRequest();
+            inValue.Body = new Barobill.SendInvoiceFaxRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.SenderID = SenderID;
             inValue.Body.FromFaxNumber = FromFaxNumber;
             inValue.Body.ToFaxNumber = ToFaxNumber;
-            iljin.Barobill.SendInvoiceFaxResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).SendInvoiceFax(inValue);
+            Barobill.SendInvoiceFaxResponse retVal = ((Barobill.BaroService_TISoap)(this)).SendInvoiceFax(inValue);
             return retVal.Body.SendInvoiceFaxResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.SendInvoiceFaxResponse> iljin.Barobill.BaroService_TISoap.SendInvoiceFaxAsync(iljin.Barobill.SendInvoiceFaxRequest request) {
+        System.Threading.Tasks.Task<Barobill.SendInvoiceFaxResponse> Barobill.BaroService_TISoap.SendInvoiceFaxAsync(Barobill.SendInvoiceFaxRequest request) {
             return base.Channel.SendInvoiceFaxAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.SendInvoiceFaxResponse> SendInvoiceFaxAsync(string CERTKEY, string CorpNum, string MgtKey, string SenderID, string FromFaxNumber, string ToFaxNumber) {
-            iljin.Barobill.SendInvoiceFaxRequest inValue = new iljin.Barobill.SendInvoiceFaxRequest();
-            inValue.Body = new iljin.Barobill.SendInvoiceFaxRequestBody();
+        public System.Threading.Tasks.Task<Barobill.SendInvoiceFaxResponse> SendInvoiceFaxAsync(string CERTKEY, string CorpNum, string MgtKey, string SenderID, string FromFaxNumber, string ToFaxNumber) {
+            Barobill.SendInvoiceFaxRequest inValue = new Barobill.SendInvoiceFaxRequest();
+            inValue.Body = new Barobill.SendInvoiceFaxRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.SenderID = SenderID;
             inValue.Body.FromFaxNumber = FromFaxNumber;
             inValue.Body.ToFaxNumber = ToFaxNumber;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).SendInvoiceFaxAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).SendInvoiceFaxAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetBaroBillURLResponse iljin.Barobill.BaroService_TISoap.GetBaroBillURL(iljin.Barobill.GetBaroBillURLRequest request) {
+        Barobill.GetBaroBillURLResponse Barobill.BaroService_TISoap.GetBaroBillURL(Barobill.GetBaroBillURLRequest request) {
             return base.Channel.GetBaroBillURL(request);
         }
         
         public string GetBaroBillURL(string CERTKEY, string CorpNum, string ID, string PWD, string TOGO) {
-            iljin.Barobill.GetBaroBillURLRequest inValue = new iljin.Barobill.GetBaroBillURLRequest();
-            inValue.Body = new iljin.Barobill.GetBaroBillURLRequestBody();
+            Barobill.GetBaroBillURLRequest inValue = new Barobill.GetBaroBillURLRequest();
+            inValue.Body = new Barobill.GetBaroBillURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
             inValue.Body.TOGO = TOGO;
-            iljin.Barobill.GetBaroBillURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetBaroBillURL(inValue);
+            Barobill.GetBaroBillURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetBaroBillURL(inValue);
             return retVal.Body.GetBaroBillURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBaroBillURLResponse> iljin.Barobill.BaroService_TISoap.GetBaroBillURLAsync(iljin.Barobill.GetBaroBillURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetBaroBillURLResponse> Barobill.BaroService_TISoap.GetBaroBillURLAsync(Barobill.GetBaroBillURLRequest request) {
             return base.Channel.GetBaroBillURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetBaroBillURLResponse> GetBaroBillURLAsync(string CERTKEY, string CorpNum, string ID, string PWD, string TOGO) {
-            iljin.Barobill.GetBaroBillURLRequest inValue = new iljin.Barobill.GetBaroBillURLRequest();
-            inValue.Body = new iljin.Barobill.GetBaroBillURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetBaroBillURLResponse> GetBaroBillURLAsync(string CERTKEY, string CorpNum, string ID, string PWD, string TOGO) {
+            Barobill.GetBaroBillURLRequest inValue = new Barobill.GetBaroBillURLRequest();
+            inValue.Body = new Barobill.GetBaroBillURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
             inValue.Body.TOGO = TOGO;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetBaroBillURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetBaroBillURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePopUpURLResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePopUpURL(iljin.Barobill.GetTaxInvoicePopUpURLRequest request) {
+        Barobill.GetTaxInvoicePopUpURLResponse Barobill.BaroService_TISoap.GetTaxInvoicePopUpURL(Barobill.GetTaxInvoicePopUpURLRequest request) {
             return base.Channel.GetTaxInvoicePopUpURL(request);
         }
         
         public string GetTaxInvoicePopUpURL(string CERTKEY, string CorpNum, string MgtKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePopUpURLRequest inValue = new iljin.Barobill.GetTaxInvoicePopUpURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePopUpURLRequestBody();
+            Barobill.GetTaxInvoicePopUpURLRequest inValue = new Barobill.GetTaxInvoicePopUpURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePopUpURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoicePopUpURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURL(inValue);
+            Barobill.GetTaxInvoicePopUpURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURL(inValue);
             return retVal.Body.GetTaxInvoicePopUpURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLAsync(iljin.Barobill.GetTaxInvoicePopUpURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLResponse> Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLAsync(Barobill.GetTaxInvoicePopUpURLRequest request) {
             return base.Channel.GetTaxInvoicePopUpURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLResponse> GetTaxInvoicePopUpURLAsync(string CERTKEY, string CorpNum, string MgtKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePopUpURLRequest inValue = new iljin.Barobill.GetTaxInvoicePopUpURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePopUpURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLResponse> GetTaxInvoicePopUpURLAsync(string CERTKEY, string CorpNum, string MgtKey, string ID, string PWD) {
+            Barobill.GetTaxInvoicePopUpURLRequest inValue = new Barobill.GetTaxInvoicePopUpURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePopUpURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePopUpURLIKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLIK(iljin.Barobill.GetTaxInvoicePopUpURLIKRequest request) {
+        Barobill.GetTaxInvoicePopUpURLIKResponse Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLIK(Barobill.GetTaxInvoicePopUpURLIKRequest request) {
             return base.Channel.GetTaxInvoicePopUpURLIK(request);
         }
         
         public string GetTaxInvoicePopUpURLIK(string CERTKEY, string CorpNum, string InvoiceKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePopUpURLIKRequest inValue = new iljin.Barobill.GetTaxInvoicePopUpURLIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePopUpURLIKRequestBody();
+            Barobill.GetTaxInvoicePopUpURLIKRequest inValue = new Barobill.GetTaxInvoicePopUpURLIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePopUpURLIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoicePopUpURLIKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLIK(inValue);
+            Barobill.GetTaxInvoicePopUpURLIKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLIK(inValue);
             return retVal.Body.GetTaxInvoicePopUpURLIKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLIKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLIKAsync(iljin.Barobill.GetTaxInvoicePopUpURLIKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLIKResponse> Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLIKAsync(Barobill.GetTaxInvoicePopUpURLIKRequest request) {
             return base.Channel.GetTaxInvoicePopUpURLIKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLIKResponse> GetTaxInvoicePopUpURLIKAsync(string CERTKEY, string CorpNum, string InvoiceKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePopUpURLIKRequest inValue = new iljin.Barobill.GetTaxInvoicePopUpURLIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePopUpURLIKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLIKResponse> GetTaxInvoicePopUpURLIKAsync(string CERTKEY, string CorpNum, string InvoiceKey, string ID, string PWD) {
+            Barobill.GetTaxInvoicePopUpURLIKRequest inValue = new Barobill.GetTaxInvoicePopUpURLIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePopUpURLIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLIKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLIKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePopUpURLNKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLNK(iljin.Barobill.GetTaxInvoicePopUpURLNKRequest request) {
+        Barobill.GetTaxInvoicePopUpURLNKResponse Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLNK(Barobill.GetTaxInvoicePopUpURLNKRequest request) {
             return base.Channel.GetTaxInvoicePopUpURLNK(request);
         }
         
         public string GetTaxInvoicePopUpURLNK(string CERTKEY, string CorpNum, string NTSConfirmNum, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePopUpURLNKRequest inValue = new iljin.Barobill.GetTaxInvoicePopUpURLNKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePopUpURLNKRequestBody();
+            Barobill.GetTaxInvoicePopUpURLNKRequest inValue = new Barobill.GetTaxInvoicePopUpURLNKRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePopUpURLNKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.NTSConfirmNum = NTSConfirmNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoicePopUpURLNKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLNK(inValue);
+            Barobill.GetTaxInvoicePopUpURLNKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLNK(inValue);
             return retVal.Body.GetTaxInvoicePopUpURLNKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLNKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLNKAsync(iljin.Barobill.GetTaxInvoicePopUpURLNKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLNKResponse> Barobill.BaroService_TISoap.GetTaxInvoicePopUpURLNKAsync(Barobill.GetTaxInvoicePopUpURLNKRequest request) {
             return base.Channel.GetTaxInvoicePopUpURLNKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePopUpURLNKResponse> GetTaxInvoicePopUpURLNKAsync(string CERTKEY, string CorpNum, string NTSConfirmNum, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePopUpURLNKRequest inValue = new iljin.Barobill.GetTaxInvoicePopUpURLNKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePopUpURLNKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePopUpURLNKResponse> GetTaxInvoicePopUpURLNKAsync(string CERTKEY, string CorpNum, string NTSConfirmNum, string ID, string PWD) {
+            Barobill.GetTaxInvoicePopUpURLNKRequest inValue = new Barobill.GetTaxInvoicePopUpURLNKRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePopUpURLNKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.NTSConfirmNum = NTSConfirmNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLNKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePopUpURLNKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePrintURLResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePrintURL(iljin.Barobill.GetTaxInvoicePrintURLRequest request) {
+        Barobill.GetTaxInvoicePrintURLResponse Barobill.BaroService_TISoap.GetTaxInvoicePrintURL(Barobill.GetTaxInvoicePrintURLRequest request) {
             return base.Channel.GetTaxInvoicePrintURL(request);
         }
         
         public string GetTaxInvoicePrintURL(string CERTKEY, string CorpNum, string MgtKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePrintURLRequest inValue = new iljin.Barobill.GetTaxInvoicePrintURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePrintURLRequestBody();
+            Barobill.GetTaxInvoicePrintURLRequest inValue = new Barobill.GetTaxInvoicePrintURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePrintURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoicePrintURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURL(inValue);
+            Barobill.GetTaxInvoicePrintURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURL(inValue);
             return retVal.Body.GetTaxInvoicePrintURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePrintURLResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePrintURLAsync(iljin.Barobill.GetTaxInvoicePrintURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePrintURLResponse> Barobill.BaroService_TISoap.GetTaxInvoicePrintURLAsync(Barobill.GetTaxInvoicePrintURLRequest request) {
             return base.Channel.GetTaxInvoicePrintURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePrintURLResponse> GetTaxInvoicePrintURLAsync(string CERTKEY, string CorpNum, string MgtKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePrintURLRequest inValue = new iljin.Barobill.GetTaxInvoicePrintURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePrintURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePrintURLResponse> GetTaxInvoicePrintURLAsync(string CERTKEY, string CorpNum, string MgtKey, string ID, string PWD) {
+            Barobill.GetTaxInvoicePrintURLRequest inValue = new Barobill.GetTaxInvoicePrintURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePrintURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePrintURLIKResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePrintURLIK(iljin.Barobill.GetTaxInvoicePrintURLIKRequest request) {
+        Barobill.GetTaxInvoicePrintURLIKResponse Barobill.BaroService_TISoap.GetTaxInvoicePrintURLIK(Barobill.GetTaxInvoicePrintURLIKRequest request) {
             return base.Channel.GetTaxInvoicePrintURLIK(request);
         }
         
         public string GetTaxInvoicePrintURLIK(string CERTKEY, string CorpNum, string InvoiceKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePrintURLIKRequest inValue = new iljin.Barobill.GetTaxInvoicePrintURLIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePrintURLIKRequestBody();
+            Barobill.GetTaxInvoicePrintURLIKRequest inValue = new Barobill.GetTaxInvoicePrintURLIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePrintURLIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoicePrintURLIKResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURLIK(inValue);
+            Barobill.GetTaxInvoicePrintURLIKResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURLIK(inValue);
             return retVal.Body.GetTaxInvoicePrintURLIKResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePrintURLIKResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePrintURLIKAsync(iljin.Barobill.GetTaxInvoicePrintURLIKRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePrintURLIKResponse> Barobill.BaroService_TISoap.GetTaxInvoicePrintURLIKAsync(Barobill.GetTaxInvoicePrintURLIKRequest request) {
             return base.Channel.GetTaxInvoicePrintURLIKAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePrintURLIKResponse> GetTaxInvoicePrintURLIKAsync(string CERTKEY, string CorpNum, string InvoiceKey, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicePrintURLIKRequest inValue = new iljin.Barobill.GetTaxInvoicePrintURLIKRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePrintURLIKRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePrintURLIKResponse> GetTaxInvoicePrintURLIKAsync(string CERTKEY, string CorpNum, string InvoiceKey, string ID, string PWD) {
+            Barobill.GetTaxInvoicePrintURLIKRequest inValue = new Barobill.GetTaxInvoicePrintURLIKRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePrintURLIKRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.InvoiceKey = InvoiceKey;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURLIKAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePrintURLIKAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicesPrintURLResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicesPrintURL(iljin.Barobill.GetTaxInvoicesPrintURLRequest request) {
+        Barobill.GetTaxInvoicesPrintURLResponse Barobill.BaroService_TISoap.GetTaxInvoicesPrintURL(Barobill.GetTaxInvoicesPrintURLRequest request) {
             return base.Channel.GetTaxInvoicesPrintURL(request);
         }
         
-        public string GetTaxInvoicesPrintURL(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicesPrintURLRequest inValue = new iljin.Barobill.GetTaxInvoicesPrintURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicesPrintURLRequestBody();
+        public string GetTaxInvoicesPrintURL(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList, string ID, string PWD) {
+            Barobill.GetTaxInvoicesPrintURLRequest inValue = new Barobill.GetTaxInvoicesPrintURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoicesPrintURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKeyList = MgtKeyList;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoicesPrintURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicesPrintURL(inValue);
+            Barobill.GetTaxInvoicesPrintURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicesPrintURL(inValue);
             return retVal.Body.GetTaxInvoicesPrintURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicesPrintURLResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicesPrintURLAsync(iljin.Barobill.GetTaxInvoicesPrintURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicesPrintURLResponse> Barobill.BaroService_TISoap.GetTaxInvoicesPrintURLAsync(Barobill.GetTaxInvoicesPrintURLRequest request) {
             return base.Channel.GetTaxInvoicesPrintURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicesPrintURLResponse> GetTaxInvoicesPrintURLAsync(string CERTKEY, string CorpNum, iljin.Barobill.ArrayOfString MgtKeyList, string ID, string PWD) {
-            iljin.Barobill.GetTaxInvoicesPrintURLRequest inValue = new iljin.Barobill.GetTaxInvoicesPrintURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicesPrintURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicesPrintURLResponse> GetTaxInvoicesPrintURLAsync(string CERTKEY, string CorpNum, Barobill.ArrayOfString MgtKeyList, string ID, string PWD) {
+            Barobill.GetTaxInvoicesPrintURLRequest inValue = new Barobill.GetTaxInvoicesPrintURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoicesPrintURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKeyList = MgtKeyList;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicesPrintURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicesPrintURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxinvoiceMailURLResponse iljin.Barobill.BaroService_TISoap.GetTaxinvoiceMailURL(iljin.Barobill.GetTaxinvoiceMailURLRequest request) {
+        Barobill.GetTaxinvoiceMailURLResponse Barobill.BaroService_TISoap.GetTaxinvoiceMailURL(Barobill.GetTaxinvoiceMailURLRequest request) {
             return base.Channel.GetTaxinvoiceMailURL(request);
         }
         
         public string GetTaxinvoiceMailURL(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxinvoiceMailURLRequest inValue = new iljin.Barobill.GetTaxinvoiceMailURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxinvoiceMailURLRequestBody();
+            Barobill.GetTaxinvoiceMailURLRequest inValue = new Barobill.GetTaxinvoiceMailURLRequest();
+            inValue.Body = new Barobill.GetTaxinvoiceMailURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetTaxinvoiceMailURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxinvoiceMailURL(inValue);
+            Barobill.GetTaxinvoiceMailURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxinvoiceMailURL(inValue);
             return retVal.Body.GetTaxinvoiceMailURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxinvoiceMailURLResponse> iljin.Barobill.BaroService_TISoap.GetTaxinvoiceMailURLAsync(iljin.Barobill.GetTaxinvoiceMailURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxinvoiceMailURLResponse> Barobill.BaroService_TISoap.GetTaxinvoiceMailURLAsync(Barobill.GetTaxinvoiceMailURLRequest request) {
             return base.Channel.GetTaxinvoiceMailURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxinvoiceMailURLResponse> GetTaxinvoiceMailURLAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.GetTaxinvoiceMailURLRequest inValue = new iljin.Barobill.GetTaxinvoiceMailURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxinvoiceMailURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxinvoiceMailURLResponse> GetTaxinvoiceMailURLAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.GetTaxinvoiceMailURLRequest inValue = new Barobill.GetTaxinvoiceMailURLRequest();
+            inValue.Body = new Barobill.GetTaxinvoiceMailURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxinvoiceMailURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxinvoiceMailURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceScrapRequestURLResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceScrapRequestURL(iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest request) {
+        Barobill.GetTaxInvoiceScrapRequestURLResponse Barobill.BaroService_TISoap.GetTaxInvoiceScrapRequestURL(Barobill.GetTaxInvoiceScrapRequestURLRequest request) {
             return base.Channel.GetTaxInvoiceScrapRequestURL(request);
         }
         
         public string GetTaxInvoiceScrapRequestURL(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest inValue = new iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceScrapRequestURLRequestBody();
+            Barobill.GetTaxInvoiceScrapRequestURLRequest inValue = new Barobill.GetTaxInvoiceScrapRequestURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceScrapRequestURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetTaxInvoiceScrapRequestURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceScrapRequestURL(inValue);
+            Barobill.GetTaxInvoiceScrapRequestURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceScrapRequestURL(inValue);
             return retVal.Body.GetTaxInvoiceScrapRequestURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceScrapRequestURLResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceScrapRequestURLAsync(iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceScrapRequestURLResponse> Barobill.BaroService_TISoap.GetTaxInvoiceScrapRequestURLAsync(Barobill.GetTaxInvoiceScrapRequestURLRequest request) {
             return base.Channel.GetTaxInvoiceScrapRequestURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceScrapRequestURLResponse> GetTaxInvoiceScrapRequestURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest inValue = new iljin.Barobill.GetTaxInvoiceScrapRequestURLRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceScrapRequestURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceScrapRequestURLResponse> GetTaxInvoiceScrapRequestURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
+            Barobill.GetTaxInvoiceScrapRequestURLRequest inValue = new Barobill.GetTaxInvoiceScrapRequestURLRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceScrapRequestURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceScrapRequestURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceScrapRequestURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceSalesListResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesList(iljin.Barobill.GetTaxInvoiceSalesListRequest request) {
+        Barobill.GetTaxInvoiceSalesListResponse Barobill.BaroService_TISoap.GetTaxInvoiceSalesList(Barobill.GetTaxInvoiceSalesListRequest request) {
             return base.Channel.GetTaxInvoiceSalesList(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoiceSalesList(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListRequestBody();
+        public Barobill.PagedTaxInvoice GetTaxInvoiceSalesList(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListRequest inValue = new Barobill.GetTaxInvoiceSalesListRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15002,18 +15002,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoiceSalesListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesList(inValue);
+            Barobill.GetTaxInvoiceSalesListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesList(inValue);
             return retVal.Body.GetTaxInvoiceSalesListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListAsync(iljin.Barobill.GetTaxInvoiceSalesListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListResponse> Barobill.BaroService_TISoap.GetTaxInvoiceSalesListAsync(Barobill.GetTaxInvoiceSalesListRequest request) {
             return base.Channel.GetTaxInvoiceSalesListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListResponse> GetTaxInvoiceSalesListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListResponse> GetTaxInvoiceSalesListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListRequest inValue = new Barobill.GetTaxInvoiceSalesListRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15021,17 +15021,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceSalesListExResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListEx(iljin.Barobill.GetTaxInvoiceSalesListExRequest request) {
+        Barobill.GetTaxInvoiceSalesListExResponse Barobill.BaroService_TISoap.GetTaxInvoiceSalesListEx(Barobill.GetTaxInvoiceSalesListExRequest request) {
             return base.Channel.GetTaxInvoiceSalesListEx(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListExRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListExRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListExRequest inValue = new Barobill.GetTaxInvoiceSalesListExRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15039,18 +15039,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoiceSalesListExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListEx(inValue);
+            Barobill.GetTaxInvoiceSalesListExResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListEx(inValue);
             return retVal.Body.GetTaxInvoiceSalesListExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListExResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListExAsync(iljin.Barobill.GetTaxInvoiceSalesListExRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListExResponse> Barobill.BaroService_TISoap.GetTaxInvoiceSalesListExAsync(Barobill.GetTaxInvoiceSalesListExRequest request) {
             return base.Channel.GetTaxInvoiceSalesListExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListExResponse> GetTaxInvoiceSalesListExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListExRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListExResponse> GetTaxInvoiceSalesListExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListExRequest inValue = new Barobill.GetTaxInvoiceSalesListExRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15058,17 +15058,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePurchaseListResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseList(iljin.Barobill.GetTaxInvoicePurchaseListRequest request) {
+        Barobill.GetTaxInvoicePurchaseListResponse Barobill.BaroService_TISoap.GetTaxInvoicePurchaseList(Barobill.GetTaxInvoicePurchaseListRequest request) {
             return base.Channel.GetTaxInvoicePurchaseList(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoicePurchaseList(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListRequestBody();
+        public Barobill.PagedTaxInvoice GetTaxInvoicePurchaseList(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListRequest inValue = new Barobill.GetTaxInvoicePurchaseListRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15076,18 +15076,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoicePurchaseListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseList(inValue);
+            Barobill.GetTaxInvoicePurchaseListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseList(inValue);
             return retVal.Body.GetTaxInvoicePurchaseListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListAsync(iljin.Barobill.GetTaxInvoicePurchaseListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListResponse> Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListAsync(Barobill.GetTaxInvoicePurchaseListRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListResponse> GetTaxInvoicePurchaseListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListResponse> GetTaxInvoicePurchaseListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListRequest inValue = new Barobill.GetTaxInvoicePurchaseListRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15095,17 +15095,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePurchaseListExResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListEx(iljin.Barobill.GetTaxInvoicePurchaseListExRequest request) {
+        Barobill.GetTaxInvoicePurchaseListExResponse Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListEx(Barobill.GetTaxInvoicePurchaseListExRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListEx(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListExRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListExRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListExRequest inValue = new Barobill.GetTaxInvoicePurchaseListExRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15113,18 +15113,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoicePurchaseListExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListEx(inValue);
+            Barobill.GetTaxInvoicePurchaseListExResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListEx(inValue);
             return retVal.Body.GetTaxInvoicePurchaseListExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListExResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListExAsync(iljin.Barobill.GetTaxInvoicePurchaseListExRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListExResponse> Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListExAsync(Barobill.GetTaxInvoicePurchaseListExRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListExResponse> GetTaxInvoicePurchaseListExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListExRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListExResponse> GetTaxInvoicePurchaseListExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListExRequest inValue = new Barobill.GetTaxInvoicePurchaseListExRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15132,17 +15132,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetDailyTaxInvoiceSalesListResponse iljin.Barobill.BaroService_TISoap.GetDailyTaxInvoiceSalesList(iljin.Barobill.GetDailyTaxInvoiceSalesListRequest request) {
+        Barobill.GetDailyTaxInvoiceSalesListResponse Barobill.BaroService_TISoap.GetDailyTaxInvoiceSalesList(Barobill.GetDailyTaxInvoiceSalesListRequest request) {
             return base.Channel.GetDailyTaxInvoiceSalesList(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetDailyTaxInvoiceSalesList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetDailyTaxInvoiceSalesListRequest inValue = new iljin.Barobill.GetDailyTaxInvoiceSalesListRequest();
-            inValue.Body = new iljin.Barobill.GetDailyTaxInvoiceSalesListRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetDailyTaxInvoiceSalesList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetDailyTaxInvoiceSalesListRequest inValue = new Barobill.GetDailyTaxInvoiceSalesListRequest();
+            inValue.Body = new Barobill.GetDailyTaxInvoiceSalesListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15151,18 +15151,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetDailyTaxInvoiceSalesListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoiceSalesList(inValue);
+            Barobill.GetDailyTaxInvoiceSalesListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoiceSalesList(inValue);
             return retVal.Body.GetDailyTaxInvoiceSalesListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetDailyTaxInvoiceSalesListResponse> iljin.Barobill.BaroService_TISoap.GetDailyTaxInvoiceSalesListAsync(iljin.Barobill.GetDailyTaxInvoiceSalesListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetDailyTaxInvoiceSalesListResponse> Barobill.BaroService_TISoap.GetDailyTaxInvoiceSalesListAsync(Barobill.GetDailyTaxInvoiceSalesListRequest request) {
             return base.Channel.GetDailyTaxInvoiceSalesListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetDailyTaxInvoiceSalesListResponse> GetDailyTaxInvoiceSalesListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetDailyTaxInvoiceSalesListRequest inValue = new iljin.Barobill.GetDailyTaxInvoiceSalesListRequest();
-            inValue.Body = new iljin.Barobill.GetDailyTaxInvoiceSalesListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetDailyTaxInvoiceSalesListResponse> GetDailyTaxInvoiceSalesListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetDailyTaxInvoiceSalesListRequest inValue = new Barobill.GetDailyTaxInvoiceSalesListRequest();
+            inValue.Body = new Barobill.GetDailyTaxInvoiceSalesListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15171,17 +15171,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoiceSalesListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoiceSalesListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetDailyTaxInvoicePurchaseListResponse iljin.Barobill.BaroService_TISoap.GetDailyTaxInvoicePurchaseList(iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest request) {
+        Barobill.GetDailyTaxInvoicePurchaseListResponse Barobill.BaroService_TISoap.GetDailyTaxInvoicePurchaseList(Barobill.GetDailyTaxInvoicePurchaseListRequest request) {
             return base.Channel.GetDailyTaxInvoicePurchaseList(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetDailyTaxInvoicePurchaseList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest inValue = new iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest();
-            inValue.Body = new iljin.Barobill.GetDailyTaxInvoicePurchaseListRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetDailyTaxInvoicePurchaseList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetDailyTaxInvoicePurchaseListRequest inValue = new Barobill.GetDailyTaxInvoicePurchaseListRequest();
+            inValue.Body = new Barobill.GetDailyTaxInvoicePurchaseListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15190,18 +15190,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetDailyTaxInvoicePurchaseListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoicePurchaseList(inValue);
+            Barobill.GetDailyTaxInvoicePurchaseListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoicePurchaseList(inValue);
             return retVal.Body.GetDailyTaxInvoicePurchaseListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetDailyTaxInvoicePurchaseListResponse> iljin.Barobill.BaroService_TISoap.GetDailyTaxInvoicePurchaseListAsync(iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetDailyTaxInvoicePurchaseListResponse> Barobill.BaroService_TISoap.GetDailyTaxInvoicePurchaseListAsync(Barobill.GetDailyTaxInvoicePurchaseListRequest request) {
             return base.Channel.GetDailyTaxInvoicePurchaseListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetDailyTaxInvoicePurchaseListResponse> GetDailyTaxInvoicePurchaseListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest inValue = new iljin.Barobill.GetDailyTaxInvoicePurchaseListRequest();
-            inValue.Body = new iljin.Barobill.GetDailyTaxInvoicePurchaseListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetDailyTaxInvoicePurchaseListResponse> GetDailyTaxInvoicePurchaseListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetDailyTaxInvoicePurchaseListRequest inValue = new Barobill.GetDailyTaxInvoicePurchaseListRequest();
+            inValue.Body = new Barobill.GetDailyTaxInvoicePurchaseListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15210,17 +15210,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoicePurchaseListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetDailyTaxInvoicePurchaseListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponse iljin.Barobill.BaroService_TISoap.GetMonthlyTaxInvoiceSalesList(iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest request) {
+        Barobill.GetMonthlyTaxInvoiceSalesListResponse Barobill.BaroService_TISoap.GetMonthlyTaxInvoiceSalesList(Barobill.GetMonthlyTaxInvoiceSalesListRequest request) {
             return base.Channel.GetMonthlyTaxInvoiceSalesList(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoiceSalesList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
-            iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest inValue = new iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest();
-            inValue.Body = new iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoiceSalesList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
+            Barobill.GetMonthlyTaxInvoiceSalesListRequest inValue = new Barobill.GetMonthlyTaxInvoiceSalesListRequest();
+            inValue.Body = new Barobill.GetMonthlyTaxInvoiceSalesListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15230,18 +15230,18 @@ namespace iljin.Barobill {
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
             inValue.Body.OrderDirection = OrderDirection;
-            iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoiceSalesList(inValue);
+            Barobill.GetMonthlyTaxInvoiceSalesListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoiceSalesList(inValue);
             return retVal.Body.GetMonthlyTaxInvoiceSalesListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponse> iljin.Barobill.BaroService_TISoap.GetMonthlyTaxInvoiceSalesListAsync(iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetMonthlyTaxInvoiceSalesListResponse> Barobill.BaroService_TISoap.GetMonthlyTaxInvoiceSalesListAsync(Barobill.GetMonthlyTaxInvoiceSalesListRequest request) {
             return base.Channel.GetMonthlyTaxInvoiceSalesListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyTaxInvoiceSalesListResponse> GetMonthlyTaxInvoiceSalesListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
-            iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest inValue = new iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequest();
-            inValue.Body = new iljin.Barobill.GetMonthlyTaxInvoiceSalesListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetMonthlyTaxInvoiceSalesListResponse> GetMonthlyTaxInvoiceSalesListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
+            Barobill.GetMonthlyTaxInvoiceSalesListRequest inValue = new Barobill.GetMonthlyTaxInvoiceSalesListRequest();
+            inValue.Body = new Barobill.GetMonthlyTaxInvoiceSalesListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15251,17 +15251,17 @@ namespace iljin.Barobill {
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
             inValue.Body.OrderDirection = OrderDirection;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoiceSalesListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoiceSalesListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponse iljin.Barobill.BaroService_TISoap.GetMonthlyTaxInvoicePurchaseList(iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest request) {
+        Barobill.GetMonthlyTaxInvoicePurchaseListResponse Barobill.BaroService_TISoap.GetMonthlyTaxInvoicePurchaseList(Barobill.GetMonthlyTaxInvoicePurchaseListRequest request) {
             return base.Channel.GetMonthlyTaxInvoicePurchaseList(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoicePurchaseList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
-            iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest inValue = new iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest();
-            inValue.Body = new iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetMonthlyTaxInvoicePurchaseList(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
+            Barobill.GetMonthlyTaxInvoicePurchaseListRequest inValue = new Barobill.GetMonthlyTaxInvoicePurchaseListRequest();
+            inValue.Body = new Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15271,18 +15271,18 @@ namespace iljin.Barobill {
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
             inValue.Body.OrderDirection = OrderDirection;
-            iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoicePurchaseList(inValue);
+            Barobill.GetMonthlyTaxInvoicePurchaseListResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoicePurchaseList(inValue);
             return retVal.Body.GetMonthlyTaxInvoicePurchaseListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponse> iljin.Barobill.BaroService_TISoap.GetMonthlyTaxInvoicePurchaseListAsync(iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetMonthlyTaxInvoicePurchaseListResponse> Barobill.BaroService_TISoap.GetMonthlyTaxInvoicePurchaseListAsync(Barobill.GetMonthlyTaxInvoicePurchaseListRequest request) {
             return base.Channel.GetMonthlyTaxInvoicePurchaseListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyTaxInvoicePurchaseListResponse> GetMonthlyTaxInvoicePurchaseListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
-            iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest inValue = new iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequest();
-            inValue.Body = new iljin.Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetMonthlyTaxInvoicePurchaseListResponse> GetMonthlyTaxInvoicePurchaseListAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, int DateType, string BaseMonth, int CountPerPage, int CurrentPage, int OrderDirection) {
+            Barobill.GetMonthlyTaxInvoicePurchaseListRequest inValue = new Barobill.GetMonthlyTaxInvoicePurchaseListRequest();
+            inValue.Body = new Barobill.GetMonthlyTaxInvoicePurchaseListRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15292,83 +15292,83 @@ namespace iljin.Barobill {
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
             inValue.Body.OrderDirection = OrderDirection;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoicePurchaseListAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetMonthlyTaxInvoicePurchaseListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetMonthlyCountTaxInvoiceResponse iljin.Barobill.BaroService_TISoap.GetMonthlyCountTaxInvoice(iljin.Barobill.GetMonthlyCountTaxInvoiceRequest request) {
+        Barobill.GetMonthlyCountTaxInvoiceResponse Barobill.BaroService_TISoap.GetMonthlyCountTaxInvoice(Barobill.GetMonthlyCountTaxInvoiceRequest request) {
             return base.Channel.GetMonthlyCountTaxInvoice(request);
         }
         
         public int GetMonthlyCountTaxInvoice(string CERTKEY, string CorpNum, int Year, int Month, int PeriodSearchType, bool hasCanceled) {
-            iljin.Barobill.GetMonthlyCountTaxInvoiceRequest inValue = new iljin.Barobill.GetMonthlyCountTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.GetMonthlyCountTaxInvoiceRequestBody();
+            Barobill.GetMonthlyCountTaxInvoiceRequest inValue = new Barobill.GetMonthlyCountTaxInvoiceRequest();
+            inValue.Body = new Barobill.GetMonthlyCountTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Year = Year;
             inValue.Body.Month = Month;
             inValue.Body.PeriodSearchType = PeriodSearchType;
             inValue.Body.hasCanceled = hasCanceled;
-            iljin.Barobill.GetMonthlyCountTaxInvoiceResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetMonthlyCountTaxInvoice(inValue);
+            Barobill.GetMonthlyCountTaxInvoiceResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetMonthlyCountTaxInvoice(inValue);
             return retVal.Body.GetMonthlyCountTaxInvoiceResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyCountTaxInvoiceResponse> iljin.Barobill.BaroService_TISoap.GetMonthlyCountTaxInvoiceAsync(iljin.Barobill.GetMonthlyCountTaxInvoiceRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetMonthlyCountTaxInvoiceResponse> Barobill.BaroService_TISoap.GetMonthlyCountTaxInvoiceAsync(Barobill.GetMonthlyCountTaxInvoiceRequest request) {
             return base.Channel.GetMonthlyCountTaxInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetMonthlyCountTaxInvoiceResponse> GetMonthlyCountTaxInvoiceAsync(string CERTKEY, string CorpNum, int Year, int Month, int PeriodSearchType, bool hasCanceled) {
-            iljin.Barobill.GetMonthlyCountTaxInvoiceRequest inValue = new iljin.Barobill.GetMonthlyCountTaxInvoiceRequest();
-            inValue.Body = new iljin.Barobill.GetMonthlyCountTaxInvoiceRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetMonthlyCountTaxInvoiceResponse> GetMonthlyCountTaxInvoiceAsync(string CERTKEY, string CorpNum, int Year, int Month, int PeriodSearchType, bool hasCanceled) {
+            Barobill.GetMonthlyCountTaxInvoiceRequest inValue = new Barobill.GetMonthlyCountTaxInvoiceRequest();
+            inValue.Body = new Barobill.GetMonthlyCountTaxInvoiceRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.Year = Year;
             inValue.Body.Month = Month;
             inValue.Body.PeriodSearchType = PeriodSearchType;
             inValue.Body.hasCanceled = hasCanceled;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetMonthlyCountTaxInvoiceAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetMonthlyCountTaxInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponse iljin.Barobill.BaroService_TISoap.GetCanceledTaxInvoiceMgtKey(iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest request) {
+        Barobill.GetCanceledTaxInvoiceMgtKeyResponse Barobill.BaroService_TISoap.GetCanceledTaxInvoiceMgtKey(Barobill.GetCanceledTaxInvoiceMgtKeyRequest request) {
             return base.Channel.GetCanceledTaxInvoiceMgtKey(request);
         }
         
-        public iljin.Barobill.ArrayOfString GetCanceledTaxInvoiceMgtKey(string CERTKEY, string CorpNum, string StartDate, string EndDate) {
-            iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest inValue = new iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest();
-            inValue.Body = new iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody();
+        public Barobill.ArrayOfString GetCanceledTaxInvoiceMgtKey(string CERTKEY, string CorpNum, string StartDate, string EndDate) {
+            Barobill.GetCanceledTaxInvoiceMgtKeyRequest inValue = new Barobill.GetCanceledTaxInvoiceMgtKeyRequest();
+            inValue.Body = new Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.StartDate = StartDate;
             inValue.Body.EndDate = EndDate;
-            iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetCanceledTaxInvoiceMgtKey(inValue);
+            Barobill.GetCanceledTaxInvoiceMgtKeyResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetCanceledTaxInvoiceMgtKey(inValue);
             return retVal.Body.GetCanceledTaxInvoiceMgtKeyResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponse> iljin.Barobill.BaroService_TISoap.GetCanceledTaxInvoiceMgtKeyAsync(iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetCanceledTaxInvoiceMgtKeyResponse> Barobill.BaroService_TISoap.GetCanceledTaxInvoiceMgtKeyAsync(Barobill.GetCanceledTaxInvoiceMgtKeyRequest request) {
             return base.Channel.GetCanceledTaxInvoiceMgtKeyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetCanceledTaxInvoiceMgtKeyResponse> GetCanceledTaxInvoiceMgtKeyAsync(string CERTKEY, string CorpNum, string StartDate, string EndDate) {
-            iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest inValue = new iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequest();
-            inValue.Body = new iljin.Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetCanceledTaxInvoiceMgtKeyResponse> GetCanceledTaxInvoiceMgtKeyAsync(string CERTKEY, string CorpNum, string StartDate, string EndDate) {
+            Barobill.GetCanceledTaxInvoiceMgtKeyRequest inValue = new Barobill.GetCanceledTaxInvoiceMgtKeyRequest();
+            inValue.Body = new Barobill.GetCanceledTaxInvoiceMgtKeyRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.StartDate = StartDate;
             inValue.Body.EndDate = EndDate;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetCanceledTaxInvoiceMgtKeyAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetCanceledTaxInvoiceMgtKeyAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceSalesListByIDResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByID(iljin.Barobill.GetTaxInvoiceSalesListByIDRequest request) {
+        Barobill.GetTaxInvoiceSalesListByIDResponse Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByID(Barobill.GetTaxInvoiceSalesListByIDRequest request) {
             return base.Channel.GetTaxInvoiceSalesListByID(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoiceSalesListByID(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListByIDRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListByIDRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListByIDRequestBody();
+        public Barobill.PagedTaxInvoice GetTaxInvoiceSalesListByID(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListByIDRequest inValue = new Barobill.GetTaxInvoiceSalesListByIDRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListByIDRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15376,18 +15376,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoiceSalesListByIDResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByID(inValue);
+            Barobill.GetTaxInvoiceSalesListByIDResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByID(inValue);
             return retVal.Body.GetTaxInvoiceSalesListByIDResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListByIDResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByIDAsync(iljin.Barobill.GetTaxInvoiceSalesListByIDRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListByIDResponse> Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByIDAsync(Barobill.GetTaxInvoiceSalesListByIDRequest request) {
             return base.Channel.GetTaxInvoiceSalesListByIDAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListByIDResponse> GetTaxInvoiceSalesListByIDAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListByIDRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListByIDRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListByIDRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListByIDResponse> GetTaxInvoiceSalesListByIDAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListByIDRequest inValue = new Barobill.GetTaxInvoiceSalesListByIDRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListByIDRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15395,17 +15395,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByIDAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByIDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePurchaseListByIDResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByID(iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest request) {
+        Barobill.GetTaxInvoicePurchaseListByIDResponse Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByID(Barobill.GetTaxInvoicePurchaseListByIDRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListByID(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListByID(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListByIDRequestBody();
+        public Barobill.PagedTaxInvoice GetTaxInvoicePurchaseListByID(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListByIDRequest inValue = new Barobill.GetTaxInvoicePurchaseListByIDRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListByIDRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15413,18 +15413,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoicePurchaseListByIDResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByID(inValue);
+            Barobill.GetTaxInvoicePurchaseListByIDResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByID(inValue);
             return retVal.Body.GetTaxInvoicePurchaseListByIDResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListByIDResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByIDAsync(iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListByIDResponse> Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByIDAsync(Barobill.GetTaxInvoicePurchaseListByIDRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListByIDAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListByIDResponse> GetTaxInvoicePurchaseListByIDAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListByIDRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListByIDRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListByIDResponse> GetTaxInvoicePurchaseListByIDAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListByIDRequest inValue = new Barobill.GetTaxInvoicePurchaseListByIDRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListByIDRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15432,17 +15432,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByIDAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByIDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoiceSalesListByIDExResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByIDEx(iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest request) {
+        Barobill.GetTaxInvoiceSalesListByIDExResponse Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByIDEx(Barobill.GetTaxInvoiceSalesListByIDExRequest request) {
             return base.Channel.GetTaxInvoiceSalesListByIDEx(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListByIDEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListByIDExRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoiceSalesListByIDEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListByIDExRequest inValue = new Barobill.GetTaxInvoiceSalesListByIDExRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListByIDExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15450,18 +15450,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoiceSalesListByIDExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByIDEx(inValue);
+            Barobill.GetTaxInvoiceSalesListByIDExResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByIDEx(inValue);
             return retVal.Body.GetTaxInvoiceSalesListByIDExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListByIDExResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByIDExAsync(iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListByIDExResponse> Barobill.BaroService_TISoap.GetTaxInvoiceSalesListByIDExAsync(Barobill.GetTaxInvoiceSalesListByIDExRequest request) {
             return base.Channel.GetTaxInvoiceSalesListByIDExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoiceSalesListByIDExResponse> GetTaxInvoiceSalesListByIDExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest inValue = new iljin.Barobill.GetTaxInvoiceSalesListByIDExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoiceSalesListByIDExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoiceSalesListByIDExResponse> GetTaxInvoiceSalesListByIDExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoiceSalesListByIDExRequest inValue = new Barobill.GetTaxInvoiceSalesListByIDExRequest();
+            inValue.Body = new Barobill.GetTaxInvoiceSalesListByIDExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15469,17 +15469,17 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByIDExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoiceSalesListByIDExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponse iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByIDEx(iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest request) {
+        Barobill.GetTaxInvoicePurchaseListByIDExResponse Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByIDEx(Barobill.GetTaxInvoicePurchaseListByIDExRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListByIDEx(request);
         }
         
-        public iljin.Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListByIDEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequestBody();
+        public Barobill.PagedTaxInvoiceEx GetTaxInvoicePurchaseListByIDEx(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListByIDExRequest inValue = new Barobill.GetTaxInvoicePurchaseListByIDExRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListByIDExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15487,18 +15487,18 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByIDEx(inValue);
+            Barobill.GetTaxInvoicePurchaseListByIDExResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByIDEx(inValue);
             return retVal.Body.GetTaxInvoicePurchaseListByIDExResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponse> iljin.Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByIDExAsync(iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListByIDExResponse> Barobill.BaroService_TISoap.GetTaxInvoicePurchaseListByIDExAsync(Barobill.GetTaxInvoicePurchaseListByIDExRequest request) {
             return base.Channel.GetTaxInvoicePurchaseListByIDExAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetTaxInvoicePurchaseListByIDExResponse> GetTaxInvoicePurchaseListByIDExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
-            iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest inValue = new iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequest();
-            inValue.Body = new iljin.Barobill.GetTaxInvoicePurchaseListByIDExRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetTaxInvoicePurchaseListByIDExResponse> GetTaxInvoicePurchaseListByIDExAsync(string CERTKEY, string CorpNum, string UserID, int TaxType, string BaseDate, int CountPerPage, int CurrentPage) {
+            Barobill.GetTaxInvoicePurchaseListByIDExRequest inValue = new Barobill.GetTaxInvoicePurchaseListByIDExRequest();
+            inValue.Body = new Barobill.GetTaxInvoicePurchaseListByIDExRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
@@ -15506,346 +15506,346 @@ namespace iljin.Barobill {
             inValue.Body.BaseDate = BaseDate;
             inValue.Body.CountPerPage = CountPerPage;
             inValue.Body.CurrentPage = CurrentPage;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByIDExAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetTaxInvoicePurchaseListByIDExAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.SendToNTSResponse iljin.Barobill.BaroService_TISoap.SendToNTS(iljin.Barobill.SendToNTSRequest request) {
+        Barobill.SendToNTSResponse Barobill.BaroService_TISoap.SendToNTS(Barobill.SendToNTSRequest request) {
             return base.Channel.SendToNTS(request);
         }
         
         public int SendToNTS(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.SendToNTSRequest inValue = new iljin.Barobill.SendToNTSRequest();
-            inValue.Body = new iljin.Barobill.SendToNTSRequestBody();
+            Barobill.SendToNTSRequest inValue = new Barobill.SendToNTSRequest();
+            inValue.Body = new Barobill.SendToNTSRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.SendToNTSResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).SendToNTS(inValue);
+            Barobill.SendToNTSResponse retVal = ((Barobill.BaroService_TISoap)(this)).SendToNTS(inValue);
             return retVal.Body.SendToNTSResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.SendToNTSResponse> iljin.Barobill.BaroService_TISoap.SendToNTSAsync(iljin.Barobill.SendToNTSRequest request) {
+        System.Threading.Tasks.Task<Barobill.SendToNTSResponse> Barobill.BaroService_TISoap.SendToNTSAsync(Barobill.SendToNTSRequest request) {
             return base.Channel.SendToNTSAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.SendToNTSResponse> SendToNTSAsync(string CERTKEY, string CorpNum, string MgtKey) {
-            iljin.Barobill.SendToNTSRequest inValue = new iljin.Barobill.SendToNTSRequest();
-            inValue.Body = new iljin.Barobill.SendToNTSRequestBody();
+        public System.Threading.Tasks.Task<Barobill.SendToNTSResponse> SendToNTSAsync(string CERTKEY, string CorpNum, string MgtKey) {
+            Barobill.SendToNTSRequest inValue = new Barobill.SendToNTSRequest();
+            inValue.Body = new Barobill.SendToNTSRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).SendToNTSAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).SendToNTSAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetNTSSendOptionResponse iljin.Barobill.BaroService_TISoap.GetNTSSendOption(iljin.Barobill.GetNTSSendOptionRequest request) {
+        Barobill.GetNTSSendOptionResponse Barobill.BaroService_TISoap.GetNTSSendOption(Barobill.GetNTSSendOptionRequest request) {
             return base.Channel.GetNTSSendOption(request);
         }
         
-        public iljin.Barobill.NTSSendOption GetNTSSendOption(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetNTSSendOptionRequest inValue = new iljin.Barobill.GetNTSSendOptionRequest();
-            inValue.Body = new iljin.Barobill.GetNTSSendOptionRequestBody();
+        public Barobill.NTSSendOption GetNTSSendOption(string CERTKEY, string CorpNum) {
+            Barobill.GetNTSSendOptionRequest inValue = new Barobill.GetNTSSendOptionRequest();
+            inValue.Body = new Barobill.GetNTSSendOptionRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.GetNTSSendOptionResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetNTSSendOption(inValue);
+            Barobill.GetNTSSendOptionResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetNTSSendOption(inValue);
             return retVal.Body.GetNTSSendOptionResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetNTSSendOptionResponse> iljin.Barobill.BaroService_TISoap.GetNTSSendOptionAsync(iljin.Barobill.GetNTSSendOptionRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetNTSSendOptionResponse> Barobill.BaroService_TISoap.GetNTSSendOptionAsync(Barobill.GetNTSSendOptionRequest request) {
             return base.Channel.GetNTSSendOptionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetNTSSendOptionResponse> GetNTSSendOptionAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetNTSSendOptionRequest inValue = new iljin.Barobill.GetNTSSendOptionRequest();
-            inValue.Body = new iljin.Barobill.GetNTSSendOptionRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetNTSSendOptionResponse> GetNTSSendOptionAsync(string CERTKEY, string CorpNum) {
+            Barobill.GetNTSSendOptionRequest inValue = new Barobill.GetNTSSendOptionRequest();
+            inValue.Body = new Barobill.GetNTSSendOptionRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetNTSSendOptionAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetNTSSendOptionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ChangeNTSSendOptionResponse iljin.Barobill.BaroService_TISoap.ChangeNTSSendOption(iljin.Barobill.ChangeNTSSendOptionRequest request) {
+        Barobill.ChangeNTSSendOptionResponse Barobill.BaroService_TISoap.ChangeNTSSendOption(Barobill.ChangeNTSSendOptionRequest request) {
             return base.Channel.ChangeNTSSendOption(request);
         }
         
-        public int ChangeNTSSendOption(string CERTKEY, string CorpNum, string ID, iljin.Barobill.NTSSendOption NTSSendOption) {
-            iljin.Barobill.ChangeNTSSendOptionRequest inValue = new iljin.Barobill.ChangeNTSSendOptionRequest();
-            inValue.Body = new iljin.Barobill.ChangeNTSSendOptionRequestBody();
+        public int ChangeNTSSendOption(string CERTKEY, string CorpNum, string ID, Barobill.NTSSendOption NTSSendOption) {
+            Barobill.ChangeNTSSendOptionRequest inValue = new Barobill.ChangeNTSSendOptionRequest();
+            inValue.Body = new Barobill.ChangeNTSSendOptionRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.NTSSendOption = NTSSendOption;
-            iljin.Barobill.ChangeNTSSendOptionResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ChangeNTSSendOption(inValue);
+            Barobill.ChangeNTSSendOptionResponse retVal = ((Barobill.BaroService_TISoap)(this)).ChangeNTSSendOption(inValue);
             return retVal.Body.ChangeNTSSendOptionResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ChangeNTSSendOptionResponse> iljin.Barobill.BaroService_TISoap.ChangeNTSSendOptionAsync(iljin.Barobill.ChangeNTSSendOptionRequest request) {
+        System.Threading.Tasks.Task<Barobill.ChangeNTSSendOptionResponse> Barobill.BaroService_TISoap.ChangeNTSSendOptionAsync(Barobill.ChangeNTSSendOptionRequest request) {
             return base.Channel.ChangeNTSSendOptionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ChangeNTSSendOptionResponse> ChangeNTSSendOptionAsync(string CERTKEY, string CorpNum, string ID, iljin.Barobill.NTSSendOption NTSSendOption) {
-            iljin.Barobill.ChangeNTSSendOptionRequest inValue = new iljin.Barobill.ChangeNTSSendOptionRequest();
-            inValue.Body = new iljin.Barobill.ChangeNTSSendOptionRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ChangeNTSSendOptionResponse> ChangeNTSSendOptionAsync(string CERTKEY, string CorpNum, string ID, Barobill.NTSSendOption NTSSendOption) {
+            Barobill.ChangeNTSSendOptionRequest inValue = new Barobill.ChangeNTSSendOptionRequest();
+            inValue.Body = new Barobill.ChangeNTSSendOptionRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.NTSSendOption = NTSSendOption;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ChangeNTSSendOptionAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ChangeNTSSendOptionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetEmailPublicKeysResponse iljin.Barobill.BaroService_TISoap.GetEmailPublicKeys(iljin.Barobill.GetEmailPublicKeysRequest request) {
+        Barobill.GetEmailPublicKeysResponse Barobill.BaroService_TISoap.GetEmailPublicKeys(Barobill.GetEmailPublicKeysRequest request) {
             return base.Channel.GetEmailPublicKeys(request);
         }
         
-        public iljin.Barobill.EMAILPUBLICKEY[] GetEmailPublicKeys(string CERTKEY) {
-            iljin.Barobill.GetEmailPublicKeysRequest inValue = new iljin.Barobill.GetEmailPublicKeysRequest();
-            inValue.Body = new iljin.Barobill.GetEmailPublicKeysRequestBody();
+        public Barobill.EMAILPUBLICKEY[] GetEmailPublicKeys(string CERTKEY) {
+            Barobill.GetEmailPublicKeysRequest inValue = new Barobill.GetEmailPublicKeysRequest();
+            inValue.Body = new Barobill.GetEmailPublicKeysRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
-            iljin.Barobill.GetEmailPublicKeysResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetEmailPublicKeys(inValue);
+            Barobill.GetEmailPublicKeysResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetEmailPublicKeys(inValue);
             return retVal.Body.GetEmailPublicKeysResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetEmailPublicKeysResponse> iljin.Barobill.BaroService_TISoap.GetEmailPublicKeysAsync(iljin.Barobill.GetEmailPublicKeysRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetEmailPublicKeysResponse> Barobill.BaroService_TISoap.GetEmailPublicKeysAsync(Barobill.GetEmailPublicKeysRequest request) {
             return base.Channel.GetEmailPublicKeysAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetEmailPublicKeysResponse> GetEmailPublicKeysAsync(string CERTKEY) {
-            iljin.Barobill.GetEmailPublicKeysRequest inValue = new iljin.Barobill.GetEmailPublicKeysRequest();
-            inValue.Body = new iljin.Barobill.GetEmailPublicKeysRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetEmailPublicKeysResponse> GetEmailPublicKeysAsync(string CERTKEY) {
+            Barobill.GetEmailPublicKeysRequest inValue = new Barobill.GetEmailPublicKeysRequest();
+            inValue.Body = new Barobill.GetEmailPublicKeysRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetEmailPublicKeysAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetEmailPublicKeysAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.MakeDocLinkageResponse iljin.Barobill.BaroService_TISoap.MakeDocLinkage(iljin.Barobill.MakeDocLinkageRequest request) {
+        Barobill.MakeDocLinkageResponse Barobill.BaroService_TISoap.MakeDocLinkage(Barobill.MakeDocLinkageRequest request) {
             return base.Channel.MakeDocLinkage(request);
         }
         
         public int MakeDocLinkage(string CERTKEY, string CorpNum, int FromDocType, string FromMgtKey, int ToDocType, string ToMgtKey) {
-            iljin.Barobill.MakeDocLinkageRequest inValue = new iljin.Barobill.MakeDocLinkageRequest();
-            inValue.Body = new iljin.Barobill.MakeDocLinkageRequestBody();
+            Barobill.MakeDocLinkageRequest inValue = new Barobill.MakeDocLinkageRequest();
+            inValue.Body = new Barobill.MakeDocLinkageRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromDocType = FromDocType;
             inValue.Body.FromMgtKey = FromMgtKey;
             inValue.Body.ToDocType = ToDocType;
             inValue.Body.ToMgtKey = ToMgtKey;
-            iljin.Barobill.MakeDocLinkageResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).MakeDocLinkage(inValue);
+            Barobill.MakeDocLinkageResponse retVal = ((Barobill.BaroService_TISoap)(this)).MakeDocLinkage(inValue);
             return retVal.Body.MakeDocLinkageResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.MakeDocLinkageResponse> iljin.Barobill.BaroService_TISoap.MakeDocLinkageAsync(iljin.Barobill.MakeDocLinkageRequest request) {
+        System.Threading.Tasks.Task<Barobill.MakeDocLinkageResponse> Barobill.BaroService_TISoap.MakeDocLinkageAsync(Barobill.MakeDocLinkageRequest request) {
             return base.Channel.MakeDocLinkageAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.MakeDocLinkageResponse> MakeDocLinkageAsync(string CERTKEY, string CorpNum, int FromDocType, string FromMgtKey, int ToDocType, string ToMgtKey) {
-            iljin.Barobill.MakeDocLinkageRequest inValue = new iljin.Barobill.MakeDocLinkageRequest();
-            inValue.Body = new iljin.Barobill.MakeDocLinkageRequestBody();
+        public System.Threading.Tasks.Task<Barobill.MakeDocLinkageResponse> MakeDocLinkageAsync(string CERTKEY, string CorpNum, int FromDocType, string FromMgtKey, int ToDocType, string ToMgtKey) {
+            Barobill.MakeDocLinkageRequest inValue = new Barobill.MakeDocLinkageRequest();
+            inValue.Body = new Barobill.MakeDocLinkageRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromDocType = FromDocType;
             inValue.Body.FromMgtKey = FromMgtKey;
             inValue.Body.ToDocType = ToDocType;
             inValue.Body.ToMgtKey = ToMgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).MakeDocLinkageAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).MakeDocLinkageAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RemoveDocLinkageResponse iljin.Barobill.BaroService_TISoap.RemoveDocLinkage(iljin.Barobill.RemoveDocLinkageRequest request) {
+        Barobill.RemoveDocLinkageResponse Barobill.BaroService_TISoap.RemoveDocLinkage(Barobill.RemoveDocLinkageRequest request) {
             return base.Channel.RemoveDocLinkage(request);
         }
         
         public int RemoveDocLinkage(string CERTKEY, string CorpNum, int FromDocType, string FromMgtKey, int ToDocType, string ToMgtKey) {
-            iljin.Barobill.RemoveDocLinkageRequest inValue = new iljin.Barobill.RemoveDocLinkageRequest();
-            inValue.Body = new iljin.Barobill.RemoveDocLinkageRequestBody();
+            Barobill.RemoveDocLinkageRequest inValue = new Barobill.RemoveDocLinkageRequest();
+            inValue.Body = new Barobill.RemoveDocLinkageRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromDocType = FromDocType;
             inValue.Body.FromMgtKey = FromMgtKey;
             inValue.Body.ToDocType = ToDocType;
             inValue.Body.ToMgtKey = ToMgtKey;
-            iljin.Barobill.RemoveDocLinkageResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RemoveDocLinkage(inValue);
+            Barobill.RemoveDocLinkageResponse retVal = ((Barobill.BaroService_TISoap)(this)).RemoveDocLinkage(inValue);
             return retVal.Body.RemoveDocLinkageResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RemoveDocLinkageResponse> iljin.Barobill.BaroService_TISoap.RemoveDocLinkageAsync(iljin.Barobill.RemoveDocLinkageRequest request) {
+        System.Threading.Tasks.Task<Barobill.RemoveDocLinkageResponse> Barobill.BaroService_TISoap.RemoveDocLinkageAsync(Barobill.RemoveDocLinkageRequest request) {
             return base.Channel.RemoveDocLinkageAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RemoveDocLinkageResponse> RemoveDocLinkageAsync(string CERTKEY, string CorpNum, int FromDocType, string FromMgtKey, int ToDocType, string ToMgtKey) {
-            iljin.Barobill.RemoveDocLinkageRequest inValue = new iljin.Barobill.RemoveDocLinkageRequest();
-            inValue.Body = new iljin.Barobill.RemoveDocLinkageRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RemoveDocLinkageResponse> RemoveDocLinkageAsync(string CERTKEY, string CorpNum, int FromDocType, string FromMgtKey, int ToDocType, string ToMgtKey) {
+            Barobill.RemoveDocLinkageRequest inValue = new Barobill.RemoveDocLinkageRequest();
+            inValue.Body = new Barobill.RemoveDocLinkageRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromDocType = FromDocType;
             inValue.Body.FromMgtKey = FromMgtKey;
             inValue.Body.ToDocType = ToDocType;
             inValue.Body.ToMgtKey = ToMgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RemoveDocLinkageAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RemoveDocLinkageAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetLinkedDocsResponse iljin.Barobill.BaroService_TISoap.GetLinkedDocs(iljin.Barobill.GetLinkedDocsRequest request) {
+        Barobill.GetLinkedDocsResponse Barobill.BaroService_TISoap.GetLinkedDocs(Barobill.GetLinkedDocsRequest request) {
             return base.Channel.GetLinkedDocs(request);
         }
         
-        public iljin.Barobill.LinkedDoc[] GetLinkedDocs(string CERTKEY, string CorpNum, int DocType, string MgtKey) {
-            iljin.Barobill.GetLinkedDocsRequest inValue = new iljin.Barobill.GetLinkedDocsRequest();
-            inValue.Body = new iljin.Barobill.GetLinkedDocsRequestBody();
+        public Barobill.LinkedDoc[] GetLinkedDocs(string CERTKEY, string CorpNum, int DocType, string MgtKey) {
+            Barobill.GetLinkedDocsRequest inValue = new Barobill.GetLinkedDocsRequest();
+            inValue.Body = new Barobill.GetLinkedDocsRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.DocType = DocType;
             inValue.Body.MgtKey = MgtKey;
-            iljin.Barobill.GetLinkedDocsResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetLinkedDocs(inValue);
+            Barobill.GetLinkedDocsResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetLinkedDocs(inValue);
             return retVal.Body.GetLinkedDocsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetLinkedDocsResponse> iljin.Barobill.BaroService_TISoap.GetLinkedDocsAsync(iljin.Barobill.GetLinkedDocsRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetLinkedDocsResponse> Barobill.BaroService_TISoap.GetLinkedDocsAsync(Barobill.GetLinkedDocsRequest request) {
             return base.Channel.GetLinkedDocsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetLinkedDocsResponse> GetLinkedDocsAsync(string CERTKEY, string CorpNum, int DocType, string MgtKey) {
-            iljin.Barobill.GetLinkedDocsRequest inValue = new iljin.Barobill.GetLinkedDocsRequest();
-            inValue.Body = new iljin.Barobill.GetLinkedDocsRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetLinkedDocsResponse> GetLinkedDocsAsync(string CERTKEY, string CorpNum, int DocType, string MgtKey) {
+            Barobill.GetLinkedDocsRequest inValue = new Barobill.GetLinkedDocsRequest();
+            inValue.Body = new Barobill.GetLinkedDocsRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.DocType = DocType;
             inValue.Body.MgtKey = MgtKey;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetLinkedDocsAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetLinkedDocsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetJicInRegistURLResponse iljin.Barobill.BaroService_TISoap.GetJicInRegistURL(iljin.Barobill.GetJicInRegistURLRequest request) {
+        Barobill.GetJicInRegistURLResponse Barobill.BaroService_TISoap.GetJicInRegistURL(Barobill.GetJicInRegistURLRequest request) {
             return base.Channel.GetJicInRegistURL(request);
         }
         
         public string GetJicInRegistURL(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetJicInRegistURLRequest inValue = new iljin.Barobill.GetJicInRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetJicInRegistURLRequestBody();
+            Barobill.GetJicInRegistURLRequest inValue = new Barobill.GetJicInRegistURLRequest();
+            inValue.Body = new Barobill.GetJicInRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetJicInRegistURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetJicInRegistURL(inValue);
+            Barobill.GetJicInRegistURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetJicInRegistURL(inValue);
             return retVal.Body.GetJicInRegistURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetJicInRegistURLResponse> iljin.Barobill.BaroService_TISoap.GetJicInRegistURLAsync(iljin.Barobill.GetJicInRegistURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetJicInRegistURLResponse> Barobill.BaroService_TISoap.GetJicInRegistURLAsync(Barobill.GetJicInRegistURLRequest request) {
             return base.Channel.GetJicInRegistURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetJicInRegistURLResponse> GetJicInRegistURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetJicInRegistURLRequest inValue = new iljin.Barobill.GetJicInRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetJicInRegistURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetJicInRegistURLResponse> GetJicInRegistURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
+            Barobill.GetJicInRegistURLRequest inValue = new Barobill.GetJicInRegistURLRequest();
+            inValue.Body = new Barobill.GetJicInRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetJicInRegistURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetJicInRegistURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetBusinessLicenseRegistURLResponse iljin.Barobill.BaroService_TISoap.GetBusinessLicenseRegistURL(iljin.Barobill.GetBusinessLicenseRegistURLRequest request) {
+        Barobill.GetBusinessLicenseRegistURLResponse Barobill.BaroService_TISoap.GetBusinessLicenseRegistURL(Barobill.GetBusinessLicenseRegistURLRequest request) {
             return base.Channel.GetBusinessLicenseRegistURL(request);
         }
         
         public string GetBusinessLicenseRegistURL(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetBusinessLicenseRegistURLRequest inValue = new iljin.Barobill.GetBusinessLicenseRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetBusinessLicenseRegistURLRequestBody();
+            Barobill.GetBusinessLicenseRegistURLRequest inValue = new Barobill.GetBusinessLicenseRegistURLRequest();
+            inValue.Body = new Barobill.GetBusinessLicenseRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetBusinessLicenseRegistURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetBusinessLicenseRegistURL(inValue);
+            Barobill.GetBusinessLicenseRegistURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetBusinessLicenseRegistURL(inValue);
             return retVal.Body.GetBusinessLicenseRegistURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBusinessLicenseRegistURLResponse> iljin.Barobill.BaroService_TISoap.GetBusinessLicenseRegistURLAsync(iljin.Barobill.GetBusinessLicenseRegistURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetBusinessLicenseRegistURLResponse> Barobill.BaroService_TISoap.GetBusinessLicenseRegistURLAsync(Barobill.GetBusinessLicenseRegistURLRequest request) {
             return base.Channel.GetBusinessLicenseRegistURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetBusinessLicenseRegistURLResponse> GetBusinessLicenseRegistURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetBusinessLicenseRegistURLRequest inValue = new iljin.Barobill.GetBusinessLicenseRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetBusinessLicenseRegistURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetBusinessLicenseRegistURLResponse> GetBusinessLicenseRegistURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
+            Barobill.GetBusinessLicenseRegistURLRequest inValue = new Barobill.GetBusinessLicenseRegistURLRequest();
+            inValue.Body = new Barobill.GetBusinessLicenseRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetBusinessLicenseRegistURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetBusinessLicenseRegistURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetBankBookRegistURLResponse iljin.Barobill.BaroService_TISoap.GetBankBookRegistURL(iljin.Barobill.GetBankBookRegistURLRequest request) {
+        Barobill.GetBankBookRegistURLResponse Barobill.BaroService_TISoap.GetBankBookRegistURL(Barobill.GetBankBookRegistURLRequest request) {
             return base.Channel.GetBankBookRegistURL(request);
         }
         
         public string GetBankBookRegistURL(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetBankBookRegistURLRequest inValue = new iljin.Barobill.GetBankBookRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetBankBookRegistURLRequestBody();
+            Barobill.GetBankBookRegistURLRequest inValue = new Barobill.GetBankBookRegistURLRequest();
+            inValue.Body = new Barobill.GetBankBookRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetBankBookRegistURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetBankBookRegistURL(inValue);
+            Barobill.GetBankBookRegistURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetBankBookRegistURL(inValue);
             return retVal.Body.GetBankBookRegistURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBankBookRegistURLResponse> iljin.Barobill.BaroService_TISoap.GetBankBookRegistURLAsync(iljin.Barobill.GetBankBookRegistURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetBankBookRegistURLResponse> Barobill.BaroService_TISoap.GetBankBookRegistURLAsync(Barobill.GetBankBookRegistURLRequest request) {
             return base.Channel.GetBankBookRegistURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetBankBookRegistURLResponse> GetBankBookRegistURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
-            iljin.Barobill.GetBankBookRegistURLRequest inValue = new iljin.Barobill.GetBankBookRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetBankBookRegistURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetBankBookRegistURLResponse> GetBankBookRegistURLAsync(string CERTKEY, string CorpNum, string UserID, string PWD) {
+            Barobill.GetBankBookRegistURLRequest inValue = new Barobill.GetBankBookRegistURLRequest();
+            inValue.Body = new Barobill.GetBankBookRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.UserID = UserID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetBankBookRegistURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetBankBookRegistURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckCorpIsMemberResponse iljin.Barobill.BaroService_TISoap.CheckCorpIsMember(iljin.Barobill.CheckCorpIsMemberRequest request) {
+        Barobill.CheckCorpIsMemberResponse Barobill.BaroService_TISoap.CheckCorpIsMember(Barobill.CheckCorpIsMemberRequest request) {
             return base.Channel.CheckCorpIsMember(request);
         }
         
         public int CheckCorpIsMember(string CERTKEY, string CorpNum, string CheckCorpNum) {
-            iljin.Barobill.CheckCorpIsMemberRequest inValue = new iljin.Barobill.CheckCorpIsMemberRequest();
-            inValue.Body = new iljin.Barobill.CheckCorpIsMemberRequestBody();
+            Barobill.CheckCorpIsMemberRequest inValue = new Barobill.CheckCorpIsMemberRequest();
+            inValue.Body = new Barobill.CheckCorpIsMemberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CheckCorpNum = CheckCorpNum;
-            iljin.Barobill.CheckCorpIsMemberResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckCorpIsMember(inValue);
+            Barobill.CheckCorpIsMemberResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckCorpIsMember(inValue);
             return retVal.Body.CheckCorpIsMemberResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckCorpIsMemberResponse> iljin.Barobill.BaroService_TISoap.CheckCorpIsMemberAsync(iljin.Barobill.CheckCorpIsMemberRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckCorpIsMemberResponse> Barobill.BaroService_TISoap.CheckCorpIsMemberAsync(Barobill.CheckCorpIsMemberRequest request) {
             return base.Channel.CheckCorpIsMemberAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckCorpIsMemberResponse> CheckCorpIsMemberAsync(string CERTKEY, string CorpNum, string CheckCorpNum) {
-            iljin.Barobill.CheckCorpIsMemberRequest inValue = new iljin.Barobill.CheckCorpIsMemberRequest();
-            inValue.Body = new iljin.Barobill.CheckCorpIsMemberRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckCorpIsMemberResponse> CheckCorpIsMemberAsync(string CERTKEY, string CorpNum, string CheckCorpNum) {
+            Barobill.CheckCorpIsMemberRequest inValue = new Barobill.CheckCorpIsMemberRequest();
+            inValue.Body = new Barobill.CheckCorpIsMemberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CheckCorpNum = CheckCorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckCorpIsMemberAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckCorpIsMemberAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistCorpResponse iljin.Barobill.BaroService_TISoap.RegistCorp(iljin.Barobill.RegistCorpRequest request) {
+        Barobill.RegistCorpResponse Barobill.BaroService_TISoap.RegistCorp(Barobill.RegistCorpRequest request) {
             return base.Channel.RegistCorp(request);
         }
         
@@ -15867,8 +15867,8 @@ namespace iljin.Barobill {
                     string TEL, 
                     string HP, 
                     string Email) {
-            iljin.Barobill.RegistCorpRequest inValue = new iljin.Barobill.RegistCorpRequest();
-            inValue.Body = new iljin.Barobill.RegistCorpRequestBody();
+            Barobill.RegistCorpRequest inValue = new Barobill.RegistCorpRequest();
+            inValue.Body = new Barobill.RegistCorpRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CorpName = CorpName;
@@ -15886,16 +15886,16 @@ namespace iljin.Barobill {
             inValue.Body.TEL = TEL;
             inValue.Body.HP = HP;
             inValue.Body.Email = Email;
-            iljin.Barobill.RegistCorpResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistCorp(inValue);
+            Barobill.RegistCorpResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistCorp(inValue);
             return retVal.Body.RegistCorpResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistCorpResponse> iljin.Barobill.BaroService_TISoap.RegistCorpAsync(iljin.Barobill.RegistCorpRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistCorpResponse> Barobill.BaroService_TISoap.RegistCorpAsync(Barobill.RegistCorpRequest request) {
             return base.Channel.RegistCorpAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistCorpResponse> RegistCorpAsync(
+        public System.Threading.Tasks.Task<Barobill.RegistCorpResponse> RegistCorpAsync(
                     string CERTKEY, 
                     string CorpNum, 
                     string CorpName, 
@@ -15913,8 +15913,8 @@ namespace iljin.Barobill {
                     string TEL, 
                     string HP, 
                     string Email) {
-            iljin.Barobill.RegistCorpRequest inValue = new iljin.Barobill.RegistCorpRequest();
-            inValue.Body = new iljin.Barobill.RegistCorpRequestBody();
+            Barobill.RegistCorpRequest inValue = new Barobill.RegistCorpRequest();
+            inValue.Body = new Barobill.RegistCorpRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CorpName = CorpName;
@@ -15932,17 +15932,17 @@ namespace iljin.Barobill {
             inValue.Body.TEL = TEL;
             inValue.Body.HP = HP;
             inValue.Body.Email = Email;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistCorpAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistCorpAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.AddUserToCorpResponse iljin.Barobill.BaroService_TISoap.AddUserToCorp(iljin.Barobill.AddUserToCorpRequest request) {
+        Barobill.AddUserToCorpResponse Barobill.BaroService_TISoap.AddUserToCorp(Barobill.AddUserToCorpRequest request) {
             return base.Channel.AddUserToCorp(request);
         }
         
         public int AddUserToCorp(string CERTKEY, string CorpNum, string MemberName, string JuminNum, string ID, string PWD, string Grade, string TEL, string HP, string Email) {
-            iljin.Barobill.AddUserToCorpRequest inValue = new iljin.Barobill.AddUserToCorpRequest();
-            inValue.Body = new iljin.Barobill.AddUserToCorpRequestBody();
+            Barobill.AddUserToCorpRequest inValue = new Barobill.AddUserToCorpRequest();
+            inValue.Body = new Barobill.AddUserToCorpRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MemberName = MemberName;
@@ -15953,18 +15953,18 @@ namespace iljin.Barobill {
             inValue.Body.TEL = TEL;
             inValue.Body.HP = HP;
             inValue.Body.Email = Email;
-            iljin.Barobill.AddUserToCorpResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).AddUserToCorp(inValue);
+            Barobill.AddUserToCorpResponse retVal = ((Barobill.BaroService_TISoap)(this)).AddUserToCorp(inValue);
             return retVal.Body.AddUserToCorpResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.AddUserToCorpResponse> iljin.Barobill.BaroService_TISoap.AddUserToCorpAsync(iljin.Barobill.AddUserToCorpRequest request) {
+        System.Threading.Tasks.Task<Barobill.AddUserToCorpResponse> Barobill.BaroService_TISoap.AddUserToCorpAsync(Barobill.AddUserToCorpRequest request) {
             return base.Channel.AddUserToCorpAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.AddUserToCorpResponse> AddUserToCorpAsync(string CERTKEY, string CorpNum, string MemberName, string JuminNum, string ID, string PWD, string Grade, string TEL, string HP, string Email) {
-            iljin.Barobill.AddUserToCorpRequest inValue = new iljin.Barobill.AddUserToCorpRequest();
-            inValue.Body = new iljin.Barobill.AddUserToCorpRequestBody();
+        public System.Threading.Tasks.Task<Barobill.AddUserToCorpResponse> AddUserToCorpAsync(string CERTKEY, string CorpNum, string MemberName, string JuminNum, string ID, string PWD, string Grade, string TEL, string HP, string Email) {
+            Barobill.AddUserToCorpRequest inValue = new Barobill.AddUserToCorpRequest();
+            inValue.Body = new Barobill.AddUserToCorpRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.MemberName = MemberName;
@@ -15975,17 +15975,17 @@ namespace iljin.Barobill {
             inValue.Body.TEL = TEL;
             inValue.Body.HP = HP;
             inValue.Body.Email = Email;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).AddUserToCorpAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).AddUserToCorpAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateCorpInfoResponse iljin.Barobill.BaroService_TISoap.UpdateCorpInfo(iljin.Barobill.UpdateCorpInfoRequest request) {
+        Barobill.UpdateCorpInfoResponse Barobill.BaroService_TISoap.UpdateCorpInfo(Barobill.UpdateCorpInfoRequest request) {
             return base.Channel.UpdateCorpInfo(request);
         }
         
         public int UpdateCorpInfo(string CERTKEY, string CorpNum, string CorpName, string CEOName, string BizType, string BizClass, string PostNum, string Addr1, string Addr2) {
-            iljin.Barobill.UpdateCorpInfoRequest inValue = new iljin.Barobill.UpdateCorpInfoRequest();
-            inValue.Body = new iljin.Barobill.UpdateCorpInfoRequestBody();
+            Barobill.UpdateCorpInfoRequest inValue = new Barobill.UpdateCorpInfoRequest();
+            inValue.Body = new Barobill.UpdateCorpInfoRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CorpName = CorpName;
@@ -15995,18 +15995,18 @@ namespace iljin.Barobill {
             inValue.Body.PostNum = PostNum;
             inValue.Body.Addr1 = Addr1;
             inValue.Body.Addr2 = Addr2;
-            iljin.Barobill.UpdateCorpInfoResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateCorpInfo(inValue);
+            Barobill.UpdateCorpInfoResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateCorpInfo(inValue);
             return retVal.Body.UpdateCorpInfoResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateCorpInfoResponse> iljin.Barobill.BaroService_TISoap.UpdateCorpInfoAsync(iljin.Barobill.UpdateCorpInfoRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateCorpInfoResponse> Barobill.BaroService_TISoap.UpdateCorpInfoAsync(Barobill.UpdateCorpInfoRequest request) {
             return base.Channel.UpdateCorpInfoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateCorpInfoResponse> UpdateCorpInfoAsync(string CERTKEY, string CorpNum, string CorpName, string CEOName, string BizType, string BizClass, string PostNum, string Addr1, string Addr2) {
-            iljin.Barobill.UpdateCorpInfoRequest inValue = new iljin.Barobill.UpdateCorpInfoRequest();
-            inValue.Body = new iljin.Barobill.UpdateCorpInfoRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateCorpInfoResponse> UpdateCorpInfoAsync(string CERTKEY, string CorpNum, string CorpName, string CEOName, string BizType, string BizClass, string PostNum, string Addr1, string Addr2) {
+            Barobill.UpdateCorpInfoRequest inValue = new Barobill.UpdateCorpInfoRequest();
+            inValue.Body = new Barobill.UpdateCorpInfoRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CorpName = CorpName;
@@ -16016,17 +16016,17 @@ namespace iljin.Barobill {
             inValue.Body.PostNum = PostNum;
             inValue.Body.Addr1 = Addr1;
             inValue.Body.Addr2 = Addr2;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateCorpInfoAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateCorpInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateUserInfoResponse iljin.Barobill.BaroService_TISoap.UpdateUserInfo(iljin.Barobill.UpdateUserInfoRequest request) {
+        Barobill.UpdateUserInfoResponse Barobill.BaroService_TISoap.UpdateUserInfo(Barobill.UpdateUserInfoRequest request) {
             return base.Channel.UpdateUserInfo(request);
         }
         
         public int UpdateUserInfo(string CERTKEY, string CorpNum, string ID, string MemberName, string JuminNum, string TEL, string HP, string Email, string Grade) {
-            iljin.Barobill.UpdateUserInfoRequest inValue = new iljin.Barobill.UpdateUserInfoRequest();
-            inValue.Body = new iljin.Barobill.UpdateUserInfoRequestBody();
+            Barobill.UpdateUserInfoRequest inValue = new Barobill.UpdateUserInfoRequest();
+            inValue.Body = new Barobill.UpdateUserInfoRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
@@ -16036,18 +16036,18 @@ namespace iljin.Barobill {
             inValue.Body.HP = HP;
             inValue.Body.Email = Email;
             inValue.Body.Grade = Grade;
-            iljin.Barobill.UpdateUserInfoResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateUserInfo(inValue);
+            Barobill.UpdateUserInfoResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateUserInfo(inValue);
             return retVal.Body.UpdateUserInfoResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateUserInfoResponse> iljin.Barobill.BaroService_TISoap.UpdateUserInfoAsync(iljin.Barobill.UpdateUserInfoRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateUserInfoResponse> Barobill.BaroService_TISoap.UpdateUserInfoAsync(Barobill.UpdateUserInfoRequest request) {
             return base.Channel.UpdateUserInfoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateUserInfoResponse> UpdateUserInfoAsync(string CERTKEY, string CorpNum, string ID, string MemberName, string JuminNum, string TEL, string HP, string Email, string Grade) {
-            iljin.Barobill.UpdateUserInfoRequest inValue = new iljin.Barobill.UpdateUserInfoRequest();
-            inValue.Body = new iljin.Barobill.UpdateUserInfoRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateUserInfoResponse> UpdateUserInfoAsync(string CERTKEY, string CorpNum, string ID, string MemberName, string JuminNum, string TEL, string HP, string Email, string Grade) {
+            Barobill.UpdateUserInfoRequest inValue = new Barobill.UpdateUserInfoRequest();
+            inValue.Body = new Barobill.UpdateUserInfoRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
@@ -16057,612 +16057,612 @@ namespace iljin.Barobill {
             inValue.Body.HP = HP;
             inValue.Body.Email = Email;
             inValue.Body.Grade = Grade;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateUserInfoAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateUserInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.UpdateUserPWDResponse iljin.Barobill.BaroService_TISoap.UpdateUserPWD(iljin.Barobill.UpdateUserPWDRequest request) {
+        Barobill.UpdateUserPWDResponse Barobill.BaroService_TISoap.UpdateUserPWD(Barobill.UpdateUserPWDRequest request) {
             return base.Channel.UpdateUserPWD(request);
         }
         
         public int UpdateUserPWD(string CERTKEY, string CorpNum, string ID, string newPWD) {
-            iljin.Barobill.UpdateUserPWDRequest inValue = new iljin.Barobill.UpdateUserPWDRequest();
-            inValue.Body = new iljin.Barobill.UpdateUserPWDRequestBody();
+            Barobill.UpdateUserPWDRequest inValue = new Barobill.UpdateUserPWDRequest();
+            inValue.Body = new Barobill.UpdateUserPWDRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.newPWD = newPWD;
-            iljin.Barobill.UpdateUserPWDResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).UpdateUserPWD(inValue);
+            Barobill.UpdateUserPWDResponse retVal = ((Barobill.BaroService_TISoap)(this)).UpdateUserPWD(inValue);
             return retVal.Body.UpdateUserPWDResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.UpdateUserPWDResponse> iljin.Barobill.BaroService_TISoap.UpdateUserPWDAsync(iljin.Barobill.UpdateUserPWDRequest request) {
+        System.Threading.Tasks.Task<Barobill.UpdateUserPWDResponse> Barobill.BaroService_TISoap.UpdateUserPWDAsync(Barobill.UpdateUserPWDRequest request) {
             return base.Channel.UpdateUserPWDAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.UpdateUserPWDResponse> UpdateUserPWDAsync(string CERTKEY, string CorpNum, string ID, string newPWD) {
-            iljin.Barobill.UpdateUserPWDRequest inValue = new iljin.Barobill.UpdateUserPWDRequest();
-            inValue.Body = new iljin.Barobill.UpdateUserPWDRequestBody();
+        public System.Threading.Tasks.Task<Barobill.UpdateUserPWDResponse> UpdateUserPWDAsync(string CERTKEY, string CorpNum, string ID, string newPWD) {
+            Barobill.UpdateUserPWDRequest inValue = new Barobill.UpdateUserPWDRequest();
+            inValue.Body = new Barobill.UpdateUserPWDRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.newPWD = newPWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).UpdateUserPWDAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).UpdateUserPWDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.ChangeCorpManagerResponse iljin.Barobill.BaroService_TISoap.ChangeCorpManager(iljin.Barobill.ChangeCorpManagerRequest request) {
+        Barobill.ChangeCorpManagerResponse Barobill.BaroService_TISoap.ChangeCorpManager(Barobill.ChangeCorpManagerRequest request) {
             return base.Channel.ChangeCorpManager(request);
         }
         
         public int ChangeCorpManager(string CERTKEY, string CorpNum, string newManagerID) {
-            iljin.Barobill.ChangeCorpManagerRequest inValue = new iljin.Barobill.ChangeCorpManagerRequest();
-            inValue.Body = new iljin.Barobill.ChangeCorpManagerRequestBody();
+            Barobill.ChangeCorpManagerRequest inValue = new Barobill.ChangeCorpManagerRequest();
+            inValue.Body = new Barobill.ChangeCorpManagerRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.newManagerID = newManagerID;
-            iljin.Barobill.ChangeCorpManagerResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).ChangeCorpManager(inValue);
+            Barobill.ChangeCorpManagerResponse retVal = ((Barobill.BaroService_TISoap)(this)).ChangeCorpManager(inValue);
             return retVal.Body.ChangeCorpManagerResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.ChangeCorpManagerResponse> iljin.Barobill.BaroService_TISoap.ChangeCorpManagerAsync(iljin.Barobill.ChangeCorpManagerRequest request) {
+        System.Threading.Tasks.Task<Barobill.ChangeCorpManagerResponse> Barobill.BaroService_TISoap.ChangeCorpManagerAsync(Barobill.ChangeCorpManagerRequest request) {
             return base.Channel.ChangeCorpManagerAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.ChangeCorpManagerResponse> ChangeCorpManagerAsync(string CERTKEY, string CorpNum, string newManagerID) {
-            iljin.Barobill.ChangeCorpManagerRequest inValue = new iljin.Barobill.ChangeCorpManagerRequest();
-            inValue.Body = new iljin.Barobill.ChangeCorpManagerRequestBody();
+        public System.Threading.Tasks.Task<Barobill.ChangeCorpManagerResponse> ChangeCorpManagerAsync(string CERTKEY, string CorpNum, string newManagerID) {
+            Barobill.ChangeCorpManagerRequest inValue = new Barobill.ChangeCorpManagerRequest();
+            inValue.Body = new Barobill.ChangeCorpManagerRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.newManagerID = newManagerID;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).ChangeCorpManagerAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).ChangeCorpManagerAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetCorpMemberContactsResponse iljin.Barobill.BaroService_TISoap.GetCorpMemberContacts(iljin.Barobill.GetCorpMemberContactsRequest request) {
+        Barobill.GetCorpMemberContactsResponse Barobill.BaroService_TISoap.GetCorpMemberContacts(Barobill.GetCorpMemberContactsRequest request) {
             return base.Channel.GetCorpMemberContacts(request);
         }
         
-        public iljin.Barobill.Contact[] GetCorpMemberContacts(string CERTKEY, string CorpNum, string CheckCorpNum) {
-            iljin.Barobill.GetCorpMemberContactsRequest inValue = new iljin.Barobill.GetCorpMemberContactsRequest();
-            inValue.Body = new iljin.Barobill.GetCorpMemberContactsRequestBody();
+        public Barobill.Contact[] GetCorpMemberContacts(string CERTKEY, string CorpNum, string CheckCorpNum) {
+            Barobill.GetCorpMemberContactsRequest inValue = new Barobill.GetCorpMemberContactsRequest();
+            inValue.Body = new Barobill.GetCorpMemberContactsRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CheckCorpNum = CheckCorpNum;
-            iljin.Barobill.GetCorpMemberContactsResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetCorpMemberContacts(inValue);
+            Barobill.GetCorpMemberContactsResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetCorpMemberContacts(inValue);
             return retVal.Body.GetCorpMemberContactsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCorpMemberContactsResponse> iljin.Barobill.BaroService_TISoap.GetCorpMemberContactsAsync(iljin.Barobill.GetCorpMemberContactsRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetCorpMemberContactsResponse> Barobill.BaroService_TISoap.GetCorpMemberContactsAsync(Barobill.GetCorpMemberContactsRequest request) {
             return base.Channel.GetCorpMemberContactsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetCorpMemberContactsResponse> GetCorpMemberContactsAsync(string CERTKEY, string CorpNum, string CheckCorpNum) {
-            iljin.Barobill.GetCorpMemberContactsRequest inValue = new iljin.Barobill.GetCorpMemberContactsRequest();
-            inValue.Body = new iljin.Barobill.GetCorpMemberContactsRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetCorpMemberContactsResponse> GetCorpMemberContactsAsync(string CERTKEY, string CorpNum, string CheckCorpNum) {
+            Barobill.GetCorpMemberContactsRequest inValue = new Barobill.GetCorpMemberContactsRequest();
+            inValue.Body = new Barobill.GetCorpMemberContactsRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CheckCorpNum = CheckCorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetCorpMemberContactsAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetCorpMemberContactsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetBalanceCostAmountResponse iljin.Barobill.BaroService_TISoap.GetBalanceCostAmount(iljin.Barobill.GetBalanceCostAmountRequest request) {
+        Barobill.GetBalanceCostAmountResponse Barobill.BaroService_TISoap.GetBalanceCostAmount(Barobill.GetBalanceCostAmountRequest request) {
             return base.Channel.GetBalanceCostAmount(request);
         }
         
         public long GetBalanceCostAmount(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetBalanceCostAmountRequest inValue = new iljin.Barobill.GetBalanceCostAmountRequest();
-            inValue.Body = new iljin.Barobill.GetBalanceCostAmountRequestBody();
+            Barobill.GetBalanceCostAmountRequest inValue = new Barobill.GetBalanceCostAmountRequest();
+            inValue.Body = new Barobill.GetBalanceCostAmountRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.GetBalanceCostAmountResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetBalanceCostAmount(inValue);
+            Barobill.GetBalanceCostAmountResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetBalanceCostAmount(inValue);
             return retVal.Body.GetBalanceCostAmountResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBalanceCostAmountResponse> iljin.Barobill.BaroService_TISoap.GetBalanceCostAmountAsync(iljin.Barobill.GetBalanceCostAmountRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetBalanceCostAmountResponse> Barobill.BaroService_TISoap.GetBalanceCostAmountAsync(Barobill.GetBalanceCostAmountRequest request) {
             return base.Channel.GetBalanceCostAmountAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetBalanceCostAmountResponse> GetBalanceCostAmountAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetBalanceCostAmountRequest inValue = new iljin.Barobill.GetBalanceCostAmountRequest();
-            inValue.Body = new iljin.Barobill.GetBalanceCostAmountRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetBalanceCostAmountResponse> GetBalanceCostAmountAsync(string CERTKEY, string CorpNum) {
+            Barobill.GetBalanceCostAmountRequest inValue = new Barobill.GetBalanceCostAmountRequest();
+            inValue.Body = new Barobill.GetBalanceCostAmountRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetBalanceCostAmountAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetBalanceCostAmountAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetBalanceCostAmountOfInterOPResponse iljin.Barobill.BaroService_TISoap.GetBalanceCostAmountOfInterOP(iljin.Barobill.GetBalanceCostAmountOfInterOPRequest request) {
+        Barobill.GetBalanceCostAmountOfInterOPResponse Barobill.BaroService_TISoap.GetBalanceCostAmountOfInterOP(Barobill.GetBalanceCostAmountOfInterOPRequest request) {
             return base.Channel.GetBalanceCostAmountOfInterOP(request);
         }
         
         public long GetBalanceCostAmountOfInterOP(string CERTKEY) {
-            iljin.Barobill.GetBalanceCostAmountOfInterOPRequest inValue = new iljin.Barobill.GetBalanceCostAmountOfInterOPRequest();
-            inValue.Body = new iljin.Barobill.GetBalanceCostAmountOfInterOPRequestBody();
+            Barobill.GetBalanceCostAmountOfInterOPRequest inValue = new Barobill.GetBalanceCostAmountOfInterOPRequest();
+            inValue.Body = new Barobill.GetBalanceCostAmountOfInterOPRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
-            iljin.Barobill.GetBalanceCostAmountOfInterOPResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetBalanceCostAmountOfInterOP(inValue);
+            Barobill.GetBalanceCostAmountOfInterOPResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetBalanceCostAmountOfInterOP(inValue);
             return retVal.Body.GetBalanceCostAmountOfInterOPResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetBalanceCostAmountOfInterOPResponse> iljin.Barobill.BaroService_TISoap.GetBalanceCostAmountOfInterOPAsync(iljin.Barobill.GetBalanceCostAmountOfInterOPRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetBalanceCostAmountOfInterOPResponse> Barobill.BaroService_TISoap.GetBalanceCostAmountOfInterOPAsync(Barobill.GetBalanceCostAmountOfInterOPRequest request) {
             return base.Channel.GetBalanceCostAmountOfInterOPAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetBalanceCostAmountOfInterOPResponse> GetBalanceCostAmountOfInterOPAsync(string CERTKEY) {
-            iljin.Barobill.GetBalanceCostAmountOfInterOPRequest inValue = new iljin.Barobill.GetBalanceCostAmountOfInterOPRequest();
-            inValue.Body = new iljin.Barobill.GetBalanceCostAmountOfInterOPRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetBalanceCostAmountOfInterOPResponse> GetBalanceCostAmountOfInterOPAsync(string CERTKEY) {
+            Barobill.GetBalanceCostAmountOfInterOPRequest inValue = new Barobill.GetBalanceCostAmountOfInterOPRequest();
+            inValue.Body = new Barobill.GetBalanceCostAmountOfInterOPRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetBalanceCostAmountOfInterOPAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetBalanceCostAmountOfInterOPAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckChargeableResponse iljin.Barobill.BaroService_TISoap.CheckChargeable(iljin.Barobill.CheckChargeableRequest request) {
+        Barobill.CheckChargeableResponse Barobill.BaroService_TISoap.CheckChargeable(Barobill.CheckChargeableRequest request) {
             return base.Channel.CheckChargeable(request);
         }
         
         public int CheckChargeable(string CERTKEY, string CorpNum, int CType, int DocType) {
-            iljin.Barobill.CheckChargeableRequest inValue = new iljin.Barobill.CheckChargeableRequest();
-            inValue.Body = new iljin.Barobill.CheckChargeableRequestBody();
+            Barobill.CheckChargeableRequest inValue = new Barobill.CheckChargeableRequest();
+            inValue.Body = new Barobill.CheckChargeableRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CType = CType;
             inValue.Body.DocType = DocType;
-            iljin.Barobill.CheckChargeableResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckChargeable(inValue);
+            Barobill.CheckChargeableResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckChargeable(inValue);
             return retVal.Body.CheckChargeableResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckChargeableResponse> iljin.Barobill.BaroService_TISoap.CheckChargeableAsync(iljin.Barobill.CheckChargeableRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckChargeableResponse> Barobill.BaroService_TISoap.CheckChargeableAsync(Barobill.CheckChargeableRequest request) {
             return base.Channel.CheckChargeableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckChargeableResponse> CheckChargeableAsync(string CERTKEY, string CorpNum, int CType, int DocType) {
-            iljin.Barobill.CheckChargeableRequest inValue = new iljin.Barobill.CheckChargeableRequest();
-            inValue.Body = new iljin.Barobill.CheckChargeableRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckChargeableResponse> CheckChargeableAsync(string CERTKEY, string CorpNum, int CType, int DocType) {
+            Barobill.CheckChargeableRequest inValue = new Barobill.CheckChargeableRequest();
+            inValue.Body = new Barobill.CheckChargeableRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.CType = CType;
             inValue.Body.DocType = DocType;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckChargeableAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckChargeableAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetChargeUnitCostResponse iljin.Barobill.BaroService_TISoap.GetChargeUnitCost(iljin.Barobill.GetChargeUnitCostRequest request) {
+        Barobill.GetChargeUnitCostResponse Barobill.BaroService_TISoap.GetChargeUnitCost(Barobill.GetChargeUnitCostRequest request) {
             return base.Channel.GetChargeUnitCost(request);
         }
         
         public int GetChargeUnitCost(string CERTKEY, string CorpNum, int ChargeCode) {
-            iljin.Barobill.GetChargeUnitCostRequest inValue = new iljin.Barobill.GetChargeUnitCostRequest();
-            inValue.Body = new iljin.Barobill.GetChargeUnitCostRequestBody();
+            Barobill.GetChargeUnitCostRequest inValue = new Barobill.GetChargeUnitCostRequest();
+            inValue.Body = new Barobill.GetChargeUnitCostRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ChargeCode = ChargeCode;
-            iljin.Barobill.GetChargeUnitCostResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetChargeUnitCost(inValue);
+            Barobill.GetChargeUnitCostResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetChargeUnitCost(inValue);
             return retVal.Body.GetChargeUnitCostResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetChargeUnitCostResponse> iljin.Barobill.BaroService_TISoap.GetChargeUnitCostAsync(iljin.Barobill.GetChargeUnitCostRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetChargeUnitCostResponse> Barobill.BaroService_TISoap.GetChargeUnitCostAsync(Barobill.GetChargeUnitCostRequest request) {
             return base.Channel.GetChargeUnitCostAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetChargeUnitCostResponse> GetChargeUnitCostAsync(string CERTKEY, string CorpNum, int ChargeCode) {
-            iljin.Barobill.GetChargeUnitCostRequest inValue = new iljin.Barobill.GetChargeUnitCostRequest();
-            inValue.Body = new iljin.Barobill.GetChargeUnitCostRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetChargeUnitCostResponse> GetChargeUnitCostAsync(string CERTKEY, string CorpNum, int ChargeCode) {
+            Barobill.GetChargeUnitCostRequest inValue = new Barobill.GetChargeUnitCostRequest();
+            inValue.Body = new Barobill.GetChargeUnitCostRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ChargeCode = ChargeCode;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetChargeUnitCostAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetChargeUnitCostAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetCertificateRegistDateResponse iljin.Barobill.BaroService_TISoap.GetCertificateRegistDate(iljin.Barobill.GetCertificateRegistDateRequest request) {
+        Barobill.GetCertificateRegistDateResponse Barobill.BaroService_TISoap.GetCertificateRegistDate(Barobill.GetCertificateRegistDateRequest request) {
             return base.Channel.GetCertificateRegistDate(request);
         }
         
         public string GetCertificateRegistDate(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetCertificateRegistDateRequest inValue = new iljin.Barobill.GetCertificateRegistDateRequest();
-            inValue.Body = new iljin.Barobill.GetCertificateRegistDateRequestBody();
+            Barobill.GetCertificateRegistDateRequest inValue = new Barobill.GetCertificateRegistDateRequest();
+            inValue.Body = new Barobill.GetCertificateRegistDateRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.GetCertificateRegistDateResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetCertificateRegistDate(inValue);
+            Barobill.GetCertificateRegistDateResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetCertificateRegistDate(inValue);
             return retVal.Body.GetCertificateRegistDateResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCertificateRegistDateResponse> iljin.Barobill.BaroService_TISoap.GetCertificateRegistDateAsync(iljin.Barobill.GetCertificateRegistDateRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetCertificateRegistDateResponse> Barobill.BaroService_TISoap.GetCertificateRegistDateAsync(Barobill.GetCertificateRegistDateRequest request) {
             return base.Channel.GetCertificateRegistDateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetCertificateRegistDateResponse> GetCertificateRegistDateAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetCertificateRegistDateRequest inValue = new iljin.Barobill.GetCertificateRegistDateRequest();
-            inValue.Body = new iljin.Barobill.GetCertificateRegistDateRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetCertificateRegistDateResponse> GetCertificateRegistDateAsync(string CERTKEY, string CorpNum) {
+            Barobill.GetCertificateRegistDateRequest inValue = new Barobill.GetCertificateRegistDateRequest();
+            inValue.Body = new Barobill.GetCertificateRegistDateRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetCertificateRegistDateAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetCertificateRegistDateAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetCertificateExpireDateResponse iljin.Barobill.BaroService_TISoap.GetCertificateExpireDate(iljin.Barobill.GetCertificateExpireDateRequest request) {
+        Barobill.GetCertificateExpireDateResponse Barobill.BaroService_TISoap.GetCertificateExpireDate(Barobill.GetCertificateExpireDateRequest request) {
             return base.Channel.GetCertificateExpireDate(request);
         }
         
         public string GetCertificateExpireDate(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetCertificateExpireDateRequest inValue = new iljin.Barobill.GetCertificateExpireDateRequest();
-            inValue.Body = new iljin.Barobill.GetCertificateExpireDateRequestBody();
+            Barobill.GetCertificateExpireDateRequest inValue = new Barobill.GetCertificateExpireDateRequest();
+            inValue.Body = new Barobill.GetCertificateExpireDateRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.GetCertificateExpireDateResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetCertificateExpireDate(inValue);
+            Barobill.GetCertificateExpireDateResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetCertificateExpireDate(inValue);
             return retVal.Body.GetCertificateExpireDateResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCertificateExpireDateResponse> iljin.Barobill.BaroService_TISoap.GetCertificateExpireDateAsync(iljin.Barobill.GetCertificateExpireDateRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetCertificateExpireDateResponse> Barobill.BaroService_TISoap.GetCertificateExpireDateAsync(Barobill.GetCertificateExpireDateRequest request) {
             return base.Channel.GetCertificateExpireDateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetCertificateExpireDateResponse> GetCertificateExpireDateAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetCertificateExpireDateRequest inValue = new iljin.Barobill.GetCertificateExpireDateRequest();
-            inValue.Body = new iljin.Barobill.GetCertificateExpireDateRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetCertificateExpireDateResponse> GetCertificateExpireDateAsync(string CERTKEY, string CorpNum) {
+            Barobill.GetCertificateExpireDateRequest inValue = new Barobill.GetCertificateExpireDateRequest();
+            inValue.Body = new Barobill.GetCertificateExpireDateRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetCertificateExpireDateAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetCertificateExpireDateAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckCERTIsValidResponse iljin.Barobill.BaroService_TISoap.CheckCERTIsValid(iljin.Barobill.CheckCERTIsValidRequest request) {
+        Barobill.CheckCERTIsValidResponse Barobill.BaroService_TISoap.CheckCERTIsValid(Barobill.CheckCERTIsValidRequest request) {
             return base.Channel.CheckCERTIsValid(request);
         }
         
         public int CheckCERTIsValid(string CERTKEY, string CorpNum) {
-            iljin.Barobill.CheckCERTIsValidRequest inValue = new iljin.Barobill.CheckCERTIsValidRequest();
-            inValue.Body = new iljin.Barobill.CheckCERTIsValidRequestBody();
+            Barobill.CheckCERTIsValidRequest inValue = new Barobill.CheckCERTIsValidRequest();
+            inValue.Body = new Barobill.CheckCERTIsValidRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.CheckCERTIsValidResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckCERTIsValid(inValue);
+            Barobill.CheckCERTIsValidResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckCERTIsValid(inValue);
             return retVal.Body.CheckCERTIsValidResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckCERTIsValidResponse> iljin.Barobill.BaroService_TISoap.CheckCERTIsValidAsync(iljin.Barobill.CheckCERTIsValidRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckCERTIsValidResponse> Barobill.BaroService_TISoap.CheckCERTIsValidAsync(Barobill.CheckCERTIsValidRequest request) {
             return base.Channel.CheckCERTIsValidAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckCERTIsValidResponse> CheckCERTIsValidAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.CheckCERTIsValidRequest inValue = new iljin.Barobill.CheckCERTIsValidRequest();
-            inValue.Body = new iljin.Barobill.CheckCERTIsValidRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckCERTIsValidResponse> CheckCERTIsValidAsync(string CERTKEY, string CorpNum) {
+            Barobill.CheckCERTIsValidRequest inValue = new Barobill.CheckCERTIsValidRequest();
+            inValue.Body = new Barobill.CheckCERTIsValidRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckCERTIsValidAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckCERTIsValidAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetCertificateRegistURLResponse iljin.Barobill.BaroService_TISoap.GetCertificateRegistURL(iljin.Barobill.GetCertificateRegistURLRequest request) {
+        Barobill.GetCertificateRegistURLResponse Barobill.BaroService_TISoap.GetCertificateRegistURL(Barobill.GetCertificateRegistURLRequest request) {
             return base.Channel.GetCertificateRegistURL(request);
         }
         
         public string GetCertificateRegistURL(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetCertificateRegistURLRequest inValue = new iljin.Barobill.GetCertificateRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetCertificateRegistURLRequestBody();
+            Barobill.GetCertificateRegistURLRequest inValue = new Barobill.GetCertificateRegistURLRequest();
+            inValue.Body = new Barobill.GetCertificateRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetCertificateRegistURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetCertificateRegistURL(inValue);
+            Barobill.GetCertificateRegistURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetCertificateRegistURL(inValue);
             return retVal.Body.GetCertificateRegistURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCertificateRegistURLResponse> iljin.Barobill.BaroService_TISoap.GetCertificateRegistURLAsync(iljin.Barobill.GetCertificateRegistURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetCertificateRegistURLResponse> Barobill.BaroService_TISoap.GetCertificateRegistURLAsync(Barobill.GetCertificateRegistURLRequest request) {
             return base.Channel.GetCertificateRegistURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetCertificateRegistURLResponse> GetCertificateRegistURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetCertificateRegistURLRequest inValue = new iljin.Barobill.GetCertificateRegistURLRequest();
-            inValue.Body = new iljin.Barobill.GetCertificateRegistURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetCertificateRegistURLResponse> GetCertificateRegistURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
+            Barobill.GetCertificateRegistURLRequest inValue = new Barobill.GetCertificateRegistURLRequest();
+            inValue.Body = new Barobill.GetCertificateRegistURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetCertificateRegistURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetCertificateRegistURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetLoginURLResponse iljin.Barobill.BaroService_TISoap.GetLoginURL(iljin.Barobill.GetLoginURLRequest request) {
+        Barobill.GetLoginURLResponse Barobill.BaroService_TISoap.GetLoginURL(Barobill.GetLoginURLRequest request) {
             return base.Channel.GetLoginURL(request);
         }
         
         public string GetLoginURL(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetLoginURLRequest inValue = new iljin.Barobill.GetLoginURLRequest();
-            inValue.Body = new iljin.Barobill.GetLoginURLRequestBody();
+            Barobill.GetLoginURLRequest inValue = new Barobill.GetLoginURLRequest();
+            inValue.Body = new Barobill.GetLoginURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetLoginURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetLoginURL(inValue);
+            Barobill.GetLoginURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetLoginURL(inValue);
             return retVal.Body.GetLoginURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetLoginURLResponse> iljin.Barobill.BaroService_TISoap.GetLoginURLAsync(iljin.Barobill.GetLoginURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetLoginURLResponse> Barobill.BaroService_TISoap.GetLoginURLAsync(Barobill.GetLoginURLRequest request) {
             return base.Channel.GetLoginURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetLoginURLResponse> GetLoginURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetLoginURLRequest inValue = new iljin.Barobill.GetLoginURLRequest();
-            inValue.Body = new iljin.Barobill.GetLoginURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetLoginURLResponse> GetLoginURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
+            Barobill.GetLoginURLRequest inValue = new Barobill.GetLoginURLRequest();
+            inValue.Body = new Barobill.GetLoginURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetLoginURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetLoginURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetCashChargeURLResponse iljin.Barobill.BaroService_TISoap.GetCashChargeURL(iljin.Barobill.GetCashChargeURLRequest request) {
+        Barobill.GetCashChargeURLResponse Barobill.BaroService_TISoap.GetCashChargeURL(Barobill.GetCashChargeURLRequest request) {
             return base.Channel.GetCashChargeURL(request);
         }
         
         public string GetCashChargeURL(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetCashChargeURLRequest inValue = new iljin.Barobill.GetCashChargeURLRequest();
-            inValue.Body = new iljin.Barobill.GetCashChargeURLRequestBody();
+            Barobill.GetCashChargeURLRequest inValue = new Barobill.GetCashChargeURLRequest();
+            inValue.Body = new Barobill.GetCashChargeURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetCashChargeURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetCashChargeURL(inValue);
+            Barobill.GetCashChargeURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetCashChargeURL(inValue);
             return retVal.Body.GetCashChargeURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetCashChargeURLResponse> iljin.Barobill.BaroService_TISoap.GetCashChargeURLAsync(iljin.Barobill.GetCashChargeURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetCashChargeURLResponse> Barobill.BaroService_TISoap.GetCashChargeURLAsync(Barobill.GetCashChargeURLRequest request) {
             return base.Channel.GetCashChargeURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetCashChargeURLResponse> GetCashChargeURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetCashChargeURLRequest inValue = new iljin.Barobill.GetCashChargeURLRequest();
-            inValue.Body = new iljin.Barobill.GetCashChargeURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetCashChargeURLResponse> GetCashChargeURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
+            Barobill.GetCashChargeURLRequest inValue = new Barobill.GetCashChargeURLRequest();
+            inValue.Body = new Barobill.GetCashChargeURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetCashChargeURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetCashChargeURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.RegistSMSFromNumberResponse iljin.Barobill.BaroService_TISoap.RegistSMSFromNumber(iljin.Barobill.RegistSMSFromNumberRequest request) {
+        Barobill.RegistSMSFromNumberResponse Barobill.BaroService_TISoap.RegistSMSFromNumber(Barobill.RegistSMSFromNumberRequest request) {
             return base.Channel.RegistSMSFromNumber(request);
         }
         
         public int RegistSMSFromNumber(string CERTKEY, string CorpNum, string FromNumber) {
-            iljin.Barobill.RegistSMSFromNumberRequest inValue = new iljin.Barobill.RegistSMSFromNumberRequest();
-            inValue.Body = new iljin.Barobill.RegistSMSFromNumberRequestBody();
+            Barobill.RegistSMSFromNumberRequest inValue = new Barobill.RegistSMSFromNumberRequest();
+            inValue.Body = new Barobill.RegistSMSFromNumberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromNumber = FromNumber;
-            iljin.Barobill.RegistSMSFromNumberResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).RegistSMSFromNumber(inValue);
+            Barobill.RegistSMSFromNumberResponse retVal = ((Barobill.BaroService_TISoap)(this)).RegistSMSFromNumber(inValue);
             return retVal.Body.RegistSMSFromNumberResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.RegistSMSFromNumberResponse> iljin.Barobill.BaroService_TISoap.RegistSMSFromNumberAsync(iljin.Barobill.RegistSMSFromNumberRequest request) {
+        System.Threading.Tasks.Task<Barobill.RegistSMSFromNumberResponse> Barobill.BaroService_TISoap.RegistSMSFromNumberAsync(Barobill.RegistSMSFromNumberRequest request) {
             return base.Channel.RegistSMSFromNumberAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.RegistSMSFromNumberResponse> RegistSMSFromNumberAsync(string CERTKEY, string CorpNum, string FromNumber) {
-            iljin.Barobill.RegistSMSFromNumberRequest inValue = new iljin.Barobill.RegistSMSFromNumberRequest();
-            inValue.Body = new iljin.Barobill.RegistSMSFromNumberRequestBody();
+        public System.Threading.Tasks.Task<Barobill.RegistSMSFromNumberResponse> RegistSMSFromNumberAsync(string CERTKEY, string CorpNum, string FromNumber) {
+            Barobill.RegistSMSFromNumberRequest inValue = new Barobill.RegistSMSFromNumberRequest();
+            inValue.Body = new Barobill.RegistSMSFromNumberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromNumber = FromNumber;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).RegistSMSFromNumberAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).RegistSMSFromNumberAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckSMSFromNumberResponse iljin.Barobill.BaroService_TISoap.CheckSMSFromNumber(iljin.Barobill.CheckSMSFromNumberRequest request) {
+        Barobill.CheckSMSFromNumberResponse Barobill.BaroService_TISoap.CheckSMSFromNumber(Barobill.CheckSMSFromNumberRequest request) {
             return base.Channel.CheckSMSFromNumber(request);
         }
         
         public int CheckSMSFromNumber(string CERTKEY, string CorpNum, string FromNumber) {
-            iljin.Barobill.CheckSMSFromNumberRequest inValue = new iljin.Barobill.CheckSMSFromNumberRequest();
-            inValue.Body = new iljin.Barobill.CheckSMSFromNumberRequestBody();
+            Barobill.CheckSMSFromNumberRequest inValue = new Barobill.CheckSMSFromNumberRequest();
+            inValue.Body = new Barobill.CheckSMSFromNumberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromNumber = FromNumber;
-            iljin.Barobill.CheckSMSFromNumberResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckSMSFromNumber(inValue);
+            Barobill.CheckSMSFromNumberResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckSMSFromNumber(inValue);
             return retVal.Body.CheckSMSFromNumberResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckSMSFromNumberResponse> iljin.Barobill.BaroService_TISoap.CheckSMSFromNumberAsync(iljin.Barobill.CheckSMSFromNumberRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckSMSFromNumberResponse> Barobill.BaroService_TISoap.CheckSMSFromNumberAsync(Barobill.CheckSMSFromNumberRequest request) {
             return base.Channel.CheckSMSFromNumberAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckSMSFromNumberResponse> CheckSMSFromNumberAsync(string CERTKEY, string CorpNum, string FromNumber) {
-            iljin.Barobill.CheckSMSFromNumberRequest inValue = new iljin.Barobill.CheckSMSFromNumberRequest();
-            inValue.Body = new iljin.Barobill.CheckSMSFromNumberRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckSMSFromNumberResponse> CheckSMSFromNumberAsync(string CERTKEY, string CorpNum, string FromNumber) {
+            Barobill.CheckSMSFromNumberRequest inValue = new Barobill.CheckSMSFromNumberRequest();
+            inValue.Body = new Barobill.CheckSMSFromNumberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromNumber = FromNumber;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckSMSFromNumberAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckSMSFromNumberAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetSMSFromNumbersResponse iljin.Barobill.BaroService_TISoap.GetSMSFromNumbers(iljin.Barobill.GetSMSFromNumbersRequest request) {
+        Barobill.GetSMSFromNumbersResponse Barobill.BaroService_TISoap.GetSMSFromNumbers(Barobill.GetSMSFromNumbersRequest request) {
             return base.Channel.GetSMSFromNumbers(request);
         }
         
-        public iljin.Barobill.FromNumber[] GetSMSFromNumbers(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetSMSFromNumbersRequest inValue = new iljin.Barobill.GetSMSFromNumbersRequest();
-            inValue.Body = new iljin.Barobill.GetSMSFromNumbersRequestBody();
+        public Barobill.FromNumber[] GetSMSFromNumbers(string CERTKEY, string CorpNum) {
+            Barobill.GetSMSFromNumbersRequest inValue = new Barobill.GetSMSFromNumbersRequest();
+            inValue.Body = new Barobill.GetSMSFromNumbersRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.GetSMSFromNumbersResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetSMSFromNumbers(inValue);
+            Barobill.GetSMSFromNumbersResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetSMSFromNumbers(inValue);
             return retVal.Body.GetSMSFromNumbersResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetSMSFromNumbersResponse> iljin.Barobill.BaroService_TISoap.GetSMSFromNumbersAsync(iljin.Barobill.GetSMSFromNumbersRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetSMSFromNumbersResponse> Barobill.BaroService_TISoap.GetSMSFromNumbersAsync(Barobill.GetSMSFromNumbersRequest request) {
             return base.Channel.GetSMSFromNumbersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetSMSFromNumbersResponse> GetSMSFromNumbersAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetSMSFromNumbersRequest inValue = new iljin.Barobill.GetSMSFromNumbersRequest();
-            inValue.Body = new iljin.Barobill.GetSMSFromNumbersRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetSMSFromNumbersResponse> GetSMSFromNumbersAsync(string CERTKEY, string CorpNum) {
+            Barobill.GetSMSFromNumbersRequest inValue = new Barobill.GetSMSFromNumbersRequest();
+            inValue.Body = new Barobill.GetSMSFromNumbersRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetSMSFromNumbersAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetSMSFromNumbersAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetSMSFromNumberURLResponse iljin.Barobill.BaroService_TISoap.GetSMSFromNumberURL(iljin.Barobill.GetSMSFromNumberURLRequest request) {
+        Barobill.GetSMSFromNumberURLResponse Barobill.BaroService_TISoap.GetSMSFromNumberURL(Barobill.GetSMSFromNumberURLRequest request) {
             return base.Channel.GetSMSFromNumberURL(request);
         }
         
         public string GetSMSFromNumberURL(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetSMSFromNumberURLRequest inValue = new iljin.Barobill.GetSMSFromNumberURLRequest();
-            inValue.Body = new iljin.Barobill.GetSMSFromNumberURLRequestBody();
+            Barobill.GetSMSFromNumberURLRequest inValue = new Barobill.GetSMSFromNumberURLRequest();
+            inValue.Body = new Barobill.GetSMSFromNumberURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetSMSFromNumberURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetSMSFromNumberURL(inValue);
+            Barobill.GetSMSFromNumberURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetSMSFromNumberURL(inValue);
             return retVal.Body.GetSMSFromNumberURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetSMSFromNumberURLResponse> iljin.Barobill.BaroService_TISoap.GetSMSFromNumberURLAsync(iljin.Barobill.GetSMSFromNumberURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetSMSFromNumberURLResponse> Barobill.BaroService_TISoap.GetSMSFromNumberURLAsync(Barobill.GetSMSFromNumberURLRequest request) {
             return base.Channel.GetSMSFromNumberURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetSMSFromNumberURLResponse> GetSMSFromNumberURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetSMSFromNumberURLRequest inValue = new iljin.Barobill.GetSMSFromNumberURLRequest();
-            inValue.Body = new iljin.Barobill.GetSMSFromNumberURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetSMSFromNumberURLResponse> GetSMSFromNumberURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
+            Barobill.GetSMSFromNumberURLRequest inValue = new Barobill.GetSMSFromNumberURLRequest();
+            inValue.Body = new Barobill.GetSMSFromNumberURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetSMSFromNumberURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetSMSFromNumberURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.CheckFaxFromNumberResponse iljin.Barobill.BaroService_TISoap.CheckFaxFromNumber(iljin.Barobill.CheckFaxFromNumberRequest request) {
+        Barobill.CheckFaxFromNumberResponse Barobill.BaroService_TISoap.CheckFaxFromNumber(Barobill.CheckFaxFromNumberRequest request) {
             return base.Channel.CheckFaxFromNumber(request);
         }
         
         public int CheckFaxFromNumber(string CERTKEY, string CorpNum, string FromNumber) {
-            iljin.Barobill.CheckFaxFromNumberRequest inValue = new iljin.Barobill.CheckFaxFromNumberRequest();
-            inValue.Body = new iljin.Barobill.CheckFaxFromNumberRequestBody();
+            Barobill.CheckFaxFromNumberRequest inValue = new Barobill.CheckFaxFromNumberRequest();
+            inValue.Body = new Barobill.CheckFaxFromNumberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromNumber = FromNumber;
-            iljin.Barobill.CheckFaxFromNumberResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).CheckFaxFromNumber(inValue);
+            Barobill.CheckFaxFromNumberResponse retVal = ((Barobill.BaroService_TISoap)(this)).CheckFaxFromNumber(inValue);
             return retVal.Body.CheckFaxFromNumberResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.CheckFaxFromNumberResponse> iljin.Barobill.BaroService_TISoap.CheckFaxFromNumberAsync(iljin.Barobill.CheckFaxFromNumberRequest request) {
+        System.Threading.Tasks.Task<Barobill.CheckFaxFromNumberResponse> Barobill.BaroService_TISoap.CheckFaxFromNumberAsync(Barobill.CheckFaxFromNumberRequest request) {
             return base.Channel.CheckFaxFromNumberAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.CheckFaxFromNumberResponse> CheckFaxFromNumberAsync(string CERTKEY, string CorpNum, string FromNumber) {
-            iljin.Barobill.CheckFaxFromNumberRequest inValue = new iljin.Barobill.CheckFaxFromNumberRequest();
-            inValue.Body = new iljin.Barobill.CheckFaxFromNumberRequestBody();
+        public System.Threading.Tasks.Task<Barobill.CheckFaxFromNumberResponse> CheckFaxFromNumberAsync(string CERTKEY, string CorpNum, string FromNumber) {
+            Barobill.CheckFaxFromNumberRequest inValue = new Barobill.CheckFaxFromNumberRequest();
+            inValue.Body = new Barobill.CheckFaxFromNumberRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.FromNumber = FromNumber;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).CheckFaxFromNumberAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).CheckFaxFromNumberAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetFaxFromNumbersResponse iljin.Barobill.BaroService_TISoap.GetFaxFromNumbers(iljin.Barobill.GetFaxFromNumbersRequest request) {
+        Barobill.GetFaxFromNumbersResponse Barobill.BaroService_TISoap.GetFaxFromNumbers(Barobill.GetFaxFromNumbersRequest request) {
             return base.Channel.GetFaxFromNumbers(request);
         }
         
-        public iljin.Barobill.FromNumber[] GetFaxFromNumbers(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetFaxFromNumbersRequest inValue = new iljin.Barobill.GetFaxFromNumbersRequest();
-            inValue.Body = new iljin.Barobill.GetFaxFromNumbersRequestBody();
+        public Barobill.FromNumber[] GetFaxFromNumbers(string CERTKEY, string CorpNum) {
+            Barobill.GetFaxFromNumbersRequest inValue = new Barobill.GetFaxFromNumbersRequest();
+            inValue.Body = new Barobill.GetFaxFromNumbersRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            iljin.Barobill.GetFaxFromNumbersResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetFaxFromNumbers(inValue);
+            Barobill.GetFaxFromNumbersResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetFaxFromNumbers(inValue);
             return retVal.Body.GetFaxFromNumbersResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetFaxFromNumbersResponse> iljin.Barobill.BaroService_TISoap.GetFaxFromNumbersAsync(iljin.Barobill.GetFaxFromNumbersRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetFaxFromNumbersResponse> Barobill.BaroService_TISoap.GetFaxFromNumbersAsync(Barobill.GetFaxFromNumbersRequest request) {
             return base.Channel.GetFaxFromNumbersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetFaxFromNumbersResponse> GetFaxFromNumbersAsync(string CERTKEY, string CorpNum) {
-            iljin.Barobill.GetFaxFromNumbersRequest inValue = new iljin.Barobill.GetFaxFromNumbersRequest();
-            inValue.Body = new iljin.Barobill.GetFaxFromNumbersRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetFaxFromNumbersResponse> GetFaxFromNumbersAsync(string CERTKEY, string CorpNum) {
+            Barobill.GetFaxFromNumbersRequest inValue = new Barobill.GetFaxFromNumbersRequest();
+            inValue.Body = new Barobill.GetFaxFromNumbersRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetFaxFromNumbersAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetFaxFromNumbersAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetFaxFromNumberURLResponse iljin.Barobill.BaroService_TISoap.GetFaxFromNumberURL(iljin.Barobill.GetFaxFromNumberURLRequest request) {
+        Barobill.GetFaxFromNumberURLResponse Barobill.BaroService_TISoap.GetFaxFromNumberURL(Barobill.GetFaxFromNumberURLRequest request) {
             return base.Channel.GetFaxFromNumberURL(request);
         }
         
         public string GetFaxFromNumberURL(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetFaxFromNumberURLRequest inValue = new iljin.Barobill.GetFaxFromNumberURLRequest();
-            inValue.Body = new iljin.Barobill.GetFaxFromNumberURLRequestBody();
+            Barobill.GetFaxFromNumberURLRequest inValue = new Barobill.GetFaxFromNumberURLRequest();
+            inValue.Body = new Barobill.GetFaxFromNumberURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            iljin.Barobill.GetFaxFromNumberURLResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetFaxFromNumberURL(inValue);
+            Barobill.GetFaxFromNumberURLResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetFaxFromNumberURL(inValue);
             return retVal.Body.GetFaxFromNumberURLResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetFaxFromNumberURLResponse> iljin.Barobill.BaroService_TISoap.GetFaxFromNumberURLAsync(iljin.Barobill.GetFaxFromNumberURLRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetFaxFromNumberURLResponse> Barobill.BaroService_TISoap.GetFaxFromNumberURLAsync(Barobill.GetFaxFromNumberURLRequest request) {
             return base.Channel.GetFaxFromNumberURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetFaxFromNumberURLResponse> GetFaxFromNumberURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
-            iljin.Barobill.GetFaxFromNumberURLRequest inValue = new iljin.Barobill.GetFaxFromNumberURLRequest();
-            inValue.Body = new iljin.Barobill.GetFaxFromNumberURLRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetFaxFromNumberURLResponse> GetFaxFromNumberURLAsync(string CERTKEY, string CorpNum, string ID, string PWD) {
+            Barobill.GetFaxFromNumberURLRequest inValue = new Barobill.GetFaxFromNumberURLRequest();
+            inValue.Body = new Barobill.GetFaxFromNumberURLRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.CorpNum = CorpNum;
             inValue.Body.ID = ID;
             inValue.Body.PWD = PWD;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetFaxFromNumberURLAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetFaxFromNumberURLAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        iljin.Barobill.GetErrStringResponse iljin.Barobill.BaroService_TISoap.GetErrString(iljin.Barobill.GetErrStringRequest request) {
+        Barobill.GetErrStringResponse Barobill.BaroService_TISoap.GetErrString(Barobill.GetErrStringRequest request) {
             return base.Channel.GetErrString(request);
         }
         
         public string GetErrString(string CERTKEY, int ErrCode) {
-            iljin.Barobill.GetErrStringRequest inValue = new iljin.Barobill.GetErrStringRequest();
-            inValue.Body = new iljin.Barobill.GetErrStringRequestBody();
+            Barobill.GetErrStringRequest inValue = new Barobill.GetErrStringRequest();
+            inValue.Body = new Barobill.GetErrStringRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.ErrCode = ErrCode;
-            iljin.Barobill.GetErrStringResponse retVal = ((iljin.Barobill.BaroService_TISoap)(this)).GetErrString(inValue);
+            Barobill.GetErrStringResponse retVal = ((Barobill.BaroService_TISoap)(this)).GetErrString(inValue);
             return retVal.Body.GetErrStringResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<iljin.Barobill.GetErrStringResponse> iljin.Barobill.BaroService_TISoap.GetErrStringAsync(iljin.Barobill.GetErrStringRequest request) {
+        System.Threading.Tasks.Task<Barobill.GetErrStringResponse> Barobill.BaroService_TISoap.GetErrStringAsync(Barobill.GetErrStringRequest request) {
             return base.Channel.GetErrStringAsync(request);
         }
         
-        public System.Threading.Tasks.Task<iljin.Barobill.GetErrStringResponse> GetErrStringAsync(string CERTKEY, int ErrCode) {
-            iljin.Barobill.GetErrStringRequest inValue = new iljin.Barobill.GetErrStringRequest();
-            inValue.Body = new iljin.Barobill.GetErrStringRequestBody();
+        public System.Threading.Tasks.Task<Barobill.GetErrStringResponse> GetErrStringAsync(string CERTKEY, int ErrCode) {
+            Barobill.GetErrStringRequest inValue = new Barobill.GetErrStringRequest();
+            inValue.Body = new Barobill.GetErrStringRequestBody();
             inValue.Body.CERTKEY = CERTKEY;
             inValue.Body.ErrCode = ErrCode;
-            return ((iljin.Barobill.BaroService_TISoap)(this)).GetErrStringAsync(inValue);
+            return ((Barobill.BaroService_TISoap)(this)).GetErrStringAsync(inValue);
         }
         
         public void Ping() {
