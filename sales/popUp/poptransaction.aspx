@@ -76,7 +76,13 @@
                         <asp:TextBox ID="txt_memo" runat="server" Height="100" TextMode="MultiLine"></asp:TextBox>
                         <asp:Label ID="lb_memo" runat="server" Height="100" Visible="false" TextMode="MultiLine"></asp:Label>
                     </td>
-                </tr>
+                </tr>   
+                <tr>
+                    <th style="padding:11px 0px 0px 0px;">거래처명변경<asp:CheckBox ID="chk_cus1" runat="server" CssClass="ml5" Height="30" onchange="txt_cus1_Visible();" /></th>
+                    <td colspan="3">
+                        <asp:TextBox ID="txt_cus1" runat="server" style="visibility:hidden"></asp:TextBox>
+                    </td>
+                </tr>   
         </table>
         <div class="title_1 mt20">
             주문품목
@@ -128,6 +134,22 @@
         </div>
         <script>
             fDatePickerById("txt_transactionDate");
+
+            txt_cus1_Visible();
+
+            function txt_cus1_Visible() {
+                let chkValue = document.getElementById('<%= chk_cus1.ClientID%>').checked;
+                let txt = document.getElementById('<%= txt_cus1.ClientID%>');
+
+                txt.value = "";
+
+                if (chkValue) {
+                    txt.style.visibility = "visible";
+                }
+                else {
+                    txt.style.visibility = "hidden";
+                }
+            }
 
             function final() {
                 var hiddenCode = document.getElementById('<%=hidden_ordCode.ClientID%>').value;

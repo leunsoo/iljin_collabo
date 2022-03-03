@@ -424,8 +424,8 @@
             var url = "/sales/popUp/poptransaction.aspx?code=" + orderNo;
             var name = "pop_transaction"
             var popupX = (window.screen.width / 2) - (770 / 2);
-            var popupY = (window.screen.height / 2) - (600 / 2);
-            window.open(url, name, 'status=no, width=770, height=600, left=' + popupX + ',top=' + popupY);
+            var popupY = (window.screen.height / 2) - (700 / 2);
+            window.open(url, name, 'status=no, width=770, height=700, left=' + popupX + ',top=' + popupY);
         }
 
         function separately(code) {

@@ -14,6 +14,7 @@ namespace iljin.popUp
 {
     public partial class poptaxbill : ApplicationRoot
     {
+        string sendDate = "";
         DB_mysql km;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -165,18 +166,16 @@ namespace iljin.popUp
                 int prodCost = 0;
                 int taxCost = 0;
                 int totalCost = 0;
-                int itemCount = 0;
-
-                itemName = dt.Rows[0][1].ToString();
+                
+                itemName = dt.Rows[0][0].ToString();
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    prodCost += int.Parse(dt.Rows[i][5].ToString());
-                    taxCost += int.Parse(dt.Rows[i][6].ToString());
-                    itemCount += int.Parse(dt.Rows[i][2].ToString());
+                    prodCost += int.Parse(dt.Rows[i][3].ToString());
+                    taxCost += int.Parse(dt.Rows[i][4].ToString());
                 }
 
-                if (itemCount > 1) itemName += " 외";
+                if (dt.Rows.Count > 1) itemName += " 외";
 
                 txt_itemName.Text = itemName;
                 txt_produceCost.Text = prodCost.ToString();
@@ -208,7 +207,7 @@ namespace iljin.popUp
 
                     PROCEDURE.CUD_TRAN("SP_taxbill_cusinfo_Add", cusObjs, km);
 
-                    object[] objs = { serialNo, hdn_cusCode.Value, cb_billtypecode, chk_taxfree, txt_registrationDate, txt_itemName, txt_produceCost, tax };
+                    object[] objs = { serialNo, hdn_cusCode.Value, cb_billtypecode, chk_taxfree, txt_registrationDate, sendDate, txt_itemName, txt_produceCost, tax };
 
                     PROCEDURE.CUD_TRAN("SP_taxbill_Add", objs, km);
 
@@ -256,8 +255,17 @@ namespace iljin.popUp
             Tax_ProucerInfo(taxInvoice);
             Tax_RecipientInfo(taxInvoice);
             Tax_Info(taxInvoice);
-            Tax_Item_Info(taxInvoice);
+            //Tax_Item_Info(taxIn
+            //
+            //voice);
 
+            TaxInvoiceStateEX tt;
+
+            tt = barobill.GetTaxInvoiceStateEX("", "", "");
+
+           // tt.NTSSendKey
+
+           // taxInvoice.
             int result;
             //세금계산서 전송
             if(hdn_serialNo.Value == "")
@@ -278,8 +286,9 @@ namespace iljin.popUp
             //전송이 완료됐으면 저장한다.
             if(result == 1)
             {
-                Response.Write($"<script>alert('완 ㅡ 벽');</script>");
-               // btn_save_Click(null, null);
+                sendDate = DateTime.Now.ToString("yyyy-MM-dd");
+                //Response.Write($"<script>alert('완 ㅡ 벽');</script>");
+                btn_save_Click(null, null);
             }
             else // 오류사항 출력
             {
@@ -338,46 +347,56 @@ namespace iljin.popUp
             tax.AmountTotal = txt_produceCost.Text;
             tax.TaxTotal = chk_taxfree.Checked == true ? "0" : txt_taxCost.Text;
             tax.TotalAmount = chk_taxfree.Checked == true ? txt_produceCost.Text : txt_totalCost.Text;
+
+            TaxInvoiceTradeLineItem item = new TaxInvoiceTradeLineItem();
+            item.PurchaseExpiry = DateTime.Parse(txt_registrationDate.Text).ToString("yyyyMMdd");  //공급일자 (YYYYMMDD)
+            item.Name = txt_itemName.Text; //품목명
+            item.Amount = txt_produceCost.Text; // 공급가액
+            item.Tax = chk_taxfree.Checked == true ? "0" : txt_taxCost.Text; //세액
+
+            tax.TaxInvoiceTradeLineItems = new TaxInvoiceTradeLineItem[1];
+            tax.TaxInvoiceTradeLineItems[0] = item;
         }
 
-        //세금계산서 품목 입력 <= 최대 99개까지 입력 가능
-        private void Tax_Item_Info(TaxInvoice tax)
-        {
-            if (km == null) km = new DB_mysql();
+        ////세금계산서 품목 입력 <= 최대 99개까지 입력 가능
+        //private void Tax_Item_Info(TaxInvoice tax)
+        //{
+        //    if (km == null) km = new DB_mysql();
 
-            string sql = "SELECT " +
-                         "REPLACE(LEFT(a.releaseDate, 10), '-', '') AS relaseDate, " +
-                         "c.fullName, " +
-                         "CAST((b.unitprice * b.totalWeight) AS integer) AS price, " +
-                         "CAST((b.unitprice * b.totalWeight / 10) AS INTEGER) AS tax " +
-                         "FROM tb_order_master a " +
-                         "INNER JOIN tb_order_detail b ON a.orderCode = b.orderCode " +
-                         "INNER JOIN tb_item c ON c.itemCode = b.itemCode ";
+        //    string sql = "SELECT " +
+        //                 "REPLACE(LEFT(a.releaseDate, 10), '-', '') AS relaseDate, " +
+        //                 "c.fullName, " +
+        //                 "CAST((b.unitprice * b.totalWeight) AS integer) AS price, " +
+        //                 "CAST((b.unitprice * b.totalWeight / 10) AS INTEGER) AS tax " +
+        //                 "FROM tb_order_master a " +
+        //                 "INNER JOIN tb_order_detail b ON a.orderCode = b.orderCode " +
+        //                 "INNER JOIN tb_item c ON c.itemCode = b.itemCode ";
 
-            if (hdn_serialNo.Value == "") // 초기 세금계산서 전송 시 orderCode로부터 품목 얻기
-            {
-                sql += $"WHERE a.orderCode IN({hdn_code.Value});";
-            }
-            else // 세금계산서 수정시 해당 세금계산서 번호로 품목 가져오기
-            {
-                sql += $"WHERE a.taxbillserialNo = '{hdn_serialNo.Value}';";
-            }
+        //    if (hdn_serialNo.Value == "") // 초기 세금계산서 전송 시 orderCode로부터 품목 얻기
+        //    {
+        //        sql += $"WHERE a.orderCode IN({hdn_code.Value});";
+        //    }
+        //    else // 세금계산서 수정시 해당 세금계산서 번호로 품목 가져오기
+        //    {
+        //        sql += $"WHERE a.taxbillserialNo = '{hdn_serialNo.Value}';";
+        //    }
 
-            DataTable dt = km.GetDTa(sql);
+        //    DataTable dt = km.GetDTa(sql);
 
-            tax.TaxInvoiceTradeLineItems = new TaxInvoiceTradeLineItem[dt.Rows.Count];
+        //    tax.TaxInvoiceTradeLineItems = new TaxInvoiceTradeLineItem[dt.Rows.Count];
             
-            for(int i = 0; i < dt.Rows.Count;i ++)
-            {
-                TaxInvoiceTradeLineItem item = new TaxInvoiceTradeLineItem();
-                item.PurchaseExpiry = DateTime.Parse(txt_registrationDate.Text).ToString("yyyyMMdd");  //공급일자 (YYYYMMDD)
-                item.Name = dt.Rows[i][1].ToString();           //품목명
-                item.Amount = dt.Rows[i][2].ToString();         //공급가액
-                item.Tax = chk_taxfree.Checked == true ? "0" : dt.Rows[i][3].ToString();            //세액
+        //    for(int i = 0; i < dt.Rows.Count;i ++)
+        //    {
+        //        TaxInvoiceTradeLineItem item = new TaxInvoiceTradeLineItem();
+        //        item.PurchaseExpiry = DateTime.Parse(txt_registrationDate.Text).ToString("yyyyMMdd");  //공급일자 (YYYYMMDD)
+        //        item.Name = dt.Rows[i][1].ToString();           //품목명
+        //        item.Amount = dt.Rows[i][2].ToString();         //공급가액
+        //        item.Tax = chk_taxfree.Checked == true ? "0" : dt.Rows[i][3].ToString();            //세액
 
-                tax.TaxInvoiceTradeLineItems[i] = item;
-            }
-        }
+        //        tax.TaxInvoiceTradeLineItems[i] = item;
+        //    }
+        //}
+
         #endregion
     }
 }
