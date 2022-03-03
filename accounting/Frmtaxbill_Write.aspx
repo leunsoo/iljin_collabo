@@ -330,8 +330,8 @@
              var url = '/accounting/popUp/poptaxbill.aspx?code=' + code.substr(1) + '&cusCode=' + cusCode;
              var name = "_blank"
              var popupX = (window.screen.width / 2) - (1200 / 2);
-             var popupY = (window.screen.height / 2) - (700 / 2);
-             window.open(url, name, 'status=no, width=1200, height=700, left=' + popupX + ',top=' + popupY);
+             var popupY = (window.screen.height / 2) - (750 / 2);
+             window.open(url, name, 'status=no, width=1200, height=750, left=' + popupX + ',top=' + popupY);
          }
 
          function seperatesent() {

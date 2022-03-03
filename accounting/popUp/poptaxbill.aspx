@@ -44,7 +44,7 @@
                 <asp:HiddenField ID="hdn_cusCode" runat="server" />
                 <asp:HiddenField ID="hdn_code" runat="server" />
                 <asp:HiddenField ID="hdn_serialNo" runat="server" />
-                <asp:HiddenField ID="hdn_tax_manager" runat="server" />
+                <asp:HiddenField ID="hdn_isSend" runat="server" />
             </div>
         </div>
         <table class="itable_1 mt10">
@@ -59,8 +59,12 @@
                         <asp:DropDownList ID="cb_billtypecode" runat="server"></asp:DropDownList>
                     </td>
                     <th>영세</th>
+                    <td class="tac">
+                        <asp:CheckBox ID="chk_taxfree" runat="server" onchange="taxFree();" />
+                    </td>
+                    <th>수정사유</th>
                     <td>
-                        <asp:CheckBox ID="chk_taxfree" runat="server" CssClass="ml150" onchange="taxFree();"/>
+                        <asp:DropDownList ID="cb_updateReason" runat="server"/>
                     </td>
                 </tr>
             </tbody>
@@ -68,7 +72,7 @@
         <table class="itable_1 mt10">
             <tbody>
                 <tr>
-                    <th rowspan="6" style="background-color: lightpink; color: red" class="tar">공<br />
+                    <th rowspan="7" style="background-color: lightpink; color: red" class="tar">공<br />
                         급<br />
                         자</th>
                     <th style="color: red">등록번호</th>
@@ -77,13 +81,13 @@
                     <th style="color: red">종사업장번호</th>
                     <td>
                         <asp:Label ID="txt_businessNo1" runat="server"></asp:Label></td>
-                    <th rowspan="6" style="background-color: skyblue; color: steelblue" class="tar">공<br />
+                    <th rowspan="7" style="background-color: skyblue; color: steelblue" class="tar">공<br />
                         급<br />
                         받<br />
                         는<br />
                         자<br />
                     </th>
-                    <th style="color: steelblue; background-color: aliceblue">등록번호</th>
+                    <th style="color: steelblue; background-color: aliceblue">등록번호<span class="red vam"> *</span></th>
                     <td>
                         <asp:TextBox ID="txt_registration2" runat="server"></asp:TextBox></td>
                     <th style="color: steelblue; background-color: aliceblue">종사업장번호</th>
@@ -97,10 +101,10 @@
                     <th style="color: red">성명</th>
                     <td>
                         <asp:Label ID="txt_bossname1" runat="server"></asp:Label></td>
-                    <th style="color: steelblue; background-color: aliceblue">상호</th>
+                    <th style="color: steelblue; background-color: aliceblue">상호<span class="red vam"> *</span></th>
                     <td>
                         <asp:TextBox ID="txt_cusName2" runat="server"></asp:TextBox></td>
-                    <th style="color: steelblue; background-color: aliceblue">성명</th>
+                    <th style="color: steelblue; background-color: aliceblue">성명<span class="red vam"> *</span></th>
                     <td>
                         <asp:TextBox ID="txt_bossname2" runat="server"></asp:TextBox></td>
                 </tr>
@@ -109,7 +113,7 @@
                     <td colspan="3">
                         <asp:Label ID="txt_address" runat="server"></asp:Label>
                     </td>
-                    <th style="color: steelblue; background-color: aliceblue">사업장</th>
+                    <th style="color: steelblue; background-color: aliceblue">사업장<span class="red vam"> *</span></th>
                     <td colspan="3">
                         <asp:TextBox ID="txt_address2" runat="server" CssClass="w75p"></asp:TextBox>
                         <asp:Button ID="btn_address2" runat="server" CssClass="btn_navy btn_80_30 ml10" Text="주소변경" OnClientClick="OpenZipcode(); return false;" />
@@ -119,16 +123,16 @@
                     <th style="color: red">업태</th>
                     <td>
                         <asp:Label ID="txt_business" runat="server"></asp:Label></td>
-                        <th style="color: red">종목</th>
-                        
-                        <td>
-                            <asp:Label ID="txt_businessitem" runat="server"></asp:Label></td>
-                        <th style="color: steelblue; background-color: aliceblue">업태</th>
-                        <td>
-                            <asp:TextBox ID="txt_business2" runat="server"></asp:TextBox></td>
-                            <th style="color: steelblue; background-color: aliceblue">종목</th>
-                            <td>
-                                <asp:TextBox ID="txt_businessitem2" runat="server"></asp:TextBox></td>
+                    <th style="color: red">종목</th>
+
+                    <td>
+                        <asp:Label ID="txt_businessitem" runat="server"></asp:Label></td>
+                    <th style="color: steelblue; background-color: aliceblue">업태</th>
+                    <td>
+                        <asp:TextBox ID="txt_business2" runat="server"></asp:TextBox></td>
+                    <th style="color: steelblue; background-color: aliceblue">종목</th>
+                    <td>
+                        <asp:TextBox ID="txt_businessitem2" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <th style="color: red">이메일</th>
@@ -137,6 +141,16 @@
                     <th style="color: steelblue; background-color: aliceblue">이메일</th>
                     <td colspan="3">
                         <asp:TextBox ID="txt_email2" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <th style="color: red">담당자</th>
+                    <td><asp:Label ID="txt_manager" runat="server"></asp:Label></td>
+                    <th style="color: red">휴대폰</th>
+                    <td><asp:Label ID="txt_phone" runat="server"></asp:Label></td>
+                    <th style="color: steelblue; background-color: aliceblue">담당자<span class="red vam"> *</span></th>
+                    <td><asp:TextBox ID="txt_manager2" runat="server"></asp:TextBox></td>
+                    <th style="color: steelblue; background-color: aliceblue">휴대폰</th>
+                    <td><asp:TextBox ID="txt_phone2" runat="server"></asp:TextBox></td>
                 </tr>
             </tbody>
         </table>
@@ -183,11 +197,18 @@
         <div class="tar mt20">
             <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
             <asp:Button ID="btn_save" Text="저장" CssClass="btn_150_40 btn_black ml10" runat="server" OnClick="btn_save_Click" />
-            <asp:Button ID="btn_send" Text="전송" CssClass="btn_150_40 btn_navy ml10" runat="server" OnClick="btn_send_Click"/>
+            <asp:Button ID="btn_send" Text="전송" CssClass="btn_150_40 btn_navy ml10" runat="server" OnClientClick="SendChk();" OnClick="btn_send_Click" />
         </div>
         <script src="//spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
-        <script>
+        <script type="text/javascript">
             fDatePickerById2("txt_date");
+            taxFree();
+
+            //문자보낼지 체크
+            function SendChk() {
+                document.getElementById('<%= hdn_isSend.ClientID%>').value = confirm("문자알림을 받으시겠습니까?");
+            }
+
             // 우편번호 - 주소
             function OpenZipcode() {
                 daumAPIFunc();

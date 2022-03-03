@@ -51,13 +51,13 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.HiddenField hdn_serialNo;
 
         /// <summary>
-        /// hdn_tax_manager 컨트롤입니다.
+        /// hdn_isSend 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdn_tax_manager;
+        protected global::System.Web.UI.WebControls.HiddenField hdn_isSend;
 
         /// <summary>
         /// txt_serialNo 컨트롤입니다.
@@ -85,6 +85,15 @@ namespace iljin.popUp
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chk_taxfree;
+
+        /// <summary>
+        /// cb_updateReason 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cb_updateReason;
 
         /// <summary>
         /// txt_registration1 컨트롤입니다.
@@ -238,6 +247,42 @@ namespace iljin.popUp
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_email2;
+
+        /// <summary>
+        /// txt_manager 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_manager;
+
+        /// <summary>
+        /// txt_phone 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_phone;
+
+        /// <summary>
+        /// txt_manager2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_manager2;
+
+        /// <summary>
+        /// txt_phone2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_phone2;
 
         /// <summary>
         /// txt_registrationDate 컨트롤입니다.
