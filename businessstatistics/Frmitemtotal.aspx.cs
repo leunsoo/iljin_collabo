@@ -44,6 +44,7 @@ namespace iljin
 
             int qty = 0;
             int price = 0;
+            int weight = 0;
             int total = 0;
 
             for(int i = 0;  i < grdTable.Items.Count; i ++)
@@ -72,6 +73,7 @@ namespace iljin
 
             cb_sort.Items.Add(new ListItem("수량", "0"));
             cb_sort.Items.Add(new ListItem("금액", "1"));
+            cb_sort.Items.Add(new listItem("중량", "2"));
         }
 
         //제품구분1 셋팅
