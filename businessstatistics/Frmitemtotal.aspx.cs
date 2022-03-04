@@ -73,7 +73,7 @@ namespace iljin
 
             cb_sort.Items.Add(new ListItem("수량", "0"));
             cb_sort.Items.Add(new ListItem("금액", "1"));
-            cb_sort.Items.Add(new ListItem("중량", "2"));
+            cb_sort.Items.Add(new listItem("중량", "2"));
         }
 
         //제품구분1 셋팅
