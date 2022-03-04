@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Woof.Windows.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:Woof.WindowsEx.Controls.MvvmAutoLoad">
+            <summary>
+            A user control that automatically loads the view when it first becomes visible
+            if its DataContext implements <see cref="T:Woof.WindowsEx.IGetAsync"/> interface.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.MvvmAutoLoad.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles PropertyChanged event to detect when the control is shown for the first time to load its view-model.
+            </summary>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="T:Woof.WindowsEx.Controls.Spinner">
+            <summary>
+            Windows-style spinner with optional percent display.
+            </summary>
+            <summary>
+            Spinner
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.Percent">
+            <summary>
+            Gets or sets percentage value, set -1 to hide percent display.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.Done">
+            <summary>
+            Gets or sets the number of items processed. If <see cref="P:Woof.WindowsEx.Controls.Spinner.Total"/> value is set, percent display is shown.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.Total">
+            <summary>
+            Gets or sets total elements to process for percentage display.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.Spinner.#ctor">
+            <summary>
+            Initializes spinner with percentage diplay off.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.A0">
+            <summary>
+            Dot animation.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.A1">
+            <summary>
+            Dot animation.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.A2">
+            <summary>
+            Dot animation.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.A3">
+            <summary>
+            Dot animation.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.Spinner.A4">
+            <summary>
+            Dot animation.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.Spinner.StartAnimation">
+            <summary>
+            Starts dots animation.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.Spinner.SuspendAnimation">
+            <summary>
+            Suspends dots animation.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.Spinner.ResumeAnimation">
+            <summary>
+            Resumes dots animation.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.Spinner.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Suspends animation when the control is not visible.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.Spinner.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Woof.WindowsEx.Controls.TextBoxEx">
+            <summary>
+            Text box with "water-marked" label inside.
+            Also MVVM friendly, Text is bound two-way by default and updates in real time.
+            </summary>
+        </member>
+        <member name="F:Woof.WindowsEx.Controls.TextBoxEx.LabelProperty">
+            <summary>
+            Label property definition.
+            </summary>
+        </member>
+        <member name="F:Woof.WindowsEx.Controls.TextBoxEx.TextProperty">
+            <summary>
+            Actual text property definition.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.TextBoxEx.Label">
+            <summary>
+            Gets or sets the text displayed as a label when the content is empty.
+            </summary>
+        </member>
+        <member name="P:Woof.WindowsEx.Controls.TextBoxEx.Text">
+            <summary>
+            Gets or sets the text contents of the text box.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.#ctor">
+            <summary>
+            Creates the extended text box element.
+            </summary>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Removes the label and graying if the control gets focus.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Displays the grayed labal when the control loses focus.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.OnTextChanged(System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Invoked whenever the base text property changes.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.OnOverridenTextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Invoked whenever overriden text property changes.
+            </summary>
+            <param name="d">This <see cref="T:Woof.WindowsEx.Controls.TextBoxEx"/> as <see cref="T:System.Windows.DependencyObject"/>.</param>
+            <param name="e">Value being changed.</param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.OnLabelChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Invoked whenever label property changes.
+            </summary>
+            <param name="d">This <see cref="T:Woof.WindowsEx.Controls.TextBoxEx"/> as <see cref="T:System.Windows.DependencyObject"/>.</param>
+            <param name="e">Value being changed.</param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.SetBaseText(System.String)">
+            <summary>
+            Sets the base text when the text propagation is not disabled.
+            </summary>
+            <param name="value">Overriden text value.</param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.SetLabel(System.String)">
+            <summary>
+            Sets the visual label.
+            </summary>
+            <param name="value">Label text.</param>
+        </member>
+        <member name="M:Woof.WindowsEx.Controls.TextBoxEx.ResetLabel">
+            <summary>
+            Resets (removes) the visual label.
+            </summary>
+        </member>
+        <member name="F:Woof.WindowsEx.Controls.TextBoxEx.ForegroundDefault">
+            <summary>
+            Default foreground brush.
+            </summary>
+        </member>
+        <member name="F:Woof.WindowsEx.Controls.TextBoxEx.IsBaseTextPropagationDisabled">
+            <summary>
+            If set true base text is not propagated to overriden text.
+            </summary>
+        </member>
+    </members>
+</doc>

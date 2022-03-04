@@ -1,0 +1,645 @@
+﻿/*마스터페이지 관련 css*/
+@charset "utf-8";
+
+@import url('main_font.css'); /*마스터페이지 관련 css*/
+@import url('common.css'); /*마스터페이지 관련 css*/
+
+body {
+    padding: 78px 0 0 290px;
+    background: #f5f5f5;
+}
+
+header .head {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 1500px;
+    padding: 0 30px;
+    border-bottom: 1px solid #efe7e3;
+    background: #fff;
+}
+
+    header .head:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    header .head h1 {
+        float: left;
+    }
+
+        header .head h1 a {
+            display: block;
+            padding: 26px 0;
+            line-height: 1;
+            font-size: 24px;
+            font-family: 'nanumS';
+            font-size: 24px;
+            font-weight: 700;
+            color: #2147b9;
+        }
+
+    header .head nav {
+        float: right;
+    }
+
+        header .head nav:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        header .head nav ul {
+            float: left;
+        }
+
+            header .head nav ul li {
+                float: left;
+                padding: 0 25px;
+            }
+
+                header .head nav ul li a {
+                    display: block;
+                    position: relative;
+                    padding: 30px 5px;
+                    line-height: 1;
+                    font-size: 17px;
+                    color: #333;
+                }
+
+                header .head nav ul li.on a {
+                    font-weight: 500;
+                    color: #000;
+                }
+
+                    header .head nav ul li.on a:after {
+                        content: '';
+                        position: absolute;
+                        z-index: 1;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: #000;
+                    }
+
+        header .head nav .admin {
+            float: left;
+            margin: 16px 0 0 50px;
+            width: 140px;
+            padding: 12px 0 14px 20px;
+            text-align: center;
+            font-size: 15px;
+            color: #241b17;
+            border: 1px solid #ddd;
+            border-radius: 100px;
+            background: #f8f8f8 url(../img/ico_login.png) no-repeat left 25px top 16px;
+        }
+
+header .submenu {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 78px;
+    width: 290px;
+    height: calc(100% - 78px);
+}
+
+    header .submenu h2 {
+        display: none;
+    }
+
+    header .submenu > ul {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        padding: 32px 0;
+        background: linear-gradient(#042275, #2764c6, #76ccc6);
+    }
+
+        header .submenu > ul > li > a {
+            display: block;
+            position: relative;
+            height: 84px;
+            color: #fff;
+            padding-top: 50px;
+            text-align: center;
+            line-height: 1;
+            background-repeat: no-repeat;
+            background-position: center 15px;
+            opacity: 0.5;
+            transition: all .3s ease;
+        }
+
+        header .submenu > ul > li.on > a,
+        header .submenu > ul > li:hover > a {
+            opacity: 1;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+            header .submenu > ul > li.on > a:after,
+            header .submenu > ul > li:hover > a:after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: 50%;
+                width: 3px;
+                height: 52px;
+                margin-top: -26px;
+                border-radius: 10px;
+                background: #fff;
+            }
+
+        header .submenu > ul > li + li {
+            margin-top: 12px;
+        }
+
+        header .submenu > ul > li.menu01 > a {
+            background-image: url(../img/ico_menu01.png);
+        }
+
+        header .submenu > ul > li.menu02 > a {
+            background-image: url(../img/ico_menu02.png);
+        }
+
+        header .submenu > ul > li.menu03 > a {
+            background-image: url(../img/ico_menu03.png);
+        }
+
+        header .submenu > ul > li.menu04 > a {
+            background-image: url(../img/ico_menu04.png);
+        }
+
+        header .submenu > ul > li.menu05 > a {
+            background-image: url(../img/ico_menu05.png);
+            background-position: center 10px;
+        }
+
+        header .submenu > ul > li.menu06 > a {
+            background-image: url(../img/ico_menu06.png);
+            background-position: center 10px;
+        }
+
+        header .submenu > ul > li.menu07 > a {
+            background-image: url(../img/ico_menu07.png);
+            background-position: center 10px;
+        }
+
+    header .submenu .depth02 {
+        position: absolute;
+        z-index: 1;
+        left: 100px;
+        top: 0;
+        width: 0;
+        height: 100%;
+        padding: 32px 0 0;
+        background: linear-gradient(to top, #e7faff, #c2e1ff);
+        transition: all .3s ease;
+        overflow: hidden;
+    }
+
+        header .submenu .depth02.on {
+            z-index: 2;
+            width: 190px;
+        }
+
+        header .submenu .depth02 ul {
+            width: 190px;
+        }
+
+        header .submenu .depth02.on ul {
+            width: 190px;
+        }
+
+        header .submenu .depth02 li a {
+            display: block;
+            line-height: 40px;
+            padding: 0 24px;
+            font-size: 15px;
+            color: #444;
+        }
+
+            header .submenu .depth02 li a:hover,
+            header .submenu .depth02 li.on a {
+                position: relative;
+                color: #3459cb;
+                font-weight: 500;
+                background: #e4f2ff;
+            }
+
+                header .submenu .depth02 li a:hover:after,
+                header .submenu .depth02 li.on a:after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    right: 0;
+                    top: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: #3459cb;
+                }
+
+#container {
+    padding: 40px 24px;
+}
+
+    #container h3 {
+        margin-bottom: 24px;
+        font-size: 20px;
+        color: #141f2a;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+.search_box {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 1px solid #333;
+}
+
+    .search_box:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+.search_option {
+    float: left;
+}
+
+    .search_option li {
+        float: left;
+        width: 190px;
+    }
+
+        .search_option li + li {
+            margin-left: 24px;
+        }
+
+        .search_option li label {
+            display: block;
+            height: 40px;
+            padding-top: 15px;
+            font-size: 15px;
+        }
+
+        .search_option li .detail_inp {
+            margin-top: 8px;
+        }
+
+.search_btn_wrap {
+    float: right;
+    text-align: right;
+}
+
+.reset_btn {
+    display: inline-block;
+    padding: 0 16px 0 40px;
+    line-height: 33px;
+    font-size: 14px;
+    color: #888;
+    border-radius: 100px;
+    border: 1px solid #d9d9d9;
+    background: url(../img/ico_reset.png) no-repeat left 18px center;
+}
+
+.search_btn {
+    display: block;
+    margin-top: 12px;
+    width: 216px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    background: #01133e;
+}
+
+    .search_btn span {
+        padding-left: 22px;
+        background: url(../img/ico_search.png) no-repeat left center;
+    }
+
+.content_wrap {
+    margin-top: 30px;
+}
+
+.result_list {
+    margin-left: -16px;
+    margin-bottom: 25px;
+}
+
+    .result_list p {
+        display: inline-block;
+        position: relative;
+        padding: 0 16px
+    }
+
+        .result_list p + p:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 6px;
+            width: 1px;
+            height: 14px;
+            background: #ccc;
+        }
+
+        .result_list p .tit {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .result_list p .con {
+            font-size: 17px;
+            margin-left: 5px;
+            font-weight: 500;
+            color: #000;
+        }
+
+.data_option:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.data_option .btn_wrap {
+    float: left;
+}
+
+.data_option .type_wrap {
+    float: right;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.ico_btn {
+    height: 42px;
+    padding: 0 23px 0 47px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left 24px center;
+    transition: all .3s ease;
+}
+
+
+    .ico_btn.ico_box {
+        background-image: url(../img/ico_box.png);
+    }
+
+    .ico_btn.ico_reser {
+        background-image: url(../img/ico_reser.png);
+    }
+
+    .ico_btn.ico_add {
+        background-image: url(../img/ico_add.png);
+    }
+
+    .ico_btn.ico_excel {
+        background-image: url(../img/ico_excel.png);
+    }
+
+.inp_radio + .inp_radio {
+    margin-left: 24px;
+}
+
+.inp_radio input {
+    position: absolute;
+    z-index: -1;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+
+    .inp_radio input + i {
+        display: inline-block;
+        width: 21px;
+        height: 20px;
+        background: url(../img/ico_radio.png) no-repeat 0 0;
+        vertical-align: top;
+    }
+
+        .inp_radio input + i + span {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 15px;
+            color: #555555;
+        }
+
+    .inp_radio input:checked + i {
+        background-image: url(../img/ico_radio_on.png);
+    }
+
+        .inp_radio input:checked + i + span {
+            color: #333333;
+        }
+
+.inp_chk input {
+    position: absolute;
+    z-index: -1;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+
+    .inp_chk input + i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/ico_chkbox.png) no-repeat 0 0;
+        vertical-align: top;
+    }
+
+        .inp_chk input + i + span {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 15px;
+            color: #555555;
+        }
+
+    .inp_chk input:checked + i {
+        background-image: url(../img/ico_chkbox_on.png);
+    }
+
+        .inp_chk input:checked + i + span {
+            color: #333333;
+        }
+
+.table_wrap {
+    margin-top: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+    .table_wrap table {
+        border: 0 !important;
+        border-top: 1px solid #000 !important;
+    }
+
+.scroll_table {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+    .scroll_table table {
+        width: 130%;
+    }
+
+.data_table {
+    border: 1px solid #ddd;
+    border-top: 1px solid #000 !important;
+    background: #fff;
+}
+
+    .data_table thead th {
+        height: 50px;
+        font-size: 15px;
+        font-weight: 400;
+        background: #e3e3e3;
+    }
+
+    .data_table tbody td {
+        padding: 10px;
+        font-size: 15px;
+        color: #666;
+        font-weight: 300;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .data_table tbody td .inp_chk {
+            position: relative;
+            top: -1px;
+        }
+
+.reser_num {
+    font-weight: 500;
+    color: #000;
+    text-decoration: underline;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0 12px;
+    height: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 26px;
+    border-radius: 5px;
+}
+
+    .tag.blue {
+        background: #206cff;
+    }
+
+    .tag.orange {
+        background: #f39147;
+    }
+
+    .tag.green {
+        background: #3bb19c;
+    }
+
+    .tag.red {
+        background: #fa6666;
+    }
+
+.pd_length {
+    color: #000;
+    font-weight: 500;
+}
+
+.paging {
+    padding: 24px 0;
+    text-align: center;
+}
+
+    .paging button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+        border-radius: 5px 0 0 5px;
+        border: 1px solid #ddd;
+        vertical-align: top;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+        .paging button + button {
+            margin-left: -4px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .paging button.first {
+            background-image: url(../img/ico_page_first.png);
+        }
+
+        .paging button.prev {
+            background-image: url(../img/ico_page_prev.png);
+        }
+
+        .paging button.next {
+            background-image: url(../img/ico_page_next.png);
+        }
+
+        .paging button.last {
+            background-image: url(../img/ico_page_last.png);
+        }
+
+    .paging ol {
+        display: inline-block;
+        margin: 0 16px;
+        vertical-align: top;
+    }
+
+        .paging ol li {
+            float: left;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 26px;
+            font-weight: 300;
+            font-size: 13px;
+            color: #888888;
+            border: 1px solid #ddd;
+        }
+
+            .paging ol li.on {
+                position: relative;
+                z-index: 1;
+                color: #206cff;
+                border-color: #206cff;
+            }
+
+                .paging ol li.on a {
+                    color: #206cff;
+                    font-weight: 600;
+                }
+
+            .paging ol li + li {
+                margin-left: -1px;
+            }
+
+            .paging ol li:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+
+            .paging ol li:last-child {
+                border-radius: 0 5px 5px 0;
+            }
