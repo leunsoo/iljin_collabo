@@ -28,7 +28,8 @@ namespace iljin
         {
             if (km == null) km = new DB_mysql();
 
-            object[] objs = { DateTime.Now.ToString("yyyy-MM-01"),txt_customer };
+            object[] objs = { DateTime .Now.AddMonths(1).AddDays(-1).ToString("yyyy-MM-dd"),txt_customer };
+
 
             DataTable dt = PROCEDURE.SELECT("SP_taxbill_GetMonth", objs, km);
 
