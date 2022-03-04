@@ -89,12 +89,6 @@ namespace iljin.popUp
                 return;
             }
 
-            if (chk_cus1.Checked && txt_cus1.Text.Trim() == "")
-            {
-                Response.Write("<script>alert('변경하시려는 거래처를 입력해 주십시오.');</script>");
-                return;
-            }
-
             if (DateTime.Compare(DateTime.Parse(txt_publisheddate.Text), DateTime.Parse(txt_transactionDate.Text)) > 0)
             {
                 Response.Write("<script>alert('거래일을 미래 일자로 지정해 주십시오.');</script>");

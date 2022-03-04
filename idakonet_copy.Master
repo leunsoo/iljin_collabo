@@ -1,0 +1,373 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="idakonet_copy.Master.cs" Inherits="idakonet.idakonet_copy" %>
+
+<!DOCTYPE html>
+
+<html lang="ko">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Nissi web master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="/webapp/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/webapp/css/sub.css"/>
+    <link rel="stylesheet" type="text/css" href="/webapp/css/font.css"/>
+    <link rel="stylesheet" type="text/css" href="/webapp/css/uikit.css"/>
+    <link rel="stylesheet" type="text/css" href="/webapp/css/jquery-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/webapp/css/nissi.css"/>
+    <script src="/webapp/js/jquery-3.3.1.min.js"></script>
+    <script src="/webapp/js/main.js"></script>
+    <script src="/js/nissi.js"></script>
+     <script src="/js/datepicker_cls.js"></script>
+    <script src="/webapp/js/jquery-ui.min.js"></script>
+   	<script type="text/javascript">
+    function tsdisp(b_path,b_page,top,idx,midx)
+    {
+        var url_path = "/" + b_path + "/" + b_page + "?top=" + top + "&idx=" + idx + "&midx=" + midx;
+        //    window.open(url_path, '_self', 'resizable=no,menubar=no,directories=no,location=0,toolbar=no,status=no,scrollbars=yes');
+        //window.resizeTo(screen.availWidth, screen.availHeight);
+        window.location.href = url_path;
+	}
+           function subdisp(top) {
+	    document.getElementById('<%= t_top.ClientID %>').value = top;
+               __doPostBack('<%= btn_ck.UniqueID  %>', '');
+           }
+           
+           function top_save(stop) {
+	    document.getElementById('<%= sel_top.ClientID %>').value = stop;
+               __doPostBack('<%= btn_seltop.UniqueID  %>', '');
+           }
+    </script>
+<%--    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div class="wrap main">
+    <table style="width:1500px;">
+        <tr>
+            <td colspan="2">
+		        <asp:button id="btn_frist" CssClass="blank" runat="server"></asp:button>
+                <asp:LinkButton ID="btn_ck" runat="server" BorderStyle="None" Height="0px" Width="0px"></asp:LinkButton>             
+                <asp:TextBox ID="t_top" runat="server" BackColor="Transparent" BorderStyle="None" Width="0px" Height="0px"></asp:TextBox>
+                <asp:TextBox ID="top_ck" runat="server" BackColor="Transparent" BorderStyle="None" Width="0px" Height="0px"></asp:TextBox>
+        
+                <asp:LinkButton ID="btn_seltop" runat="server" BorderStyle="None" Height="0px" Width="0px"></asp:LinkButton>             
+                <asp:TextBox ID="sel_top" runat="server" BackColor="Transparent" BorderStyle="None" Width="0px" Height="0px"></asp:TextBox>
+             
+                <asp:LinkButton ID="btn_ck1" runat="server" BorderStyle="None" Height="0px" Width="0px"></asp:LinkButton>             
+                <asp:TextBox ID="t_top1" runat="server" BackColor="Transparent" BorderStyle="None" Width="0px" Height="0px"></asp:TextBox>
+            <header class="head">
+                <div class="head_row head_bg cf">
+                    <h1 class="logo"><a href="sub_page.html"></a></h1>
+<%--                    <span style="font-size:12pt; color:white; padding-left:30px; vertical-align: bottom">: 회사
+			        <asp:label id="lbl_ComName" runat="server" Text="SssSSs" color="red"></asp:label></span>--%>                     
+                    <!--사이드 메뉴 영역-->
+                  <ul class="aside_menu">
+                  <%--      <li><a href="/upload/pm_upload.aspx" title="다운로드">다운로드<span class="mark_box1"></span></a></li>--%>
+                      <li><a href="/board/board.aspx" title="알람">알림<span class="mark_box1"></span></a></li>
+                  <%--    <li><a href="/board/alim.aspx" title="종합현황">종합현황<span class="mark_box1"></span></a></li>
+                       <li><a href="/system/up_excel_data.aspx" title="관리자">관리자<span class="mark_box1"></span></a></li>
+                    </ul>--%>
+                    </ul>
+                </div>
+                <!--gnb 영역 시작-->
+                <ul class="head_row gnb cf">
+                    <!--/////시스템 영역/////-->
+                    <!--1depth 영역 시작-->
+                    <li><asp:Label ID="btn_01_1" runat="server" Text="시스템1"></asp:Label>
+                        <ul class="gnb_sub">                                                              
+                            <asp:datalist id="dl_Submenu0_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate>  
+                                <li><asp:HyperLink ID="l_tit0_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                        </ul>
+                    </li>
+                    <li><asp:Label ID="btn_02_1" runat="server" Text="기준관리1"></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu1_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit1_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                        </ul>
+                    </li>
+                    <li><asp:Label ID="btn_03_1" runat="server" Text="영업관리"></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu2_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit2_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_04_1" runat="server" Text="생산관리"></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu3_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit3_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_05_1" runat="server" Text="자재관리"></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu4_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit4_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_06_1" runat="server" Text="재고관리"></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu5_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit5_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_07_1" runat="server" Text="설비관리"></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu6_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit6_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_08_1" runat="server" Text=""></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu7_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit7_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_09_1" runat="server" Text=""></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu8_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit8_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                     </li>
+                   <li><asp:Label ID="btn_10_1" runat="server" Text=""></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu9_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit9_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li>
+                    <li><asp:Label ID="btn_11_1" runat="server" Text=""></asp:Label>
+                        <ul class="gnb_sub">                                       
+                            <asp:datalist id="dl_Submenu10_1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				            <ItemTemplate> 
+                                <li><asp:HyperLink ID="l_tit10_1" runat="server"></asp:HyperLink></li>
+				            </ItemTemplate>
+			                </asp:datalist>
+                      </ul>
+                    </li><%--
+                    <li><asp:Label ID="btn_12_1" runat="server" Text=""></asp:Label>
+                    </li>
+                    <ul>
+                        <asp:DataList ID="dl_Submenu7" runat="server" BorderWidth="0" GridLines="None" RepeatColumns="1" RepeatDirection="Vertical" ShowFooter="False" ShowHeader="False">
+                            <ItemTemplate>
+                                <li>
+                                    <asp:HyperLink ID="l_tit2" runat="server" Width="100%"></asp:HyperLink>
+                                </li>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </ul>--%>
+                </ul><!--gnb 영역 끝-->
+            </header><!--헤더 영역 끝-->
+            </td>
+        </tr>
+        <tr>
+            <td style="width:200px; vertical-align:top">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <!--컨텐츠 랩 영역 시작-->
+                        <section class="content_wrap cf">
+                            <!--사이드 내비게이션 영역 시작-->
+                            <nav class="side_nav gnb-modify">  
+                            <ul>
+                                <li>
+                                    <span class="sd_gnb" >
+                                        <img src="/webapp/img/gnb_01_off.png" alt="">
+                                        <asp:Label ID="btn_01" runat="server" Text="시스템"></asp:Label>
+                                        <span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                
+                                        <asp:datalist id="dl_Submenu0" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                    <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>
+                                                    <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit0" runat="server"></asp:HyperLink>
+                                                </li>
+				                            </ItemTemplate>
+			                            </asp:datalist>                                   
+ 				                    </ul>
+                               </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_02_off.png" alt=""><asp:Label ID="btn_02" runat="server" Text="기준"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu1" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px" class="on">
+                                                    <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     
+                                                    <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image>                                                  
+                                                    <asp:HyperLink ID="l_tit1" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_03_off.png" alt=""><asp:Label ID="btn_03" runat="server" Text="영업"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu2" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit2" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_04_off.png" alt=""><asp:Label ID="btn_04" runat="server" Text="생산"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu3" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>      
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit3" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_05_off.png" alt=""><asp:Label ID="btn_05" runat="server" Text="자재"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu4" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit4" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_06_off.png" alt=""><asp:Label ID="btn_06" runat="server" Text="재고"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu5" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit5" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_07_off.png" alt=""><asp:Label ID="btn_07" runat="server" Text="설비"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu6" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>      
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit6" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_08_off.png" alt=""><asp:Label ID="btn_08" runat="server" Text="설비"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu7" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit7" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_09_off.png" alt=""><asp:Label ID="btn_09" runat="server" Text="일반"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu8" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit8" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_10_off.png" alt=""><asp:Label ID="btn_10" runat="server" Text="케기비"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu9" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                                                                                         <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit9" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_11_off.png" alt=""><asp:Label ID="btn_11" runat="server" Text="현황"></asp:Label><span class="plus">+</span></span>
+                                    <ul class="sd_2depth">                                        
+                                        <asp:datalist id="dl_Submenu10" runat="server" RepeatDirection="Vertical"  CellPadding="0" CellSpacing="0" BorderWidth="0" ShowHeader="False" ShowFooter="False" GridLines="None" RepeatColumns="1">
+				                            <ItemTemplate>     
+                                                <li style="height:22px">
+                                             <asp:image id="Image1" class="black_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico.png"></asp:image>                                                     
+                                                    <asp:image class="white_ico" runat="server" ImageUrl="/webapp/img/gnb_sub_ico_on.png"></asp:image> 
+                                                    <asp:HyperLink ID="l_tit10" runat="server"></asp:HyperLink></li>
+				                            </ItemTemplate>
+			                            </asp:datalist>
+                                    </ul>
+                                </li><%--
+                                <li>
+                                    <span class="sd_gnb"><img src="/webapp/img/gnb_12_off.png" alt="">
+                                        <asp:Label ID="btn_12" runat="server" Text="인사"></asp:Label></span>
+                                </li>--%>
+                            </ul>
+                            </nav><!--사이드 내비게이션 영역 끝-->
+                        </section>
+                        </td>
+                    </tr>
+                </table>            
+            </td>
+            <td style="width:1300px; text-align:left;vertical-align:top">
+                 <table style="width:100%">
+                     <tr>
+                         <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                         </td>
+                     </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div><!--전체 랩 영역 끝--> 
+    </form>
+</body>
+</html>
