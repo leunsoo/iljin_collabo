@@ -19,17 +19,31 @@ namespace iljin
             if (!IsPostBack)
             {
                 if (km == null) km = new DB_mysql();
-
+                grdTable_ColumnName_Change();
                 Search();
             }
+        }
+
+        //그리드 컬럼명 현재월을 기준으로 바꿔주기
+        private void grdTable_ColumnName_Change()
+        {
+            //우리가 바꿔야하는건 그리드의 필드명인데 이 그리드의 필드명은 <th>3월말<th> <= 이거를 해당 달에 따라서 바꿔줘야 함
+            //html 태그의 텍스트를 코드로 바꿀 수 있나?
+
+            txt_month0.InnerHtml = DateTime.Now.AddMonths(0).ToString("MMM") + "월말";
+            txt_month1.InnerHtml = DateTime.Now.AddMonths(1).ToString("MMM") + "월말";
+            txt_month2.InnerHtml = DateTime.Now.AddMonths(2).ToString("MMM") + "월말";
+            txt_month3.InnerHtml = DateTime.Now.AddMonths(3).ToString("MMM") + "월말";
+            txt_month4.InnerHtml = DateTime.Now.AddMonths(4).ToString("MMM") + "월말";
+            txt_month5.InnerHtml = DateTime.Now.AddMonths(5).ToString("MMM") + "월말";
+            txt_month6.InnerHtml = DateTime.Now.AddMonths(6).ToString("MMM") + "월말";
         }
 
         private void Search()
         {
             if (km == null) km = new DB_mysql();
 
-            object[] objs = { DateTime .Now.AddMonths(1).AddDays(-1).ToString("yyyy-MM-dd"),txt_customer };
-
+            object[] objs = { DateTime.Now.ToString("yyyy-MM-01"), txt_customer };
 
             DataTable dt = PROCEDURE.SELECT("SP_taxbill_GetMonth", objs, km);
 

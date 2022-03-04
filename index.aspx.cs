@@ -30,7 +30,6 @@ namespace iljin
                     chk_rememberInfo.Checked = true;
                 }
 
-                string test = "헬로우월드";
     
                 try
                 {

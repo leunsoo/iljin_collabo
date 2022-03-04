@@ -189,13 +189,13 @@
                 <thead>
                     <tr>
                         <th class="mWt16p">거래처</th>
-                        <th class="mWt12p">3월말</th>
-                        <th class="mWt12p">4월말</th>
-                        <th class="mWt12p">5월말</th>
-                        <th class="mWt12p">6월말</th>
-                        <th class="mWt12p">7월말</th>
-                        <th class="mWt12p">8월말</th>
-                        <th class="mWt12p">9월말</th>
+                        <th class="mWt12p" id="txt_month0" runat="server">3월말</th>
+                        <th class="mWt12p" id="txt_month1" runat="server">4월말</th>
+                        <th class="mWt12p" id="txt_month2" runat="server">5월말</th>
+                        <th class="mWt12p" id="txt_month3" runat="server">6월말</th>
+                        <th class="mWt12p" id="txt_month4" runat="server">7월말</th>
+                        <th class="mWt12p" id="txt_month5" runat="server">8월말</th>
+                        <th class="mWt12p" id="txt_month6" runat="server">9월말</th>
                     </tr>
                 </thead>
                 <tbody>

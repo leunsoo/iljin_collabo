@@ -25,8 +25,6 @@ namespace iljin
                     return;
                 }
 
-                string test = "얄루2";
-
                 hide_menu();
                 string top = Request.QueryString["top"];
                 string sub = Request.Params.Get("midx");
