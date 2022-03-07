@@ -32,9 +32,22 @@ namespace iljin.popUp
 
                     string date = DateTime.Now.ToString("yyyy-MM-dd");
                     txt_registrationdate.Text = date;
-                }
 
+                    UserSetting();
+                }
             }
+        }
+
+        //로그인한 사람 정보 자동 입력
+        private void UserSetting()
+        {
+            if (km == null) km = new DB_mysql();
+
+            hidden_userCode.Value = Session["userCode"].ToString();
+
+            string sql = $"SELECT empName FROM tb_emp WHERE userCode = '{hidden_userCode.Value}'; ";
+
+            tb_emp.Text = km.GetDTa(sql).Rows[0][0].ToString();
         }
 
         //기존에 저희가 저장했던 작업 데이터 검색

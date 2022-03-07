@@ -23,7 +23,6 @@ namespace iljin
 
                 km.GetCbDT(ConstClass.ITEM_DIV1_CODE, cb_divCode1, "전체");
                 km.GetCbDT(cb_divCode1.SelectedValue, cb_divCode2, "전체");
-                Search();
 
             }
         }
@@ -38,7 +37,7 @@ namespace iljin
             
             if (km == null) km = new DB_mysql();
 
-            object[] objs = { hidden_itemCode,tb_itemname,cb_divCode1,cb_divCode2 };
+            object[] objs = { hidden_itemCode,cb_divCode1,cb_divCode2 };
 
             DataTable dt = PROCEDURE.SELECT("SP_warehousing_Search_IncomeStatus", objs, km);
 
