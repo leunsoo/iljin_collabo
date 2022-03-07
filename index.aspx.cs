@@ -20,6 +20,10 @@ namespace iljin
         {
             if (!IsPostBack)
             {
+                if (km == null) km = new DB_mysql();
+
+                lb_notice.Text = km.GetDTa("SELECT notice FROM tb_company;").Rows[0][0].ToString();
+
                 string CURL = Server.MapPath("bin/");
                 string URL1 = CURL + Config.cfgFile;
 

@@ -159,13 +159,13 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.CheckBox chk_cus1;
 
         /// <summary>
-        /// txt_cus1 컨트롤입니다.
+        /// txt_cus_change 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_cus1;
+        protected global::System.Web.UI.WebControls.TextBox txt_cus_change;
 
         /// <summary>
         /// grdTable 컨트롤입니다.

@@ -526,6 +526,7 @@
     <Content Include="stock\popUp\popworkcomplete.aspx" />
     <Content Include="stock\popUp\popworkorder.aspx" />
     <Content Include="system\FrmLogin.aspx" />
+    <Content Include="system\Frmnotice.aspx" />
     <Content Include="system\popUp\popauthority.aspx" />
     <Content Include="system\popUp\popcustomer.aspx" />
     <Content Include="system\popUp\popsecondarycode.aspx" />
@@ -1215,6 +1216,13 @@
     </Compile>
     <Compile Include="system\FrmLogin.aspx.designer.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Frmnotice.aspx.cs">
+      <DependentUpon>Frmnotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Frmnotice.aspx.designer.cs">
+      <DependentUpon>Frmnotice.aspx</DependentUpon>
     </Compile>
     <Compile Include="system\popUp\popauthority.aspx.cs">
       <DependentUpon>popauthority.aspx</DependentUpon>
