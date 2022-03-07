@@ -32,7 +32,7 @@
                 <asp:HiddenField ID="hdn_deleteCode" runat="server" />
                 </div>
             </div>
-       <div class="fixed_hs_450 mt10">
+       <div class="fixed_hs_450 mt10" style="width:945px">
             <table class="grtable_th">
                 <thead>
                     <tr>
@@ -48,7 +48,7 @@
                     <tr>
                         <td colspan="6">
                             <div style="height: 400px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
-                                <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
+                                <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="945">
                                     <HeaderStyle Height="25px" />
                                     <ItemStyle HorizontalAlign="Center" />
                                     <Columns>

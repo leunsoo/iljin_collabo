@@ -48,6 +48,15 @@ namespace iljin.popUp
                 txt_memo.Text = dt.Rows[0]["tmemo"].ToString();
                 txt_transactionDate.Text = dt.Rows[0]["transactionDate"].ToString();
 
+                string cus_temp = dt.Rows[0]["customer_temp"].ToString();
+
+                if(cus_temp != "")
+                {
+                    chk_cus1.Checked = true;
+                    txt_cus_change.Style.Add("visibiliy", "visible");
+                    txt_cus_change.Text = cus_temp;
+                }
+
                 if(dt.Rows[0]["releaseDate"].ToString() != "")
                 {
                     hidden_releaseChk.Value = "1";
@@ -105,7 +114,7 @@ namespace iljin.popUp
                 {
                     string tranNo = les_Tool_DB.SetCode_Tran("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
 
-                    object[] objs = { tranNo, txt_ordernum, hidden_cusCode, hidden_cusAddressIdx, txt_transactionDate, txt_publisheddate, txt_memo };
+                    object[] objs = { tranNo, txt_ordernum, hidden_cusCode, hidden_cusAddressIdx, txt_transactionDate, txt_publisheddate, txt_memo, txt_cus_change };
 
                     PROCEDURE.CUD_TRAN("SP_transaction_Add_FromOrder", objs, km);
 
@@ -113,7 +122,7 @@ namespace iljin.popUp
                 }
                 else //수정
                 {
-                    object[] objs = { txt_transactionnum, txt_transactionDate, txt_memo};
+                    object[] objs = { txt_transactionnum, txt_transactionDate, txt_memo, txt_cus_change };
 
                     PROCEDURE.CUD_TRAN("SP_transaction_Update_FromOrder", objs, km);
 

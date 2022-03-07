@@ -9,7 +9,6 @@ namespace iljin
     public class ApplicationRoot : System.Web.UI.Page
     {
         protected DB_mysql km;
-        protected int pageID;
 
         protected void SetDBConnection()
         {

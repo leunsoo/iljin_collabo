@@ -11,6 +11,11 @@
     <meta name="format-detection" content="telephone=no"/>
     <link rel="stylesheet" type="text/css" href="/webapp/css/ibuild.css"/>
     <link rel="stylesheet" type="text/css" href="/webapp/css/login.css"/>
+    <style>
+        .login_notice {
+            font-size:30px;
+        }
+    </style>
 </head>
 <script type="text/javascript">
     function pw_change() {
@@ -28,10 +33,12 @@
         window.open(url, name, 'status=no, width=880, height=630, left=' + popupX + ',top=' + popupY);
     }
 </script>
-<body onload="window.moveTo(0,0); window.resizeTo(screen.availWidth,screen.availHeight); Form1.txt_com.focus()">
+<body onload="window.moveTo(0,0); window.resizeTo(screen.availWidth,screen.availHeight);">
     <form id="Form1" method="post" runat="server">
-
     <div class="login_wrap">
+    <div style="text-align:center;">
+        <asp:Label ID="lb_notice" runat="server" Text="?????" CssClass="login_notice box_row"></asp:Label>
+    </div>
         <div class="box">
             <div class="logo_name">
                 <span class="logo_txt">일진 WMS</span>

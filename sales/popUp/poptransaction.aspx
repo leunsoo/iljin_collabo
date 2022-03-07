@@ -80,7 +80,7 @@
                 <tr>
                     <th style="padding:11px 0px 0px 0px;">거래처명변경<asp:CheckBox ID="chk_cus1" runat="server" CssClass="ml5" Height="30" onchange="txt_cus1_Visible();" /></th>
                     <td colspan="3">
-                        <asp:TextBox ID="txt_cus1" runat="server" style="visibility:hidden"></asp:TextBox>
+                        <asp:TextBox ID="txt_cus_change" runat="server" style="visibility:hidden"></asp:TextBox>
                     </td>
                 </tr>   
         </table>
@@ -139,14 +139,13 @@
 
             function txt_cus1_Visible() {
                 let chkValue = document.getElementById('<%= chk_cus1.ClientID%>').checked;
-                let txt = document.getElementById('<%= txt_cus1.ClientID%>');
-
-                txt.value = "";
+                let txt = document.getElementById('<%= txt_cus_change.ClientID%>');
 
                 if (chkValue) {
                     txt.style.visibility = "visible";
                 }
                 else {
+                    txt.value = "";
                     txt.style.visibility = "hidden";
                 }
             }
@@ -155,8 +154,10 @@
                 var hiddenCode = document.getElementById('<%=hidden_ordCode.ClientID%>').value;
                 var date = document.getElementById('<%= txt_publisheddate.ClientID%>').innerHTML;
 
+                let customer = document.getElementById('<%= txt_cus_change.ClientID%>').value;
                 let memo;
                 let tdate;
+                
 
                 //출고처리된 경우 라벨로 값을 넘겨줘야 한다. (asp로 Visible = false를 하면 객체를 못찾아옴)
                 if (document.getElementById('<%= hidden_releaseChk.ClientID%>').value != '1')
@@ -176,7 +177,7 @@
                     return false;
                 }
 
-                var url = "http://print.ibuild.kr/ClipReport4/dunggi/iljin_transaction.jsp?orderCode=" + hiddenCode + "&date=" + tdate + "&memo=" + memo + "&div=0";
+                var url = "http://print.ibuild.kr/ClipReport4/dunggi/iljin_transaction.jsp?orderCode=" + hiddenCode + "&date=" + tdate + "&memo=" + memo + "&div=0" + "&customer=" + customer;
                 var name = "print_transaction"
                 var popupX = (window.screen.width / 2) - (890 / 2);
                 var popupY = (window.screen.height / 2) - (990 / 2);
