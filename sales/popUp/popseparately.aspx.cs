@@ -29,7 +29,7 @@ namespace iljin.popUp
                 {
                     date = DateTime.Now.ToString("yyyy-MM-dd");
                     txt_publisheddate.Text = date;
-                    txt_transactionnum.Text = les_Tool_DB.SetCode("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
+                    txt_transactionnum.Text = Tool_DB.SetCode("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
                 }
                 else
                 {
@@ -87,7 +87,7 @@ namespace iljin.popUp
             {
                 if(hdn_tcode.Value == "") // 추가
                 {
-                    string tranNo = les_Tool_DB.SetCode_Tran("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
+                    string tranNo = Tool_DB.SetCode_Tran("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
 
                     object[] objs = { tranNo, cb_cusname, cb_customeraddress, tb_itemname, txt_Qty, txt_transactionDate, txt_publisheddate, txt_note, txt_price, txt_totalPrice, chk_isShow };
 

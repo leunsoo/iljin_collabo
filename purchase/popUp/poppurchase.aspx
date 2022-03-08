@@ -377,19 +377,20 @@
                         <thead>
                             <tr>
                                 <th class="mWt23p">제품명</th>
-                                <th class="mWt11p">제품구분1</th>
-                                <th class="mWt11p">제품구분2</th>
-                                <th class="mWt9p">두께</th>
-                                <th class="mWt9p">폭</th>
-                                <th class="mWt9p">길이</th>
-                                <th class="mWt10p">개수</th>
-                                <th class="mWt10p">단가($)</th>
+                                <th class="mWt9p">제품구분1</th>
+                                <th class="mWt9p">제품구분2</th>
+                                <th class="mWt8p">두께</th>
+                                <th class="mWt8p">폭</th>
+                                <th class="mWt8p">길이</th>
+                                <th class="mWt9p">남은수량</th>
+                                <th class="mWt9p">개수</th>
+                                <th class="mWt9p">단가($)</th>
                                 <th class="mWt8p">관리</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="10">
+                                <td colspan="11">
                                     <div style="height: auto; width:auto; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
                                         <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
                                             <HeaderStyle Height="25px" />
@@ -411,33 +412,37 @@
                                                         <asp:TextBox ID="t1" CssClass="lblTextBox" runat="server" ></asp:TextBox>
                                                     </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="11%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                   <%--  <ItemTemplate>
                                                         <asp:TextBox ID="t2" CssClass="lblTextBox" runat="server" ></asp:TextBox>
                                                     </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="11%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                              <%--       <ItemTemplate>
                                                         <asp:TextBox ID="t3" CssClass="lblTextBox" runat="server" ></asp:TextBox>
                                                     </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="9%" CssClass="" />
+                                                    <ItemStyle Width="8%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                         <%--            <ItemTemplate>
                                                         <asp:TextBox ID="t4" CssClass="lblTextBox" runat="server" ></asp:TextBox>
                                                     </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="9%" CssClass="" />
+                                                    <ItemStyle Width="8%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                           <%--                          <ItemTemplate>
                                                         <asp:TextBox ID="t5" CssClass="lblTextBox" runat="server"></asp:TextBox>
                                                     </ItemTemplate>--%>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <ItemStyle Width="8%" CssClass="" />
+                                                </asp:TemplateColumn>
+                                                <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
                                                     <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
@@ -446,14 +451,14 @@
                                                         <asp:TextBox ID="txt_count" runat="server" CssClass="tar"></asp:TextBox>
                                                     </ItemTemplate>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="10%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <ItemTemplate>
                                                         <asp:TextBox ID="txt_unitprice" runat="server" CssClass="tar"></asp:TextBox>
                                                     </ItemTemplate>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="10%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <ItemTemplate>
@@ -474,7 +479,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th colspan="6">Total</th>
+                                <th colspan="7">Total</th>
                                 <th >
                                     <asp:TextBox ID="txt_totalQty" runat="server" CssClass="mWt90p tar" placeholder="개수"></asp:TextBox>
                                 </th>

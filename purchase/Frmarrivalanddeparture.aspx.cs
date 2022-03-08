@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using PublicLibsManagement;
 using MysqlLib;
+using les;
 
 namespace iljin
 {
@@ -85,6 +86,8 @@ namespace iljin
                 grdTable.Items[i].Cells[3].Text = predicQty.ToString();
 
                 grdTable.Items[i].Cells[4].Text = (currentQty + predicQty - (avgQty * int.Parse(cb_forecastmonth.SelectedValue))).ToString();
+
+                Tool_UI.NegativeText_Set_RedColor(grdTable.Items[i].Cells[4]);
             }
         }
 

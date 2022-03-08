@@ -76,7 +76,7 @@ namespace iljin.popUp
             {
                 date = DateTime.Now.ToString("yyyy-MM-dd");
                 txt_publisheddate.Text = date;
-                txt_transactionnum.Text = les_Tool_DB.SetCode("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
+                txt_transactionnum.Text = Tool_DB.SetCode("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
                 txt_memo.Text = dt.Rows[0]["memo"].ToString();
             }
         }
@@ -112,7 +112,7 @@ namespace iljin.popUp
             {
                 if(hidden_tranCode.Value == "") //추가
                 {
-                    string tranNo = les_Tool_DB.SetCode_Tran("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
+                    string tranNo = Tool_DB.SetCode_Tran("tb_transaction", "transactionCode", ConstClass.TRANSACTION_CODE_PREFIX, km);
 
                     object[] objs = { tranNo, txt_ordernum, hidden_cusCode, hidden_cusAddressIdx, txt_transactionDate, txt_publisheddate, txt_memo, txt_cus_change };
 

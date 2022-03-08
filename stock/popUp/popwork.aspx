@@ -31,17 +31,17 @@
         function isExist(value) {
             var param = '';
 
-            if (div == '1') {
+            if (div == '-1') {
                 param = 'keyward=' + value + '&div=item';
             }
-            else if (div == '2') {
-                param = 'keyward=' + value + '&div=item';
+            else if (div == '-2') {
+                param = 'keyward=' + value + '&div=emp';
             }
-            else if (div == '3') {
+            else if (div == '-3') {
                 param = 'keyward=' + value + '&div=foreigner';
             }
             else {
-                param = 'keyward=' + value + '&div=emp';
+                param = 'keyward=' + value + '&div=item';
             }
 
             sendRequest("/Scripts/autocomplete_list.aspx", param, 'GET', XHRcallback);
@@ -136,24 +136,24 @@
 
             div = _div;
             //제품
-            if (div == '1') {
+            if (div == '-1') {
                 txtId = 'txt_workitem';
                 hdnId = 'hidden_itemCode';
             }
             //생산제품
-            else if (div == '2') {
-                txtId = 'txt_produceitem';
-                hdnId = 'hidden_itemCode2';
+            else if (div == '-2') {
+                txtId = 'tb_emp';
+                hdnId = 'hidden_userCode';
             }
             //작업자
-            else if (div == '3') {
+            else if (div == '-3') {
                 txtId = 'tb_foreign';
                 hdnId = 'hidden_idx';
             }
             //지시자
             else {
-                txtId = 'tb_emp';
-                hdnId = 'hidden_userCode';
+                txtId = 'grdTable1_txt_produceitem_' + _div;
+                hdnId = 'grdTable1_hidden_itemCode2_' + _div;
             }
 
             var txt = document.getElementById(txtId);
@@ -170,7 +170,7 @@
             }
         }
 
-        function KeyPressEvent(row) { 
+        function KeyPressEvent(row) {
             if (event.keyCode == 13) {
                 var txt = document.getElementById(txtId);
                 var hidden_keyWord = document.getElementById(hdnkeyward);
@@ -246,7 +246,7 @@
                     <span>작업등록</span>
                     <asp:HiddenField ID="hdn_serialNo" runat="server" />
                     <asp:HiddenField ID="hidden_keyWord" runat="server" />
-                    <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list"  Style="top:0px; left:0px; visibility: hidden;"></asp:ListBox>
+                    <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list" Style="top: 0px; left: 0px; visibility: hidden;"></asp:ListBox>
                 </div>
             </div>
             <div class="title_1 mt20">
@@ -267,12 +267,12 @@
                     <tr>
                         <th>작업자</th>
                         <td>
-                            <asp:TextBox ID="tb_foreign" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('3');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
+                            <asp:TextBox ID="tb_foreign" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('-3');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                             <asp:HiddenField ID="hidden_idx" runat="server" />
                         </td>
                         <th>지시자</th>
                         <td>
-                            <asp:TextBox ID="tb_emp" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('4');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
+                            <asp:TextBox ID="tb_emp" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('-2');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                             <asp:HiddenField ID="hidden_userCode" runat="server" />
                         </td>
                     </tr>
@@ -288,33 +288,54 @@
                     </tr>
             </table>
             <div class="title_1 mt20">
-                작업정보
+                작업제품
             </div>
             <table class="itable_1 mt10">
-                <tobody>
+                <tbody>
                     <tr>
-                        <th>작업제품</th>
-                        <td>
-                            <asp:TextBox ID="txt_workitem" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('1');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
+                        <th class="w10p">작업제품</th>
+                        <td class="w50p">
+                            <asp:TextBox ID="txt_workitem" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('-1');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                             <asp:HiddenField ID="hidden_itemCode" runat="server" />
                         </td>
-                        <th>수량</th>
-                        <td>
+                        <th class="w10p">수량</th>
+                        <td class="w30p">
                             <asp:TextBox ID="txt_workitemQty" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <th>생산제품</th>
-                        <td>
-                            <asp:TextBox ID="txt_produceitem" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('2');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
-                            <asp:HiddenField ID="hidden_itemCode2" runat="server" />
-                        </td>
-                        <th>수량</th>
-                        <td>
-                            <asp:TextBox ID="txt_produceitemQty" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
+                </tbody>
             </table>
+            <div class="title_1 ">
+                생산제품
+                <asp:Button ID="btn_add" runat="server" CssClass="ft_right btn_navy btn_100_30" Text="추가" OnClick="btn_add_Click" />
+            </div>
+            <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
+                <Columns>
+                    <asp:TemplateColumn HeaderText="">
+                        <ItemTemplate>
+                            <table class="itable_1">
+                                <tbody>
+                                    <tr>
+                                        <th class="w10p">생산제품</th>
+                                        <td class="w50p">
+                                            <asp:TextBox ID="txt_produceitem" runat="server" autocomplete="off"></asp:TextBox>
+                                            <asp:HiddenField ID="hidden_itemCode2" runat="server" />
+                                        </td>
+                                        <th class="w10p">수량</th>
+                                        <td class="w20p">
+                                            <asp:TextBox ID="txt_produceitemQty" runat="server"></asp:TextBox>
+                                        </td>
+                                        <th class="w10p">
+                                            <asp:Button ID="btn_delete" runat="server" CssClass="btn_60_25 btn_red" Text="삭제" />
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ItemTemplate>
+                    </asp:TemplateColumn>
+                </Columns>
+                <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
+            </asp:DataGrid>
             <div class="tar mt20">
                 <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black" Text="저장" OnClick="btn_save_Click"></asp:Button>
                 <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
@@ -322,7 +343,6 @@
             <script>
                 fDatePickerById("txt_registrationdate");
                 fDatePickerById("txt_workdate");
-
             </script>
             <asp:Button ID="btn_default" runat="server" OnClientClick="return false;" CssClass="hidden" />
         </asp:Panel>

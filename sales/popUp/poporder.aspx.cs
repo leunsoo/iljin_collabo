@@ -16,7 +16,7 @@ namespace iljin.popUp
         DB_mysql km;
         DataTable Mdt;
 
-        string[] fieldArr = { "idx", "releaseIdx", "none1", "hidden_keyword1", "virtualItemName", "virtualItemCode", "hidden_keyword2", "actualItemName", "actualItemCode", "unit", "leftQty", "qty", "totalWeight", "weight", "unitprice", "none2", "cud" };
+        string[] fieldArr = { "idx", "releaseIdx", "none1", "hidden_keyword1", "virtualItemName", "virtualItemCode", "hidden_keyword2", "actualItemName", "actualItemCode", "unit", "leftQty", "qty", "totalWeight", "weight", "unitprice", "taxFree", "none2", "cud" };
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace iljin.popUp
                 }
                 else
                 {
-                    txt_ordernum.Text = les_Tool_DB.SetCode("tb_order_master", "orderCode", ConstClass.ORDER_CODE_PREFIX, km);
+                    txt_ordernum.Text = Tool_DB.SetCode("tb_order_master", "orderCode", ConstClass.ORDER_CODE_PREFIX, km);
 
                     txt_orderdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 }
@@ -169,6 +169,8 @@ namespace iljin.popUp
                     tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); calcTotalPrice('{i.ToString()}');");
                     unitprice = tb.Text == "" ? 0 : float.Parse(tb.Text);
 
+                    ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree")).Checked = Mdt.Rows[i]["taxFree"].ToString() == "1" ? true : false;
+
                     totalPrice = (int)(Math.Round(weight * unitprice, 2));
                     sumTotalPrice += totalPrice;
                     grdTable.Items[i].Cells[10].Text = totalPrice.ToString();
@@ -215,6 +217,8 @@ namespace iljin.popUp
                     tb.Text = "";
                     tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); calcTotalPrice('{i.ToString()}');");
                     unitprice = tb.Text == "" ? 0 : float.Parse(tb.Text);
+
+                    ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree")).Checked = Mdt.Rows[i]["taxFree"].ToString() == "1" ? true : false;
 
                     totalPrice = (int)(Math.Round(weight * unitprice, 2));
                     sumTotalPrice += totalPrice;
@@ -289,7 +293,7 @@ namespace iljin.popUp
 
             try
             {
-                string no = les_Tool_DB.SetCode_Tran("tb_order_master", "orderCode", ConstClass.ORDER_CODE_PREFIX, km);
+                string no = Tool_DB.SetCode_Tran("tb_order_master", "orderCode", ConstClass.ORDER_CODE_PREFIX, km);
                 Save_Info(no);
                 Save_Item(no);
 
@@ -331,6 +335,8 @@ namespace iljin.popUp
 
             for (int i = 0; i < rCount; i++)
             {
+                string chkValue = ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree")).Checked ? "1" : "0";
+
                 string cud = ((HiddenField)grdTable.Items[i].FindControl("hdn_cud")).Value;
                 if (cud == "c") //저장
                 {
@@ -340,7 +346,8 @@ namespace iljin.popUp
                           $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_orderQty")).Text}'" +
                           $",'{((HiddenField)grdTable.Items[i].FindControl("hdn_weight")).Value}'" +
                           $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_totalWeight")).Text}'" +
-                          $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_unitprice")).Text}');";
+                          $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_unitprice")).Text}'" +
+                          $",'{chkValue}');";
 
                     sql += $"CALL SP_warehousing_release_Add(" +
                           $"'{((HiddenField)grdTable.Items[i].FindControl("grd_hdn_actualItemCode")).Value}'" +
@@ -356,7 +363,8 @@ namespace iljin.popUp
                           $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_orderQty")).Text}'" +
                           $",'{((HiddenField)grdTable.Items[i].FindControl("hdn_weight")).Value}'" +
                           $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_totalWeight")).Text}'" +
-                          $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_unitprice")).Text}');";
+                          $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_unitprice")).Text}'" +
+                          $",'{chkValue}');";
 
                     sql += $"CALL SP_warehousing_release_Update('{grdTable.Items[i].Cells[1].Text}'" +
                           $",'{((HiddenField)grdTable.Items[i].FindControl("grd_hdn_actualItemCode")).Value}'" +

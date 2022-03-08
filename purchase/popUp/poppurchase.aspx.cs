@@ -170,6 +170,8 @@ namespace iljin.popUp
                     grdTable1.Items[i].Cells[6].Text = "";
                 }
 
+                grdTable1.Items[i].Cells[7].Text = itemDt.Rows[i]["leftQty"].ToString();
+
                 tb = grdTable1.Items[i].FindControl("txt_count") as TextBox;
                 tb.Text = itemDt.Rows[i]["qty"].ToString();
                 tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); Sum_Count();");
@@ -254,6 +256,7 @@ namespace iljin.popUp
             dt.Columns.Add("thickness", typeof(string));
             dt.Columns.Add("width", typeof(string));
             dt.Columns.Add("length", typeof(string));
+            dt.Columns.Add("leftQty", typeof(string));
             dt.Columns.Add("qty", typeof(string));
             dt.Columns.Add("unitprice", typeof(string));
             dt.Columns.Add("cud", typeof(string));
@@ -272,6 +275,7 @@ namespace iljin.popUp
                 dr["thickness"] = grdTable1.Items[i].Cells[4].Text;//((TextBox)grdTable1.Items[i].FindControl("t3")).Text;
                 dr["width"] = grdTable1.Items[i].Cells[5].Text;//((TextBox)grdTable1.Items[i].FindControl("t4")).Text;
                 dr["length"] = grdTable1.Items[i].Cells[6].Text;// ((TextBox)grdTable1.Items[i].FindControl("t5")).Text;
+                dr["leftQty"] = grdTable1.Items[i].Cells[7].Text;
                 dr["qty"] = ((TextBox)grdTable1.Items[i].FindControl("txt_count")).Text;
                 dr["unitprice"] = ((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text;
                 dr["cud"] = ((HiddenField)grdTable1.Items[i].FindControl("hdn_cud")).Value;

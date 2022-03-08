@@ -7,12 +7,15 @@ using System.Web.UI.WebControls;
 using PublicLibsManagement;
 using MysqlLib;
 using System.Data;
+using les;
 
 namespace iljin.popUp
 {
     public partial class popwork : ApplicationRoot
     {
         DB_mysql km;
+        private DataTable Mdt;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -34,6 +37,7 @@ namespace iljin.popUp
                     txt_registrationdate.Text = date;
 
                     UserSetting();
+                    btn_add_Click(null, null);
                 }
             }
         }
@@ -50,35 +54,30 @@ namespace iljin.popUp
             tb_emp.Text = km.GetDTa(sql).Rows[0][0].ToString();
         }
 
-        //기존에 저희가 저장했던 작업 데이터 검색
-        //Request.Params.Get("code")로 가져온 일련번호로 
-        //DB에서 SELECT 해서 해당 일련번호의 데이터들을 가져온다,(등록일,작업일~~)
-        //프로시져 만들어라! SP_item_remake_GetByCode('') <= serialNo <= PrimaryKey
+        //작업정보 && 작업제품 정보
         private void Select()
         {
            if (km == null) km = new DB_mysql();
 
-            DataTable Mdt = PROCEDURE.SELECT("SP_item_remake_GetbyCode", hdn_serialNo.Value, km);
+            DataTable dt = PROCEDURE.SELECT("SP_item_remake_GetbyCode", hdn_serialNo.Value, km);
 
-            if (Mdt.Rows.Count < 1)
+            if (dt.Rows.Count < 1)
                 return;
 
             txt_serialNo.Text = hdn_serialNo.Value;
-            txt_registrationdate.Text = Mdt.Rows[0]["registrationdate"].ToString();
-            txt_workdate.Text = Mdt.Rows[0]["workdate"].ToString();
-            tb_foreign.Text = Mdt.Rows[0]["name"].ToString();
-            hidden_idx.Value =  Mdt.Rows[0]["foreignIdx"].ToString();
-            tb_emp.Text = Mdt.Rows[0]["empName"].ToString();
-            hidden_userCode.Value = Mdt.Rows[0]["empCode"].ToString();
-            cb_machineNo.SelectedValue = Mdt.Rows[0]["machineNo"].ToString();
-            txt_workitem.Text = Mdt.Rows[0]["workI"].ToString();
-            hidden_itemCode.Value = Mdt.Rows[0]["workitem"].ToString();
-            txt_workitemQty.Text = Mdt.Rows[0]["workitemQty"].ToString();
-            txt_produceitem.Text = Mdt.Rows[0]["prodI"].ToString();
-            hidden_itemCode2.Value = Mdt.Rows[0]["produceitem"].ToString();
-            txt_produceitemQty.Text = Mdt.Rows[0]["produceitemQty"].ToString();
+            txt_registrationdate.Text = dt.Rows[0]["registrationdate"].ToString();
+            txt_workdate.Text = dt.Rows[0]["workdate"].ToString();
+            tb_foreign.Text = dt.Rows[0]["name"].ToString();
+            hidden_idx.Value =  dt.Rows[0]["foreignIdx"].ToString();
+            tb_emp.Text = dt.Rows[0]["empName"].ToString();
+            hidden_userCode.Value = dt.Rows[0]["empCode"].ToString();
+            cb_machineNo.SelectedValue = dt.Rows[0]["machineNo"].ToString();
+            txt_workitem.Text = dt.Rows[0]["workI"].ToString();
+            hidden_itemCode.Value = dt.Rows[0]["workitem"].ToString();
+            txt_workitemQty.Text = dt.Rows[0]["workitemQty"].ToString();
         }
 
+        //저장
         protected void btn_save_Click(object sender, EventArgs e)
         {
             if (km == null) km = new DB_mysql();
@@ -90,7 +89,7 @@ namespace iljin.popUp
                 if (hdn_serialNo.Value != "") //수정
                 {
                     object[] obj = { hdn_serialNo.Value, txt_registrationdate, txt_workdate,hidden_idx,hidden_userCode,cb_machineNo,
-                    hidden_itemCode,txt_workitemQty,hidden_itemCode2,txt_produceitemQty};
+                    hidden_itemCode,txt_workitemQty};
                    PROCEDURE.CUD_TRAN("SP_item_remake_Update", obj, km);
                 }
                 else // 추가
@@ -98,7 +97,7 @@ namespace iljin.popUp
                     string serialNo = PublicLibs.SetCode_Tran("tb_item_remake", "serialNo", ConstClass.REMAKE_CODE_PREFIX, km);
 
                     object[] obj = {txt_serialNo,txt_registrationdate,txt_workdate,hidden_idx,hidden_userCode,cb_machineNo,
-                    hidden_itemCode,txt_workitemQty,hidden_itemCode2,txt_produceitemQty};
+                    hidden_itemCode,txt_workitemQty};
                    PROCEDURE.CUD_TRAN("SP_item_remake_Add", obj, km);
                 }
 
@@ -111,12 +110,75 @@ namespace iljin.popUp
             {
                 PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
 
-                Response.Write("<script>('저장실패');</script>");
+                Response.Write("<script>alert('저장실패');</script>");
             }
         }
 
-      
+        //작업정보 저장
+        private void Save_WorkInfo()
+        {
 
+        }
 
+        //생산제품 저장
+        private void Save_ProdInfo()
+        {
+
+        }
+
+        //추가
+        protected void btn_add_Click(object sender, EventArgs e)
+        {
+            Get_Dt_From_Grid();
+            Set_Grid_From_Dt();
+        }
+
+        //그리드 정보로 DT복사 및 DT의 새로운 row 만들기
+        private void Get_Dt_From_Grid()
+        {
+            Mdt = new DataTable();
+
+            Mdt.Columns.Add("itemCode");
+            Mdt.Columns.Add("itemName");
+            Mdt.Columns.Add("qty");
+
+            DataRow dr;
+
+            for (int i = 0;  i < grdTable1.Items.Count; i++)
+            { 
+                dr = Mdt.NewRow();
+
+                dr["itemCode"] = ((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value;
+                dr["itemName"] = ((TextBox)grdTable1.Items[i].FindControl("txt_produceitem")).Text;
+                dr["qty"] = ((TextBox)grdTable1.Items[i].FindControl("txt_produceitemQty")).Text;
+
+                Mdt.Rows.Add(dr);
+            }
+
+            dr = Mdt.NewRow();
+
+            Mdt.Rows.Add(dr);
+        }
+
+        //그리드에 DT넣기
+        private void Set_Grid_From_Dt()
+        {
+            grdTable1.DataSource = Mdt;
+            grdTable1.DataBind();
+
+            TextBox tb;
+
+            for(int i = 0; i < grdTable1.Items.Count; i ++)
+            {
+                ((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value = Mdt.Rows[i]["itemCode"].ToString();
+                ((TextBox)grdTable1.Items[i].FindControl("txt_produceitemQty")).Text = Mdt.Rows[i]["qty"].ToString();
+
+                tb = ((TextBox)grdTable1.Items[i].FindControl("txt_produceitem"));
+                tb.Text = Mdt.Rows[i]["itemName"].ToString();
+                tb.Attributes.Add("onkeypress", $"KeyPressEvent('{i.ToString()}');");
+                tb.Attributes.Add("onkeydown", $"KeyDownEvent('{i.ToString()}');");
+                tb.Attributes.Add("onclick", $"visibleChk('{i.ToString()}','1');");
+            }
+        }
     }
 }

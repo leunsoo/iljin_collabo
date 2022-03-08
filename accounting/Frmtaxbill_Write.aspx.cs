@@ -22,7 +22,7 @@ namespace iljin
             {
                 if (km == null) km = new DB_mysql();
 
-                les_Tool.Set_TextBoxes_Period_MM_01_To_Now(tb_orderdate, tb_orderdate2);
+                Tool_Date.Set_TextBoxes_Period_MM_01_To_Now(tb_orderdate, tb_orderdate2);
                 Search();
             }
         }

@@ -114,7 +114,12 @@
      <script type="text/javascript">
          function work(div) {
              var grd = document.getElementById('<%= grdTable.ClientID%>'); //그리드의 클라이언트ID로 그리드 가져옴
-             var rowCount = grd.rows.length; // 그리드의 row의 개수
+             if (!grd) {
+                 var rowCount = 0;
+             }
+             else {
+                 var rowCount = grd.rows.length; // 그리드의 row의 개수
+             }
              var chkCount = 0; //체크된 체크박스 개수
              var serialNo = ''; //일련번호 값을 넣어줄 변수
 
@@ -151,8 +156,8 @@
              var url = "/stock/popUp/popwork.aspx?code=" + serialNo;
              var name = "_blank"
              var popupX = (window.screen.width / 2) - (800 / 2);
-             var popupY = (window.screen.height / 2) - (500 / 2);
-             window.open(url, name, 'status=no, width=800, height=550, left=' + popupX + ',top=' + popupY);
+             var popupY = (window.screen.height / 2) - (650 / 2);
+             window.open(url, name, 'status=no, width=800, height=650, left=' + popupX + ',top=' + popupY);
          }
 
          function workorder() {

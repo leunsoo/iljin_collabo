@@ -350,14 +350,14 @@
                                 <th class="mWt8p">주문수량</th>
                                 <th class="mWt7p">중량</th>
                                 <th class="mWt10p">단가</th>
-                                <th class="mWt10p">합계</th>
-                                <th class="mWt8p">삭제</th>
-
+                                <th class="mWt8p">합계</th>
+                                <th class="mWt4p">영세</th>
+                                <th class="mWt6p">삭제</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="10">
+                                <td colspan="11">
                                     <div style="height: 225px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
                                         <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1317">
                                             <HeaderStyle Height="25px" />
@@ -425,7 +425,14 @@
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="10%" CssClass="tar" />
+                                                    <ItemStyle Width="8%" CssClass="tar" />
+                                                </asp:TemplateColumn>
+                                                <asp:TemplateColumn HeaderText="">
+                                                    <ItemTemplate>
+                                                        <asp:CheckBox ID="chk_taxFree" runat="server" CssClass="tac"/>
+                                                    </ItemTemplate>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <ItemStyle Width="4%"/>
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
@@ -433,7 +440,7 @@
                                                         <asp:Button ID="grd_btn_del" runat="server" CssClass="btn_50_20 btn_red" Text="삭제"></asp:Button>
                                                         <asp:HiddenField ID="hdn_cud" runat="server" />
                                                     </ItemTemplate>
-                                                    <ItemStyle Width="8%" CssClass="" />
+                                                    <ItemStyle Width="6%" CssClass="" />
                                                 </asp:TemplateColumn>
                                             </Columns>
                                         </asp:DataGrid>

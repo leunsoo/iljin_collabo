@@ -25,6 +25,8 @@ namespace iljin
         }
         private void Search()//조회
         {
+            return;
+
             if (km == null) km = new DB_mysql();
 
             object[] obj = { tb_registrationdate, tb_registrationdate2, tb_item };

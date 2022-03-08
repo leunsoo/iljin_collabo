@@ -29,7 +29,7 @@ namespace iljin.popUp
 
                 if (hdn_serialNo.Value == "")
                 {
-                    txt_serialNo.Text = les_Tool_DB.SetCode("tb_taxbill", "serialNo", ConstClass.TAXBILL_CODE_PREFIX, km);
+                    txt_serialNo.Text = Tool_DB.SetCode("tb_taxbill", "serialNo", ConstClass.TAXBILL_CODE_PREFIX, km);
                 }
                 else
                 {
@@ -201,7 +201,7 @@ namespace iljin.popUp
 
                 if (hdn_serialNo.Value == "") //추가
                 {
-                    string serialNo = les_Tool_DB.SetCode_Tran("tb_taxbill", "serialNo", ConstClass.TAXBILL_CODE_PREFIX, km);
+                    string serialNo = Tool_DB.SetCode_Tran("tb_taxbill", "serialNo", ConstClass.TAXBILL_CODE_PREFIX, km);
 
                     object[] cusObjs = { serialNo, txt_registration2, txt_cusName2, txt_businessNo2, txt_bossname2, txt_address2, txt_business2, txt_businessitem2, txt_email2,txt_manager2,txt_phone2 };
 
