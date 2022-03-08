@@ -37,8 +37,8 @@
                                 <th class="mWt15p">거래처</th>
                                 <th class="mWt5p">샘플수량</th>
                                 <th class="mWt10p">등록자</th>
-                                <th class="mWt15p">비고</th>
-                                <th class="mWt20p">관리</th>
+                                <th class="mWt20p">비고</th>
+                                <th class="mWt15p">관리</th>
 
 
                             </tr>
@@ -78,16 +78,16 @@
                                                 </asp:TemplateColumn>
                                                   <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="15%" CssClass="" />
+                                                    <ItemStyle Width="20%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <ItemTemplate>
-                                                        <asp:Button ID="btn_correction" runat="server" CssClass="btn_green btn_100_30 ml10" Text="수정" />
-                                                        <asp:Button ID="btn_del" runat="server" CssClass="btn_red btn_100_30 ml10" Text="삭제"  />
+                                                        <asp:Button ID="btn_correction" runat="server" CssClass="btn_green btn_60_25 ml10" Text="수정" />
+                                                        <asp:Button ID="btn_del" runat="server" CssClass="btn_red btn_60_25 ml10" Text="삭제"  />
 
                                                     </ItemTemplate>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="20%" CssClass="" />
+                                                    <ItemStyle Width="15%" CssClass="" />
                                                 </asp:TemplateColumn>
 
                                             </Columns>
