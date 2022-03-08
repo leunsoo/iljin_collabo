@@ -145,35 +145,37 @@ namespace iljin.popUp
 
                 if (itemCode != "")
                 {
-                    ((TextBox)grdTable1.Items[i].FindControl("t1")).Text = itemDt.Rows[i]["div1"].ToString();
-                    ((TextBox)grdTable1.Items[i].FindControl("t2")).Text = itemDt.Rows[i]["div2"].ToString();
-                    ((TextBox)grdTable1.Items[i].FindControl("t3")).Text = itemDt.Rows[i]["thickness"].ToString();
-                    ((TextBox)grdTable1.Items[i].FindControl("t4")).Text = itemDt.Rows[i]["width"].ToString();
-                    ((TextBox)grdTable1.Items[i].FindControl("t5")).Text = itemDt.Rows[i]["length"].ToString();
+                    //((TextBox)grdTable1.Items[i].FindControl("t1")).Text = itemDt.Rows[i]["div1"].ToString();
+                    //((TextBox)grdTable1.Items[i].FindControl("t2")).Text = itemDt.Rows[i]["div2"].ToString();
+                    //((TextBox)grdTable1.Items[i].FindControl("t3")).Text = itemDt.Rows[i]["thickness"].ToString();
+                    //((TextBox)grdTable1.Items[i].FindControl("t4")).Text = itemDt.Rows[i]["width"].ToString();
+                    // ((TextBox)grdTable1.Items[i].FindControl("t5")).Text = itemDt.Rows[i]["length"].ToString();DIKR
+                    grdTable1.Items[i].Cells[2].Text = itemDt.Rows[i]["div1"].ToString();
+                    grdTable1.Items[i].Cells[3].Text = itemDt.Rows[i]["div2"].ToString();
+                    grdTable1.Items[i].Cells[4].Text = itemDt.Rows[i]["thickness"].ToString();
+                    grdTable1.Items[i].Cells[5].Text = itemDt.Rows[i]["width"].ToString();
+                    grdTable1.Items[i].Cells[6].Text = itemDt.Rows[i]["length"].ToString();
                 }
                 else
                 {
-                    ((TextBox)grdTable1.Items[i].FindControl("t1")).Text = "";
-                    ((TextBox)grdTable1.Items[i].FindControl("t2")).Text = "";
-                    ((TextBox)grdTable1.Items[i].FindControl("t3")).Text = "";
-                    ((TextBox)grdTable1.Items[i].FindControl("t4")).Text = "";
-                    ((TextBox)grdTable1.Items[i].FindControl("t5")).Text = "";
+                    //((TextBox)grdTable1.Items[i].FindControl("t1")).Text = "";
+                    //((TextBox)grdTable1.Items[i].FindControl("t2")).Text = "";
+                    //((TextBox)grdTable1.Items[i].FindControl("t3")).Text = "";
+                    //((TextBox)grdTable1.Items[i].FindControl("t4")).Text = "";
+                    // ((TextBox)grdTable1.Items[i].FindControl("t5")).Text = "";
+                    grdTable1.Items[i].Cells[2].Text = "";
+                    grdTable1.Items[i].Cells[3].Text = "";
+                    grdTable1.Items[i].Cells[4].Text ="";
+                    grdTable1.Items[i].Cells[5].Text ="";
+                    grdTable1.Items[i].Cells[6].Text = "";
                 }
 
                 tb = grdTable1.Items[i].FindControl("txt_count") as TextBox;
                 tb.Text = itemDt.Rows[i]["qty"].ToString();
-                tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}');");
-
-                tb = grdTable1.Items[i].FindControl("txt_weight") as TextBox;
-                tb.Text = itemDt.Rows[i]["weight"].ToString();
-                tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}');");
+                tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); Sum_Count();");
 
                 tb = grdTable1.Items[i].FindControl("txt_unitprice") as TextBox;
                 tb.Text = itemDt.Rows[i]["unitprice"].ToString();
-                tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}');");
-
-                tb = grdTable1.Items[i].FindControl("txt_price") as TextBox;
-                tb.Text = itemDt.Rows[i]["price"].ToString();
                 tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}');");
 
                 ((HiddenField)grdTable1.Items[i].FindControl("hdn_cud")).Value = itemDt.Rows[i]["cud"].ToString();
@@ -253,9 +255,7 @@ namespace iljin.popUp
             dt.Columns.Add("width", typeof(string));
             dt.Columns.Add("length", typeof(string));
             dt.Columns.Add("qty", typeof(string));
-            dt.Columns.Add("weight", typeof(string));
             dt.Columns.Add("unitprice", typeof(string));
-            dt.Columns.Add("price", typeof(string));
             dt.Columns.Add("cud", typeof(string));
 
             DataRow dr;
@@ -267,15 +267,13 @@ namespace iljin.popUp
                 dr["idx"] = grdTable1.Items[i].Cells[0].Text;
                 dr["itemCode"] = ((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode")).Value;
                 dr["fullName"] = ((TextBox)grdTable1.Items[i].FindControl("txt_itemname")).Text;
-                dr["div1"] = ((TextBox)grdTable1.Items[i].FindControl("t1")).Text;
-                dr["div2"] = ((TextBox)grdTable1.Items[i].FindControl("t2")).Text;
-                dr["thickness"] = ((TextBox)grdTable1.Items[i].FindControl("t3")).Text;
-                dr["width"] = ((TextBox)grdTable1.Items[i].FindControl("t4")).Text;
-                dr["length"] = ((TextBox)grdTable1.Items[i].FindControl("t5")).Text;
+                dr["div1"] = grdTable1.Items[i].Cells[2].Text;//((TextBox)grdTable1.Items[i].FindControl("t1")).Text;
+                dr["div2"] = grdTable1.Items[i].Cells[3].Text;//((TextBox)grdTable1.Items[i].FindControl("t2")).Text;
+                dr["thickness"] = grdTable1.Items[i].Cells[4].Text;//((TextBox)grdTable1.Items[i].FindControl("t3")).Text;
+                dr["width"] = grdTable1.Items[i].Cells[5].Text;//((TextBox)grdTable1.Items[i].FindControl("t4")).Text;
+                dr["length"] = grdTable1.Items[i].Cells[6].Text;// ((TextBox)grdTable1.Items[i].FindControl("t5")).Text;
                 dr["qty"] = ((TextBox)grdTable1.Items[i].FindControl("txt_count")).Text;
-                dr["weight"] = ((TextBox)grdTable1.Items[i].FindControl("txt_weight")).Text;
                 dr["unitprice"] = ((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text;
-                dr["price"] = ((TextBox)grdTable1.Items[i].FindControl("txt_price")).Text;
                 dr["cud"] = ((HiddenField)grdTable1.Items[i].FindControl("hdn_cud")).Value;
 
                 dt.Rows.Add(dr);
@@ -409,9 +407,7 @@ namespace iljin.popUp
                         $"'{hdn_idx.Value}'," +
                         $"'{itemCode}'," +
                         $"'{((TextBox)grdTable1.Items[i].FindControl("txt_count")).Text}'," +
-                        $"'{ ((TextBox)grdTable1.Items[i].FindControl("txt_weight")).Text}'," +
-                        $"'{((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text}'," +
-                        $"'{((TextBox)grdTable1.Items[i].FindControl("txt_price")).Text}');";
+                        $"'{((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text}');";
                 }
                 else if (cud == "u") //수정
                 {
@@ -419,9 +415,7 @@ namespace iljin.popUp
                         $"'{grdTable1.Items[i].Cells[0].Text}'," +
                         $"'{itemCode}'," +
                         $"'{((TextBox)grdTable1.Items[i].FindControl("txt_count")).Text}'," +
-                        $"'{ ((TextBox)grdTable1.Items[i].FindControl("txt_weight")).Text}'," +
-                        $"'{((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text}'," +
-                        $"'{((TextBox)grdTable1.Items[i].FindControl("txt_price")).Text}');";
+                        $"'{((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text}');";
                 }
             }
 
@@ -479,9 +473,7 @@ namespace iljin.popUp
                 grdTable1.Items[row].Cells[6].Text = "";   //길이
 
                 ((TextBox)grdTable1.Items[row].FindControl("txt_count")).Text = "";  //개수
-                ((TextBox)grdTable1.Items[row].FindControl("txt_weight")).Text = "";  //중량
                 ((TextBox)grdTable1.Items[row].FindControl("txt_unitprice")).Text = "";  //단가
-                ((TextBox)grdTable1.Items[row].FindControl("txt_price")).Text = "";  //가격
                 return;
             }
 
@@ -492,84 +484,16 @@ namespace iljin.popUp
 
             DataTable dt = km.GetDTa(sql);
 
-            ((TextBox)grdTable1.Items[row].FindControl("t1")).Text = dt.Rows[0][0].ToString();   //구분1
-            ((TextBox)grdTable1.Items[row].FindControl("t2")).Text = dt.Rows[0][1].ToString();   //구분2
-            ((TextBox)grdTable1.Items[row].FindControl("t3")).Text = dt.Rows[0][2].ToString();   //두께
-            ((TextBox)grdTable1.Items[row].FindControl("t4")).Text = dt.Rows[0][3].ToString();   //폭
-            ((TextBox)grdTable1.Items[row].FindControl("t5")).Text = dt.Rows[0][4].ToString();   //길이
-
-            //((TextBox)grdTable1.Items[row].FindControl("grd_txt_itemName2")).Text = itemName;
-            //((HiddenField)grdTable1.Items[row].FindControl("grd_hdn_actualItemCode")).Value = dt.Rows[0][0].ToString();
-
-            //grdTable1.Items[row].Cells[5].Text = dt.Rows[0][2].ToString();  //단위
-            //grdTable1.Items[row].Cells[6].Text = dt.Rows[0][3].ToString();  //재고
-            //((TextBox)grdTable1.Items[row].FindControl("grd_txt_orderQty")).Text = "1";  //주문수량
-            //((TextBox)grdTable1.Items[row].FindControl("grd_txt_unitprice")).Text = dt.Rows[0][4].ToString();  //단가
-
-            //int thickness = int.Parse(dt.Rows[0][5].ToString()); //두께
-            //int width = int.Parse(dt.Rows[0][6].ToString());     //폭
-            //int length = int.Parse(dt.Rows[0][7].ToString());    //길이
-            //float weight = 0f;
-            //float unitprice = dt.Rows[0][4].ToString() == "" ? 0 : float.Parse(dt.Rows[0][4].ToString());
-            //중량 = 두께 * 폭 * 길이 * 비중 
-            //여기서 거래처별 비중과 적용소수점을 계산해주어야 한다.
-
-            //if (itemName.Contains("PET"))
-            //{
-            //    weight = float.Parse(hidden_weight_Pet.Value);
-            //}
-            //else if (itemName.Contains("PP"))
-            //{
-            //    weight = float.Parse(hidden_weight_Pp.Value);
-            //}
-            //else if (itemName.Contains("알미늄"))
-            //{
-            //    weight = float.Parse(hidden_weight_Al.Value);
-            //}
-
-            //float totalWeight = weight * thickness * width * length * 0.001f * 0.0001f;
-
-            //switch (hidden_cus_Decimal.Value.Trim())
-            //{
-            //    case "소수3자리버림":
-            //        totalWeight = (float)Math.Truncate(totalWeight * 100) / 100;
-            //        break;
-            //    case "소수3자리반올림":
-            //        totalWeight = (float)Math.Round(totalWeight, 3);
-            //        break;
-            //    case "소수3자리올림":
-            //        totalWeight = (float)Math.Ceiling(totalWeight * 100) / 100;
-            //        break;
-            //    case "소수2자리버림":
-            //        totalWeight = (float)Math.Truncate(totalWeight * 10) / 10;
-            //        break;
-            //    case "소수2자리반올림":
-            //        totalWeight = (float)Math.Round(totalWeight, 2);
-            //        break;
-            //    case "소수2자리올림":
-            //        totalWeight = (float)Math.Ceiling(totalWeight * 10) / 10;
-            //        break;
-            //    default:
-            //        totalWeight = (float)Math.Truncate(totalWeight * 100) / 100;
-            //        break;
-            //}
-
-            //((HiddenField)grdTable.Items[row].FindControl("hdn_weight")).Value = totalWeight.ToString();
-
-            //float price = totalWeight * unitprice;
-
-            //grdTable.Items[row].Cells[8].Text = totalWeight.ToString();
-            //grdTable.Items[row].Cells[10].Text = price.ToString();
-
-            //float tWeight = float.Parse(txt_totalWeight.Text);
-            //int totalPrice = int.Parse(txt_totalamount.Text);
-
-            //txt_totalWeight.Text = (tWeight + totalWeight).ToString();
-            //txt_totalamount.Text = (totalPrice + price).ToString();
-
-            //float supplyPrice = (totalPrice + price) / 1.1f;
-            //txt_supplyprice.Text = Math.Round(supplyPrice).ToString();
-            //txt_vat.Text = Math.Round((supplyPrice * 0.1f)).ToString();
+            //((TextBox)grdTable1.Items[row].FindControl("t1")).Text = dt.Rows[0][0].ToString();   //구분1
+            //((TextBox)grdTable1.Items[row].FindControl("t2")).Text = dt.Rows[0][1].ToString();   //구분2
+            //((TextBox)grdTable1.Items[row].FindControl("t3")).Text = dt.Rows[0][2].ToString();   //두께
+            //((TextBox)grdTable1.Items[row].FindControl("t4")).Text = dt.Rows[0][3].ToString();   //폭
+            //((TextBox)grdTable1.Items[row].FindControl("t5")).Text = dt.Rows[0][4].ToString();   //길이
+            grdTable1.Items[row].Cells[2].Text = dt.Rows[0][0].ToString();
+            grdTable1.Items[row].Cells[3].Text = dt.Rows[0][1].ToString();
+            grdTable1.Items[row].Cells[4].Text = dt.Rows[0][2].ToString();
+            grdTable1.Items[row].Cells[5].Text = dt.Rows[0][3].ToString();
+            grdTable1.Items[row].Cells[6].Text = dt.Rows[0][4].ToString();
         }
 
         private void Alert(string msg)

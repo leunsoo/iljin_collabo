@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="/webapp/css/jquery-ui.theme.min.css" />
     <link rel="stylesheet" type="text/css" href="/webapp/css/sub.css" />
     <link rel="stylesheet" type="text/css" href="/webapp/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="/webapp/css/ibuild.css" />
     <link rel="stylesheet" type="text/css" href="/webapp/css/popUp.css" />
+    <link rel="stylesheet" type="text/css" href="/webapp/css/ibuild.css" />
     <script src="/webapp/js/jquery-1.11.1.min.js"></script>
     <script src="/webapp/js/skyblueUtil.js"></script>
     <script src="/webapp/js/jquery-ui.min.js"></script>
@@ -187,7 +187,7 @@
                 var txt = document.getElementById(txtId);
                 var hidden_keyWord = document.getElementById(hdnkeyward);
                 document.getElementById(hdnId).value = '';
-                itemSet(selectRow, '');
+                itemInfoInit(selectRow, '');
                 //문자가 없는데 입력 시 return
                 if (txt.value.length == 0) {
                     return false;
@@ -240,15 +240,22 @@
             }
         }
 
-        function itemSet(row,text) {
+        function itemInfoInit(row, text) {
+            let grid = document.getElementById('<%= grdTable1.ClientID%>');
+
             if (row > -1) {
 
-                if (text == '') {
-                    for (var i = 1; i < 6; i++) {
-                        var txt = document.getElementById('grdTable1_t' + i + '_' + row);
-                        txt.value = '';
-                    }
-                }
+                grid.rows[row].cells[1].innerText = "";
+                grid.rows[row].cells[2].innerText = "";
+                grid.rows[row].cells[3].innerText = "";
+                grid.rows[row].cells[4].innerText = "";
+                grid.rows[row].cells[5].innerText = "";
+                //if (text == '') {
+                //    for (var i = 1; i < 5; i++) {
+                //        var txt = document.getElementById('grdTable1_t' + i + '_' + row);
+                //        txt.value = '';
+                //    }
+                //}
             }
         }
 
@@ -298,7 +305,7 @@
                     </td>
                     <th>가격</th>
                     <td>
-                        <asp:TextBox ID="txt_price" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_price" runat="server" ></asp:TextBox>
                     </td>
                     <th>출발예정일</th>
                     <td>
@@ -306,7 +313,7 @@
                     </td>
                     <th>수량</th>
                     <td>
-                        <asp:TextBox ID="txt_qty" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_qty" runat="server" onchange="Paste_TotalWeight();"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -334,7 +341,7 @@
                 <tr>
                     <th>계약금액</th>
                     <td>
-                        <asp:TextBox ID="txt_contractprice" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_contractprice" runat="server" onchange="Paste_TotalPrice();"></asp:TextBox>
                     </td>
                     <th>등록일</th>
                     <td>
@@ -369,22 +376,20 @@
                     <table class="grtable_th">
                         <thead>
                             <tr>
-                                <th class="mWt18p">제품명</th>
-                                <th class="mWt8p">제품구분1</th>
-                                <th class="mWt8p">제품구분2</th>
-                                <th class="mWt7p">두께</th>
-                                <th class="mWt7p">폭</th>
-                                <th class="mWt7p">길이</th>
-                                <th class="mWt7p">개수</th>
-                                <th class="mWt10p">중량(kg)</th>
+                                <th class="mWt23p">제품명</th>
+                                <th class="mWt11p">제품구분1</th>
+                                <th class="mWt11p">제품구분2</th>
+                                <th class="mWt9p">두께</th>
+                                <th class="mWt9p">폭</th>
+                                <th class="mWt9p">길이</th>
+                                <th class="mWt10p">개수</th>
                                 <th class="mWt10p">단가($)</th>
-                                <th class="mWt10p">가격(USD)</th>
                                 <th class="mWt8p">관리</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="12">
+                                <td colspan="10">
                                     <div style="height: auto; width:auto; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
                                         <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
                                             <HeaderStyle Height="25px" />
@@ -399,53 +404,46 @@
                                                         <asp:TextBox ID="txt_itemname" runat="server" autocomplete="off"></asp:TextBox>
                                                     </ItemTemplate>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="18%" CssClass="" />
+                                                    <ItemStyle Width="23%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
+                                            <%--        <ItemTemplate>
                                                         <asp:TextBox ID="t1" CssClass="lblTextBox" runat="server" ></asp:TextBox>
-                                                    </ItemTemplate>
+                                                    </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="8%" CssClass="" />
+                                                    <ItemStyle Width="11%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
+                                                  <%--  <ItemTemplate>
                                                         <asp:TextBox ID="t2" CssClass="lblTextBox" runat="server" ></asp:TextBox>
-                                                    </ItemTemplate>
+                                                    </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="8%" CssClass="" />
+                                                    <ItemStyle Width="11%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
+                                             <%--       <ItemTemplate>
                                                         <asp:TextBox ID="t3" CssClass="lblTextBox" runat="server" ></asp:TextBox>
-                                                    </ItemTemplate>
+                                                    </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="7%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
+                                        <%--            <ItemTemplate>
                                                         <asp:TextBox ID="t4" CssClass="lblTextBox" runat="server" ></asp:TextBox>
-                                                    </ItemTemplate>
+                                                    </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="7%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
+                          <%--                          <ItemTemplate>
                                                         <asp:TextBox ID="t5" CssClass="lblTextBox" runat="server"></asp:TextBox>
-                                                    </ItemTemplate>
+                                                    </ItemTemplate>--%>
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="7%" CssClass="" />
+                                                    <ItemStyle Width="9%" CssClass="" />
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <ItemTemplate>
                                                         <asp:TextBox ID="txt_count" runat="server" CssClass="tar"></asp:TextBox>
-                                                    </ItemTemplate>
-                                                    <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="7%" CssClass="" />
-                                                </asp:TemplateColumn>
-                                                <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
-                                                        <asp:TextBox ID="txt_weight" runat="server" CssClass="tar"></asp:TextBox>
                                                     </ItemTemplate>
                                                     <HeaderStyle HorizontalAlign="Center" />
                                                     <ItemStyle Width="10%" CssClass="" />
@@ -453,13 +451,6 @@
                                                 <asp:TemplateColumn HeaderText="">
                                                     <ItemTemplate>
                                                         <asp:TextBox ID="txt_unitprice" runat="server" CssClass="tar"></asp:TextBox>
-                                                    </ItemTemplate>
-                                                    <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="10%" CssClass="" />
-                                                </asp:TemplateColumn>
-                                                <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
-                                                        <asp:TextBox ID="txt_price" runat="server" CssClass="tar"></asp:TextBox>
                                                     </ItemTemplate>
                                                     <HeaderStyle HorizontalAlign="Center" />
                                                     <ItemStyle Width="10%" CssClass="" />
@@ -483,18 +474,15 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th class="mWt50p" colspan="6">Total</th>
-                                <th class="mWt5p">
-                                    <asp:TextBox ID="txt_totalQty" runat="server" CssClass="mWt90p tar"></asp:TextBox>
+                                <th colspan="6">Total</th>
+                                <th >
+                                    <asp:TextBox ID="txt_totalQty" runat="server" CssClass="mWt90p tar" placeholder="개수"></asp:TextBox>
                                 </th>
-                                <th class="mWt10p">
-                                    <asp:TextBox ID="txt_totalWeight" runat="server" CssClass="mWt90p tar"></asp:TextBox>
+                                <th >
+                                    <asp:TextBox ID="txt_totalWeight" runat="server" CssClass="mWt90p tar"  placeholder="중량"></asp:TextBox>
                                 </th>
-                                <th class="mWt10p"></th>
-                                <th class="mWt15p">                                    
-                                    <asp:TextBox ID="txt_totalPrice" runat="server" CssClass="mWt90p tar"></asp:TextBox>
-                                </th>
-                                <th class="mWt10p"></th>
+                                <th>
+                                    <asp:TextBox ID="txt_totalPrice" runat="server" CssClass="mWt90p tar"  placeholder="가격"></asp:TextBox></th>
                             </tr>
                         </tfoot>
                     </table>
@@ -506,12 +494,36 @@
             <asp:Button ID="btn_save" Text="저장" runat="server" CssClass="btn_150_40 btn_black ml10" OnClick="btn_save_Click" />
             <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
         </div>
-        
-        
         <script type="text/javascript">
             fDatePickerById("txt_contractdate");
             fDatePickerById("txt_arrivaldate");
             fDatePickerById("txt_registrationdate");
+
+            //계약정보 가격 => 구매품목 그리드 가격
+            function Paste_TotalPrice() {
+                document.getElementById('<%= txt_totalPrice.ClientID %>').value = document.getElementById('<%= txt_contractprice.ClientID %>').value;
+            }
+
+            //계약정보 수량 => 구매품목 그리드 중량
+            function Paste_TotalWeight() {
+                document.getElementById('<%= txt_totalWeight.ClientID %>').value = document.getElementById('<%= txt_qty.ClientID%>').value;
+            }
+
+            //구매품목 수량 총합 계산
+            function Sum_Count() {
+                let grid = document.getElementById('<%= grdTable1.ClientID%>');
+                let sum = 0;
+
+                for (let i = 0; i < grid.rows.length; i++) {
+                    let qty = document.getElementById('grdTable1_txt_count_' + i).value;
+
+                    if (!parseInt(qty)) continue;
+
+                    sum += parseInt(qty);
+                }
+
+                document.getElementById('<%= txt_totalQty.ClientID %>').value = sum;
+            }
 
             function change_cud(num) {
                 var cud = document.getElementById('grdTable1_hdn_cud_' + num);

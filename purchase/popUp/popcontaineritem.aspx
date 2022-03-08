@@ -33,18 +33,17 @@
                 <thead>
                     <tr>
                         <th class="mWt26p">제품명</th>
-                        <th class="mWt12p">제품구분1</th>
-                        <th class="mWt12p">제품구분2</th>
-                        <th class="mWt10p">두께</th>
-                        <th class="mWt10p">폭</th>
-                        <th class="mWt10p">길이</th>
-                        <th class="mWt10p">개수</th>
-                        <th class="mWt10p">중량(kg)</th>
+                        <th class="mWt13p">제품구분1</th>
+                        <th class="mWt13p">제품구분2</th>
+                        <th class="mWt12p">두께</th>
+                        <th class="mWt12p">폭</th>
+                        <th class="mWt12p">길이</th>
+                        <th class="mWt12p">개수</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="8">
+                        <td colspan="7">
                             <div style="overflow:auto">
                                 <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
                                     <HeaderStyle Height="25px" />
@@ -56,6 +55,18 @@
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText="">
                                             <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="13%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText="">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="13%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText="">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="12%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText="">
+                                            <HeaderStyle HorizontalAlign="Center" />
                                             <ItemStyle Width="12%" CssClass="" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText="">
@@ -64,23 +75,7 @@
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
-                                        </asp:TemplateColumn>
-                                        <asp:TemplateColumn HeaderText="">
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
-                                        </asp:TemplateColumn>
-                                        <asp:TemplateColumn HeaderText="">
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
-                                        </asp:TemplateColumn>
-                                        <asp:TemplateColumn HeaderText="">
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
-                                        </asp:TemplateColumn>
-                                        <asp:TemplateColumn HeaderText="">
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
+                                            <ItemStyle Width="12%" CssClass="" />
                                         </asp:TemplateColumn>
                                     </Columns>
                                     <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
@@ -91,9 +86,8 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th class="mWt80p" colspan="6">Total</th>
-                        <th class="mWt10p"></th>
-                        <th class="mWt10p"></th>
+                        <th colspan="6">Total</th>
+                        <th id ="txt_totalQty" runat="server"></th>
                     </tr>
                 </tfoot>
             </table>

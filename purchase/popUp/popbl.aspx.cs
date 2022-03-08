@@ -200,21 +200,6 @@ namespace iljin.popUp
                     btn.Attributes.Add("onclick", $"showcontainer('{i.ToString()}','0'); return false;");
                 }
 
-                //if (itemChk == "0" || itemChk == "")
-                //{
-                //    btn.Text = "제품선택";
-                //    btn.BackColor = Color.Green;
-                //    btn.ForeColor = Color.White;
-                //    btn.Attributes.Add("onclick", $"showcontainer('{i.ToString()}','0'); return false;");
-                //}
-                //else
-                //{
-                //    btn.Text = "선택완료";
-                //    btn.BackColor = Color.Black;
-                //    btn.ForeColor = Color.White;
-                //    btn.Attributes.Add("onclick", $"containeritem('{containerDt.Rows[i][0].ToString()}'); return false;");
-                //}
-
                 if(hidden_chkUpdate.Value == "1")
                 {
                     btn = grdTable1.Items[i].FindControl("btn_correction") as Button;
@@ -286,61 +271,6 @@ namespace iljin.popUp
             }
         }
 
-        /*
-        //컨테이너명 중복체크
-        protected void btn_container_overlap_Click(object sender, EventArgs e)
-        {
-            int row = int.Parse(hdn_container_selectedRow.Value);
-            string containerNo = ((TextBox)grdTable1.Items[row].FindControl("txt_container")).Text;
-
-            if (containerNo == "")
-            {
-                Response.Write($"<script>alert('컨테이너 번호를 입력해 주십시오.');</script>");
-                return;
-            }
-
-            if (km == null) km = new DB_mysql();
-
-            string sql = $"SELECT containerNo FROM tb_container_info WHERE containerNo = '{containerNo}';";
-
-            DataTable dt = km.tran_GetDTa(sql);
-
-            if (dt.Rows.Count > 0) // 중복이 있는 경우
-            {
-                sql = $"SELECT containerNo FROM tb_container_info WHERE containerNo LIKE '%{containerNo}_%' ORDER BY idx DESC;";
-
-                dt = km.tran_GetDTa(sql);
-
-                if(dt.Rows.Count > 0)
-                {
-                    string temp = containerNo;
-                    containerNo = dt.Rows[0][0].ToString();
-
-                    string strNum = containerNo.Substring(containerNo.LastIndexOf("_")).Replace("_","");
-
-                    int num = int.Parse(strNum);
-
-                    containerNo = temp + "_" + (num+1).ToString();
-                }
-                else
-                {
-                    containerNo += "_1";
-                }
-
-                Response.Write($"<script>alert('{containerNo}으로 대체되었습니다.');</script>");
-            }
-            else
-            {
-                Response.Write($"<script>alert('사용가능한 번호입니다.');</script>");
-            }
-
-            ((TextBox)grdTable1.Items[row].FindControl("txt_container")).Text = containerNo;
-            ((HiddenField)grdTable1.Items[row].FindControl("hdn_overlapchk")).Value = "1";
-
-            km.dbClose();
-        }
-        */
-
         //컨테이너Grid DT로 변환
         private DataTable Dt_From_ContainerGrd()
         {
@@ -405,72 +335,29 @@ namespace iljin.popUp
 
             int rowCount = grdTable2.Items.Count;
             int colCount = grdTable2.Columns.Count;
-            int currentWeight = 0;
+            int totalQty_left = 0;
             TextBox tb;
 
             for (int i = 0; i < rowCount; i++)
             {
                 ((HiddenField)grdTable2.Items[i].FindControl("hdn_itemCode")).Value = dt.Rows[i]["itemCode"].ToString();
 
-                for (int j = 1; j < colCount - 2; j++)
+                for (int j = 1; j < colCount - 1; j++)
                 {
                     if (dt.Rows[i][j].ToString() != "") grdTable2.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
 
+                totalQty_left += int.Parse(dt.Rows[i]["resultQty"].ToString());
+
                 tb = ((TextBox)grdTable2.Items[i].FindControl("txt_qty"));
                 tb.Text = dt.Rows[i]["resultQty"].ToString();
-                tb.Attributes.Add("onchange", $"qtyValidateCheck('{i.ToString()}','{dt.Rows[i]["resultQty"].ToString()}'); calcweight('{i.ToString()}'); return false;");
+                tb.Attributes.Add("onchange", $"qtyValidateCheck('{i.ToString()}','{dt.Rows[i]["resultQty"].ToString()}'); Sum_CheckedQty();");
 
-                ((HiddenField)grdTable2.Items[i].FindControl("hdn_originWeight")).Value = dt.Rows[i]["weight"].ToString();
                 ((HiddenField)grdTable2.Items[i].FindControl("hdn_originQty")).Value = dt.Rows[i]["qty"].ToString();
-
-                grdTable2.Items[i].Cells[9].Text = CalcWeight(dt.Rows[i]["resultQty"].ToString() , dt.Rows[i]["qty"].ToString(), dt.Rows[i]["weight"].ToString()) ;
-                ((HiddenField)grdTable2.Items[i].FindControl("hdn_currentWeight")).Value = grdTable2.Items[i].Cells[9].Text;
             }
+
+            txt_totalQty_left.InnerText = totalQty_left.ToString();
         }
-
-        /*
-        //컨테이너 품목 정보 불러오기-선택완료
-        private void Search_Container_Item_Selected()
-        {
-            if (km == null) km = new DB_mysql();
-
-            int row = int.Parse(hdn_container_selectedRow.Value);
-
-            string containerId = grdTable1.Items[row].Cells[0].Text;
-            string contractId = ((DropDownList)grdTable1.Items[row].FindControl("cb_contractNo")).SelectedValue;
-
-            object[] objs = { containerId, contractId };
-
-            DataTable dt = PROCEDURE.SELECT("SP_container_item_temp_GetByContainer", objs, km);
-
-            grdTable2.DataSource = dt;
-            grdTable2.DataBind();
-
-            int rowCount = grdTable2.Items.Count;
-            int colCount = grdTable2.Columns.Count;
-            TextBox tb;
-
-            for (int i = 0; i < rowCount; i++)
-            {
-                ((HiddenField)grdTable2.Items[i].FindControl("hdn_idx")).Value = dt.Rows[i]["idx"].ToString();
-                ((HiddenField)grdTable2.Items[i].FindControl("hdn_itemCode")).Value = dt.Rows[i]["itemCode"].ToString();
-
-                for (int j = 1; j < colCount - 2; j++)
-                {
-                    if (dt.Rows[i][j + 1].ToString() != "") grdTable2.Items[i].Cells[j].Text = dt.Rows[i][j + 1].ToString();
-                }
-
-                tb = ((TextBox)grdTable2.Items[i].FindControl("txt_qty"));
-                tb.Text = dt.Rows[i]["leftQty"].ToString();
-                tb.Attributes.Add("readonly", "readonly");
-
-                tb = ((TextBox)grdTable2.Items[i].FindControl("txt_weight"));
-                tb.Text = dt.Rows[i]["weight"].ToString();
-                tb.Attributes.Add("readonly", "readonly");
-            }
-        }
-        */
 
         //컨테이너 품목 정보 불러오기-수정
         private void Search_Container_Item_Update()
@@ -490,6 +377,8 @@ namespace iljin.popUp
 
             int rowCount = grdTable2.Items.Count;
             int colCount = grdTable2.Columns.Count;
+            int totalQty_left = 0;
+            int totalQty = 0;
             TextBox tb;
             int chkCount = 0;
 
@@ -503,42 +392,31 @@ namespace iljin.popUp
                 ((HiddenField)grdTable2.Items[i].FindControl("hdn_idx")).Value = dt.Rows[i]["idx"].ToString();
                 ((HiddenField)grdTable2.Items[i].FindControl("hdn_itemCode")).Value = dt.Rows[i]["itemCode"].ToString();
 
-                for (int j = 1; j < colCount - 2; j++)
+                for (int j = 1; j < colCount - 1; j++)
                 {
                     if (dt.Rows[i][j + 1].ToString() != "") grdTable2.Items[i].Cells[j].Text = dt.Rows[i][j + 1].ToString();
                 }
 
-                string qty = dt.Rows[i]["qty"].ToString() != "" ? dt.Rows[i]["qty"].ToString() : dt.Rows[i]["resultQty"].ToString();
+                totalQty_left += int.Parse(dt.Rows[i]["resultQty"].ToString());
 
+                totalQty += dt.Rows[i]["qty"].ToString() != "" ? int.Parse(dt.Rows[i]["qty"].ToString()) : 0;
+
+                string qty = dt.Rows[i]["qty"].ToString() != "" ? dt.Rows[i]["qty"].ToString() : dt.Rows[i]["resultQty"].ToString();
 
                 tb = ((TextBox)grdTable2.Items[i].FindControl("txt_qty"));
                 tb.Text = qty;
-                tb.Attributes.Add("onchange", $"qtyValidateCheck('{i.ToString()}','{dt.Rows[i]["resultQty"].ToString()}'); calcweight('{i.ToString()}'); return false;");
+                tb.Attributes.Add("onchange", $"qtyValidateCheck('{i.ToString()}','{dt.Rows[i]["resultQty"].ToString()}'); Sum_CheckedQty();");
 
-                ((HiddenField)grdTable2.Items[i].FindControl("hdn_originWeight")).Value = dt.Rows[i]["weight"].ToString();
                 ((HiddenField)grdTable2.Items[i].FindControl("hdn_originQty")).Value = dt.Rows[i]["originQty"].ToString();
-
-                grdTable2.Items[i].Cells[9].Text = CalcWeight(qty, dt.Rows[i]["originQty"].ToString(), dt.Rows[i]["weight"].ToString());
-                ((HiddenField)grdTable2.Items[i].FindControl("hdn_currentWeight")).Value = grdTable2.Items[i].Cells[9].Text;
             }
+
+            txt_totalQty_left.InnerText = totalQty_left.ToString();
+            txt_totalQty.InnerText = totalQty.ToString();
 
             if (chkCount == rowCount)
             {
                 chk_itemAll.Checked = true;
             }
-        }
-
-        //현재 중량 계산
-        private string CalcWeight(string qty1,string qty2, string weight)
-        {
-            float iqty1 = float.Parse(qty1);
-            float iqty2 = float.Parse(qty2);
-
-            float iweight = float.Parse(weight);
-
-            float currentWeight = iqty1 / iqty2 * iweight;
-
-            return Math.Round(currentWeight,2).ToString();
         }
 
         // 컨테이너 품목 보기 
@@ -587,6 +465,7 @@ namespace iljin.popUp
             }
             catch (Exception ex)
             {
+                Response.Write("<script>alert('저장실패.');</script>");
                 PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
             }
 
@@ -614,7 +493,6 @@ namespace iljin.popUp
                          $"'{contractIdx}'," +
                          $"'{((HiddenField)grdTable2.Items[i].FindControl("hdn_itemCode")).Value}'," +
                          $"'{((TextBox)grdTable2.Items[i].FindControl("txt_qty")).Text}'," +
-                         $"'{((HiddenField)grdTable2.Items[i].FindControl("hdn_currentWeight")).Value}'," +
                          $"'{hdn_user.Value}');";
                 }
             }

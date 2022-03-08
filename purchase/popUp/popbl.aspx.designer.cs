@@ -267,6 +267,24 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.DataGrid grdTable2;
 
         /// <summary>
+        /// txt_totalQty_left 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell txt_totalQty_left;
+
+        /// <summary>
+        /// txt_totalQty 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell txt_totalQty;
+
+        /// <summary>
         /// btn_container_save 컨트롤입니다.
         /// </summary>
         /// <remarks>

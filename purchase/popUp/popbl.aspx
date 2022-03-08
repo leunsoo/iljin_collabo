@@ -72,11 +72,11 @@
                         &nbsp;Kg</td>
                     <th>ETD</th>
                     <td>
-                        <asp:TextBox ID="txt_etd" runat="server" CssClass="w85p"></asp:TextBox>
+                        <asp:TextBox ID="txt_etd" runat="server" CssClass="w85p" autocomplete="off"></asp:TextBox>
                     </td>
                     <th>ETA</th>
                     <td>
-                        <asp:TextBox ID="txt_eta" runat="server" CssClass="w85p"></asp:TextBox>
+                        <asp:TextBox ID="txt_eta" runat="server" CssClass="w85p" autocomplete="off"></asp:TextBox>
                     </td>
                 </tr>
         </table>
@@ -179,22 +179,21 @@
                 <table class="grtable_th">
                     <thead>
                         <tr>
-                            <th class="mWt3p">
+                            <th class="mWt5p">
                                 <asp:CheckBox ID="chk_itemAll" runat="server" /></th>
                             <th class="mWt25p">제품명</th>
-                            <th class="mWt8p">제품구분1</th>
-                            <th class="mWt8p">제품구분2</th>
-                            <th class="mWt8p">두께</th>
-                            <th class="mWt8p">폭</th>
+                            <th class="mWt10p">제품구분1</th>
+                            <th class="mWt10p">제품구분2</th>
+                            <th class="mWt10p">두께</th>
+                            <th class="mWt10p">폭</th>
                             <th class="mWt10p">길이</th>
                             <th class="mWt10p">남은수량</th>
                             <th class="mWt10p">수량</th>
-                            <th class="mWt10p">중량(kg)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="10">
+                            <td colspan="9">
                                 <div style="height: 225px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
                                     <asp:DataGrid ID="grdTable2" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1325">
                                         <HeaderStyle Height="25px" />
@@ -202,12 +201,12 @@
                                         <Columns>
                                             <asp:TemplateColumn HeaderText="">
                                                 <ItemTemplate>
-                                                    <asp:CheckBox ID="chk_item" runat="server" />
+                                                    <asp:CheckBox ID="chk_item" runat="server" onchange="Sum_CheckedQty();" />
                                                     <asp:HiddenField ID="hdn_idx" runat="server" />
                                                     <asp:HiddenField ID="hdn_itemCode" runat="server" />
                                                 </ItemTemplate>
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="3%" CssClass="" />
+                                                <ItemStyle Width="5%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
@@ -215,19 +214,19 @@
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="8%" CssClass="" />
+                                                <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="8%" CssClass="" />
+                                                <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="8%" CssClass="" />
+                                                <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="8%" CssClass="" />
+                                                <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
@@ -247,10 +246,6 @@
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="">
-                                                <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="10%" CssClass="" />
-                                            </asp:TemplateColumn>
                                         </Columns>
                                         <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
                                     </asp:DataGrid>
@@ -260,10 +255,9 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th class="mWt5p"></th>
-                            <th class="mWt75p" colspan="7">Total</th>
-                            <th class="mWt10p"></th>
-                            <th class="mWt10p"></th>
+                            <th colspan="7">Total</th>
+                            <th id="txt_totalQty_left" runat="server"></th>
+                            <th id="txt_totalQty" runat="server"></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -285,6 +279,27 @@
             fDatePickerById("txt_etd");
             fDatePickerById("txt_eta");
             fDatePickerById2("grdTable1_txt_dispatchdate");
+
+            function Sum_CheckedQty() {
+                let grid = document.getElementById('<%= grdTable2.ClientID%>');
+                let totalQty = 0;
+
+                for (let i = 0; i < grid.rows.length; i++) {
+                    let chkValue = document.getElementById('grdTable2_chk_item_' + i).checked;
+
+                    if (chkValue) {
+                        let qty = document.getElementById('grdTable2_txt_qty_' + i).value;
+
+                        if (!parseInt(qty)) continue;
+
+                        totalQty += parseInt(qty);
+                    }
+                }
+
+                if (totalQty == 0) totalQty = "";
+
+                document.getElementById('<%= txt_totalQty.ClientID %>').innerText = totalQty;
+            }
 
             function showimage() {
                 var imgurl = document.getElementById('<%= hdn_filePath.ClientID %>').value;
@@ -323,30 +338,11 @@
                 var grid = document.getElementById('<%= grdTable2.ClientID %>');
 
                 var checkBox;
-                for (var i = 0; grid.rows.length; i++) {
+                for (var i = 0; i < grid.rows.length; i++) {
                     checkBox = document.getElementById("grdTable2_chk_item_" + i.toString());
                     checkBox.checked = chk;
                 }
-            }
-
-<%--            function container_overlapcheck(row) {                
-                document.getElementById('<%= hdn_container_selectedRow.ClientID%>').value = row;
-
-                document.getElementById('<%=btn_container_overlap.ClientID%>').click();
-            }--%>
-
-            function calcweight(row) {
-                var grd = document.getElementById('<%= grdTable2.ClientID%>');
-                var originWeigth = document.getElementById('grdTable2_hdn_originWeight_' + row).value;
-                var originQty = document.getElementById('grdTable2_hdn_originQty_' + row).value;
-                var currentQty = document.getElementById('grdTable2_txt_qty_' + row).value;
-                
-                var sum = parseFloat(currentQty) / parseFloat(originQty) * parseFloat(originWeigth);
-                var result = Math.round(sum * 100) / 100;
-
-                grd.rows[row].cells[9].innerHTML = result;
-
-                document.getElementById('grdTable2_hdn_currentWeight_' + row).value = result;
+                Sum_CheckedQty();
             }
 
             function container_delete(row) {

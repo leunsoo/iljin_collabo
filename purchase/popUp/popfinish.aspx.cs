@@ -83,8 +83,6 @@ namespace iljin.popUp
             }
 
             txt_totalQty.Text = totalQty.ToString();
-            txt_totalWeigth.Text = totalWeigth.ToString();
-            txt_totalPrice.Text = totalPrice.ToString();
         }
 
         //정보검색
@@ -143,13 +141,9 @@ namespace iljin.popUp
                 }
 
                 totalQty += int.Parse(dt.Rows[i]["qty"].ToString());
-                totalWeigth += float.Parse(dt.Rows[i]["weight"].ToString());
-                totalPrice += float.Parse(dt.Rows[i]["price"].ToString());
             }
 
             txt_totalQty.Text = totalQty.ToString();
-            txt_totalWeigth.Text = totalWeigth.ToString();
-            txt_totalPrice.Text = totalPrice.ToString();
         }
     }
 }

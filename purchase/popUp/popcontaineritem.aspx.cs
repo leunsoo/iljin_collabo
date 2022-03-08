@@ -37,6 +37,7 @@ namespace iljin.popUp
 
             int rowCount = grdTable1.Items.Count;
             int colCount = grdTable1.Columns.Count;
+            int totalQty = 0;
             TextBox tb;
 
             for (int i = 0; i < rowCount; i++)
@@ -45,7 +46,11 @@ namespace iljin.popUp
                 {
                     if (dt.Rows[i][j].ToString() != "") grdTable1.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
+
+                totalQty += int.Parse(dt.Rows[i][colCount - 1].ToString());
             }
+
+            txt_totalQty.InnerText = totalQty.ToString();
         }
     }
 }

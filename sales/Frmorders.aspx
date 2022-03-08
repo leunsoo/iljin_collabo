@@ -219,15 +219,15 @@
                         <tr>
                             <th class="mWt4p">
                                 <asp:CheckBox ID="checkbox" runat="server" onchange="onCheckedChange();" /></th>
-                            <th class="mWt10p">주문번호</th>
-                            <th class="mWt10p">주문일</th>
-                            <th class="mWt10p">납기일</th>
+                            <th class="mWt8p">주문번호</th>
+                            <th class="mWt8p">주문일</th>
+                            <th class="mWt8p">납기일</th>
                             <th class="mWt4p">오전</th>
-                            <th class="mWt10p">거래처명</th>
-                            <th class="mWt15p">제품명</th>
-                            <th class="mWt4p">수량</th>
+                            <th class="mWt15p">거래처명</th>
+                            <th class="mWt18p">제품명</th>
+                            <th class="mWt5p">수량</th>
                             <th class="mWt10p">배송지</th>
-                            <th class="mWt10p">상태</th>
+                            <th class="mWt7p">상태</th>
 
                         </tr>
                     </thead>
@@ -250,23 +250,19 @@
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="10%" CssClass="" />
+                                                <ItemStyle Width="8%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="10%" CssClass="" />
+                                                <ItemStyle Width="8%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="10%" CssClass="" />
+                                                <ItemStyle Width="8%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="4%" CssClass="" />
-                                            </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="">
-                                                <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="10%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
@@ -274,7 +270,11 @@
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="4%" CssClass="" />
+                                                <ItemStyle Width="18%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="5%" CssClass="" />
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
@@ -282,7 +282,7 @@
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <HeaderStyle HorizontalAlign="Center" />
-                                                <ItemStyle Width="10%" CssClass="" />
+                                                <ItemStyle Width="7%" CssClass="" />
                                             </asp:TemplateColumn>
                                         </Columns>
                                     </asp:DataGrid>
