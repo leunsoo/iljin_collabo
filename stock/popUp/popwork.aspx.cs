@@ -80,26 +80,25 @@ namespace iljin.popUp
         //저장
         protected void btn_save_Click(object sender, EventArgs e)
         {
+            string serialNo = "";
+
             if (km == null) km = new DB_mysql();
 
             try
             {
-                 km.BeginTran();
+                km.BeginTran();
 
-                if (hdn_serialNo.Value != "") //수정
+                if(hdn_serialNo.Value != "")
                 {
-                    object[] obj = { hdn_serialNo.Value, txt_registrationdate, txt_workdate,hidden_idx,hidden_userCode,cb_machineNo,
-                    hidden_itemCode,txt_workitemQty};
-                   PROCEDURE.CUD_TRAN("SP_item_remake_Update", obj, km);
+                    serialNo = hdn_serialNo.Value;
                 }
-                else // 추가
+                else
                 {
-                    string serialNo = PublicLibs.SetCode_Tran("tb_item_remake", "serialNo", ConstClass.REMAKE_CODE_PREFIX, km);
+                    serialNo = PublicLibs.SetCode_Tran("tb_item_remake", "serialNo", ConstClass.REMAKE_CODE_PREFIX, km);
+                }
 
-                    object[] obj = {txt_serialNo,txt_registrationdate,txt_workdate,hidden_idx,hidden_userCode,cb_machineNo,
-                    hidden_itemCode,txt_workitemQty};
-                   PROCEDURE.CUD_TRAN("SP_item_remake_Add", obj, km);
-                }
+                Save_WorkInfo(serialNo);
+                Save_ProdInfo(serialNo);
 
                 km.Commit();
                 Response.Write("<script>alert('저장되었습니다.');</script>");
@@ -115,14 +114,27 @@ namespace iljin.popUp
         }
 
         //작업정보 저장
-        private void Save_WorkInfo()
+        private void Save_WorkInfo(string serialNo)
         {
-
+            if (hdn_serialNo.Value != "") //수정
+            {
+                object[] obj = { serialNo, txt_registrationdate, txt_workdate,hidden_idx,hidden_userCode,cb_machineNo,
+                    hidden_itemCode,txt_workitemQty};
+                PROCEDURE.CUD_TRAN("SP_item_remake_Update", obj, km);
+            }
+            else // 추가
+            {
+                object[] obj = {serialNo,txt_registrationdate,txt_workdate,hidden_idx,hidden_userCode,cb_machineNo,
+                    hidden_itemCode,txt_workitemQty};
+                PROCEDURE.CUD_TRAN("SP_item_remake_Add", obj, km);
+            }
         }
 
         //생산제품 저장
-        private void Save_ProdInfo()
+        private void Save_ProdInfo(string serialNo)
         {
+            string sql = "";
+
 
         }
 

@@ -337,12 +337,32 @@
                 <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
             </asp:DataGrid>
             <div class="tar mt20">
-                <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black" Text="저장" OnClick="btn_save_Click"></asp:Button>
+                <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black" Text="저장" OnClientClick="return SaveValidChk();" OnClick="btn_save_Click"></asp:Button>
                 <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
             </div>
             <script>
                 fDatePickerById("txt_registrationdate");
                 fDatePickerById("txt_workdate");
+
+                function SaveValidChk() {
+                    let grid = document.getElementById('<%= grdTable1.ClientID %>');
+                    if (!grid) {
+                        alert('생산제품을 등록해 주십시오.');
+                        return false;
+                    }
+
+                    for (let i = 0; i < grid.rows.length; i++) {
+                        let itemCode = document.getElementById('grdTable1_hidden_itemCode2_' + i).value;
+
+                        if (itemCode == '' || !itemCode) {
+                            alert('제품을 선택해 주십시오.');
+                            return false;
+                        }
+                    }
+
+                    return true;
+                }
+
             </script>
             <asp:Button ID="btn_default" runat="server" OnClientClick="return false;" CssClass="hidden" />
         </asp:Panel>
