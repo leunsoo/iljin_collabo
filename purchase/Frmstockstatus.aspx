@@ -215,7 +215,7 @@
                     <tr>
                         <td colspan="9">
                             <div style="height:600px; overflow-x:hidden;overflow-y:auto; margin:0px;padding:0px;">
-                                <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
+                                <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1190">
                                     <HeaderStyle Height="25px" />
                                     <ItemStyle HorizontalAlign="Center" />
                                     <Columns>

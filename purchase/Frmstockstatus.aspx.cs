@@ -29,15 +29,15 @@ namespace iljin
 
         private void Search()
         {
-            if (hidden_itemCode.Value == "")
-            {
-                Response.Write("<script>alert('제품을 선택해 주십시오.');</script>");
-                return;
-            }
+            //if (hidden_itemCode.Value == "")
+            //{
+            //    Response.Write("<script>alert('제품을 선택해 주십시오.');</script>");
+            //    return;
+            //}
             
             if (km == null) km = new DB_mysql();
 
-            object[] objs = { hidden_itemCode,cb_divCode1,cb_divCode2 };
+            object[] objs = { tb_itemname,cb_divCode1,cb_divCode2 };
 
             DataTable dt = PROCEDURE.SELECT("SP_warehousing_Search_IncomeStatus", objs, km);
 
