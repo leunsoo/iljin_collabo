@@ -183,7 +183,7 @@
         <asp:ListBox ID="li_itemlist" runat="server" Style="top:0px; left:0px; visibility: hidden;" CssClass="autoComplete_list"></asp:ListBox>
         <div class ="search_box">
             <div class ="box_row">
-                <span>주문일자</span>
+                <span>거래일자</span>
                 <asp:TextBox ID="tb_orderdate" runat="server" CssClass="mWt100 txac"></asp:TextBox>
                 ~
                 <asp:TextBox ID="tb_orderdate2" runat="server" CssClass="mWt100 txac"></asp:TextBox>
@@ -203,8 +203,8 @@
                        
                         <th class="mWt3p"><asp:CheckBox ID="chk_all" runat="server" onchange="checkedChange()" /></th>
                         <th class="mWt10p">거래처명</th>
-                        <th class="mWt10p">사업자등록번호</th>
-                        <th class="mWt8p">주문일</th>
+                        <th class="mWt8p">거래일</th>
+                        <th class="mWt8p">납기일</th>
                         <th class="mWt8p">주문번호</th>
                         <th class="mWt19p">제품명</th>
                         <th class="mWt8p">수량</th>
@@ -238,7 +238,7 @@
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
+                                            <ItemStyle Width="8%" CssClass="" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
                                             <HeaderStyle HorizontalAlign="Center" />
