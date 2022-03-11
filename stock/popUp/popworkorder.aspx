@@ -29,8 +29,10 @@
         }
 
         table.order_table > tbody > tr > td {
-            border: 1px solid;
-            height:30px;
+            border: 1px solid black;
+            border-style: solid;
+            height: 30px;
+            text-align: center;
         }
     </style>
     <script>
@@ -47,29 +49,29 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="pop_wrap" style="width:210mm;margin-left:auto;margin-right:auto;">
+        <div class="pop_wrap" style="width: 210mm; margin-left: auto; margin-right: auto;">
         </div>
         <div class="tar mt15">
-            <asp:Button ID="btn_print" runat="server" CssClass="btn_gray btn_150_40" Text="인쇄" OnClientClick="print_page();"  />
-           <button type="button" id="btn_close" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
+            <asp:Button ID="btn_print" runat="server" CssClass="btn_gray btn_150_40" Text="인쇄" OnClientClick="print_page();" />
+            <button type="button" id="btn_close" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
 
         </div>
         <table class="order_table mt35">
             <tr>
-                <td rowspan="3" style="text-align:center;">로고</td>
-                <td rowspan="3" style="text-align:center;">작업지시서</td>
-                <td style="text-align:center;">문서번호</td>
-                <td style="text-align:center;">
+                <td rowspan="3">로고</td>
+                <td rowspan="3" >작업지시서</td>
+                <td >문서번호</td>
+                <td >
                     <asp:Label ID="lbl_serialNo" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center;">작성자</td>
-                <td style="text-align:center;"></td>
+                <td>작성자</td>
+                <td></td>
             </tr>
             <tr>
-                <td style="text-align:center;">작성일자</td>
-                <td style="text-align:center;">
+                <td>작성일자</td>
+                <td>
                     <asp:Label ID="lbl_registrationDate" runat="server"></asp:Label>
                 </td>
             </tr>
@@ -77,26 +79,26 @@
         <div class="mt20">
             <table class="order_table">
                 <tr>
-                    <td style="text-align:center;">작업일자</td>
-                    <td style="text-align:center;">
+                    <td>작업일자</td>
+                    <td>
                         <asp:Label ID="lbl_workDate" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center;">작업자</td>
-                    <td style="text-align:center;">
+                    <td >작업자</td>
+                    <td>
                         <asp:Label ID="lbl_foreignIdx" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center;">작업기계</td>
-                    <td style="text-align:center;">
+                    <td>작업기계</td>
+                    <td>
                         <asp:Label ID="lbl_machineNo" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center;">지시자</td>
-                    <td style="text-align:center;">
+                    <td>지시자</td>
+                    <td>
                         <asp:Label ID="lbl_empCode" runat="server"></asp:Label>
                     </td>
                 </tr>
@@ -104,68 +106,57 @@
         </div>
 
         <div class="mt20">
-            <table class="order_table">
+            <table class="order_table" style="table-layout:auto">
                 <tr>
-                    <td colspan="3" style="text-align:center;">작업지시내용</td>
+                    <td colspan="4">작업지시내용</td>
                 </tr>
                 <tr>
-                    <td rowspan="2" style="text-align:center;">작업전</td>
-                    <td style="text-align:center;">품목</td>
-                    <td style="text-align:center;">
+                    <td style="width:10%" >품목</td>
+                    <td style="width:50%">
                         <asp:Label ID="lbl_workItem" runat="server"></asp:Label>
                     </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center;">수량</td>
-                    <td style="text-align:center;">
+                    <td style="width:10%" >수량</td>
+                    <td style="width:30%" >
                         <asp:Label ID="lbl_workItemQty" runat="server"></asp:Label>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td rowspan="2" style="text-align:center;">작업후</td>
-                    <td style="text-align:center;">품목</td>
-                    <td style="text-align:center;">
-                        <asp:Label ID="lbl_produceItem" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center;">수량</td>
-                    <td style="text-align:center;">
-                        <asp:Label ID="lbl_produceItemQty" runat="server"></asp:Label>
                     </td>
                 </tr>
             </table>
         </div>
         <div class="mt20">
-            <table class="order_table">
-
+            <table class="order_table" style="border-bottom:0px;">
                 <tr>
-                    <td colspan="3" style="text-align:center;">작업결과</td>
+                    <td colspan="4" style="text-align: center;">작업결과</td>
                 </tr>
-                <tr>
-                    <td rowspan="2" style="text-align:center;">작업후</td>
-                    <td style="text-align:center;">품목</td>
-                    <td style="text-align:center;"></td>
-                </tr>
-                <tr>
-                    <td style="text-align:center;">수량</td>
-                    <td style="text-align:center;"></td>
-
-                </tr>
+                <asp:DataGrid ID="grdTable1" style="border-collapse:separate; border-style: solid; text-align: center; table-layout:auto" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
+                    <Columns>
+                        <asp:TemplateColumn HeaderText="" >
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle CssClass="w10p" />
+                        </asp:TemplateColumn> 
+                        <asp:TemplateColumn HeaderText="">
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle CssClass="w50p" />
+                        </asp:TemplateColumn> 
+                        <asp:TemplateColumn HeaderText="">
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle CssClass="w10p" />
+                        </asp:TemplateColumn> 
+                        <asp:TemplateColumn HeaderText="">
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle CssClass="w30p" />
+                        </asp:TemplateColumn>
+                    </Columns>
+                </asp:DataGrid>
             </table>
         </div>
-        <div class="mt10">
+        <div class="mt30">
             <table class="order_table">
                 <tr>
-                    <td colspan="3" style="text-align:center;">비고
-    <br />
+                    <td colspan="3" style="text-align: center;">비고
                         <br />
-                       
-                        <asp:TextBox ID="txt_memo" runat="server" style="overflow:hidden" TextMode="MultiLine" Rows="5" ></asp:TextBox>
-                       <%-- <textarea id="ta_memo" runat="server" style="height:70px"></textarea> --%>
                         <br />
-
+                        <asp:TextBox ID="txt_memo" runat="server" Style="overflow: hidden" TextMode="MultiLine" Rows="4"></asp:TextBox>
+                        <br />
                     </td>
                 </tr>
                 <tr>
@@ -173,16 +164,14 @@
                         <br />
                         <br />
                         <br />
-                        <br />
                     </td>
-                    <td style="text-align:center;">작업지시자<br />
+                    <td style="text-align: center;">작업지시자<br />
                         (서명)
-      <br />
                         <br />
                         <br />
                         <br />
                     </td>
-                    <td style="text-align:center;">작업자<br />
+                    <td style="text-align: center;">작업자<br />
                         (서명)<br />
                         <br />
                         <br />

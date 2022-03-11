@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using PublicLibsManagement;
+using les;
 
 namespace iljin
 {
@@ -17,15 +18,12 @@ namespace iljin
         {
             if (!IsPostBack)
             {
-
-                Search();
-
                 set_date();
+                Search();
             }
         }
         private void Search()//조회
         {
-            return;
 
             if (km == null) km = new DB_mysql();
 
@@ -37,42 +35,59 @@ namespace iljin
             grdTable.DataBind();
 
             int rowCount = grdTable.Items.Count;
-
             //그리드테이블의 컬럼의 개수
             int colCount = grdTable.Columns.Count;
 
+            int rowSpan = 1;
+            string mergeValue = "";
+
             for (int i = 0; i < rowCount; i++)
             {
-                for (int j = 1; j < colCount; j++)
+                mergeValue = dt.Rows[i][0].ToString();
+
+                if (i < rowCount - 1 && mergeValue == dt.Rows[i + 1][0].ToString())
                 {
-                    if (dt.Rows[i][j - 1].ToString() != "") grdTable.Items[i].Cells[j].Text = dt.Rows[i][j - 1].ToString();
+                    rowSpan++;
+
+                    grdTable.Items[i - rowSpan + 2].Cells[0].RowSpan = rowSpan;
+                    grdTable.Items[i + 1].Cells[0].Visible = false;
+
+                    for (int j = 1; j < 6; j++)
+                    {
+                        //((CheckBox)grdTable.Items[i].FindControl("grd_checkBox")).Visible = false;
+
+                        grdTable.Items[i - rowSpan + 2].Cells[j].RowSpan = rowSpan;
+                        grdTable.Items[i - rowSpan + 2].Cells[j].Text = dt.Rows[i][j-1].ToString();
+
+                        grdTable.Items[i + 1].Cells[j].Visible = false;
+                    }
+                }
+                else
+                {
+                    for (int j = 1; j < 6; j++)
+                    {
+                        grdTable.Items[i].Cells[j].Text = dt.Rows[i][j-1].ToString();
+                    }
+                    rowSpan = 1;
+                }
+
+                for (int j = 6; j < grdTable.Columns.Count; j++)
+                {
+                    grdTable.Items[i].Cells[j].Text = dt.Rows[i][j-1].ToString();
+                }
+
+                if (i == rowCount - 1)
+                {
+                    for (int j = 1; j < 6; j++)
+                    {
+                        if (grdTable.Items[i].Cells[j].Visible)
+                        {
+                            grdTable.Items[i].Cells[j].Text = dt.Rows[i][j-1].ToString();
+                        }
+                    }
                 }
             }
         }
-
-        /* private void test()
-         {
-             int rowCount = grdTable.Items.Count;
-             int chkCount = 0; //체크카운트
-             string sql = "";
-             for(int i = 0; i < rowCount; i++)
-             {
-                 if(((CheckBox)grdTable.Items[i].FindControl("checkBox1")).Checked)
-                 {
-                     chkCount++;
-
-
-                 }
-             }
-
-
-
-             if(chkCount > 1) // 2,3,4..
-             {
-                 Response.Write("<script>alert('하나의 제품만 수정이 가능합니다.')</script>");
-                 return;
-             }
-         }*/
 
         protected void btn_sch_Click(object sender, EventArgs e)
         {
@@ -84,39 +99,6 @@ namespace iljin
             tb_registrationdate.Text = DateTime.Now.AddDays(-5).ToString("yyyy-MM-dd");
             tb_registrationdate2.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
-
-        //protected void btn_correction_Click(object sender, EventArgs e) //수정
-        //{
-        //    int rowCount = grdTable.Items.Count;
-        //    int chkCount = 0;//체크카운트
-        //    string sql = "";
-        //    string serialNo = "";
-        //    for (int i = 0; i < rowCount; i++)
-        //    {
-        //        if (((CheckBox)grdTable.Items[i].FindControl("grd_checkBox")).Checked)
-        //        {
-        //            chkCount++;
-        //            serialNo = grdTable.Items[i].Cells[1].Text;
-        //        }
-        //    }
-
-        //    if (chkCount > 1) // 2,3,4
-        //    {
-        //        Response.Write("<script>alert('하나의 제품만 수정이 가능합니다.')</script>");
-
-        //        return;
-        //    }
-        //    else if (chkCount == 0)
-        //    {
-        //        Response.Write("<script>alert('제품을 선택해 주십시오.')</script>");
-
-        //        return;
-        //    }
-
-
-        //    //response.write
-        //    Response.Write($"<script>window.open('/stock/popUp/popwork.aspx?code={serialNo}', '_blank', 'status=no, width=800, height=550, left= (window.screen.width / 2) - (800 / 2),top= (window.screen.height / 2) - (550 / 2)');</script>");
-        //}
 
         protected void btn_del_Click(object sender, EventArgs e) //삭제
         {
@@ -139,7 +121,8 @@ namespace iljin
             if (chkCount == 0) return;
             serialNo = serialNo.Substring(1);
 
-            string sql = $"DELETE FROM tb_item_remake WHERE serialNo IN ({serialNo}); ";
+            string sql = $"DELETE FROM tb_item_remake WHERE serialNo IN ({serialNo}); " +
+                         $"DELETE FROM tb_item_remake_detail WHERE serialNo IN ({serialNo});";
 
             km.ExSQL_Ret(sql);
             Response.Write("<script>alert('삭제되었습니다.')</script>");
@@ -167,17 +150,16 @@ namespace iljin
                     break;
                 }
             }
+
             //체크되어 있는 row를 찾고 그 row의 cell의 1번째 값(일련번호)를 code에 저장했으면
             //밑에 작성된 query 문을 통해 체크박스가 선택되어 있던 작업의 작업상태를 변경해준다.
-            km.ExSQL_Ret("UPDATE tb_item_remake SET workStatus = '1' WHERE serialNo = '" + code + "'");
+            km.ExSQL_Ret("UPDATE tb_item_remake SET workStatus = '1' WHERE serialNo = '" + code + "' AND workStatus = '0'");
 
             //변경해주었다는걸 시각적으로 나타내기 위해 Search() 함수를 실행해준다.
             Search();
         }
-
-       
-        }
     }
+}
 
     
 

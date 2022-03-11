@@ -105,22 +105,13 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.Label lbl_workItemQty;
 
         /// <summary>
-        /// lbl_produceItem 컨트롤입니다.
+        /// grdTable1 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_produceItem;
-
-        /// <summary>
-        /// lbl_produceItemQty 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_produceItemQty;
+        protected global::System.Web.UI.WebControls.DataGrid grdTable1;
 
         /// <summary>
         /// txt_memo 컨트롤입니다.

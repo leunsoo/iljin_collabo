@@ -15,7 +15,18 @@ namespace iljin.popUp
         DB_mysql km;
         string code;
 
-        private void Select()
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                code = Request.Params.Get("code");
+
+                Search_Info();
+                Search_Item_Info();
+            }
+        }
+
+        private void Search_Info()
         {
             if (km == null) km = new DB_mysql();
 
@@ -32,23 +43,26 @@ namespace iljin.popUp
             lbl_empCode.Text = Mdt.Rows[0]["empName"].ToString();
             lbl_workItem.Text = Mdt.Rows[0]["workI"].ToString();
             lbl_workItemQty.Text = Mdt.Rows[0]["workItemQty"].ToString();
-            lbl_produceItem.Text = Mdt.Rows[0]["prodI"].ToString();
-            lbl_produceItemQty.Text = Mdt.Rows[0]["produceItemQty"].ToString();
         }
 
-
-        protected void Page_Load(object sender, EventArgs e)
+        //생산제품 정보
+        private void Search_Item_Info()
         {
-            if (!IsPostBack)
-            {
-                code = Request.Params.Get("code");
+            if (km == null) km = new DB_mysql();
 
-                Select();
+            DataTable dt = PROCEDURE.SELECT("SP_item_remake_detail_GetBySerialNo", code, km);
+
+            grdTable1.DataSource = dt;
+            grdTable1.DataBind();
+
+            for (int i = 0; i < grdTable1.Items.Count; i++)
+            {
+                grdTable1.Items[i].Cells[0].Text = "품목";
+                grdTable1.Items[i].Cells[1].Text = dt.Rows[i][1].ToString();
+                grdTable1.Items[i].Cells[2].Text = "수량";
+                grdTable1.Items[i].Cells[3].Text = dt.Rows[i][2].ToString();
             }
 
-
         }
-
-
     }
 }

@@ -127,10 +127,12 @@
                  //그리드 row탐색
                  for (var i = 0; i < rowCount; i++) {
                      //그리드의 checkbox 클라이언트ID로 찾아온뒤 checked라는 값을 가져온가(true,false) 
-                     var checkValue = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i).checked;
+                     var checkBox = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i);
+
+                     if (!checkBox) continue;
 
                      //체크가 되어있으면
-                     if (checkValue == true) {
+                     if (checkBox.checked == true) {
                          chkCount++; //체크된 체크박스 개수를 1 더해준다
                          serialNo = grd.rows[i].cells[1].innerHTML; //일련번호 변수에 체크된 row의 일련번호 값을 가져온다.
 
@@ -170,14 +172,14 @@
              //그리드 row탐색
              for (i = 0; i < rowCount; i++)
              {
-                 //그리드의 checkbox 클라이언트ID로 찾아온뒤 checked라는 값을 가져온가(true,false) 
-                 var checkValue = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i).checked;
+                 var checkBox = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i);
 
+                 if (!checkBox) continue;
+                 
                  //체크가 되어있으면
-                 if (checkValue == true) {
+                 if (checkBox.checked == true) {
                      chkCount++; //체크된 체크박스 개수를 1 더해준다
                      serialNo = grd.rows[i].cells[1].innerHTML; //일련번호 변수에 체크된 row의 일련번호 값을 가져온다.
-
                  }
              }
 
@@ -207,10 +209,12 @@
              //grid row 탐색
              for (i = 0; i < rowCount; i++) {
                  //그리드의 checkbox 클라이언트 ID로 찾아온뒤 checked라는 값을 가져오는가(true,false)
-                 var checkValue = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i).checked;
+                 var checkBox = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i);
+
+                 if (!checkBox) continue;
 
                  //체크가 되어있으면
-                 if (checkValue == true) {
+                 if (checkBox.checked == true) {
                      chkCount++; //체크된 체크박스 개수를 1 더해준다.
 
                      if (grd.rows[i].cells[9].innerHTML == '완료') {
@@ -240,11 +244,12 @@
              //grid row 탐색
              for (i = 0; i < rowCount; i++)
              {
-                 //그리드의 checkbox 클라이언트 ID로 찾아온뒤 checked라는 값을 가져오는가(true,false)
-                 var checkValue = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i).checked;
+                 var checkBox = document.getElementById('ContentPlaceHolder2_grdTable_grd_checkBox_' + i);
+
+                 if (!checkBox) continue;
 
                  //체크가 되어있으면
-                 if (checkValue == true) {
+                 if (checkBox.checked == true) {
                      chkCount++; //체크된 체크박스 개수를 1 더해준다.
                      serialNo = grd.rows[i].cells[1].innerHTML; //일련번호 변수에 체크된 row의 일련번호 값을 가져온다.
 
@@ -270,8 +275,8 @@
              var url = "/stock/popUp/popworkcomplete.aspx?code=" + serialNo;
              var name = "_blank"
              var popupX = (window.screen.width / 2) - (800 / 2);
-             var popupY = (window.screen.height / 2) - (500 / 2);
-             window.open(url, name, 'status=no, width=800, height=550, left=' + popupX + ',top=' + popupY);
+             var popupY = (window.screen.height / 2) - (650 / 2);
+             window.open(url, name, 'status=no, width=800, height=650, left=' + popupX + ',top=' + popupY);
 
          }
          function refresh() {
