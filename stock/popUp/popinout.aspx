@@ -41,13 +41,12 @@
                         <th class="mWt9p">조정</th>
                         <th class="mWt9p">입고</th>
                         <th class="mWt9p">출고</th>
-                        <th class="mWt13p">수량</th>
                         <th class="mWt15p">재고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="7">
+                        <td colspan="6">
                           <div style=" height:150px; overflow-x:hidden; overflow-y:auto;margin: 0px;padding: 0px;">
                                 <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False"  AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="600">
                                     <HeaderStyle Height="25px" />
@@ -75,14 +74,9 @@
                                         </asp:TemplateColumn>
                                          <asp:TemplateColumn HeaderText="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="13%" CssClass="" />
-                                        </asp:TemplateColumn>
-                                         <asp:TemplateColumn HeaderText="">
-                                            <HeaderStyle HorizontalAlign="Center" />
                                             <ItemStyle Width="15%" CssClass="" />
                                         </asp:TemplateColumn>
-                                         
-                                                                                  
+                                                                                    
                                     </Columns>
                                     <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
                                 </asp:DataGrid>
@@ -92,40 +86,50 @@
                 </tbody>
             </table>
         </div>
-            <div style="float:left; width:285px">
+            
                 <div class="float_title">
-                    <span>입고 확정</span> 
+                    <span>입항예정/입고 확정</span> 
                 </div>
-                <div class="fixed_hs_200">
+                <div class="fixed_hs_200" style="width:600px;">
                     <table class="grtable_th">
                         <thead>
                             <tr>
-                                <th class="mWt33p">일자</th>
-                                <th class="mWt33p">수량</th>
-                                <th class="mWt33p">BLNO</th>
+                                <th class="mWt20p">수량</th>
+                                <th class="mWt20p">입항예정</th>
+                                <th class="mWt20p">배차일</th>
+                                  <th class="mWt20p">BLNO</th>
+                                  <th class="mWt20p">컨테이너NO</th>
                                
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="3">
+                                <td colspan="5">
                                          <div style=" height:150px; overflow-x:hidden; overflow-y:auto;margin: 0px;padding: 0px;">
-                                            <asp:DataGrid ID="grdTable2" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False"  AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="275">
+                                            <asp:DataGrid ID="grdTable2" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False"  AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="600">
                                             <HeaderStyle Height="25px" />
                                             <ItemStyle HorizontalAlign="Center" />
                                             <Columns>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="33%" CssClass=""/>
+                                                    <ItemStyle Width="20%" CssClass=""/>
                                                 </asp:TemplateColumn>
                                                 <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="33%" CssClass=""/>
+                                                    <ItemStyle Width="20%" CssClass=""/>
                                                 </asp:TemplateColumn>  
                                                   <asp:TemplateColumn HeaderText="">
                                                     <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="33%" CssClass="" />
+                                                    <ItemStyle Width="20%" CssClass="" />
                                                 </asp:TemplateColumn>  
+                                                 <asp:TemplateColumn HeaderText="">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <ItemStyle Width="20%" CssClass="" />
+                                                </asp:TemplateColumn>
+                                                 <asp:TemplateColumn HeaderText="">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <ItemStyle Width="20%" CssClass="" />
+                                                </asp:TemplateColumn>
                                             </Columns>
                                             <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
                                         </asp:DataGrid>
@@ -135,51 +139,9 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+         
 
-            <div style="float:right; width:285px">
-                <div class="float_title">
-                    <span>입항예정</span>
-                   </div>
-                <div class="fixed_hs_200">
-                    <table class="grtable_th">
-                       <thead>
-                            <tr>
-                                <th class="mWt33p">일자</th>
-                                <th class="mWt33p">수량</th>
-                                <th class="mWt33p">컨테이너NO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="3">
-                                    <div style="overflow:auto;">
-                                        <asp:DataGrid ID="grdTable3" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False"  AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="285">
-                                            <HeaderStyle Height="25px" />
-                                            <ItemStyle HorizontalAlign="Center" />
-                                            <Columns>
-                                                <asp:TemplateColumn HeaderText="">
-                                                    <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="33%" CssClass="conts_tbl_center"/>
-                                                </asp:TemplateColumn>
-                                                <asp:TemplateColumn HeaderText="">
-                                                    <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="33%" CssClass="conts_tbl_center" />
-                                                </asp:TemplateColumn>
-                                                <asp:TemplateColumn HeaderText="">
-                                                    <HeaderStyle HorizontalAlign="Center" />
-                                                    <ItemStyle Width="33%" CssClass="conts_tbl_center" />
-                                                </asp:TemplateColumn>
-                                            </Columns>
-                                            <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
-                                        </asp:DataGrid>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           
         <div class="tar mt10">
         <button type="button" class="btn_150_40 btn_gray mt10" onclick="self.close()">닫기</button>
         </div>

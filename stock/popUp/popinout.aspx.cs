@@ -99,7 +99,7 @@ namespace iljin.popUp
         {
             if (km == null) km = new DB_mysql();
             DataTable dt = PROCEDURE.SELECT("SP_warehousing_GetIncome_Predic", itemCode, km);
-            les_DataGridSystem.Set_DataGrid_From_Dt(grdTable3, dt, 0);
+            //les_DataGridSystem.Set_DataGrid_From_Dt(grdTable3, dt, 0);
         }
     }
 }
