@@ -201,7 +201,7 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btn_default">
         <div class="pop_wrap">
             <div class="pop_title">
                 <span>재고조정 등록</span>

@@ -54,58 +54,6 @@ namespace iljin
 
             les_DataGridSystem.Set_DataGrid_From_Dt(grdTable, dt, 1);
 
-            /*
-            grdTable.DataSource = dt;
-            grdTable.DataBind();
-
-            int rCount = grdTable.Items.Count;
-            int cCount = grdTable.Columns.Count;
-            string mergeValue = "";
-            int rowSpan = 1;
-
-            for (int i = 0; i < rCount; i++)
-                {
-                    mergeValue = dt.Rows[i]["orderCode"].ToString();
-                    grdTable.Items[i].Cells[0].Text = (i+1).ToString();
-
-                    if (i < rCount - 1 && mergeValue == dt.Rows[i + 1]["orderCode"].ToString())
-                    {
-                        rowSpan++;
-
-                        for (int j = 1; j < 4; j++)
-                        {
-                            grdTable.Items[i - rowSpan + 2].Cells[j].RowSpan = rowSpan;
-                            grdTable.Items[i - rowSpan + 2].Cells[j].Text = dt.Rows[i][j -1].ToString();
-
-                            grdTable.Items[i + 1].Cells[j].Visible = false;
-                        }
-                    }
-                    else
-                    {
-                        for (int j = 1; j <4; j++)
-                        {
-                             grdTable.Items[i].Cells[j].Text = dt.Rows[i][j - 1].ToString();
-                        }
-
-                        rowSpan = 1;
-                    }
-
-                    for (int j = 4; j < cCount; j++)
-                    {
-                        grdTable.Items[i].Cells[j].Text = dt.Rows[i][j-1].ToString();
-                    }
-
-                    if (i == rCount - 1)
-                    {
-                        for (int j = 1; j < 4; j++)
-                        {
-                            if (grdTable.Items[i].Cells[j].Visible && j != 0)
-                            {
-                                grdTable.Items[i].Cells[j].Text = dt.Rows[i][j - 1].ToString();
-                            }
-                        }
-                    }
-                }*/
         }
 
         protected void rb_release_CheckedChanged(object sender, EventArgs e)
