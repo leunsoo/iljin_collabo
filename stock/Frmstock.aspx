@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/iljin.Master" AutoEventWireup="true" CodeBehind="Frmstock.aspx.cs" Inherits="iljin.Frmstock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+    <br />
     <script type="text/javascript">
         var listId = 'ContentPlaceHolder2_li_itemlist';
         var txtId = 'ContentPlaceHolder2_txt_itemname';
@@ -167,7 +169,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
- <article class ="conts_inner">
+    <article class ="conts_inner">
         <asp:Panel ID="defaultPanel1" runat="server" DefaultButton="btn_default">
         <h2 class="conts_tit"><asp:Label ID="m_title" runat="server" Text="재고관리 ::> 재고현황"></asp:Label></h2>
             <asp:HiddenField ID="hidden_keyWord" runat="server" />
