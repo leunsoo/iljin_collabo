@@ -229,7 +229,7 @@ label {
 }
 
 table {
-    width: 100% !important;
+    width: 100%;
     border-spacing: 0;
     border-collapse: 0;
     color: #000;
