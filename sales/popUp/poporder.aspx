@@ -350,7 +350,7 @@
                                 <th class="mWt8p">주문수량</th>
                                 <th class="mWt7p">중량</th>
                                 <th class="mWt10p">단가</th>
-                                <th class="mWt8p">합계</th>
+                                <th class="mWt8p">금액</th>
                                 <th class="mWt4p">영세</th>
                                 <th class="mWt6p">삭제</th>
                             </tr>
@@ -515,7 +515,7 @@
                 weight.value = (result).toFixed(2);
             }
 
-            //합계계산
+            //합계계산 - 모든 row 
             function calcTotalPrice_All() {
                 var grd = document.getElementById('<%= grdTable.ClientID%>');
 
@@ -529,6 +529,8 @@
                     var qty = document.getElementById('grdTable_grd_txt_orderQty_' + i).value;
                     var unitprice = document.getElementById('grdTable_grd_txt_unitprice_' + i).value;
                     var weight = document.getElementById('grdTable_grd_txt_totalWeight_' + i).value;
+                    let taxfree = document.getElementById('grdTable_chk_taxFree_' + i);
+                    let tax = 0;
 
                     var result = 0;
 
@@ -536,7 +538,11 @@
                         result = 0;
                     }
                     else {
-                        result = parseFloat(weight) * parseFloat(unitprice);
+                        if (!taxfree.checked) {
+                            tax = parseFloat(weight) * parseFloat(unitprice) / 10;
+                        }
+
+                        result = parseFloat(weight) * parseFloat(unitprice) + tax;
                     }
 
                     grd.rows[i].cells[8].innerHTML = Math.trunc(result);
@@ -551,7 +557,9 @@
                 var grd = document.getElementById('<%= grdTable.ClientID%>');
                 var originWeigth = document.getElementById('grdTable_grd_txt_totalWeight_' + row).value;
                 var qty = document.getElementById('grdTable_grd_txt_orderQty_' + row).value;
-                var unitprice = document.getElementById('grdTable_grd_txt_unitprice_' + row).value;
+                var unitprice = document.getElementById('grdTable_grd_txt_unitprice_' + row).value
+                let taxfree = document.getElementById('grdTable_chk_taxFree_' + row);
+                let tax = 0;
 
                 var result = 0;
 
@@ -559,7 +567,11 @@
                     result = 0;
                 }
                 else {
-                    result = parseFloat(originWeigth) * parseFloat(unitprice);
+                    if (!taxfree.checked) {
+                        tax = parseFloat(originWeigth) * parseFloat(unitprice) / 10;
+                    }
+
+                    result = parseFloat(originWeigth) * parseFloat(unitprice) + tax;
                 }
 
                 grd.rows[row].cells[8].innerHTML = Math.trunc(result);
@@ -567,26 +579,35 @@
                 totalSum();
             }
 
+            //하단 공급가,부가세,총중량,총금액 계산
             function totalSum() {
                 var grd = document.getElementById('<%= grdTable.ClientID%>');
                 var rowCount = grd.rows.length;
                 var totalWeight = 0;
                 var totalPrice = 0;
+                let totalVat = 0;
 
                 for (var i = 0; i < rowCount; i++) {
                     var weight = document.getElementById('grdTable_grd_txt_totalWeight_' + i).value;
+                    let taxfree = document.getElementById('grdTable_chk_taxFree_' + i);
+
                     var price = grd.rows[i].cells[8].innerHTML;
 
                     if (weight != "") {
                         totalWeight += parseFloat(weight)
                     }
-                    if (price != "") {
+
+                    if (!taxfree.checked) {
+                        totalVat += parseFloat(price / 11);
+                        totalPrice += parseFloat(price) / 1.1;
+                    }
+                    else {
                         totalPrice += parseFloat(price);
                     }
                 }
 
                 var supply = Math.round(totalPrice);
-                var tax = Math.round(supply * 0.1);
+                var tax = Math.round(totalVat);
 
                 var total = totalPrice + tax;
 
