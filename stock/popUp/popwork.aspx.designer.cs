@@ -51,6 +51,24 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.HiddenField hidden_keyWord;
 
         /// <summary>
+        /// hdn_deleteRow 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdn_deleteRow;
+
+        /// <summary>
+        /// hdn_btn_delete 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button hdn_btn_delete;
+
+        /// <summary>
         /// li_itemlist 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -168,13 +186,13 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.Button btn_add;
 
         /// <summary>
-        /// grdTable1 컨트롤입니다.
+        /// table_ItemInfo 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataGrid grdTable1;
+        protected global::System.Web.UI.WebControls.DataGrid table_ItemInfo;
 
         /// <summary>
         /// btn_save 컨트롤입니다.

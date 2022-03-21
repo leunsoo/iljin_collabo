@@ -246,6 +246,8 @@
                     <span>작업 완료</span>
                     <asp:HiddenField ID="hidden_code" runat="server" />
                     <asp:HiddenField ID="hidden_keyWord" runat="server" />
+                    <asp:HiddenField ID="hdn_deleteRow" runat="server" />
+                    <asp:Button ID="hdn_btn_delete" runat="server" OnClick="hdn_btn_delete_Click" />
                     <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list" Style="top:0px; left:0px; visibility: hidden;"></asp:ListBox>
                 </div>
             </div>
@@ -303,25 +305,69 @@
                             <asp:TextBox ID="txt_workitemQty" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <th>생산제품</th>
-                        <td>
-                            <asp:TextBox ID="txt_produceitem" runat="server" onkeydown="KeyDownEvent();" onclick="visibleChk('2');" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
-                            <asp:HiddenField ID="hidden_itemCode2" runat="server" />
-                        </td>
-                        <th>수량</th>
-                        <td>
-                            <asp:TextBox ID="txt_produceitemQty" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
             </table>
+            <div class="title_1 ">
+                생산제품
+                <asp:Button ID="btn_add" runat="server" CssClass="ft_right btn_navy btn_100_30" Text="추가" OnClick="btn_add_Click" />
+            </div>
+            <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
+                <Columns>
+                    <asp:TemplateColumn HeaderText="">
+                        <ItemTemplate>
+                            <table class="itable_1">
+                                <tbody>
+                                    <tr>
+                                        <th class="w10p">생산제품</th>
+                                        <td class="w50p">
+                                            <asp:HiddenField ID="hidden_itemCode2" runat="server" />
+                                            <asp:TextBox ID="txt_produceitem" runat="server" autocomplete="off"></asp:TextBox>
+                                        </td>
+                                        <th class="w10p">수량</th>
+                                        <td class="w20p">
+                                            <asp:TextBox ID="txt_produceitemQty" runat="server" CssClass="w100p" TextMode="Number"></asp:TextBox>
+                                        </td>
+                                        <th class="w10p">
+                                            <asp:Button ID="btn_delete" runat="server" CssClass="btn_60_25 btn_red" Text="삭제" />
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ItemTemplate>
+                    </asp:TemplateColumn>
+                </Columns>
+                <SelectedItemStyle BackColor="#00CCFF"></SelectedItemStyle>
+            </asp:DataGrid>
             <div class="tar mt20">
-                <asp:Button ID="btn_complete" runat="server" class="btn_150_40 btn_black" Text="완료" OnClick="btn_complete_Click" />
+                <asp:Button ID="btn_complete" runat="server" class="btn_150_40 btn_black" Text="완료" OnClientClick="return SaveValidChk();" OnClick="btn_complete_Click" />
                 <button type="button" class="btn_150_40 btn_gray ml10" onclick="self.close()">취소</button>
             </div>
             <script>
                 fDatePickerById("txt_registrationdate");
                 fDatePickerById("txt_workdate");
+
+                function SaveValidChk() {
+                    let grid = document.getElementById('<%= grdTable1.ClientID %>');
+                    if (!grid) {
+                        alert('생산제품을 등록해 주십시오.');
+                        return false;
+                    }
+
+                    for (let i = 0; i < grid.rows.length; i++) {
+                        let itemCode = document.getElementById('grdTable1_hidden_itemCode2_' + i).value;
+
+                        if (itemCode == '' || !itemCode) {
+                            alert('제품을 선택해 주십시오.');
+                            return false;
+                        }
+                    }
+
+                    return true;
+                }
+
+                function DeleteItem(row) {
+                    document.getElementById('<%= hdn_deleteRow.ClientID%>').value = row;
+                    document.getElementById('<%= hdn_btn_delete.ClientID%>').click();
+                }
             </script>
             <asp:Button ID="btn_default" runat="server" OnClientClick="return false;" CssClass="hidden" />
         </asp:Panel>

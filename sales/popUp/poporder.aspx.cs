@@ -16,7 +16,7 @@ namespace iljin.popUp
         DB_mysql km;
         DataTable Mdt;
 
-        string[] fieldArr = { "idx", "releaseIdx", "none1", "hidden_keyword1", "virtualItemName", "virtualItemCode", "hidden_keyword2", "actualItemName", "actualItemCode", "unit", "leftQty", "qty", "totalWeight", "weight", "unitprice", "taxFree", "none2", "cud" };
+        string[] fieldArr = { "idx", "releaseIdx", "none1", "hidden_keyword1", "virtualItemName", "virtualItemCode", "hidden_keyword2", "actualItemName", "actualItemCode", "unit", "leftQty", "qty", "totalWeight", "weight", "unitprice", "none2", "taxfree", "cud" };
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -102,14 +102,18 @@ namespace iljin.popUp
             int totalPrice = 0;
             float weight = 0;
             float unitprice = 0;
-
             int sumTotalPrice = 0;
             float sumTotalWeight = 0;
 
+            string str = "?";
+
             TextBox tb;
+            CheckBox chk;
 
             for (int i = 0; i < rowCount; i++)
             {
+                float tax = 0;
+
                 grdTable.Items[i].Cells[0].Text = Mdt.Rows[i]["idx"].ToString();
                 grdTable.Items[i].Cells[1].Text = Mdt.Rows[i]["releaseIdx"].ToString();
 
@@ -121,7 +125,6 @@ namespace iljin.popUp
                 tb.Attributes.Add("onclick", $"visibleChk('{i.ToString()}','1');");
 
                 string itemCode = Mdt.Rows[i]["virtualItemCode"].ToString();
-
 
                 ((HiddenField)grdTable.Items[i].FindControl("grd_hdn_virtualItemCode")).Value = itemCode;
 
@@ -169,11 +172,18 @@ namespace iljin.popUp
                     tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); calcTotalPrice('{i.ToString()}');");
                     unitprice = tb.Text == "" ? 0 : float.Parse(tb.Text);
 
-                    ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree")).Checked = Mdt.Rows[i]["taxFree"].ToString() == "1" ? true : false;
+                    chk = ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree"));
+                    chk.Checked = Mdt.Rows[i]["taxfree"].ToString() == "1" ? true : false;
+                    chk.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); calcTotalPrice('{i.ToString()}');");
 
-                    totalPrice = (int)(Math.Round(weight * unitprice, 2));
-                    sumTotalPrice += totalPrice;
-                    grdTable.Items[i].Cells[10].Text = totalPrice.ToString();
+                    //if(chk.Checked)
+                    //{
+                    //    tax = weight * unitprice / 10;
+                    //}
+
+                    //totalPrice = (int)(weight * unitprice + tax);
+                    //sumTotalPrice += totalPrice;
+                    //grdTable.Items[i].Cells[10].Text = totalPrice.ToString();
                 }
                 else // 기존에 제품이 선택되지 않은 row
                 {
@@ -218,11 +228,18 @@ namespace iljin.popUp
                     tb.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); calcTotalPrice('{i.ToString()}');");
                     unitprice = tb.Text == "" ? 0 : float.Parse(tb.Text);
 
-                    ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree")).Checked = Mdt.Rows[i]["taxFree"].ToString() == "1" ? true : false;
+                    chk = ((CheckBox)grdTable.Items[i].FindControl("chk_taxFree"));
+                    chk.Checked = Mdt.Rows[i]["taxfree"].ToString() == "1" ? true : false;
+                    chk.Attributes.Add("onchange", $"change_cud('{i.ToString()}'); calcTotalPrice('{i.ToString()}');");
 
-                    totalPrice = (int)(Math.Round(weight * unitprice, 2));
-                    sumTotalPrice += totalPrice;
-                    grdTable.Items[i].Cells[10].Text = totalPrice.ToString();
+                    //if (chk.Checked)
+                    //{
+                    //    tax = weight * unitprice / 10;
+                    //}
+
+                    //totalPrice = (int)(weight * unitprice + tax);
+                    //sumTotalPrice += totalPrice;
+                    //grdTable.Items[i].Cells[10].Text = totalPrice.ToString();
                 }
 
                 ((Button)grdTable.Items[i].FindControl("grd_btn_del")).Attributes.Add("onclick", $"deleteRow('{i.ToString()}'); return false;");
@@ -232,12 +249,12 @@ namespace iljin.popUp
                 ((HiddenField)grdTable.Items[i].FindControl("hidden_keyWord2")).Value = Mdt.Rows[i]["hidden_keyWord2"].ToString();
             }
 
-            txt_totalamount.Text = sumTotalPrice.ToString();
-            txt_totalWeight.Text = sumTotalWeight.ToString();
+            //txt_totalamount.Text = sumTotalPrice.ToString();
+            //txt_totalWeight.Text = sumTotalWeight.ToString();
 
-            float supplyPrice = sumTotalPrice / 1.1f;
-            txt_supplyprice.Text = Math.Round(supplyPrice).ToString();
-            txt_vat.Text = Math.Round((supplyPrice * 0.1f)).ToString();
+            //float supplyPrice = sumTotalPrice / 1.1f;
+            //txt_supplyprice.Text = Math.Round(supplyPrice).ToString();
+            //txt_vat.Text = Math.Round((supplyPrice * 0.1f)).ToString();
         }
 
         //품목추가

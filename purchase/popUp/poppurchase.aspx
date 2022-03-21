@@ -383,7 +383,7 @@
                                 <th class="mWt8p">폭</th>
                                 <th class="mWt8p">길이</th>
                                 <th class="mWt9p">남은수량</th>
-                                <th class="mWt9p">개수</th>
+                                <th class="mWt9p">수량</th>
                                 <th class="mWt9p">단가($)</th>
                                 <th class="mWt8p">관리</th>
                             </tr>

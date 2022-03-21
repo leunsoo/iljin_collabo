@@ -140,7 +140,6 @@
                 txtId = 'txt_workitem';
                 hdnId = 'hidden_itemCode';
             }
-            //생산제품
             else if (div == '-2') {
                 txtId = 'tb_emp';
                 hdnId = 'hidden_userCode';
@@ -150,10 +149,9 @@
                 txtId = 'tb_foreign';
                 hdnId = 'hidden_idx';
             }
-            //지시자
             else {
-                txtId = 'grdTable1_txt_produceitem_' + _div;
-                hdnId = 'grdTable1_hidden_itemCode2_' + _div;
+                txtId = 'table_ItemInfo_txt_produceitem_' + _div;
+                hdnId = 'table_ItemInfo_hidden_itemCode2_' + _div;
             }
 
             var txt = document.getElementById(txtId);
@@ -246,6 +244,8 @@
                     <span>작업등록</span>
                     <asp:HiddenField ID="hdn_serialNo" runat="server" />
                     <asp:HiddenField ID="hidden_keyWord" runat="server" />
+                    <asp:HiddenField ID="hdn_deleteRow" runat="server" />
+                    <asp:Button ID="hdn_btn_delete" runat="server" OnClick="hdn_btn_delete_Click" />
                     <asp:ListBox ID="li_itemlist" runat="server" CssClass="autoComplete_list" Style="top: 0px; left: 0px; visibility: hidden;"></asp:ListBox>
                 </div>
             </div>
@@ -257,11 +257,11 @@
                     <tr>
                         <th>등록일</th>
                         <td>
-                            <asp:TextBox ID="txt_registrationdate" runat="server" Width="200px" autocomplete="off"></asp:TextBox>
+                            <asp:TextBox ID="txt_registrationdate" runat="server" CssClass="w85p" autocomplete="off"></asp:TextBox>
                         </td>
                         <th>작업일</th>
                         <td>
-                            <asp:TextBox ID="txt_workdate" runat="server" Width="200px"></asp:TextBox>
+                            <asp:TextBox ID="txt_workdate" runat="server" CssClass="w85p" autocomplete="off"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -309,7 +309,7 @@
                 생산제품
                 <asp:Button ID="btn_add" runat="server" CssClass="ft_right btn_navy btn_100_30" Text="추가" OnClick="btn_add_Click" />
             </div>
-            <asp:DataGrid ID="grdTable1" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
+            <asp:DataGrid ID="table_ItemInfo" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff">
                 <Columns>
                     <asp:TemplateColumn HeaderText="">
                         <ItemTemplate>
@@ -318,12 +318,12 @@
                                     <tr>
                                         <th class="w10p">생산제품</th>
                                         <td class="w50p">
-                                            <asp:TextBox ID="txt_produceitem" runat="server" autocomplete="off"></asp:TextBox>
                                             <asp:HiddenField ID="hidden_itemCode2" runat="server" />
+                                            <asp:TextBox ID="txt_produceitem" runat="server" autocomplete="off"></asp:TextBox>
                                         </td>
                                         <th class="w10p">수량</th>
                                         <td class="w20p">
-                                            <asp:TextBox ID="txt_produceitemQty" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txt_produceitemQty" runat="server" CssClass="w100p" TextMode="Number"></asp:TextBox>
                                         </td>
                                         <th class="w10p">
                                             <asp:Button ID="btn_delete" runat="server" CssClass="btn_60_25 btn_red" Text="삭제" />
@@ -345,7 +345,7 @@
                 fDatePickerById("txt_workdate");
 
                 function SaveValidChk() {
-                    let grid = document.getElementById('<%= grdTable1.ClientID %>');
+                    let grid = document.getElementById('<%= table_ItemInfo.ClientID %>');
                     if (!grid) {
                         alert('생산제품을 등록해 주십시오.');
                         return false;
@@ -361,6 +361,11 @@
                     }
 
                     return true;
+                }
+
+                function DeleteItem(row) {
+                    document.getElementById('<%= hdn_deleteRow.ClientID%>').value = row;
+                    document.getElementById('<%= hdn_btn_delete.ClientID%>').click();
                 }
 
             </script>
