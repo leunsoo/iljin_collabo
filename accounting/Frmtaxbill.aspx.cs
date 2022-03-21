@@ -44,7 +44,7 @@ namespace iljin
 
                 if (dt.Rows[i]["sendDate"].ToString() != "")
                 {
-                    btn.Text = "발행완료";
+                    btn.Text = "전송완료";
                     btn.BackColor = Color.Green;
                 }
                 else

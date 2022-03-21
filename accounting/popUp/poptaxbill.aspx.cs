@@ -14,8 +14,11 @@ namespace iljin.popUp
 {
     public partial class poptaxbill : ApplicationRoot
     {
-        string sendDate = "";
-        DB_mysql km;
+        //바로빌 연동인증키 
+        private static string key = "A4A6B70C-2215-458F-9818-E0F194D3FAC5";
+
+        private string sendDate = "";
+        private DB_mysql km;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,6 +48,7 @@ namespace iljin.popUp
         }
 
         #region 기본정보 불러오기
+
         //청구/영수 설정
         private void cb_billtypecode_Setting()
         {
@@ -57,21 +61,32 @@ namespace iljin.popUp
         //수정사유 설정
         private void cb_updateReason_Setting()
         {
+            if (km == null) km = new DB_mysql();
+                 
             cb_updateReason.Items.Clear();
 
             if(hdn_serialNo.Value == "")
             {
-                cb_updateReason.Items.Add(new ListItem("해당사항없음", ""));
+                cb_updateReason.Items.Add(new ListItem("해당사항없음", "none"));
             }
             else
             {
-                cb_updateReason.Items.Add(new ListItem("선택", ""));
-                cb_updateReason.Items.Add(new ListItem("기재사항 수정", "1"));
-                cb_updateReason.Items.Add(new ListItem("공급가액 변동", "2"));
-                cb_updateReason.Items.Add(new ListItem("재화의 환입", "3"));
-                cb_updateReason.Items.Add(new ListItem("계약의 해제", "4"));
-                cb_updateReason.Items.Add(new ListItem("내국신용장 사후개설", "5"));
-                cb_updateReason.Items.Add(new ListItem("착오에 의한 이중발급", "6"));
+                string sql = $"SELECT sendDate FROM tb_taxbill WHERE serialNo = '{hdn_serialNo.Value}';";
+
+                if(km.GetDTa(sql).Rows[0][0].ToString() != "")
+                {
+                    cb_updateReason.Items.Add(new ListItem("선택", ""));
+                    cb_updateReason.Items.Add(new ListItem("기재사항 수정", "1"));
+                    cb_updateReason.Items.Add(new ListItem("공급가액 변동", "2"));
+                    cb_updateReason.Items.Add(new ListItem("재화의 환입", "3"));
+                    cb_updateReason.Items.Add(new ListItem("계약의 해제", "4"));
+                    cb_updateReason.Items.Add(new ListItem("내국신용장 사후개설", "5"));
+                    cb_updateReason.Items.Add(new ListItem("착오에 의한 이중발급", "6"));
+                }
+                else
+                {
+                    cb_updateReason.Items.Add(new ListItem("해당사항없음", "none"));
+                }
             }
         }
 
@@ -147,13 +162,13 @@ namespace iljin.popUp
                 if (chk == "1")
                 {
                     chk_taxfree.Checked = true;
-                    txt_taxCost.Text = (int.Parse(txt_produceCost.Text ) / 10).ToString();
+                    txt_taxCost.Text = dt.Rows[0]["taxCost"].ToString();
                     txt_taxCost.Attributes.Add("style", "visibility:hidden");
                     txt_totalCost.Text = txt_produceCost.Text;
                 }
                 else
                 {
-                    txt_taxCost.Text = (int.Parse(txt_produceCost.Text) / 10).ToString();
+                    txt_taxCost.Text = dt.Rows[0]["taxCost"].ToString();
                     txt_totalCost.Text = (int.Parse(txt_produceCost.Text) + int.Parse(txt_taxCost.Text)).ToString();
                 }
             }
@@ -185,6 +200,7 @@ namespace iljin.popUp
             }
 
         }
+
         #endregion
 
         //저장
@@ -196,9 +212,6 @@ namespace iljin.popUp
             {
                 km.BeginTran();
 
-                string tax = txt_taxCost.Text;
-                if (chk_taxfree.Checked) tax = "0";
-
                 if (hdn_serialNo.Value == "") //추가
                 {
                     string serialNo = Tool_DB.SetCode_Tran("tb_taxbill", "serialNo", ConstClass.TAXBILL_CODE_PREFIX, km);
@@ -207,7 +220,7 @@ namespace iljin.popUp
 
                     PROCEDURE.CUD_TRAN("SP_taxbill_cusinfo_Add", cusObjs, km);
 
-                    object[] objs = { serialNo, hdn_cusCode.Value, cb_billtypecode, chk_taxfree, txt_registrationDate, sendDate, txt_itemName, txt_produceCost, tax };
+                    object[] objs = { serialNo, hdn_cusCode.Value, cb_billtypecode, chk_taxfree, txt_registrationDate, sendDate, txt_itemName, txt_produceCost, txt_taxCost };
 
                     PROCEDURE.CUD_TRAN("SP_taxbill_Add", objs, km);
 
@@ -219,11 +232,18 @@ namespace iljin.popUp
                 }
                 else // 수정
                 {
+                    string updateSerialNo = "";
+                    //수정세금계산서일 경우
+                    if (cb_updateReason.Items.Count > 3 && sendDate != "")
+                    {
+                        updateSerialNo = Get_UpdateSerialNo();
+                    }
+
                     object[] cusObjs = { hdn_serialNo, txt_registration2, txt_cusName2, txt_businessNo2, txt_bossname2, txt_address2, txt_business2, txt_businessitem2, txt_email2, txt_manager2, txt_phone2 };
 
                     PROCEDURE.CUD_TRAN("SP_taxbill_cusinfo_Update", cusObjs, km);
 
-                    object[] objs = { hdn_serialNo, cb_billtypecode, chk_taxfree, txt_itemName, tax };
+                    object[] objs = { hdn_serialNo, updateSerialNo, cb_billtypecode, chk_taxfree, txt_itemName, txt_taxCost,sendDate };
 
                     PROCEDURE.CUD_TRAN("SP_taxbill_Update", objs, km);
 
@@ -247,41 +267,24 @@ namespace iljin.popUp
         {
             BaroService_TISoapClient barobill = new BaroService_TISoapClient();
 
-            //연동인증키
-            string key = "A4A6B70C-2215-458F-9818-E0F194D3FAC5";
+            Tax_Set_NTS_Option(barobill);  //발급 시 바로 국세청 전송
 
             TaxInvoice taxInvoice = new TaxInvoice();
 
-            Tax_ProucerInfo(taxInvoice);
-            Tax_RecipientInfo(taxInvoice);
-            Tax_Info(taxInvoice);
-            //Tax_Item_Info(taxIn
-            //
-            //voice);
+            Tax_ProucerInfo(taxInvoice);   //공급자 정보 입력
+            Tax_RecipientInfo(taxInvoice); //공급받는자 정보 입력
+            Tax_Info(taxInvoice,barobill);          //세금계산서 내용 입력
 
-            TaxInvoiceStateEX tt;
-
-            tt = barobill.GetTaxInvoiceStateEX("", "", "");
-
-           // tt.NTSSendKey
-
-           // taxInvoice.
             int result;
-            //세금계산서 전송
-            if(hdn_serialNo.Value == "")
-            {
-                result = barobill.RegistAndIssueTaxInvoice(key, txt_registration1.Text.Replace("-", ""), taxInvoice, Convert.ToBoolean(hdn_isSend.Value), false, "");
-            }
-            else //세금계산서 수정 전송
-            {
-                if(cb_updateReason.SelectedValue == "")
-                {
-                    Response.Write("<script>alert('수정사유를 선택해주십시오.');</script>");
-                    return;
-                }
 
-                result = barobill.UpdateTaxInvoiceEX(key,txt_registration1.Text.Replace("-",""),taxInvoice,1);
+            if (cb_updateReason.SelectedValue == "")
+            {
+                Response.Write("<script>alert('수정사유를 선택해주십시오.');</script>");
+                return;
             }
+
+            //세금계산서 전송
+            result = barobill.RegistAndIssueTaxInvoice(key, txt_registration1.Text.Replace("-", ""), taxInvoice, false, true, "");
 
             //전송이 완료됐으면 저장한다.
             if(result == 1)
@@ -293,20 +296,70 @@ namespace iljin.popUp
             else // 오류사항 출력
             {
                 Response.Write($"<script>alert('{barobill.GetErrString(key, result)}');</script>");
+                return;
             }
+        }
+
+        //발급 시 바로 국세청 전송되게 Setting
+        private void Tax_Set_NTS_Option(BaroService_TISoapClient barobill)
+        {
+            string corpNum = txt_registration1.Text.Replace("-", "");
+
+            NTSSendOption nTSSendOption = barobill.GetNTSSendOption(key, corpNum);
+
+            if(nTSSendOption.TaxationOption > 0)
+            {
+                //발급시 바로 국세청으로 전송되게 만드는 부분
+                if (nTSSendOption.TaxationOption != 2)
+                {
+                    nTSSendOption.TaxationOption = 2;
+
+                    barobill.ChangeNTSSendOption(key, corpNum, "iljin6834",nTSSendOption);
+                }
+            }
+            else
+            {
+                Response.Write($"<script>alert('{barobill.GetErrString(key, nTSSendOption.TaxationOption)}');</script>");
+                return;
+            }
+        }
+
+        //수정세금계산서 관리번호 자동채번
+        private string Get_UpdateSerialNo()
+        {
+            string serialNo = "";
+
+            if (km == null) km = new DB_mysql();
+
+            string sql = $"SELECT serialNo_Update FROM tb_taxbill WHERE serialNo = '{txt_serialNo.Text}';";
+
+            serialNo = km.tran_GetDTa(sql).Rows[0][0].ToString();
+            int updateNo = int.Parse(serialNo.Substring(serialNo.Length - 2));
+            string strUpdateNo = (updateNo + 1).ToString();
+
+            if (strUpdateNo.Length == 1) strUpdateNo = "0" + strUpdateNo;
+
+            return serialNo = txt_serialNo.Text + "_" + strUpdateNo;
         }
 
         //공급자 정보 입력
         private void Tax_ProucerInfo(TaxInvoice tax)
         {
+            string serialNo = txt_serialNo.Text;
+
+            //바로빌 ID가져오기
             if (km == null) km = new DB_mysql();
-
             string sql = "SELECT barobill_ID FROM tb_company;";
-
             string id = km.GetDTa(sql).Rows[0][0].ToString();
 
+            //수정세금계산서일 경우
+            if (cb_updateReason.Items.Count > 3)
+            {
+                serialNo = Get_UpdateSerialNo();
+            }
+
             tax.InvoicerParty = new InvoiceParty();
-            tax.InvoicerParty.MgtNum = txt_serialNo.Text; //고유ID 자동채번 세금계산서번호
+            tax.InvoicerParty.MgtNum = serialNo; //고유ID 자동채번 세금계산서번호
             tax.InvoicerParty.CorpNum = txt_registration1.Text.Replace("-",""); //사업자등록번호 -뺴고
             tax.InvoicerParty.CorpName = txt_cusName1.Text; //업체명
             tax.InvoicerParty.CEOName = txt_bossname1.Text; //대표자명
@@ -330,12 +383,25 @@ namespace iljin.popUp
         }
 
         //세금계산서 내용 입력
-        private void Tax_Info(TaxInvoice tax)
+        private void Tax_Info(TaxInvoice tax, BaroService_TISoapClient barobill)
         {
-            if(hdn_serialNo.Value != "")
+            string corpNum = txt_registration1.Text.Replace("-", "");
+
+            //세금계산서를 수정할 경우
+            if (cb_updateReason.Items.Count > 3)
             {
-                tax.ModifyCode = cb_updateReason.SelectedValue; //수정사유
-                tax.Remark1 = ""; // 국세청 승인번호,...?
+                TaxInvoiceStateEX taxEx = barobill.GetTaxInvoiceStateEX(key, corpNum, hdn_serialNo.Value);
+
+                if(taxEx.BarobillState > 0)
+                {
+                    tax.ModifyCode = cb_updateReason.SelectedValue; //수정사유
+                    tax.Remark1 = taxEx.NTSSendKey;
+                }
+                else
+                {
+                    Response.Write($"<script>alert('{barobill.GetErrString(key, taxEx.BarobillState)}');</script>");
+                    return;
+                }
             }
 
             tax.IssueDirection = 1;
@@ -348,6 +414,7 @@ namespace iljin.popUp
             tax.TaxTotal = chk_taxfree.Checked == true ? "0" : txt_taxCost.Text;
             tax.TotalAmount = chk_taxfree.Checked == true ? txt_produceCost.Text : txt_totalCost.Text;
 
+            //세금계산서 품목 입력
             TaxInvoiceTradeLineItem item = new TaxInvoiceTradeLineItem();
             item.PurchaseExpiry = DateTime.Parse(txt_registrationDate.Text).ToString("yyyyMMdd");  //공급일자 (YYYYMMDD)
             item.Name = txt_itemName.Text; //품목명
@@ -357,45 +424,6 @@ namespace iljin.popUp
             tax.TaxInvoiceTradeLineItems = new TaxInvoiceTradeLineItem[1];
             tax.TaxInvoiceTradeLineItems[0] = item;
         }
-
-        ////세금계산서 품목 입력 <= 최대 99개까지 입력 가능
-        //private void Tax_Item_Info(TaxInvoice tax)
-        //{
-        //    if (km == null) km = new DB_mysql();
-
-        //    string sql = "SELECT " +
-        //                 "REPLACE(LEFT(a.releaseDate, 10), '-', '') AS relaseDate, " +
-        //                 "c.fullName, " +
-        //                 "CAST((b.unitprice * b.totalWeight) AS integer) AS price, " +
-        //                 "CAST((b.unitprice * b.totalWeight / 10) AS INTEGER) AS tax " +
-        //                 "FROM tb_order_master a " +
-        //                 "INNER JOIN tb_order_detail b ON a.orderCode = b.orderCode " +
-        //                 "INNER JOIN tb_item c ON c.itemCode = b.itemCode ";
-
-        //    if (hdn_serialNo.Value == "") // 초기 세금계산서 전송 시 orderCode로부터 품목 얻기
-        //    {
-        //        sql += $"WHERE a.orderCode IN({hdn_code.Value});";
-        //    }
-        //    else // 세금계산서 수정시 해당 세금계산서 번호로 품목 가져오기
-        //    {
-        //        sql += $"WHERE a.taxbillserialNo = '{hdn_serialNo.Value}';";
-        //    }
-
-        //    DataTable dt = km.GetDTa(sql);
-
-        //    tax.TaxInvoiceTradeLineItems = new TaxInvoiceTradeLineItem[dt.Rows.Count];
-            
-        //    for(int i = 0; i < dt.Rows.Count;i ++)
-        //    {
-        //        TaxInvoiceTradeLineItem item = new TaxInvoiceTradeLineItem();
-        //        item.PurchaseExpiry = DateTime.Parse(txt_registrationDate.Text).ToString("yyyyMMdd");  //공급일자 (YYYYMMDD)
-        //        item.Name = dt.Rows[i][1].ToString();           //품목명
-        //        item.Amount = dt.Rows[i][2].ToString();         //공급가액
-        //        item.Tax = chk_taxfree.Checked == true ? "0" : dt.Rows[i][3].ToString();            //세액
-
-        //        tax.TaxInvoiceTradeLineItems[i] = item;
-        //    }
-        //}
 
         #endregion
     }

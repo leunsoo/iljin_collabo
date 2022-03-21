@@ -264,7 +264,7 @@
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <ItemTemplate>
-                                                    <asp:Button ID="btn_send" runat="server" CssClass="btn_red btn_60_20" Text="수정" />
+                                                    <asp:Button ID="btn_send" runat="server" CssClass="btn_red btn_60_20" Text="미전송" />
                                                 </ItemTemplate>
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="9%" CssClass="" />
