@@ -192,7 +192,7 @@
                     <thead>
                         <tr>
                             <th class="mWt20p">거래처</th>
-                            <th class="mWt30p">최근수금</th>
+                            <th class="mWt30p">최근입금</th>
                             <th class="mWt25p">현매출</th>
                             <th class="mWt25p">현미수금</th> 
                             <%--<th class="mWt10p">관리</th>--%>
