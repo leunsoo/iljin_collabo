@@ -30,6 +30,8 @@ namespace iljin.popUp
             }
         }
 
+        #region 정보 불러오기
+
         //작업정보 && 작업제품 정보
         private void Search_Info()
         {
@@ -83,77 +85,9 @@ namespace iljin.popUp
             }
         }
 
-        //작업완료
-        protected void btn_complete_Click(object sender, EventArgs e)
-        {
-            int count = 0;
+        #endregion
 
-            for (int i = 0; i < grdTable1.Items.Count; i++)
-            {
-                if (((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value != "") count++;
-            }
-
-            if (count == 0)
-            {
-                Response.Write("<script>alert('최소 1개 이상의 제품을 등록하셔야 합니다.');</script>");
-                return;
-            }
-
-            string serialNo = "";
-
-            if (km == null) km = new DB_mysql();
-
-            try
-            {
-                km.BeginTran();
-
-                Save_WorkInfo();
-                Save_ProdInfo();
-
-                km.Commit();
-                Response.Write("<script>alert('저장되었습니다.');</script>");
-                Response.Write("<script>window.opener.refresh();</script>");
-                Response.Write("<script>window.close();</script>");
-            }
-            catch (Exception ex)
-            {
-                PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
-
-                Response.Write("<script>alert('저장실패');</script>");
-            }
-        }
-
-        //작업정보 저장
-        private void Save_WorkInfo()
-        {
-            if (km == null) km = new DB_mysql(); //DB 연결
-
-            object[] objs = { hidden_code, txt_workdate, hidden_idx, hidden_userCode, cb_machineNo, hidden_itemCode, txt_workitemQty };
-
-            PROCEDURE.CUD_TRAN("SP_item_remake_Update_final", objs, km);
-        }
-
-        //생산제품 저장
-        private void Save_ProdInfo()
-        {
-            //제품저장시 기존 제품 삭제 후 덮어 쓰기
-            string sql = $"DELETE FROM tb_item_remake_detail WHERE serialNo = '{hidden_code.Value}';";
-
-            for (int i = 0; i < grdTable1.Items.Count; i++)
-            {
-                string itemCode = ((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value;
-
-                if (itemCode != "")
-                {
-                    sql += " CALL SP_item_remake_detail_Add(" +
-                          $"'{hidden_code.Value}'," +
-                          $"'{((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value}'," +
-                          $"'{((TextBox)grdTable1.Items[i].FindControl("txt_produceitemQty")).Text}');";
-                }
-            }
-
-            km.tran_ExSQL_Ret(sql);
-        }
+        #region 그리드 추가,삭제
 
         //삭제 버튼 클릭
         //그리드 row삭제
@@ -182,5 +116,120 @@ namespace iljin.popUp
 
             Search_Item_Info(false);
         }
+
+        #endregion
+
+        #region 저장
+
+        //작업완료
+        protected void btn_complete_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+
+            for (int i = 0; i < grdTable1.Items.Count; i++)
+            {
+                if (((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value != "") count++;
+            }
+
+            if (count == 0)
+            {
+                Response.Write("<script>alert('최소 1개 이상의 제품을 등록하셔야 합니다.');</script>");
+                return;
+            }
+
+            if (km == null) km = new DB_mysql();
+
+            try
+            {
+                km.BeginTran();
+
+                Save_WorkInfo();                //작업정보 저장
+                Warehousing_Release_WorkItem(); //작업제품 출고처리
+                Inventory_Decrease();           //출고제품 재고 계산
+
+                Save_ProdInfo(); //생산제품 정보 저장 && 입고처리 && 재고계산
+
+                km.Commit();
+                Response.Write("<script>alert('저장되었습니다.');</script>");
+                Response.Write("<script>window.opener.refresh();</script>");
+                Response.Write("<script>window.close();</script>");
+            }
+            catch (Exception ex)
+            {
+                PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
+
+                Response.Write("<script>alert('저장실패');</script>");
+            }
+        }
+
+        //작업정보 저장
+        private void Save_WorkInfo()
+        {
+            object[] objs = { hidden_code, txt_workdate, hidden_idx, hidden_userCode, cb_machineNo, hidden_itemCode, txt_workitemQty };
+
+            PROCEDURE.CUD_TRAN("SP_item_remake_Update_final", objs, km);
+        }
+        
+        //작업제품 출고처리
+        private void Warehousing_Release_WorkItem()
+        {
+            object[] objs = { txt_workdate, hidden_itemCode, txt_workitemQty, hidden_userCode, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") };
+
+            PROCEDURE.CUD_TRAN("SP_warehousing_Release_From_item_remake", objs, km);
+        }
+
+        //출고제품 재고 계산
+        private void Inventory_Decrease()
+        {
+            object[] objs = {  hidden_itemCode, txt_workitemQty };
+
+            PROCEDURE.CUD_TRAN("SP_inventory_Decrease", objs, km);
+        }
+
+        //생산제품 저장
+        private void Save_ProdInfo()
+        {
+            //제품저장시 기존 제품 삭제 후 덮어 쓰기
+            string sql = $"DELETE FROM tb_item_remake_detail WHERE serialNo = '{hidden_code.Value}';";
+
+            for (int i = 0; i < grdTable1.Items.Count; i++)
+            {
+                string itemCode = ((HiddenField)grdTable1.Items[i].FindControl("hidden_itemCode2")).Value;
+                string qty = ((TextBox)grdTable1.Items[i].FindControl("txt_produceitemQty")).Text;
+
+                if (itemCode != "")
+                {
+
+                    //생산제품 정보 저장
+                    sql += " CALL SP_item_remake_detail_Add(" +
+                          $"'{hidden_code.Value}'," +
+                          $"'{itemCode}'," +
+                          $"'{qty}');";
+
+                    Warehousing_Income_ProdItem(itemCode, qty); //생산제품 입고처리
+                    Inventory_Increase(itemCode, qty);          //입고제품 재고 계산
+                }
+            }
+
+            km.tran_ExSQL_Ret(sql);
+        }
+
+        //생산제품 입고처리
+        private void Warehousing_Income_ProdItem(string itemCode, string qty)
+        {
+            object[] objs = { txt_workdate, itemCode, qty, hidden_userCode, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") };
+
+            PROCEDURE.CUD_TRAN("SP_inventory_Decrease", objs, km);
+        }
+
+        //입고제품 재고 계산
+        private void Inventory_Increase(string itemCode, string qty)
+        {
+            object[] objs = { itemCode, qty };
+
+            PROCEDURE.CUD_TRAN("SP_inventory_Increase", objs, km);
+        }
+
+        #endregion
     }
 }
