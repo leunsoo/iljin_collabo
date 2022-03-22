@@ -73,7 +73,7 @@
 
             var height = (itemHeight * itemCount + 1) + "px";
             list.style.height = height;
-            var listTop = (txt.getBoundingClientRect().top - 67) + "px";
+            var listTop = (txt.getBoundingClientRect().top - 67 + window.pageYOffset) + "px";
             var listLeft = (txt.getBoundingClientRect().left - 290) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;

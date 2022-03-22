@@ -270,7 +270,7 @@
         <div class="ft_right">
             <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black ml10" Text="저장" OnClick="btn_save_Click" />
             <asp:Button ID="btn_delete" runat="server" CssClass="btn_150_40 btn_red ml10" Text="삭제" OnClick="btn_delete_Click" />
-            <asp:Button ID="btn_close" runat="server" CssClass="btn_150_40 btn_gray ml10" Text="취소" OnClick="btn_close_Click" OnUnload="btn_close_Unload" />
+            <asp:Button ID="btn_close" runat="server" CssClass="btn_150_40 btn_gray ml10" Text="취소"/>
         </div>
         <div class="mt30" />
         &nbsp
