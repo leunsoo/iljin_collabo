@@ -108,9 +108,9 @@ namespace iljin.popUp
                           $"a.leftQty = a.leftQty - {grdTable1.Items[i].Cells[7].Text} " +
                           $"WHERE a.itemCode = '{grdTable1.Items[i].Cells[0].Text}' " +
                           $"AND a.contractId = (SELECT b.contractId FROM tb_container_info b WHERE b.idx = {hidden_idx.Value});";
-                    //sql += "CALL SP_inventory_Add_From_Income(" +
-                    //    $"'{grdTable1.Items[i].Cells[0].Text}'" +
-                    //    $",'{grdTable1.Items[i].Cells[7].Text}');";
+
+                    //재고 추가
+                    Inventory_Increase(grdTable1.Items[i].Cells[0].Text, grdTable1.Items[i].Cells[7].Text);
                 }
 
                 if (sql != "")
@@ -129,6 +129,14 @@ namespace iljin.popUp
 
                 Response.Write("<script>alert('입고 실패.')</script>");
             }
+        }
+
+        //입고제품 재고 계산
+        private void Inventory_Increase(string itemCode, string qty)
+        {
+            object[] objs = { itemCode, qty };
+
+            PROCEDURE.CUD_TRAN("SP_inventory_Increase", objs, km);
         }
     }
 }

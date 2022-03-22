@@ -187,18 +187,18 @@ namespace iljin.popUp
 
                 km.tran_ExSQL_Ret(sql);
 
-                DataTable dt = km.tran_GetDTa($"SELECT actualItemCode,qty FROM tb_order_detail WHERE orderCode IN ({hidden_codeList.Value.Substring(1)});");
+                //DataTable dt = km.tran_GetDTa($"SELECT actualItemCode,qty FROM tb_order_detail WHERE orderCode IN ({hidden_codeList.Value.Substring(1)});");
 
-                sql = "";
+                //sql = "";
 
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    sql += "UPDATE tb_inventory SET " +
-                          $"rQty = rQty - {dt.Rows[0][1].ToString()} " +
-                          $"WHERE itemCode = '{dt.Rows[0][0].ToString()}';";
-                }
+                //for (int i = 0; i < dt.Rows.Count; i++)
+                //{
+                //    sql += "UPDATE tb_inventory SET " +
+                //          $"rQty = rQty - {dt.Rows[0][1].ToString()} " +
+                //          $"WHERE itemCode = '{dt.Rows[0][0].ToString()}';";
+                //}
 
-                km.tran_ExSQL_Ret(sql);
+                //km.tran_ExSQL_Ret(sql);
 
                 km.Commit();
 

@@ -371,6 +371,8 @@ namespace iljin.popUp
                           $",'{cb_cusname.SelectedValue}'" +
                           $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_orderQty")).Text}'" +
                           $",'{no}');";
+
+                    Inventory_Decrease(((HiddenField)grdTable.Items[i].FindControl("grd_hdn_actualItemCode")).Value, ((TextBox)grdTable.Items[i].FindControl("grd_txt_orderQty")).Text);
                 }
                 else if (cud == "u") //수정
                 {
@@ -399,6 +401,14 @@ namespace iljin.popUp
             {
                 km.tran_ExSQL_Ret(sql);
             }
+        }
+
+        //출고제품 재고 계산
+        private void Inventory_Decrease(string itemCode, string qty)
+        {
+            object[] objs = { itemCode, qty };
+
+            PROCEDURE.CUD_TRAN("SP_inventory_Decrease", objs, km);
         }
 
         //삭제
