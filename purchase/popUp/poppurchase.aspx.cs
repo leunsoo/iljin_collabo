@@ -210,37 +210,21 @@ namespace iljin.popUp
         //품목 삭제
         protected void btn_grd_delete_Click(object sender, EventArgs e)
         {
-            if (km == null) km = new DB_mysql();
-
             string sql = "";
             int rowIdx = int.Parse(hdn_selectedRow.Value);
             string idx = grdTable1.Items[rowIdx].Cells[0].Text;
 
-            km.BeginTran();
-
-            try
+            //불러온 데이터인 경우
+            if (idx != "")
             {
-                //불러온 데이터인 경우
-                if (idx != "")
-                {
-                    object[] objs = { idx };
-
-                    km.tran_ExSQL_Ret($"DELETE FROM tb_purchase_item WHERE idx = {idx}");
-                }
-
-                itemDt = Dt_From_ItemGrd();
-
-                itemDt.Rows.RemoveAt(rowIdx);
-
-                km.Commit();
-                Search_ItemInfo(false);
-                Alert("삭제되었습니다.");
+                hidden_deleteIdx.Value += "," + idx;
             }
-            catch (Exception ex)
-            {
-                PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
-                Alert("삭제 실패");
-            }
+
+            itemDt = Dt_From_ItemGrd();
+
+            itemDt.Rows.RemoveAt(rowIdx);
+
+            Search_ItemInfo(false);
         }
 
         //구매품목Grid DT로 변환
@@ -421,6 +405,12 @@ namespace iljin.popUp
                         $"'{((TextBox)grdTable1.Items[i].FindControl("txt_count")).Text}'," +
                         $"'{((TextBox)grdTable1.Items[i].FindControl("txt_unitprice")).Text}');";
                 }
+            }
+
+            if (hidden_deleteIdx.Value != "")
+            {
+                string delete = hidden_deleteIdx.Value.Substring(1);
+                sql += $"DELETE FROM tb_purchase_item WHERE idx IN ('{delete}');";
             }
 
             if (sql != "")

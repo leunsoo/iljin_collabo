@@ -272,6 +272,7 @@
                 <asp:HiddenField ID="hidden_keyWord" runat="server" />
                 <asp:HiddenField ID="hidden_cusCode" runat="server" />
                 <asp:HiddenField ID="hidden_chkUpdate" runat="server" />
+                <asp:HiddenField ID="hidden_deleteIdx" runat="server" />
                 <asp:ListBox ID="li_itemlist" runat="server" Style="top: 0px; left: 0px; visibility: hidden;" CssClass="autoComplete_list"></asp:ListBox>
             </div>
         </div>

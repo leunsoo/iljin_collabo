@@ -416,7 +416,7 @@ namespace iljin.popUp
 
             Mdt = les_DataGridSystem.Get_Dt_From_DataGrid(grdTable, fieldArr);
 
-            Mdt.Rows.RemoveAt(int.Parse(hidden_selectedRow.Value));
+            Mdt.Rows.RemoveAt(row);
 
             Search_Item(false);
         }
