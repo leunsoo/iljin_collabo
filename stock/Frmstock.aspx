@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/iljin.Master" AutoEventWireup="true" CodeBehind="Frmstock.aspx.cs" Inherits="iljin.Frmstock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <br />
     <script type="text/javascript">
         var listId = 'ContentPlaceHolder2_li_itemlist';
         var txtId = 'ContentPlaceHolder2_txt_itemname';
@@ -78,7 +76,7 @@
             var height = (itemHeight * itemCount + 1) + "px";
            list.style.height = height;
             var listTop = (txt.getBoundingClientRect().top - 67 + window.pageYOffset) + "px";
-            var listLeft = (txt.getBoundingClientRect().left - 290) + "px";
+            var listLeft = (txt.getBoundingClientRect().left - 290 + window.pageXOffset) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;
             list.style.width = txt.offsetWidth + "px";
@@ -171,10 +169,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <article class ="conts_inner">
         <asp:Panel ID="defaultPanel1" runat="server" DefaultButton="btn_default">
-        <h2 class="conts_tit"><asp:Label ID="m_title" runat="server" Text="재고관리 ::> 재고현황"></asp:Label></h2>
+        <h2 class="conts_tit"><asp:Label ID="m_title" runat="server" Text="재고관리 ::> 재고현황"></asp:Label>
             <asp:HiddenField ID="hidden_keyWord" runat="server" />
             <asp:HiddenField ID="hidden_itemCode" runat="server" />
             <asp:ListBox ID="li_itemlist" runat="server"  CssClass="autoComplete_list" Style="top:0px; left:0px; visibility: hidden;"></asp:ListBox>
+        </h2>
         <div class ="search_box">
             <div class ="box_row">
                 <span>제품명</span>

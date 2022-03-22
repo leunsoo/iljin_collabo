@@ -123,7 +123,7 @@
             let height = (itemHeight * itemCount + 1) + "px";
             list.style.height = height;
             let listTop = (txt.getBoundingClientRect().top + 30 + window.pageYOffset) + "px";
-            let listLeft = (txt.getBoundingClientRect().left) + "px";
+            let listLeft = (txt.getBoundingClientRect().left + window.pageXOffset) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;
             list.style.width = txt.offsetWidth + "px";

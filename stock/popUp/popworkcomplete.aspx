@@ -121,7 +121,7 @@
             //list.setAttribute("style", "height:" + height + " visibility:visible; width:200px; padding:0px 0px; background:white; position:absolute;left:101px;top:108px;z-index:10;");
             list.style.height = height;
             var listTop = (txt.getBoundingClientRect().top + 30 + window.pageYOffset) + "px";
-            var listLeft = txt.getBoundingClientRect().left + "px";
+            var listLeft = (txt.getBoundingClientRect().left + window.pageXOffset) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;
             list.style.width = txt.offsetWidth + "px";
