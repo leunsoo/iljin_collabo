@@ -116,7 +116,7 @@
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText="">
                                             <ItemTemplate>
-                                                <asp:DropDownList ID="cb_contractno" runat="server"></asp:DropDownList>
+                                                <asp:DropDownList ID="cb_contractno" runat="server" onchange="grdTable2_visible_hidden()"></asp:DropDownList>
                                             </ItemTemplate>
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <ItemStyle Width="14%" CssClass="" />
@@ -171,7 +171,7 @@
                 </tbody>
             </table>
         </div>
-        <div id="visiblity" runat="server" visible="false">
+        <div id="visiblity" runat="server"  style="visibility:hidden">
             <div class="title_1 mt20">
                 * 제품선택 
             </div>
@@ -270,7 +270,7 @@
         <div class="ft_right">
             <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black ml10" Text="저장" OnClick="btn_save_Click" />
             <asp:Button ID="btn_delete" runat="server" CssClass="btn_150_40 btn_red ml10" Text="삭제" OnClick="btn_delete_Click" />
-            <asp:Button ID="btn_close" runat="server" CssClass="btn_150_40 btn_gray ml10" Text="취소"/>
+            <asp:Button ID="btn_close" runat="server" CssClass="btn_150_40 btn_gray ml10" Text="취소" OnClick="btn_close_Click"/>
         </div>
         <div class="mt30" />
         &nbsp
@@ -279,6 +279,10 @@
             fDatePickerById("txt_etd");
             fDatePickerById("txt_eta");
             fDatePickerById2("grdTable1_txt_dispatchdate");
+
+            function grdTable2_visible_hidden() {
+                document.getElementById('visiblity').style.visibility = 'hidden';
+            }
 
             function Sum_CheckedQty() {
                 let grid = document.getElementById('<%= grdTable2.ClientID%>');

@@ -30,13 +30,13 @@ namespace iljin
             //우리가 바꿔야하는건 그리드의 필드명인데 이 그리드의 필드명은 <th>3월말<th> <= 이거를 해당 달에 따라서 바꿔줘야 함
             //html 태그의 텍스트를 코드로 바꿀 수 있나?
 
-            txt_month0.InnerHtml = DateTime.Now.AddMonths(0).ToString("MMM") + "월말";
-            txt_month1.InnerHtml = DateTime.Now.AddMonths(1).ToString("MMM") + "월말";
-            txt_month2.InnerHtml = DateTime.Now.AddMonths(2).ToString("MMM") + "월말";
-            txt_month3.InnerHtml = DateTime.Now.AddMonths(3).ToString("MMM") + "월말";
-            txt_month4.InnerHtml = DateTime.Now.AddMonths(4).ToString("MMM") + "월말";
-            txt_month5.InnerHtml = DateTime.Now.AddMonths(5).ToString("MMM") + "월말";
-            txt_month6.InnerHtml = DateTime.Now.AddMonths(6).ToString("MMM") + "월말";
+            txt_month0.InnerHtml = DateTime.Now.AddMonths(0).ToString("MM").Replace("0","") + "월말";
+            txt_month1.InnerHtml = DateTime.Now.AddMonths(1).ToString("MM").Replace("0", "") + "월말";
+            txt_month2.InnerHtml = DateTime.Now.AddMonths(2).ToString("MM").Replace("0", "") + "월말";
+            txt_month3.InnerHtml = DateTime.Now.AddMonths(3).ToString("MM").Replace("0", "") + "월말";
+            txt_month4.InnerHtml = DateTime.Now.AddMonths(4).ToString("MM").Replace("0", "") + "월말";
+            txt_month5.InnerHtml = DateTime.Now.AddMonths(5).ToString("MM").Replace("0", "") + "월말";
+            txt_month6.InnerHtml = DateTime.Now.AddMonths(6).ToString("MM").Replace("0", "") + "월말";
         }
 
         private void Search()

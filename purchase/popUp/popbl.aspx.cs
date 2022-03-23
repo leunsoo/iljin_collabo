@@ -260,7 +260,7 @@ namespace iljin.popUp
                 km.Commit();
                 Search_ContainerInfo(false);
                 grdTable2.DataSource = null;
-                visiblity.Visible = false;
+                visiblity.Attributes.Add("style", "visibility:hidden");
 
                 Response.Write("<script>alert('삭제되었습니다.');</script>");
             }
@@ -441,13 +441,13 @@ namespace iljin.popUp
                 Search_Container_Item_Update();
             }
 
-            visiblity.Visible = true;
+            visiblity.Attributes.Add("style", "visibility:visible");
         }
 
         //컨테이너 선택취소
         protected void btn_container_close_Click(object sender, EventArgs e)
         {
-            visiblity.Visible = false;
+            visiblity.Attributes.Add("style", "visibility:hidden");
         }
 
         //컨테이너 품목 저장 - 선택완료
@@ -469,7 +469,7 @@ namespace iljin.popUp
                 PROCEDURE.ERROR_ROLLBACK(ex.Message, km);
             }
 
-            visiblity.Visible = false;
+            visiblity.Attributes.Add("style", "visibility:hidden");
         }
 
         //컨테이너 품목 저장
@@ -664,7 +664,7 @@ namespace iljin.popUp
             Response.Write("<script>window.close();</script>");
         }
 
-        //삭제 <= 이거 바꿔야할거같은데?
+        //삭제
         protected void btn_delete_Click(object sender, EventArgs e)
         {
             if (km == null) km = new DB_mysql();
@@ -673,9 +673,17 @@ namespace iljin.popUp
 
             try
             {
-                string sql = $"DELETE FROM tb_BLinfo WHERE idx = '{hdn_no.Value}';";
+                //BL에 등록된 컨테이너,컨테이너 제품 삭제
+                object[] objs = { hdn_no };
+                PROCEDURE.CUD_TRAN("SP_container_DeleteByBLId", objs, km);
 
+                //BL정보 삭제
+                string sql = $"DELETE FROM tb_BLinfo WHERE idx = '{hdn_no.Value}';";
                 km.tran_ExSQL_Ret(sql);
+
+                //임시테이블 초기화
+                objs = new object[] { hdn_user };
+                PROCEDURE.CUD_TRAN("SP_tempTable_Delete", objs, km);
 
                 km.Commit();
 
