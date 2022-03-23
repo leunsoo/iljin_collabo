@@ -101,7 +101,7 @@ namespace iljin.popUp
             }
         }
 
-        #region bl
+        #region BL 정보
         //BL 정보 불러오기
         private void Search_BLInfo()
         {
@@ -137,7 +137,7 @@ namespace iljin.popUp
         }
         #endregion
 
-        #region container
+        #region 컨테이너정보
         //컨테이너 정보 불러오기
         private void Search_ContainerInfo(bool isSearch)
         {
@@ -315,7 +315,7 @@ namespace iljin.popUp
 
         #endregion
 
-        #region container_item
+        #region 컨테이너 품목 정보
         //컨테이너 품목 정보 불러오기-제품선택
         private void Search_Container_Item_FromContract()
         {
@@ -664,20 +664,7 @@ namespace iljin.popUp
             Response.Write("<script>window.close();</script>");
         }
 
-        //언로드 이벤트
-        protected void btn_close_Unload(object sender, EventArgs e)
-        {
-        }
-
-        //삭제 가능하면 true
-        //불가능하면 false
-        private bool DeleteCheck()
-        {
-            return true;
-            return false;
-        }
-
-        //삭제
+        //삭제 <= 이거 바꿔야할거같은데?
         protected void btn_delete_Click(object sender, EventArgs e)
         {
             if (km == null) km = new DB_mysql();

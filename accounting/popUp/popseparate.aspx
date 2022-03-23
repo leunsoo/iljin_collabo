@@ -122,8 +122,8 @@
 
             let height = (itemHeight * itemCount + 1) + "px";
             list.style.height = height;
-            let listTop = (txt.getBoundingClientRect().top + 30) + "px";
-            let listLeft = (txt.getBoundingClientRect().left) + "px";
+            let listTop = (txt.getBoundingClientRect().top + 30 + window.pageYOffset) + "px";
+            let listLeft = (txt.getBoundingClientRect().left + window.pageXOffset) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;
             list.style.width = txt.offsetWidth + "px";
@@ -238,7 +238,7 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server" defaultbutton="btn_default">
+    <form id="form1" runat="server" defaultbutton="btn_default" class="mb10">
         <asp:UpdatePanel runat="server">
             <ContentTemplate>
                 <asp:ScriptManager runat="server"></asp:ScriptManager>
@@ -282,8 +282,10 @@
                             <td class="tac">
                                 <asp:CheckBox ID="chk_taxfree" runat="server" onchange="taxFree();" />
                             </td>
-                            <th></th>
-                            <td></td>
+                            <th>수정사유</th>
+                            <td>
+                                <asp:DropDownList ID="cb_updateReason" runat="server"/>
+                            </td>
                         </tr>
                 </table>
                 <div class="tar mt10">
@@ -329,7 +331,7 @@
                 <table class="itable_1 mt10">
                     <tbody>
                         <tr>
-                            <th rowspan="6" style="background-color: lightpink; color: red" class="tar">공<br />
+                            <th rowspan="7" style="background-color: lightpink; color: red" class="tar">공<br />
                                 급<br />
                                 자</th>
                             <th style="color: red">등록번호</th>
@@ -338,7 +340,7 @@
                             <th style="color: red">종사업장번호</th>
                             <td>
                                 <asp:Label ID="txt_businessNo1" runat="server"></asp:Label></td>
-                            <th rowspan="6" style="background-color: skyblue; color: steelblue" class="tar">공<br />
+                            <th rowspan="7" style="background-color: skyblue; color: steelblue" class="tar">공<br />
                                 급<br />
                                 받<br />
                                 는<br />
@@ -397,6 +399,20 @@
                             <th style="color: steelblue; background-color: aliceblue">이메일</th>
                             <td colspan="3">
                                 <asp:TextBox ID="txt_email2" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <th style="color: red">담당자</th>
+                            <td>
+                                <asp:Label ID="txt_manager" runat="server"></asp:Label></td>
+                            <th style="color: red">휴대폰</th>
+                            <td>
+                                <asp:Label ID="txt_phone" runat="server"></asp:Label></td>
+                            <th style="color: steelblue; background-color: aliceblue">담당자<span class="red vam"> *</span></th>
+                            <td>
+                                <asp:TextBox ID="txt_manager2" runat="server"></asp:TextBox></td>
+                            <th style="color: steelblue; background-color: aliceblue">휴대폰</th>
+                            <td>
+                                <asp:TextBox ID="txt_phone2" runat="server"></asp:TextBox></td>
                         </tr>
                     </tbody>
                 </table>
@@ -470,15 +486,17 @@
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
-        <div class="mt10" >
-            <span style="border:1px solid black; padding:1px 18px 1px 18px; font-size:20px; vertical-align:middle; background-color:#f2f2f2">총금액</span>
-            <asp:TextBox ID="txt_wholePrice" runat="server" style="border:1px solid black; border-radius:0px; padding:0px 10px 1px 10px; width:300px; height:33px; font-size:20px;"></asp:TextBox>
-            <button type="button" class="btn_150_40 btn_gray ml10 ft_right" onclick="self.close()">취소</button>
-            <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black ft_right" Text="저장" OnClick="btn_save_Click" />
-            <%--            <button type="button" class="btn_150_40 btn_gray ml10">미리보기</button>--%>
-            <%--            <button type="button" class="btn_150_40 btn_gray ml10">전송</button>--%>
+        <div class="mt10">
+            <span style="border: 1px solid black; padding: 1px 18px 1px 18px; font-size: 20px; vertical-align: middle; background-color: #f2f2f2">제품명</span>
+            <asp:TextBox ID="txt_title" runat="server" Style="border: 1px solid black; border-radius: 0px; padding: 0px 10px 1px 10px; width: 600px; height: 33px; font-size: 20px;"></asp:TextBox>
+            <span style="border: 1px solid black; padding: 1px 18px 1px 18px; font-size: 20px; vertical-align: middle; background-color: #f2f2f2; margin-left: 10px;">총금액</span>
+            <asp:TextBox ID="txt_wholePrice" runat="server" Style="border: 1px solid black; border-radius: 0px; padding: 0px 10px 1px 10px; width: 300px; height: 33px; font-size: 20px;"></asp:TextBox>
         </div>
-        <script src="https://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+        <div class="tar mt15 mb10">       
+            <button type="button" class="btn_150_40 btn_gray" onclick="self.close()">취소</button>
+            <asp:Button ID="btn_save" runat="server" CssClass="btn_150_40 btn_black ml10" Text="저장" OnClick="btn_save_Click" />
+            <asp:Button ID="btn_send" Text="전송" CssClass="btn_150_40 btn_navy ml10" runat="server" OnClick="btn_send_Click" /> 
+        </div>
         <script src="//spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
         <script>
             // 우편번호 - 주소
@@ -639,7 +657,8 @@
                 let p2 = 0;
 
                 for (let i = 0; i < rowCount; i++) {
-                    totalPrice += parseInt(grid.rows[i].cells[6].innerHTML);
+                    p = parseInt(grid.rows[i].cells[6].innerHTML);
+                    if (p) totalPrice += p;
 
                     p = parseInt(grid.rows[i].cells[4].innerHTML);
                     if (p) p1 += p;

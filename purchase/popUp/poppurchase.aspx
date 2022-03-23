@@ -125,8 +125,8 @@
             var height = (itemHeight * itemCount + 1) + "px";
             //list.setAttribute("style", "height:" + height + " visibility:visible; width:200px; padding:0px 0px; background:white; position:absolute;left:101px;top:108px;z-index:10;");
             list.style.height = height;
-            var listTop = (txt.getBoundingClientRect().top + 31) + "px";
-            var listLeft = txt.getBoundingClientRect().left + "px";
+            var listTop = (txt.getBoundingClientRect().top + 31 + window.pageYOffset) + "px";
+            var listLeft = (txt.getBoundingClientRect().left + window.pageXOffset) + "px";
 
             list.style.top = listTop;
             list.style.left = listLeft;
@@ -272,6 +272,7 @@
                 <asp:HiddenField ID="hidden_keyWord" runat="server" />
                 <asp:HiddenField ID="hidden_cusCode" runat="server" />
                 <asp:HiddenField ID="hidden_chkUpdate" runat="server" />
+                <asp:HiddenField ID="hidden_deleteIdx" runat="server" />
                 <asp:ListBox ID="li_itemlist" runat="server" Style="top: 0px; left: 0px; visibility: hidden;" CssClass="autoComplete_list"></asp:ListBox>
             </div>
         </div>

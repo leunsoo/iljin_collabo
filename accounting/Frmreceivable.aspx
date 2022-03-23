@@ -74,8 +74,8 @@
 
             var height = (itemHeight * itemCount + 1) + "px";
             list.style.height = height;
-            var listTop = (txt.getBoundingClientRect().top - 67) + "px";
-            var listLeft = (txt.getBoundingClientRect().left - 290) + "px";
+            var listTop = (txt.getBoundingClientRect().top - 67 + window.pageYOffset) + "px";
+            var listLeft = (txt.getBoundingClientRect().left - 290 + window.pageXOffset) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;
             list.style.width = txt.offsetWidth + "px";
@@ -192,7 +192,7 @@
                     <thead>
                         <tr>
                             <th class="mWt20p">거래처</th>
-                            <th class="mWt30p">최근수금</th>
+                            <th class="mWt30p">최근입금</th>
                             <th class="mWt25p">현매출</th>
                             <th class="mWt25p">현미수금</th> 
                             <%--<th class="mWt10p">관리</th>--%>

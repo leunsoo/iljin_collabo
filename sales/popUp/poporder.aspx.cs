@@ -371,6 +371,8 @@ namespace iljin.popUp
                           $",'{cb_cusname.SelectedValue}'" +
                           $",'{((TextBox)grdTable.Items[i].FindControl("grd_txt_orderQty")).Text}'" +
                           $",'{no}');";
+
+                    Inventory_Decrease(((HiddenField)grdTable.Items[i].FindControl("grd_hdn_actualItemCode")).Value, ((TextBox)grdTable.Items[i].FindControl("grd_txt_orderQty")).Text);
                 }
                 else if (cud == "u") //수정
                 {
@@ -401,6 +403,14 @@ namespace iljin.popUp
             }
         }
 
+        //출고제품 재고 계산
+        private void Inventory_Decrease(string itemCode, string qty)
+        {
+            object[] objs = { itemCode, qty };
+
+            PROCEDURE.CUD_TRAN("SP_inventory_Decrease", objs, km);
+        }
+
         //삭제
         protected void btn_delete_Click(object sender, EventArgs e)
         {
@@ -416,7 +426,7 @@ namespace iljin.popUp
 
             Mdt = les_DataGridSystem.Get_Dt_From_DataGrid(grdTable, fieldArr);
 
-            Mdt.Rows.RemoveAt(int.Parse(hidden_selectedRow.Value));
+            Mdt.Rows.RemoveAt(row);
 
             Search_Item(false);
         }

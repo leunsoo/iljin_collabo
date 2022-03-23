@@ -79,8 +79,8 @@
 
             var height = (itemHeight * itemCount + 1) + "px";
             list.style.height = height;
-            var listTop = (txt.getBoundingClientRect().top - 67) + "px";
-            var listLeft = (txt.getBoundingClientRect().left - 290) + "px";
+            var listTop = (txt.getBoundingClientRect().top - 67 + window.pageYOffset) + "px";
+            var listLeft = (txt.getBoundingClientRect().left - 290 + window.pageXOffset) + "px";
             list.style.top = listTop;
             list.style.left = listLeft;
             list.style.width = txt.offsetWidth + "px";
@@ -264,7 +264,7 @@
                                             </asp:TemplateColumn>
                                             <asp:TemplateColumn HeaderText="">
                                                 <ItemTemplate>
-                                                    <asp:Button ID="btn_send" runat="server" CssClass="btn_red btn_60_20" Text="수정" />
+                                                    <asp:Button ID="btn_send" runat="server" CssClass="btn_red btn_60_20" Text="미전송" />
                                                 </ItemTemplate>
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="9%" CssClass="" />

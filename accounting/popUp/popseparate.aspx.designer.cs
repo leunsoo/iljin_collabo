@@ -159,6 +159,15 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.CheckBox chk_taxfree;
 
         /// <summary>
+        /// cb_updateReason 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cb_updateReason;
+
+        /// <summary>
         /// btn_itemadd 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -375,6 +384,42 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.TextBox txt_email2;
 
         /// <summary>
+        /// txt_manager 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_manager;
+
+        /// <summary>
+        /// txt_phone 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_phone;
+
+        /// <summary>
+        /// txt_manager2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_manager2;
+
+        /// <summary>
+        /// txt_phone2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_phone2;
+
+        /// <summary>
         /// grdTable 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -393,6 +438,15 @@ namespace iljin.popUp
         protected global::System.Web.UI.WebControls.Button btn_default;
 
         /// <summary>
+        /// txt_title 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_title;
+
+        /// <summary>
         /// txt_wholePrice 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -409,5 +463,14 @@ namespace iljin.popUp
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_save;
+
+        /// <summary>
+        /// btn_send 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_send;
     }
 }
