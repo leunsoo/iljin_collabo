@@ -104,11 +104,6 @@ namespace iljin.popUp
                         $",'{hidden_idx.Value}'" +
                         $",'{emp}');";
 
-                    sql += "UPDATE tb_purchase_item a SET " +
-                          $"a.leftQty = a.leftQty - {grdTable1.Items[i].Cells[7].Text} " +
-                          $"WHERE a.itemCode = '{grdTable1.Items[i].Cells[0].Text}' " +
-                          $"AND a.contractId = (SELECT b.contractId FROM tb_container_info b WHERE b.idx = {hidden_idx.Value});";
-
                     //재고 추가
                     Inventory_Increase(grdTable1.Items[i].Cells[0].Text, grdTable1.Items[i].Cells[7].Text);
                 }

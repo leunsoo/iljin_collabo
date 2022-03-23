@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using MysqlLib;
 using PublicLibsManagement;
+using les;
 
 namespace iljin
 {
@@ -48,8 +49,8 @@ namespace iljin
             {
                 grdTable.Items[i].Cells[0].Text = (i + 1).ToString();
                 grdTable.Items[i].Cells[1].Text = dt.Rows[i][1].ToString();
-                grdTable.Items[i].Cells[2].Text = String.Format("{0:#,0}", dt.Rows[i][2]); 
-                grdTable.Items[i].Cells[3].Text = String.Format("{0:#,0}", dt.Rows[i][3]);
+                grdTable.Items[i].Cells[2].Text = Tool_UI.SetComma(dt.Rows[i][2]); // String.Format("{0:#,0}", dt.Rows[i][2]); 
+                grdTable.Items[i].Cells[3].Text = Tool_UI.SetComma(dt.Rows[i][3]); //String.Format("{0:#,0}", dt.Rows[i][3]);
 
                 price += int.Parse(dt.Rows[i][2].ToString());
                 total += int.Parse(dt.Rows[i][3].ToString());
@@ -61,14 +62,14 @@ namespace iljin
             {
                 grdTable_Copy.Items[i].Cells[0].Text = (i + 1).ToString();
                 grdTable_Copy.Items[i].Cells[1].Text = dt.Rows[i][1].ToString();
-                grdTable_Copy.Items[i].Cells[2].Text = String.Format("{0:#,0}", dt.Rows[i][2]);
-                grdTable_Copy.Items[i].Cells[3].Text = String.Format("{0:#,0}", dt.Rows[i][3]);
+                grdTable_Copy.Items[i].Cells[2].Text = Tool_UI.SetComma(dt.Rows[i][2]); // String.Format("{0:#,0}", dt.Rows[i][2]); 
+                grdTable_Copy.Items[i].Cells[3].Text = Tool_UI.SetComma(dt.Rows[i][3]); //String.Format("{0:#,0}", dt.Rows[i][3]);
             }
 
-            txt_price.InnerHtml = String.Format("{0:#,0}", price);
-            txt_total.InnerHtml = String.Format("{0:#,0}", total);
-            txt_price_hidden.InnerHtml = String.Format("{0:#,0}", price);
-            txt_total_hidden.InnerHtml = String.Format("{0:#,0}", total);
+            txt_price.InnerHtml = Tool_UI.SetComma(price);//String.Format("{0:#,0}", price);
+            txt_total.InnerHtml = Tool_UI.SetComma(total);//String.Format("{0:#,0}", total);
+            txt_price_hidden.InnerHtml = Tool_UI.SetComma(price);//String.Format("{0:#,0}", price);
+            txt_total_hidden.InnerHtml = Tool_UI.SetComma(total);//String.Format("{0:#,0}", total);
         }
 
         protected void btn_search_Click(object sender, EventArgs e)

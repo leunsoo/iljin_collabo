@@ -664,7 +664,7 @@ namespace iljin.popUp
             Response.Write("<script>window.close();</script>");
         }
 
-        //삭제 <= 이거 바꿔야할거같은데?
+        //삭제
         protected void btn_delete_Click(object sender, EventArgs e)
         {
             if (km == null) km = new DB_mysql();
