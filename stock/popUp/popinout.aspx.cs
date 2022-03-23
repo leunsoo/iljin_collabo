@@ -45,11 +45,11 @@ namespace iljin.popUp
                 //현재수량 = int. 바꿔준다(dt.열[0][0].문자열로())
                 currentQty = int.Parse(dt.Rows[0][0].ToString());
             }
-            else //또는
-            {
+           // else //또는
+           // {
                 //반환(돌려준다)
-                return;
-            }
+              //  return;
+           // }
 
             //dt = 프로시저.고른다("SP_warehousing_GetList"에서 ,itemCode,km);
             dt = PROCEDURE.SELECT("SP_warehousing_GetList",itemCode,km);
@@ -64,41 +64,42 @@ namespace iljin.popUp
             //int 행의개수 = gridtable1.행.개수(숫자)
             int cCount = grdTable1.Columns.Count;
             
-            les_DataGridSystem.Set_DataGrid_From_Dt(grdTable1, dt, 0);
+            les_DataGridSystem.Set_DataGrid_From_Dt(grdTable1, dt, 0);//지우면 날짜가 뜨지 않음
 
             //int i = 0 i 가 아이템개수보다 작으면 i를 더해준다
-            for(int i = 0; i < rCount; i++)
+           for(int i = 0; i < rCount; i++)
             {
                 //grdTable1.아이템[i].행[행의개수 -1].문자 = 현재수량.문자열로()
                 grdTable1.Items[i].Cells[cCount -1].Text = currentQty.ToString();
 
                 //string sqty = gridtable1.아이템[i].셀[행의개수 -1].문자
                 string sQty = grdTable1.Items[i].Cells[cCount -1].Text;
-                //int iqty = sqty를 int로 바꿈
-                int iQty = int.Parse(sQty);
+                
+                //int iqty = sqty(string)를 int로 바꿈
+               int iQty = int.Parse(sQty);
 
                 //만약(iqty가 0보다 크면)
                 if(iQty > 0) //입고,출고 시 +,-로 표시
-                {
+               {
                     //만약(gridtable1.아이템[i].셀[4].문자 == "출고")
                     if(grdTable1.Items[i].Cells[4].Text=="")//출고 X
                     {
                         //iqty *= -1
-                        iQty = 0;
+                       // iQty = -1;
                         //gridtable1.아이템[i].셀[행의갯수 -2].문자 = sqty.넣는다(0,"-")
-                        grdTable1.Items[i].Cells[cCount -2].Text = sQty.Insert(0,"-");
-                    }
+                        grdTable1.Items[i].Cells[cCount -2].Text = sQty.Insert(0,"+");
+                  }
                     else //또는
                     {
                         //gridtable1.아이템[i].셀[행의갯수 -2].문자 = sqty.넣는다(0,"+")
-                        grdTable1.Items[i].Cells[cCount -2].Text = sQty.Insert(0, "+ ");
+                        grdTable1.Items[i].Cells[cCount -2].Text = sQty.Insert(0, "-");
                     }
                 }
-                else //재고조정시 +,- 판별용 //또는
-                {
+               // else //재고조정시 +,- 판별용 //또는
+              //  {
                     //grdtable.items[i].셀[행의갯수 -2].문자 = sqty.넣는다(0,"-");
-                   // grdTable1.Items[i].Cells[cCount -2].Text = sQty.Insert(0, "-");
-                }
+                  //  grdTable1.Items[i].Cells[cCount -2].Text = sQty.Insert(0, "-");
+               // }
              
                 //현재수량 = iqty
                 currentQty = iQty;
