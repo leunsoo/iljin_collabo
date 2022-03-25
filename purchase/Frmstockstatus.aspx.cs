@@ -37,7 +37,7 @@ namespace iljin
             
             if (km == null) km = new DB_mysql();
 
-            object[] objs = { tb_itemname,cb_divCode1,cb_divCode2 };
+            object[] objs = { tb_itemname,cb_divCode1,cb_divCode2,txt_thickness,txt_width1,txt_width2 };
 
             DataTable dt = PROCEDURE.SELECT("SP_warehousing_Search_IncomeStatus", objs, km);
 

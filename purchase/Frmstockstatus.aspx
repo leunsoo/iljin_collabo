@@ -192,7 +192,14 @@
                 <asp:DropDownList ID="cb_divCode1" runat="server" CssClass="mWt150" AutoPostBack="true" OnSelectedIndexChanged="cb_divCode1_SelectedIndexChanged"></asp:DropDownList>
                 <span class="ml20 mWt110">제품구분2</span>
                 <asp:DropDownList ID="cb_divCode2" runat="server" CssClass="mWt150"></asp:DropDownList>
-
+                </div>
+             <div class="box_row mt10">
+                 <span> 두께 </span>
+                 <asp:TextBox ID ="txt_thickness" runat="server" CssClass="mWt100"></asp:TextBox>
+                <span class="ml10">폭</span>
+                <asp:TextBox ID ="txt_width1" runat="server" CssClass="mWt70"></asp:TextBox>
+                &nbsp~&nbsp
+                <asp:TextBox ID ="txt_width2" runat="server" CssClass="mWt70"></asp:TextBox>
                 <asp:Button ID="btn_search" runat="server" CssClass="btn_navy btn_100_30 ml20" Text="조회" OnClick="btn_search_Click" />
             </div>
         </div>
