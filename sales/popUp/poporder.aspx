@@ -357,7 +357,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="11">
+                                <td colspan="13">
                                     <div style="height: 225px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
                                         <asp:DataGrid ID="grdTable" CssClass="grtable_td" runat="server" AllowCustomPaging="True" ShowHeader="False" AutoGenerateColumns="False" GridLines="both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1317">
                                             <HeaderStyle Height="25px" />
@@ -609,7 +609,7 @@
                 var supply = Math.round(totalPrice);
                 var tax = Math.round(totalVat);
 
-                var total = totalPrice + tax;
+                var total = supply + tax;
 
                 document.getElementById('<%= txt_supplyprice.ClientID%>').value = supply;
                 document.getElementById('<%= txt_vat.ClientID%>').value = tax;
