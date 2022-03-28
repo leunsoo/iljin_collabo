@@ -66,5 +66,21 @@ namespace iljin
         {
             Search();
         }
+
+        protected void btn_excel_Click(object sender, EventArgs e)
+        {
+            string filename = "세금계산서" + DateTime.Now.ToString("yyMMdd") + ".xls";
+            System.IO.StringWriter tw = new System.IO.StringWriter();
+            System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
+
+            exceldiv4.RenderControl(hw);
+            Response.ContentType = "application/vnd.ms-excel";
+            Response.Charset = "euc-kr";
+            Response.ContentEncoding = System.Text.Encoding.GetEncoding("euc-kr");
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + "");
+            this.EnableViewState = false;
+            Response.Write(tw.ToString());
+            Response.End();
+        }
     }
 }

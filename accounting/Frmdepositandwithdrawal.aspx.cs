@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PublicLibsManagement;
 using System.Drawing;
+using les;
 
 namespace iljin
 {
@@ -90,5 +91,20 @@ namespace iljin
             tb_tradedt2.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
+        protected void btn_excel_Click(object sender, EventArgs e)
+        {
+            string filename = "매출/입금관리" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
+            System.IO.StringWriter tw = new System.IO.StringWriter();
+            System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
+
+            exceldiv.RenderControl(hw);
+            Response.ContentType = "application/vnd.ms_excel";
+            Response.Charset = "euc-kr";
+            Response.ContentEncoding = System.Text.Encoding.GetEncoding("euc-kr");
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + "");
+            this.EnableViewState = false;
+            Response.Write(tw.ToString());
+            Response.End();
+        }
     }
 }
