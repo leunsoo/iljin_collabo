@@ -38,10 +38,10 @@ namespace iljin
 
             for(int i = 0; i < grdTable.Items.Count; i++)
             {
-                grdTable.Items[i].Cells[0].Text = dt.Rows[i][1].ToString();
-                grdTable.Items[i].Cells[1].Text =  String.Format("{0:#,0}", dt.Rows[i][1]); 
-                grdTable.Items[i].Cells[2].Text = String.Format("{0:#,0}", dt.Rows[i][2]);
-                grdTable.Items[i].Cells[3].Text = String.Format("{0:#,0}", dt.Rows[i][3]);
+                grdTable.Items[i].Cells[0].Text = dt.Rows[i][0].ToString();
+                grdTable.Items[i].Cells[1].Text = dt.Rows[i][1].ToString(); 
+                grdTable.Items[i].Cells[2].Text = dt.Rows[i][2].ToString();
+                grdTable.Items[i].Cells[3].Text = dt.Rows[i][3].ToString();
 
                 // ((Button)grdTable.Items[i].FindControl("btn_regist")).Attributes.Add("onclick", $"collectmoney('{dt.Rows[i][0].ToString()}'); return false;");
             }
