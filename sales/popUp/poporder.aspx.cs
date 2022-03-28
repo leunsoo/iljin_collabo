@@ -610,14 +610,18 @@ namespace iljin.popUp
 
             float tWeigth = 0f;
             float totalPrice = 0f;
-
+            
             for (int i = 0; i < grdTable.Items.Count; i++)
             {
-                float tw = float.Parse(((TextBox)grdTable.Items[row].FindControl("grd_txt_totalWeight")).Text);
-                float p = float.Parse(grdTable.Items[i].Cells[10].Text);
+                if (float.TryParse(((TextBox)grdTable.Items[row].FindControl("grd_txt_totalWeight")).Text, out float rowWeight))
+                {
+                    tWeigth += rowWeight;
+                }
 
-                tWeigth += tw;
-                totalPrice += p;
+                if (float.TryParse(grdTable.Items[i].Cells[10].Text, out float rowPrice))
+                {
+                    totalPrice += rowPrice;
+                }
             }
 
             txt_totalWeight.Text = tWeigth.ToString();
