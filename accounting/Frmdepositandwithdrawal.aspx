@@ -198,7 +198,7 @@
                     ~
                     <asp:TextBox ID="tb_tradedt2" runat="server" CssClass="mWt100 txac"></asp:TextBox>
                     <span class="ml10">거래처</span>
-                    <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt200" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
+                    <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt150" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                     <span class="ml10">코드<span class="red vam"> *</span></span>
                     <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt130"></asp:TextBox>
                     <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 " Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
