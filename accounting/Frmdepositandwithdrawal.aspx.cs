@@ -1,14 +1,15 @@
-﻿using MysqlLib;
-using System;
-using System.Data;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using MysqlLib;
 using PublicLibsManagement;
-using System.Drawing;
 using les;
+using System.Drawing;
+
 
 namespace iljin
 {
@@ -52,7 +53,7 @@ namespace iljin
             //grdTable 에 dt의 값을 넣어주는 for문
             for (int i = rowCount - 1; i >= 0; i--)
             {
-                for(int j = 0; j < colCount - 1; j++)
+                for (int j = 0; j < colCount - 1; j++)
                 {
                     grdTable.Items[rowCount - 1 - i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
@@ -61,11 +62,11 @@ namespace iljin
 
                 btn = grdTable.Items[rowCount - 1 - i].FindControl("btn_check") as Button;
 
-                if(div == "")
+                if (div == "")
                 {
                     btn.Attributes.Add("onclick", "return false;");
                 }
-                else if(div.Contains("TB"))
+                else if (div.Contains("TB"))
                 {
                     btn.Attributes.Add("onclick", "return false;");
                     btn.BackColor = Color.Red;
@@ -91,6 +92,7 @@ namespace iljin
             tb_tradedt2.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
+
         protected void btn_excel_Click(object sender, EventArgs e)
         {
             string filename = "매출/입금관리" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
@@ -98,7 +100,7 @@ namespace iljin
             System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
 
             exceldiv.RenderControl(hw);
-            Response.ContentType = "application/vnd.ms_excel";
+            Response.ContentType = "application/vnd.ms-excel";
             Response.Charset = "euc-kr";
             Response.ContentEncoding = System.Text.Encoding.GetEncoding("euc-kr");
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + "");

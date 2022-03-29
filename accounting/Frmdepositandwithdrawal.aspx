@@ -203,11 +203,11 @@
                     <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt130"></asp:TextBox>
                     <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 " Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
                     <button type="button" runat="server" class="btn_black btn_100_30  " onclick="withdrawal('')">입금등록</button>
-                    <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green" Text="엑셀다운로드" />
+                    <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green" Text="엑셀 다운로드" OnClick="btn_excel_Click"></asp:Button>
          
                 </div>
             </div>
-            <div class="fixed_hs_600 mt10" style="width: 1190px; overflow: hidden;">
+            <div id="exceldiv" runat="server" class="fixed_hs_600 mt10" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
                         <tr>
