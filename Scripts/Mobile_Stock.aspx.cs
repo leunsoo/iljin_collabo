@@ -78,6 +78,8 @@ namespace iljin
 
             string whereSql = "";
 
+            string limitSql = "LIMIT 100;";
+
             //제품명
             if(itemName != "") {
                 whereSql += $"b.fullName LIKE '%{itemName}%' AND ";
@@ -118,11 +120,11 @@ namespace iljin
             if (whereSql != "")
             {
                 whereSql.Insert(0, "WHERE ").Substring(0,whereSql.Length - 4);
-                return sql + whereSql;
+                return sql + whereSql + limitSql;
             }
             else
             {
-                return sql;
+                return sql + limitSql;
             }
         }
     }
