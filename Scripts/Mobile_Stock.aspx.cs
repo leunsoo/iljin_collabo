@@ -49,12 +49,12 @@ namespace iljin
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 ja = new Dictionary<string, string>();
-                ja.Add("code", dt.Rows[i][0].ToString());
-                ja.Add("div", dt.Rows[i][1].ToString());
-                ja.Add("thickness", dt.Rows[i][2].ToString());
-                ja.Add("width", dt.Rows[i][3].ToString());
-                ja.Add("lenth", dt.Rows[i][4].ToString());
-                ja.Add("qty", dt.Rows[i][5].ToString());
+                ja.Add("ItemCode", dt.Rows[i][0].ToString());
+                ja.Add("ItemDiv", dt.Rows[i][1].ToString());
+                ja.Add("ItemThickness", dt.Rows[i][2].ToString());
+                ja.Add("ItemWidth", dt.Rows[i][3].ToString());
+                ja.Add("ItemLength", dt.Rows[i][4].ToString());
+                ja.Add("ItemQty", dt.Rows[i][5].ToString());
                 li.Add(ja);
             }
 
