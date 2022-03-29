@@ -95,7 +95,7 @@ namespace iljin
 
         protected void btn_excel_Click(object sender, EventArgs e)
         {
-            string filename = "매출/입금관리" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
+            string filename = "매출/관리" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
             System.IO.StringWriter tw = new System.IO.StringWriter();
             System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
 
