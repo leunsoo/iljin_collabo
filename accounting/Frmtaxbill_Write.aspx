@@ -285,8 +285,8 @@
             </table>
         </div>
 
-        <div id="exceldiv5" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
-            <table class ="grtable_th">
+       <div id="exceldiv5" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
+             <table class ="grtable_th">
                 <thead>
                     <tr>
                        
@@ -300,12 +300,12 @@
                         <th class="mWt8p">공급가액</th>
                         <th class="mWt8p">부가세</th>
                         <th class="mWt10p">합계액</th>
-   
+                       
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan ="1">
+                        <td colspan ="9">
                              <div style=" height:550px; overflow-x:hidden; overflow-y:auto;margin: 0px;padding: 0px;">
                
                                 <asp:DataGrid ID="DataGrid1" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1190">
@@ -350,7 +350,7 @@
                                             <ItemStyle Width="10%" CssClass="" />
                                         </asp:TemplateColumn>
                                         
-                                            
+                                       
                                     </Columns>
                                 </asp:DataGrid>
                             </div>
