@@ -70,7 +70,6 @@ namespace iljin
             this.EnableViewState = false;
             Response.Write(tw.ToString());
             Response.End();
-
         }
     }
 
