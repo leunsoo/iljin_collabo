@@ -1,6 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/iljin.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="Frmdepositandwithdrawal.aspx.cs" Inherits="iljin.Frmdepositandwithdrawal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <style>
+        table.ui-datepicker-calendar {
+            display: none;
+        }
+
+        .ui-datepicker .ui-datepicker-buttonpane button {
+            padding: 0em 0.6em 0em 0.6em;
+        }
+    </style>
+   
     <script type="text/javascript">
 
         var listId = 'ContentPlaceHolder2_li_itemlist';
@@ -191,11 +201,13 @@
                     <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt200" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                     <span class="ml10">코드<span class="red vam"> *</span></span>
                     <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt130"></asp:TextBox>
-                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
-                    <button type="button" runat="server" class="btn_black btn_100_30 ft_right " onclick="withdrawal('')">입금등록</button>
+                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 " Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
+                    <button type="button" runat="server" class="btn_black btn_100_30  " onclick="withdrawal('')">입금등록</button>
+                    <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green" Text="엑셀 다운로드" OnClick="btn_excel_Click"></asp:Button>
+         
                 </div>
             </div>
-            <div class="fixed_hs_600 mt10" style="width: 1190px; overflow: hidden;">
+             <div class="fixed_hs_650 mt10" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
                         <tr>
@@ -258,6 +270,64 @@
                     </tbody>
                 </table>
             </div>
+             <div id="exceldiv" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
+            <table class="grtable_th">
+                   <thead>
+                        <tr>
+                            <th class="mWt15p">거래명세표</th>
+                            <th class="mWt15p">등록일</th>
+                            <th class="mWt15p">거래일</th>
+                            <th class="mWt15p">거래금액</th>
+                            <th class="mWt15p">입금금액</th>
+                            <th class="mWt15p">누적미수금액</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <div style="height: 550px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
+
+                                    <asp:DataGrid ID="DataGrid1" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1190">
+                                        <HeaderStyle Height="25px" />
+                                        <ItemStyle HorizontalAlign="Center" />
+                                        <Columns>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            
+                                             
+                                        </Columns>
+                                    </asp:DataGrid>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <asp:Button ID="btn_default" runat="server" OnClientClick="return false;" CssClass="hidden" />
         </asp:Panel>
     </article>
