@@ -193,10 +193,10 @@
                  <asp:Button ID ="btn_taxbill" runat="server" CssClass="btn_black btn_100_30 ml10" Text="이전화면" OnClientClick="move_to_taxbill();return false;" />
                  <asp:Button ID ="btn_seperateSent" runat="server" CssClass="btn_navy btn_100_30 ml10" OnClientClick="seperatesent();return false;" Text="별도발행"/>
                  <asp:Button ID ="btn_sent" runat="server" CssClass="btn_navy btn_100_30 ml10" OnClientClick="sent();return false;" Text="세금계산서 발행"/>
-                 <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green ml10" Text="엑셀다운로드"  />                                                                                
+                 <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green ml10" Text="엑셀다운로드" OnClick="btn_excel_Click"  />                                                                                
          </div>
             </div>
-        <div class ="fixed_hs_600 mt10" style="width:1190px; overflow:hidden;">
+        <div id="exceldiv5" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
             <table class ="grtable_th">
                 <thead>
                     <tr>

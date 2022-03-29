@@ -13,10 +13,10 @@
                 <asp:Button ID="btn_update_hdn" runat="server" CssClass="hidden" OnClick="btn_update_hdn_Click" />
                 <asp:HiddenField ID="hdn_selectedRow" runat="server" />
                 <asp:Button ID ="btn_sch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClick="btn_sch_Click" />
-                 <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green ml10" Text="엑셀다운로드"  />
+                 <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green ml10" Text="엑셀다운로드" OnClick="btn_excel_Click" />
          </div>
             </div>
-        <div class ="fixed_hs_650 mt10" style="width:1190px; overflow:hidden;">
+         <div id="exceldiv3" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
             <table class ="grtable_th">
                 <thead>
                     <tr>

@@ -193,10 +193,10 @@
                     <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt150" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                     <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClick="btn_sch_Click" />
                     <asp:Button ID="btn_taxbill" runat="server" CssClass="btn_black btn_100_30  ml10" Text="세금계산서작성" OnClientClick="move_to_taxbillwrite();return false;" />
-                    <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green ml10" Text="엑셀다운로드"  />
+                    <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green ml10" Text="엑셀다운로드"  OnClick="btn_excel_Click" />
                 </div>
             </div>
-            <div class="fixed_hs_600 mt10" style="width: 1190px; overflow: hidden;">
+             <div id="exceldiv4" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
                         <tr>
