@@ -198,11 +198,11 @@
                     ~
                     <asp:TextBox ID="tb_tradedt2" runat="server" CssClass="mWt100 txac"></asp:TextBox>
                     <span class="ml10">거래처</span>
-                    <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt150" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
+                    <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt200" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                     <span class="ml10">코드<span class="red vam"> *</span></span>
-                    <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt130"></asp:TextBox>
-                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 " Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
-                    <button type="button" runat="server" class="btn_black btn_100_30  " onclick="withdrawal('')">입금등록</button>
+                    <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt120"></asp:TextBox>
+                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30" Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
+                    <button type="button" runat="server" class="btn_black btn_100_30 " onclick="withdrawal('')">입금등록</button>
                     <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green" Text="엑셀 다운로드" OnClick="btn_excel_Click"></asp:Button>
          
                 </div>
