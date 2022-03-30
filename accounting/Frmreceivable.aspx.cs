@@ -38,7 +38,7 @@ namespace iljin
 
             for(int i = 0; i < grdTable.Items.Count; i++)
             {
-                grdTable.Items[i].Cells[0].Text = String.Format("{0:#,0}", dt.Rows[i][0]); // dt.Rows[i][0].ToString();
+                grdTable.Items[i].Cells[0].Text =   dt.Rows[i][0].ToString();
                 grdTable.Items[i].Cells[1].Text = String.Format("{0:#,0}", dt.Rows[i][1]); //dt.Rows[i][1].ToString(); 
                 grdTable.Items[i].Cells[2].Text = String.Format("{0:#,0}", dt.Rows[i][2]);//dt.Rows[i][2].ToString();
                 grdTable.Items[i].Cells[3].Text = String.Format("{0:#,0}", dt.Rows[i][3]);// dt.Rows[i][3].ToString();

@@ -278,9 +278,9 @@
                     </tbody>
                 </table>
             </div>
-             <div id="exceldiv4" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
-            <table class="grtable_th">
-                <thead>
+               <div id="exceldiv4" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
+                   <table class="grtable_th">
+                    <thead>
                         <tr>
 
                             <th class="mWt4p">NO</th>
@@ -293,7 +293,7 @@
                             <th class="mWt9p">공급가액</th>
                             <th class="mWt9p">부가세</th>
                             <th class="mWt9p">합계액</th>
-                           
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -345,7 +345,8 @@
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="9%" CssClass="" />
                                             </asp:TemplateColumn>
-                                          
+                                           
+                                               
                                         </Columns>
                                     </asp:DataGrid>
                                 </div>
@@ -354,6 +355,7 @@
                     </tbody>
                 </table>
             </div>
+
             <asp:Button ID="btn_default" runat="server" OnClientClick="return false;" CssClass="hidden" />
         </asp:Panel>
     </article>

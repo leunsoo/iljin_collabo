@@ -206,7 +206,10 @@
                     <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green" Text="엑셀 다운로드" OnClick="btn_excel_Click"></asp:Button>
          
                 </div>
+           
             </div>
+             <button type="button" runat="server" class="btn_black btn_100_30 ft_right mr10 mb10" onclick="transaction()">거래명세표 목록</button>
+            
              <div class="fixed_hs_650 mt10" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
@@ -272,7 +275,7 @@
             </div>
              <div id="exceldiv" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
             <table class="grtable_th">
-                  <thead>
+                <thead>
                         <tr>
                             <th class="mWt15p">거래명세표</th>
                             <th class="mWt15p">등록일</th>
@@ -280,6 +283,7 @@
                             <th class="mWt15p">거래금액</th>
                             <th class="mWt15p">입금금액</th>
                             <th class="mWt15p">누적미수금액</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -316,8 +320,7 @@
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="15%" CssClass="" />
                                             </asp:TemplateColumn>
-                                           
-
+                                         
                                         </Columns>
                                     </asp:DataGrid>
                                 </div>
@@ -359,6 +362,15 @@
 
         function refresh() {
             document.getElementById('<%= btn_sch.ClientID %>').click();
+        }
+
+        function transaction() {
+            var url = "/sales/popUp/poptransactionlist.aspx";
+            var name = "pop_transactionList"
+            var popupX = (window.screen.width / 2) - (1000 / 2);
+            var popupY = (window.screen.height / 2) - (650 / 2);
+            window.open(url, name, 'status=no, width=1000, height=650, left=' + popupX + ',top=' + popupY);
+
         }
     </script>
 </asp:Content>
