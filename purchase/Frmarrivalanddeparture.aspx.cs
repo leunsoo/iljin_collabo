@@ -62,7 +62,7 @@ namespace iljin
 
                 if (dt.Rows[i][1].ToString() != "")
                 {
-                     avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue), 2);
+                     avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) * int.Parse(cb_averagemonth.SelectedValue), 2);
                  
                 }
                 else
