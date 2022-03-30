@@ -62,7 +62,10 @@ namespace iljin
 
                 if (dt.Rows[i][1].ToString() != "")
                 {
-                    avgQty = Math.Ceiling(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue), 0);
+                    //avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue), 0);
+
+                    avgQty = Math.Ceiling(double.Parse(dt.Rows[i][1].ToString()));
+            
                    
                 }
                 else
@@ -92,6 +95,8 @@ namespace iljin
                 Tool_UI.NegativeText_Set_RedColor(grdTable.Items[i].Cells[4]);
             }
         }
+
+        
 
         //제품구분1 셋팅
         private void cb_divCode_Setting()
