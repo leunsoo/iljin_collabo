@@ -41,6 +41,9 @@ namespace iljin.Menu.accounting
             grdTable.DataSource = dt;
             grdTable.DataBind();
 
+            DataGrid1.DataSource = dt;
+            DataGrid1.DataBind();
+
             for(int i = 0;i < grdTable.Items.Count; i++)
             {
                 grdTable.Items[i].Cells[0].Text = (i + 1).ToString();

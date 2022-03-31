@@ -41,6 +41,10 @@ namespace iljin
 
             grdTable.DataSource = dt;
             grdTable.DataBind();
+            grdTable_Copy.DataSource = dt;
+            grdTable_Copy.DataBind();
+
+   
 
             int rowCount = grdTable.Items.Count;
             int colCount = grdTable.Columns.Count;

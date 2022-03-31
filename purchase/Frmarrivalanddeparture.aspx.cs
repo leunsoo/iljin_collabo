@@ -91,10 +91,12 @@ namespace iljin
 
                 grdTable.Items[i].Cells[3].Text = predicQty.ToString();
 
-               grdTable.Items[i].Cells[4].Text = Math.Floor(currentQty + predicQty - (avgQty * int.Parse(cb_forecastmonth.SelectedValue))).ToString();
 
+                grdTable.Items[i].Cells[4].Text = Math.Floor (currentQty + predicQty - (avgQty * int.Parse(cb_forecastmonth.SelectedValue))).ToString();
                 
+                    
 
+        
                 Tool_UI.NegativeText_Set_RedColor(grdTable.Items[i].Cells[4]);
             }
         }

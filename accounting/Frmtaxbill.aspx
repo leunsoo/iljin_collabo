@@ -278,9 +278,10 @@
                     </tbody>
                 </table>
             </div>
+
                <div id="exceldiv4" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
                    <table class="grtable_th">
-                    <thead>
+                   <thead>
                         <tr>
 
                             <th class="mWt4p">NO</th>
@@ -345,8 +346,7 @@
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <ItemStyle Width="9%" CssClass="" />
                                             </asp:TemplateColumn>
-                                           
-                                               
+                                          
                                         </Columns>
                                     </asp:DataGrid>
                                 </div>
