@@ -41,6 +41,7 @@ namespace iljin
 
             grdTable.DataSource = dt;
             grdTable.DataBind();
+
             grdTable_Copy.DataSource = dt;
             grdTable_Copy.DataBind();
 

@@ -41,8 +41,7 @@ namespace iljin.Menu.accounting
             grdTable.DataSource = dt;
             grdTable.DataBind();
 
-            DataGrid1.DataSource = dt;
-            DataGrid1.DataBind();
+           
 
             for(int i = 0;i < grdTable.Items.Count; i++)
             {
@@ -89,7 +88,7 @@ namespace iljin.Menu.accounting
 
         protected void btn_excel_Click(object sender, EventArgs e)
         {
-            string filename = "출하용달료관리" + DateTime.Now.ToString("yyMMdd") + ".xls";
+            string filename = "출하용달료관리" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
             System.IO.StringWriter tw = new System.IO.StringWriter();
             System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
 
@@ -101,8 +100,7 @@ namespace iljin.Menu.accounting
             this.EnableViewState = false;
             Response.Write(tw.ToString());
             Response.End();
-
-
         }
+
     }
 }

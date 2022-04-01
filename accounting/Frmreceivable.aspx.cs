@@ -35,6 +35,7 @@ namespace iljin
 
             grdTable.DataSource = dt;
             grdTable.DataBind();
+            
 
             for(int i = 0; i < grdTable.Items.Count; i++)
             {

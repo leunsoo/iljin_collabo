@@ -35,6 +35,7 @@ namespace iljin
             DataTable dt = PROCEDURE.SELECT("SP_taxbill_GetBySearch", objs, km);
 
             les_DataGridSystem.Set_DataGrid_From_Dt(grdTable, dt, 0, grdTable.Columns.Count - 1, 1);
+            les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 1,DataGrid1.Columns.Count -1, 1 );
 
             Button btn;
 
