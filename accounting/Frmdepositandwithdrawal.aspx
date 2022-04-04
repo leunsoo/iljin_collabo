@@ -200,13 +200,16 @@
                     <span class="ml10">거래처</span>
                     <asp:TextBox ID="txt_customer" runat="server" CssClass="mWt200" onkeydown="KeyDownEvent();" onclick="visibleChk();" onkeypress="KeyPressEvent();" autocomplete="off"></asp:TextBox>
                     <span class="ml10">코드<span class="red vam"> *</span></span>
-                    <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt130"></asp:TextBox>
-                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30 " Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
-                    <button type="button" runat="server" class="btn_black btn_100_30  " onclick="withdrawal('')">입금등록</button>
+                    <asp:TextBox ID="txt_cusCode" runat="server" CssClass="mWt120"></asp:TextBox>
+                    <asp:Button ID="btn_sch" runat="server" CssClass="btn_navy btn_100_30" Text="조회" OnClientClick="return validChk();" OnClick="btn_sch_Click" />
+                    <button type="button" runat="server" class="btn_black btn_100_30 " onclick="withdrawal('')">입금등록</button>
                     <asp:Button ID="btn_excel" runat="server" CssClass="btn_100_30 btn_green" Text="엑셀 다운로드" OnClick="btn_excel_Click"></asp:Button>
          
                 </div>
+           
             </div>
+             <button type="button" runat="server" class="btn_black btn_100_30 ft_right mr10 mb10" onclick="transaction()">거래명세표 목록</button>
+            
              <div class="fixed_hs_650 mt10" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
@@ -270,6 +273,65 @@
                     </tbody>
                 </table>
             </div>
+             <div id="exceldiv" runat="server" class="hidden"  style="width: 1190px; overflow: hidden;">
+                  <table class="grtable_th">
+                        <thead>
+                        <tr>
+                            <th class="mWt15p">거래명세표</th>
+                            <th class="mWt15p">등록일</th>
+                            <th class="mWt15p">거래일</th>
+                            <th class="mWt15p">거래금액</th>
+                            <th class="mWt15p">입금금액</th>
+                            <th class="mWt15p">누적미수금액</th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <div style="height: 550px; overflow-x: hidden; overflow-y: auto; margin: 0px; padding: 0px;">
+
+                                  <asp:DataGrid ID="grdTable_Copy" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1190">
+                                    
+                                        <HeaderStyle Height="25px" />
+                                        <ItemStyle HorizontalAlign="Center" />
+                                        <Columns>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="">
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <ItemStyle Width="15%" CssClass="" />
+                                            </asp:TemplateColumn>
+                                          
+
+                                        </Columns>
+                                    </asp:DataGrid>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+
             <asp:Button ID="btn_default" runat="server" OnClientClick="return false;" CssClass="hidden" />
         </asp:Panel>
     </article>
@@ -301,6 +363,15 @@
 
         function refresh() {
             document.getElementById('<%= btn_sch.ClientID %>').click();
+        }
+
+        function transaction() {
+            var url = "/sales/popUp/poptransactionlist.aspx";
+            var name = "pop_transactionList"
+            var popupX = (window.screen.width / 2) - (1000 / 2);
+            var popupY = (window.screen.height / 2) - (650 / 2);
+            window.open(url, name, 'status=no, width=1000, height=650, left=' + popupX + ',top=' + popupY);
+
         }
     </script>
 </asp:Content>
