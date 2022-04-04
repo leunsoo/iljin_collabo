@@ -207,7 +207,7 @@
          
                 </div>
             </div>
-            <div id="exceldiv" runat="server" class="hidden" style="width: 1190px; overflow: hidden;">
+             <div class="fixed_hs_650 mt10" style="width: 1190px; overflow: hidden;">
                 <table class="grtable_th">
                     <thead>
                         <tr>
