@@ -42,9 +42,15 @@ namespace iljin
             grdTable.DataSource = dt;
             grdTable.DataBind();
 
+            grdTable_Copy.DataSource = dt;
+            grdTable_Copy.DataBind();
+
+   
+
             int rowCount = grdTable.Items.Count;
             int colCount = grdTable.Columns.Count;
 
+           
             int price = 0;
 
             Button btn;
@@ -57,6 +63,12 @@ namespace iljin
                 {
                     grdTable.Items[rowCount - 1 - i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
+
+                for (int j = 0; j < colCount - 1; j++)
+                {
+                    grdTable_Copy.Items[rowCount - 1 - i].Cells[j].Text = dt.Rows[i][j].ToString();
+                }
+
 
                 div = dt.Rows[i][6].ToString();
 
@@ -81,7 +93,8 @@ namespace iljin
             }
         }
 
-        protected void btn_sch_Click(object sender, EventArgs e)
+      
+    protected void btn_sch_Click(object sender, EventArgs e)
         {
             Search();
         }

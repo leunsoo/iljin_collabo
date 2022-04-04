@@ -33,11 +33,15 @@ namespace iljin
 
             object[] objs = { tb_orderdate, tb_orderdate2, txt_customer };
             DataTable dt = PROCEDURE.SELECT("SP_taxbill_write_GetBySearch", objs, km);
+            
 
             // les_DataGridSystem.Set_DataGrid_From_Dt(grdTable, dt, 1, grdTable.Columns.Count - 1, 0);
             string[] fields = { "hdn_code" };
             les_DataGridSystem.Set_DataGrid_From_Search_Dt(grdTable, dt, fields);
+            les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 1, DataGrid1.Columns.Count -1, 1);
             Button btn;
+
+          
 
             for (int i = 0; i < grdTable.Items.Count; i++)
             {

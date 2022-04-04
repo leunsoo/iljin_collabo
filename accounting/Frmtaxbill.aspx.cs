@@ -35,6 +35,7 @@ namespace iljin
             DataTable dt = PROCEDURE.SELECT("SP_taxbill_GetBySearch", objs, km);
 
             les_DataGridSystem.Set_DataGrid_From_Dt(grdTable, dt, 0, grdTable.Columns.Count - 1, 1);
+            les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 0, DataGrid1.Columns.Count -1, 1 );
 
             Button btn;
 
@@ -69,7 +70,7 @@ namespace iljin
 
         protected void btn_excel_Click(object sender, EventArgs e)
         {
-            string filename = "세금계산서" + DateTime.Now.ToString("yyMMdd") + ".xls";
+            string filename = "세금계산서" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
             System.IO.StringWriter tw = new System.IO.StringWriter();
             System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
 

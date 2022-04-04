@@ -190,8 +190,8 @@
                     
                 </div>
             </div>
-           <div id="exceldiv2" runat="server" class ="fixed_hs_650 mt10" style="width:1190px; overflow:hidden;">
-                <table class="grtable_th">
+          <div id="exceldiv2" runat="server" class="fixed_hs_650 mt10" style="width: 1190px; overflow: hidden;">
+            <table class="grtable_th">
                     <thead>
                         <tr>
                             <th class="mWt20p">거래처</th>

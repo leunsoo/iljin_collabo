@@ -41,7 +41,11 @@ namespace iljin.Menu.accounting
             grdTable.DataSource = dt;
             grdTable.DataBind();
 
-            for(int i = 0;i < grdTable.Items.Count; i++)
+           
+
+
+
+            for (int i = 0;i < grdTable.Items.Count; i++)
             {
                 grdTable.Items[i].Cells[0].Text = (i + 1).ToString();
 
@@ -50,6 +54,7 @@ namespace iljin.Menu.accounting
                     grdTable.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
 
+              
                 ((TextBox)grdTable.Items[i].FindControl("txt_paymentdate")).Text = dt.Rows[i]["payDate"].ToString();
                 ((Button)grdTable.Items[i].FindControl("btn_update")).Attributes.Add("onclick", $"update_payDate('{i.ToString()}'); return false;");
                 ((HiddenField)grdTable.Items[i].FindControl("hdn_idx")).Value = dt.Rows[i][0].ToString();
@@ -86,7 +91,7 @@ namespace iljin.Menu.accounting
 
         protected void btn_excel_Click(object sender, EventArgs e)
         {
-            string filename = "출하용달료관리" + DateTime.Now.ToString("yyMMdd") + ".xls";
+            string filename = "출하용달료관리" + DateTime.Now.ToString("yyMMdd") + "ExportExcel.xls";
             System.IO.StringWriter tw = new System.IO.StringWriter();
             System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
 
@@ -98,8 +103,7 @@ namespace iljin.Menu.accounting
             this.EnableViewState = false;
             Response.Write(tw.ToString());
             Response.End();
-
-
         }
+
     }
 }
