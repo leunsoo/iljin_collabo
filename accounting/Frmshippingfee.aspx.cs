@@ -57,9 +57,11 @@ namespace iljin.Menu.accounting
                     grdTable.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
 
+                for (int j = 1; j < grdtable_copy2.Columns.Count - 2; j++)
+                {
+                    grdtable_copy2.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
+                }
 
-
-               
 
 
                     ((TextBox)grdTable.Items[i].FindControl("txt_paymentdate")).Text = dt.Rows[i]["payDate"].ToString();

@@ -112,10 +112,14 @@ namespace iljin
             System.IO.StringWriter tw = new System.IO.StringWriter();
             System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
 
+            string encoding = Request.ContentEncoding.HeaderName;
+
             exceldiv.RenderControl(hw);
             Response.ContentType = "application/vnd.ms-excel";
+            Response.Write("<meta http-equiv='Content-Type' content='text/html; charset=" + encoding + "'>");
             Response.Charset = "euc-kr";
-            Response.ContentEncoding = System.Text.Encoding.GetEncoding("euc-kr");
+
+            //Response.ContentEncoding = System.Text.Encoding.GetEncoding("euc-kr");
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + "");
             this.EnableViewState = false;
             Response.Write(tw.ToString());

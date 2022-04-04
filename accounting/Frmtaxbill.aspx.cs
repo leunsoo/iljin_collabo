@@ -35,9 +35,29 @@ namespace iljin
             DataTable dt = PROCEDURE.SELECT("SP_taxbill_GetBySearch", objs, km);
 
             les_DataGridSystem.Set_DataGrid_From_Dt(grdTable, dt, 0, grdTable.Columns.Count - 1, 1);
-            les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 0, DataGrid1.Columns.Count -1, 1 );
 
-            Button btn;
+
+            //les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 0, DataGrid1.Columns.Count -1, 1 );
+
+            DataGrid1.DataSource = dt;
+            DataGrid1.DataBind();
+
+            for (int i = 0; i < dt.Rows.Count; i++ )
+            {
+                DataGrid1.Items[i].Cells[0].Text = (i + 1).ToString();
+                DataGrid1.Items[i].Cells[1].Text = dt.Rows[i]["serialNo"]        .ToString();
+                DataGrid1.Items[i].Cells[2].Text = dt.Rows[i]["registrationDate"] .ToString();
+                DataGrid1.Items[i].Cells[3].Text = dt.Rows[i]["sendDate"]         .ToString();
+                DataGrid1.Items[i].Cells[4].Text = dt.Rows[i]["cusName"]          .ToString();
+                DataGrid1.Items[i].Cells[5].Text = dt.Rows[i]["qty"]              .ToString();
+                DataGrid1.Items[i].Cells[6].Text = dt.Rows[i]["unitprice"].ToString();
+                DataGrid1.Items[i].Cells[7].Text = dt.Rows[i]["price"]            .ToString();
+                DataGrid1.Items[i].Cells[8].Text = dt.Rows[i]["vat"]              .ToString();
+                DataGrid1.Items[i].Cells[9].Text = dt.Rows[i]["totalprice"].ToString();
+            }
+
+
+                Button btn;
 
             for (int i = 0; i < grdTable.Items.Count; i++)
             {
