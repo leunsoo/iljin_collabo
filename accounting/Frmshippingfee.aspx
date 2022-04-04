@@ -186,9 +186,7 @@
                                             <ItemStyle Width="8%" CssClass="" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
-                                            <ItemTemplate>
-                                            <asp:TextBox ID="txt_paymentdate" runat="server"></asp:TextBox>
-                                            </ItemTemplate>
+                                           
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <ItemStyle Width="10%" CssClass="" />
                                         </asp:TemplateColumn>
