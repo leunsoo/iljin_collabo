@@ -113,6 +113,64 @@
             </table>
         </div>
     
+             <div id="exceldiv3" runat="server" class="hidden"  style="width: 1190px; overflow: hidden;">
+            <table class ="grtable_th">
+                <thead>
+                    <tr>
+                        <th class="mWt4p">NO</th>
+                        <th class="mWt8p">일자</th>
+                        <th class="mWt10p">매출처</th>
+                        <th class="mWt12p">입고처</th>
+                        <th class="mWt6p">이름</th>
+                        <th class="mWt8p">연락처</th>
+                        <th class="mWt8p">사업자번호</th>
+                        <th class="mWt7p">공급가액</th>
+                        <th class="mWt7p">총액</th>
+                        <th class="mWt6p">은행명</th>
+                        <th class="mWt8p">계좌번호</th>
+                        <th class="mWt10p">지급일</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan ="13">
+                             <div style=" height:600px; overflow-x:hidden; overflow-y:auto;margin: 0px;padding: 0px;">
+               
+                                <asp:DataGrid ID="grdtable_copy2" CssClass="grtable_td" runat="server" AllowCustomPaging="true" ShowHeader="false" AutoGenerateColumns="false" GridLines="Both" PageSize="2" SelectedItemStyle-BackColor="#ccffff" Width="1190">
+                                    <HeaderStyle Height="25px" />
+                                    <ItemStyle HorizontalAlign="Center" />
+                                    <Columns>
+                                        <asp:TemplateColumn HeaderText ="">                       
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="4%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText ="">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="8%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText ="">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="10%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText ="">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="12%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText ="">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <ItemStyle Width="6%" CssClass="" />
+                                        </asp:TemplateColumn>
+                                       
+                                    </Columns>
+                                </asp:DataGrid>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
               <div id="exceldiv3" runat="server" class="hidden"  style="width: 1190px; overflow: hidden;">
             <table class ="grtable_th">
                 <thead>

@@ -56,14 +56,18 @@ namespace iljin
             //입고예정
             int predicQty;
 
-            for(int i = 0; i < grdTable.Items.Count; i++)
+           
+
+            for (int i = 0; i < grdTable.Items.Count; i++)
             {
                 grdTable.Items[i].Cells[0].Text = dt.Rows[i][0].ToString();
 
                 if (dt.Rows[i][1].ToString() != "")
                 {
-                     avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue), 2);
-                 
+                    //avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue), 0);
+
+                    avgQty = Math.Ceiling(double.Parse(dt.Rows[i][1].ToString()));
+                      
                 }
                 else
                 {
@@ -87,11 +91,17 @@ namespace iljin
 
                 grdTable.Items[i].Cells[3].Text = predicQty.ToString();
 
-                grdTable.Items[i].Cells[4].Text = (currentQty + predicQty - (avgQty * int.Parse(cb_forecastmonth.SelectedValue))).ToString();
 
+                grdTable.Items[i].Cells[4].Text = Math.Floor (currentQty + predicQty - (avgQty * int.Parse(cb_forecastmonth.SelectedValue))).ToString();
+                
+                    
+
+        
                 Tool_UI.NegativeText_Set_RedColor(grdTable.Items[i].Cells[4]);
             }
         }
+
+        
 
         //제품구분1 셋팅
         private void cb_divCode_Setting()

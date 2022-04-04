@@ -475,6 +475,7 @@
     <Content Include="sales\popUp\poptransaction.aspx" />
     <Content Include="sales\popUp\poptransactionlist.aspx" />
     <Content Include="Scripts\Mobile_Stock.aspx" />
+    <Content Include="Scripts\Mobile_Get_ItemDiv.aspx" />
     <Content Include="Scripts\autocomplete_list.aspx" />
     <Content Include="base\Frmcompany.aspx" />
     <Content Include="base\Frmemp.aspx" />
@@ -860,6 +861,13 @@
     </Compile>
     <Compile Include="Scripts\Mobile_Stock.aspx.designer.cs">
       <DependentUpon>Mobile_Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Mobile_Get_ItemDiv.aspx.cs">
+      <DependentUpon>Mobile_Get_ItemDiv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scripts\Mobile_Get_ItemDiv.aspx.designer.cs">
+      <DependentUpon>Mobile_Get_ItemDiv.aspx</DependentUpon>
     </Compile>
     <Compile Include="Scripts\autocomplete_list.aspx.cs">
       <DependentUpon>autocomplete_list.aspx</DependentUpon>

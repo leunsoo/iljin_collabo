@@ -76,7 +76,7 @@ namespace iljin
                 grdTable.Items[i].Cells[7].Text = String.Format("{0:#,0}", Mdt.Rows[i][7]);// Mdt.Rows[i]["qty"].ToString();
                 grdTable.Items[i].Cells[8].Text = Mdt.Rows[i]["deliveryDate"].ToString();
                 grdTable.Items[i].Cells[9].Text = Mdt.Rows[i]["manufacturer"].ToString();
-                grdTable.Items[i].Cells[10].Text = String.Format("{0:#,0}", Mdt.Rows[i][10]); //Mdt.Rows[i]["unitprice"].ToString();
+                grdTable.Items[i].Cells[10].Text = string.Format("{0:#,##0}", Mdt.Rows[i][10]); ;//Mdt.Rows[i]["unitprice"].ToString();
                 grdTable.Items[i].Cells[11].Text = Mdt.Rows[i]["progress"].ToString();
                 grdTable.Items[i].Cells[12].Text = Mdt.Rows[i]["memo"].ToString();
 

@@ -43,9 +43,7 @@ namespace iljin.Menu.accounting
             grdtable_copy2.DataSource = dt;
             grdtable_copy2.DataBind();
 
-
-
-            for (int i = 0;i < grdTable.Items.Count; i++)
+            for(int i = 0;i < grdTable.Items.Count; i++)
             {
                 grdTable.Items[i].Cells[0].Text = (i + 1).ToString();
 
