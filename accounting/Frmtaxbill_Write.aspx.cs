@@ -38,7 +38,25 @@ namespace iljin
             // les_DataGridSystem.Set_DataGrid_From_Dt(grdTable, dt, 1, grdTable.Columns.Count - 1, 0);
             string[] fields = { "hdn_code" };
             les_DataGridSystem.Set_DataGrid_From_Search_Dt(grdTable, dt, fields);
-            les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 1, DataGrid1.Columns.Count -1, 1);
+            // les_DataGridSystem.Set_DataGrid_From_Dt(DataGrid1, dt, 1, DataGrid1.Columns.Count -1, 1);
+
+            DataGrid1.DataSource = dt;
+            DataGrid1.DataBind();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+               // DataGrid1.Items[i].Cells[0].Text = (i + 1).ToString();
+                DataGrid1.Items[i].Cells[0].Text = dt.Rows[i]["cusName"].ToString();
+                DataGrid1.Items[i].Cells[1].Text = dt.Rows[i]["transactionDate"].ToString();
+                DataGrid1.Items[i].Cells[2].Text = dt.Rows[i]["deliverydate"].ToString();
+                DataGrid1.Items[i].Cells[3].Text = dt.Rows[i]["orderCode"].ToString();
+                DataGrid1.Items[i].Cells[4].Text = dt.Rows[i]["name"].ToString();
+                DataGrid1.Items[i].Cells[5].Text = dt.Rows[i]["qty"].ToString();
+                DataGrid1.Items[i].Cells[6].Text = dt.Rows[i]["price"].ToString();
+                DataGrid1.Items[i].Cells[7].Text = dt.Rows[i]["vat"].ToString();
+                DataGrid1.Items[i].Cells[8].Text = dt.Rows[i]["totalprice"].ToString();
+            }
+
             Button btn;
 
           
