@@ -40,8 +40,11 @@ namespace iljin.Menu.accounting
 
             grdTable.DataSource = dt;
             grdTable.DataBind();
+            grdtable_copy2.DataSource = dt;
+            grdtable_copy2.DataBind();
 
-           
+
+
 
 
 
@@ -54,14 +57,20 @@ namespace iljin.Menu.accounting
                     grdTable.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
 
-              
-                ((TextBox)grdTable.Items[i].FindControl("txt_paymentdate")).Text = dt.Rows[i]["payDate"].ToString();
+
+
+               
+
+
+                    ((TextBox)grdTable.Items[i].FindControl("txt_paymentdate")).Text = dt.Rows[i]["payDate"].ToString();
                 ((Button)grdTable.Items[i].FindControl("btn_update")).Attributes.Add("onclick", $"update_payDate('{i.ToString()}'); return false;");
                 ((HiddenField)grdTable.Items[i].FindControl("hdn_idx")).Value = dt.Rows[i][0].ToString();
             }
         }
 
-        protected void btn_update_hdn_Click(object sender, EventArgs e)
+        
+           
+    protected void btn_update_hdn_Click(object sender, EventArgs e)
         {
             if (km == null) km = new DB_mysql();
 
