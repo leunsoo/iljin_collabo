@@ -43,7 +43,7 @@ namespace iljin.Menu.accounting
             grdtable_copy2.DataSource = dt;
             grdtable_copy2.DataBind();
 
-            for(int i = 0;i < grdTable.Items.Count; i++)
+            for (int i = 0;i < grdTable.Items.Count; i++)
             {
                 grdTable.Items[i].Cells[0].Text = (i + 1).ToString();
 
@@ -52,6 +52,8 @@ namespace iljin.Menu.accounting
                     grdTable.Items[i].Cells[j].Text = dt.Rows[i][j].ToString();
                 }
 
+               
+
                 for (int k = 0; k < dt.Rows.Count; k++)
                 {
                     grdtable_copy2.Items[k].Cells[0].Text = (k + 1).ToString();
@@ -59,7 +61,7 @@ namespace iljin.Menu.accounting
                     grdtable_copy2.Items[k].Cells[2].Text = dt.Rows[k]["cusName"].ToString();
                     grdtable_copy2.Items[k].Cells[3].Text = dt.Rows[k]["addressName"].ToString();
                     grdtable_copy2.Items[k].Cells[4].Text = dt.Rows[k]["shipmentCusName"].ToString();
-                    grdtable_copy2.Items[k].Cells[5].Text = dt.Rows[k]["tel"].ToString();
+                   grdtable_copy2.Items[k].Cells[5].Text = dt.Rows[k]["tel"].ToString();
                     grdtable_copy2.Items[k].Cells[6].Text = dt.Rows[k]["registration"].ToString();
                     grdtable_copy2.Items[k].Cells[7].Text = dt.Rows[k]["price"].ToString();
                     grdtable_copy2.Items[k].Cells[8].Text = dt.Rows[k]["totalprice"].ToString();
