@@ -52,9 +52,12 @@ namespace iljin
                grdTable.Items[i].Cells[4].Text = dt.Rows[i][3].ToString();
 
                 grdTable.Items[i].Cells[5].Text = dt.Rows[i][4].ToString();// == "" ? "0" : dt.Rows[i][4].ToString();
-               // grdTable.Items[i].Cells[6].Text = dt.Rows[i][5].ToString() == "" ? "0" : dt.Rows[i][5].ToString();
+                                                                           // grdTable.Items[i].Cells[6].Text = dt.Rows[i][5].ToString() == "" ? "0" : dt.Rows[i][5].ToString();
 
-              //  grdTable.Items[i].Cells[7].Text = dt.Rows[i][6].ToString();
+                //  grdTable.Items[i].Cells[7].Text = dt.Rows[i][6].ToString();
+
+                Tool_UI.NegativeText_Set_RedColor(grdTable.Items[i].Cells[4]);
+                Tool_UI.IntegerText_Set_BlueColor(grdTable.Items[i].Cells[4]);
 
                 ((Button)grdTable.Items[i].FindControl("grd_btn_inout")).Attributes.Add("onclick", $"inout('{dt.Rows[i][0].ToString()}','{dt.Rows[i][2].ToString()}'); return false;");
             }

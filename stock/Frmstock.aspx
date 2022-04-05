@@ -217,35 +217,35 @@
                                     <Columns>
                                         <asp:TemplateColumn HeaderText ="" Visible ="false">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="0%" CssClass="" />
+                                            <ItemStyle Width="0%" CssClass=""  />
+                                        </asp:TemplateColumn>
+                                        <asp:TemplateColumn HeaderText ="">
+                                            <HeaderStyle HorizontalAlign="Center"  />
+                                            <ItemStyle Width="5%" CssClass="" Font-Size="15px" Height="50px" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="5%" CssClass="" />
+                                            <ItemStyle Width="10%" CssClass="" Font-Size="15px" Height="50px" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
+                                            <ItemStyle Width="30%" CssClass="" Font-Size="15px"  Height="50px" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="30%" CssClass="" />
-                                        </asp:TemplateColumn>
-                                        <asp:TemplateColumn HeaderText ="">
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="7%" CssClass="" />
+                                            <ItemStyle Width="7%" CssClass="" Font-Size="15px"  Height="50px" />
                                         </asp:TemplateColumn>
                                        
                                         <asp:TemplateColumn HeaderText ="">
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="24%" CssClass="" />
+                                            <ItemStyle Width="24%" CssClass="" Font-Size="15px"  Height="50px" />
                                         </asp:TemplateColumn>
                                         <asp:TemplateColumn HeaderText ="">
                                             <ItemTemplate>
                                           <asp:Button ID="grd_btn_inout" runat="server" CssClass="btn_75_25 btn_green mr10" Text="입출고내역" ></asp:Button>
                                                 </ItemTemplate>
                                             <HeaderStyle HorizontalAlign="Center" />
-                                            <ItemStyle Width="10%" CssClass="" />
+                                            <ItemStyle Width="10%" CssClass=""  Height="50px" />
                                         </asp:TemplateColumn>                                            
                                     </Columns>
                                 </asp:DataGrid>
