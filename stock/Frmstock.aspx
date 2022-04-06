@@ -186,11 +186,11 @@
                 </div>
             <div class="box_row mt10">
                  <span> 두께 </span>
-                 <asp:TextBox ID ="txt_thickness" runat="server" CssClass="mWt100"></asp:TextBox>
+                 <asp:TextBox ID ="txt_thickness" runat="server" CssClass="mWt100" TextMode="Number"></asp:TextBox>
                 <span class="ml10">폭</span>
-                <asp:TextBox ID ="txt_width1" runat="server" CssClass="mWt70"></asp:TextBox>
+                <asp:TextBox ID ="txt_width1" runat="server" CssClass="mWt70" TextMode="Number"></asp:TextBox>
                 &nbsp~&nbsp
-                <asp:TextBox ID ="txt_width2" runat="server" CssClass="mWt70"></asp:TextBox>
+                <asp:TextBox ID ="txt_width2" runat="server" CssClass="mWt70" TextMode="Number"></asp:TextBox>
                 <span class="ml10">비고</span>
                 <asp:TextBox ID ="txt_memo" runat="server" CssClass="mWt200"></asp:TextBox>
                  <asp:Button ID ="btn_serch" runat="server" CssClass="btn_navy btn_100_30 ml10" Text="조회" OnClick="btn_serch_Click" />

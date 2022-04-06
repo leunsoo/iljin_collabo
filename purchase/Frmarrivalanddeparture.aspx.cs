@@ -55,31 +55,33 @@ namespace iljin
             int currentQty;
             //입고예정
             int predicQty;
-
+            //n 개월 후 재고
+            double foreQty;
            
 
             for (int i = 0; i < grdTable.Items.Count; i++)
             {
                 grdTable.Items[i].Cells[0].Text = dt.Rows[i][0].ToString();
 
+                //평균 출고량
                 if (dt.Rows[i][1].ToString() != "")
                 {
-                    //avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue), 0);
-
-                    avgQty = Math.Ceiling(double.Parse(dt.Rows[i][1].ToString()));
-                      
+                    //avgQty = Math.Round(float.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue),0);
+                    avgQty = double.Parse(dt.Rows[i][1].ToString()) / int.Parse(cb_averagemonth.SelectedValue);       
                 }
                 else
                 {
                     avgQty = 0;
                 }
+                grdTable.Items[i].Cells[1].Text = Math.Ceiling(avgQty).ToString();
 
-                grdTable.Items[i].Cells[1].Text = avgQty.ToString();
 
+                //현재고
                 currentQty = int.Parse(dt.Rows[i][2].ToString());
-
                 grdTable.Items[i].Cells[2].Text = currentQty.ToString();
 
+
+                //입고예정
                 if (dt.Rows[i][3].ToString() != "")
                 {
                     predicQty = int.Parse(dt.Rows[i][3].ToString());
@@ -88,15 +90,23 @@ namespace iljin
                 {
                     predicQty = 0;
                 }
-
                 grdTable.Items[i].Cells[3].Text = predicQty.ToString();
 
+               /* if (dt.Rows[i][4].ToString() != "")
+                {
+                    foreQty = Math.Floor(double.Parse(dt.Rows[i][4].ToString()) / int.Parse(cb_forecastmonth.SelectedValue));
+                }
+                else
+                {
+                    foreQty = 0;
+                }*/
 
+                //N개월 후 재고
                 grdTable.Items[i].Cells[4].Text = Math.Floor (currentQty + predicQty - (avgQty * int.Parse(cb_forecastmonth.SelectedValue))).ToString();
-                
-                    
 
-        
+
+
+
                 Tool_UI.NegativeText_Set_RedColor(grdTable.Items[i].Cells[4]);
             }
         }
