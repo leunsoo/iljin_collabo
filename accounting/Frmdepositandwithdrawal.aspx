@@ -1,16 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/iljin.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="Frmdepositandwithdrawal.aspx.cs" Inherits="iljin.Frmdepositandwithdrawal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <style>
-        table.ui-datepicker-calendar {
-            display: none;
-        }
-
-        .ui-datepicker .ui-datepicker-buttonpane button {
-            padding: 0em 0.6em 0em 0.6em;
-        }
-    </style>
-   
+    
     <script type="text/javascript">
 
         var listId = 'ContentPlaceHolder2_li_itemlist';
